@@ -1,0 +1,181 @@
+{
+  "id": "949F81EB-D4BA-4B56-90E1-166F66770BED",
+  "name": "subscribe",
+  "slug": "subscribe",
+  "type": "form",
+  "width": 1275,
+  "height": 351,
+  "layersCount": 4,
+  "layers": [
+    {
+      "name": "subsribe-form",
+      "type": "Group",
+      "x": 253,
+      "y": 174,
+      "width": 769,
+      "height": 55,
+      "layers": [
+        {
+          "name": "input",
+          "type": "ShapePath",
+          "x": 0,
+          "y": 0,
+          "width": 769,
+          "height": 68
+        },
+        {
+          "name": "button-subscribe",
+          "type": "SymbolInstance",
+          "x": 633,
+          "y": 2,
+          "width": 136,
+          "height": 64,
+          "symbolId": "3CAE7DB8-B990-465D-B25B-5FCF92F05535",
+          "masterName": "button-subscribe",
+          "overrides": [
+            {
+              "id": "62EB3A41-7561-4A30-A6E4-F6FF4ECCC1D2_color:fill-0",
+              "property": "color:fill-0",
+              "value": "#ffc25eff"
+            },
+            {
+              "id": "62EB3A41-7561-4A30-A6E4-F6FF4ECCC1D2_blendMode:fill-0",
+              "property": "blendMode:fill-0",
+              "value": "0"
+            },
+            {
+              "id": "62EB3A41-7561-4A30-A6E4-F6FF4ECCC1D2_opacity:fill-0",
+              "property": "opacity:fill-0",
+              "value": "1"
+            },
+            {
+              "id": "4219E403-D4B2-43FA-8949-E2C0BA50CD3E_stringValue",
+              "property": "stringValue",
+              "value": "Subscribe"
+            },
+            {
+              "id": "4219E403-D4B2-43FA-8949-E2C0BA50CD3E_textHAlign",
+              "property": "textHAlign",
+              "value": "center"
+            },
+            {
+              "id": "4219E403-D4B2-43FA-8949-E2C0BA50CD3E_textDecoration",
+              "property": "textDecoration",
+              "value": "none"
+            },
+            {
+              "id": "4219E403-D4B2-43FA-8949-E2C0BA50CD3E_textColor",
+              "property": "textColor",
+              "value": "#42474eff"
+            },
+            {
+              "id": "4219E403-D4B2-43FA-8949-E2C0BA50CD3E_textSize",
+              "property": "textSize",
+              "value": "16.00"
+            },
+            {
+              "id": "4219E403-D4B2-43FA-8949-E2C0BA50CD3E_textWeight",
+              "property": "textWeight",
+              "value": "[object Object]"
+            },
+            {
+              "id": "4219E403-D4B2-43FA-8949-E2C0BA50CD3E_verticalSizing",
+              "property": "verticalSizing",
+              "value": "1"
+            },
+            {
+              "id": "4219E403-D4B2-43FA-8949-E2C0BA50CD3E_horizontalSizing",
+              "property": "horizontalSizing",
+              "value": "1"
+            },
+            {
+              "id": "4219E403-D4B2-43FA-8949-E2C0BA50CD3E_isVisible",
+              "property": "isVisible",
+              "value": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Stay Intouch with Mo",
+      "type": "Text",
+      "x": 253,
+      "y": 37,
+      "width": 769,
+      "height": 94,
+      "text": "Stay Intouch with Mosi",
+      "fontSize": 72,
+      "fontFamily": "Clarity City",
+      "fontWeight": 5,
+      "lineHeight": null,
+      "textColor": "#171c1f",
+      "alignment": "left"
+    },
+    {
+      "name": "Get latest produt up",
+      "type": "Text",
+      "x": 468,
+      "y": 126,
+      "width": 339,
+      "height": 29,
+      "text": "Get latest produt update right in your inbox",
+      "fontSize": 18,
+      "fontFamily": "Helvetica",
+      "fontWeight": 5,
+      "lineHeight": 29,
+      "textColor": "#778481",
+      "alignment": "left"
+    },
+    {
+      "name": "terms-and-condition",
+      "type": "Group",
+      "x": 379,
+      "y": 265,
+      "width": 518,
+      "height": 18,
+      "layers": [
+        {
+          "name": "I accept Intelliwebl",
+          "type": "Text",
+          "x": 25,
+          "y": 4,
+          "width": 370,
+          "height": 14,
+          "text": "I accept Intelliweblab Terms and Privacy Policy, Unsubscribe anytime.",
+          "fontSize": 12,
+          "fontFamily": "Helvetica",
+          "fontWeight": 5,
+          "lineHeight": null,
+          "textColor": "#42474e",
+          "alignment": "left"
+        },
+        {
+          "name": "Line",
+          "type": "ShapePath",
+          "x": 180,
+          "y": 17,
+          "width": 36,
+          "height": 1
+        },
+        {
+          "name": "Line",
+          "type": "ShapePath",
+          "x": 261,
+          "y": 17,
+          "width": 95,
+          "height": 1
+        },
+        {
+          "name": "Rectangle 4",
+          "type": "ShapePath",
+          "x": 0,
+          "y": 0,
+          "width": 16,
+          "height": 16
+        }
+      ]
+    }
+  ],
+  "markupSnippet": "<form class=\"newsletter-form\" aria-label=\"subscribe\">\n  <h3 class=\"form__title\">subscribe</h3>\n  <div class=\"input-group\">\n    <input type=\"email\" class=\"input\" placeholder=\"Enter your email\" required aria-label=\"Email address\">\n    <button type=\"submit\" class=\"button primary\">Subscribe</button>\n  </div>\n</form>"
+}

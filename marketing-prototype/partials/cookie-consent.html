@@ -1,0 +1,67 @@
+<!-- Cookie Consent Banner -->
+<aside class="cookie-banner" data-cookie-banner role="region" aria-label="Cookie consent banner" aria-hidden="true">
+    <div class="cookie-banner__inner">
+        <div class="cookie-banner__content">
+            <h3 class="cookie-banner__title">Cookie &amp; Privacy Preferences</h3>
+            <p class="cookie-banner__copy">
+                We use essential cookies to maintain site security and session state, and optional analytics (Google Analytics) to improve our customer journey. Read our <a href="/privacy-policy">Privacy Policy</a>.
+            </p>
+        </div>
+        <div class="cookie-banner__actions cluster">
+            <button type="button" class="button" data-cookie-accept-all>Accept all</button>
+            <button type="button" class="button" data-cookie-reject>Reject non-essential</button>
+            <button type="button" class="button" data-cookie-customize>Preferences</button>
+        </div>
+    </div>
+</aside>
+
+<!-- Cookie Preferences Modal -->
+<div class="modal" data-cookie-modal role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal__panel">
+        <header class="modal__header">
+            <h2 id="cookie-modal-title" class="modal__title">Cookie Preferences</h2>
+            <button type="button" class="modal__close" data-cookie-modal-close aria-label="Close cookie preferences">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </header>
+        <div class="modal__body stack stack--s">
+            <p class="text-sm">Customize which cookies you allow us to use. Essential cookies are required for basic site features and cannot be deactivated.</p>
+
+            <div class="cookie-category">
+                <div class="cookie-category__header">
+                    <h4 class="cookie-category__title">Essential Cookies</h4>
+                    <span class="cookie-badge-always">Always Active</span>
+                </div>
+                <p class="cookie-category__desc">Necessary for core website security, navigation, and session memory.</p>
+            </div>
+
+            <div class="cookie-category">
+                <div class="cookie-category__header">
+                    <label for="cookie-opt-analytics" class="cookie-category__title">Analytics &amp; Performance</label>
+                    <label class="cookie-switch">
+                        <input type="checkbox" id="cookie-opt-analytics" checked>
+                        <span class="cookie-switch__slider"></span>
+                    </label>
+                </div>
+                <p class="cookie-category__desc">Google Analytics (G-4EKVRPD9KK) helps us anonymously understand visitor interactions and optimize conversion pathways.</p>
+            </div>
+
+            <div class="cookie-category">
+                <div class="cookie-category__header">
+                    <label for="cookie-opt-marketing" class="cookie-category__title">Personalization &amp; Attribution</label>
+                    <label class="cookie-switch">
+                        <input type="checkbox" id="cookie-opt-marketing">
+                        <span class="cookie-switch__slider"></span>
+                    </label>
+                </div>
+                <p class="cookie-category__desc">Used to measure campaign attribution and improve tailored diagnostic guidance.</p>
+            </div>
+        </div>
+        <footer class="modal__footer">
+            <button type="button" class="button" data-cookie-modal-reject>Reject all</button>
+            <button type="button" class="button" data-cookie-save>Save preferences</button>
+            <button type="button" class="button" data-cookie-modal-accept-all>Accept all</button>
+        </footer>
+    </div>
+</div>

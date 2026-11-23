@@ -1,0 +1,23 @@
+{
+  "name": "intellitheme-starter",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0 --port 4344",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "sass": "^1.89.2",
+    "themeui-lab": "git+https://github.com/rEinve/themeui-lab.git",
+    "vite": "^7.1.5",
+    "vite-plugin-include-html": "^1.0.0"
+  },
+  "dependencies": {
+    "@fontsource/material-icons": "^5.2.7",
+    "@fontsource/plus-jakarta-sans": "^5.2.5",
+    "@material-design-icons/font": "^0.14.15",
+    "astro": "^7.4.13"
+  }
+}

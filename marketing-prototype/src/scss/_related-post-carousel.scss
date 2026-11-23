@@ -1,0 +1,91 @@
+@use "themeui-lab/src/scss/abstracts/mixins" as tools;
+
+.related-post-carousel__container {
+    gap: var(--space);
+}
+
+.related-post-carousel__track-window {
+    gap: var(--space);
+    --carousel-gap: var(--space);
+    --carousel-slide-padding: 0;
+    --carousel-slide-size: 100%;
+}
+
+.related-post-carousel .carousel__viewport {
+    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.related-post-carousel .card__media {
+    min-block-size: 0;
+    aspect-ratio: 5 / 4;
+    overflow: hidden;
+}
+
+.related-post-carousel .card__media img {
+    inline-size: 100%;
+    block-size: 100%;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+}
+
+.related-post-carousel__controls {
+    justify-content: flex-start;
+    gap: var(--space);
+}
+
+.related-post-carousel__controls .carousel__actions {
+    gap: 0;
+}
+
+.related-post-carousel__controls .carousel__button:first-child {
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
+}
+
+.related-post-carousel__controls .carousel__button:last-child {
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
+    border-inline-start-width: 0;
+}
+
+.related-post-carousel__progress {
+    inline-size: min(32rem, 50%);
+    block-size: 2px;
+    appearance: none;
+    border: 0;
+    border-radius: var(--radius-pill);
+    background: var(--outline-variant);
+    color: var(--on-surface-variant);
+}
+
+.related-post-carousel__progress::-webkit-progress-bar {
+    border-radius: var(--radius-pill);
+    background: var(--outline-variant);
+}
+
+.related-post-carousel__progress::-webkit-progress-value {
+    border-radius: var(--radius-pill);
+    background: var(--on-surface-variant);
+    transition: inline-size var(--motion-fast) var(--motion-ease-standard);
+}
+
+.related-post-carousel__progress::-moz-progress-bar {
+    border-radius: var(--radius-pill);
+    background: var(--on-surface-variant);
+}
+
+@include tools.breakpoint(medium) {
+    .related-post-carousel__track-window {
+        --carousel-slide-size: calc((100% - var(--carousel-gap)) / 2);
+    }
+}
+
+@include tools.breakpoint(expanded) {
+    .related-post-carousel__track-window {
+        --carousel-slide-size: calc((100% - var(--carousel-gap) - var(--carousel-gap)) / 3);
+    }
+}

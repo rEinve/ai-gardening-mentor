@@ -1,0 +1,15 @@
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xxs);
+    min-height: 1.75rem;
+    padding: 0 0 var(--space-xxl) 0;
+    border: unset;
+    border-radius: var(--radius-control-sm);
+    background: unset;
+    color: var(--inverse-on-surface);
+    font-size: var(--text-xl);
+    font-weight: var(--weight-medium);
+    line-height: var(--lh-label);
+    white-space: nowrap;
+}

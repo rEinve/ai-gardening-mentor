@@ -1,0 +1,33 @@
+# OS & editor junk
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Node & Firebase backend build outputs
+dist/
+node_modules/
+marketing-prototype/node_modules/
+marketing-prototype/dist/
+marketing-prototype/.astro/
+backend/hosting-web/
+backend/functions/node_modules/
+backend/functions/lib/
+backend/.firebase/
+*.log
+.env
+.env.local
+
+# Flutter build & tool caches
+mobile/build/
+mobile/.dart_tool/
+mobile/.flutter-plugins
+mobile/.flutter-plugins-dependencies
+mobile/ios/Pods/
+mobile/macos/Pods/
+mobile/android/.gradle/
+mobile/android/local.properties
+mobile/android/app/google-services.json
+
+# Scratch files
+docs/.scratch/

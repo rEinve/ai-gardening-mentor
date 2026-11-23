@@ -1,0 +1,26 @@
+.input {
+    width: 100%;
+    box-sizing: border-box;
+    min-block-size: var(--control-block-size);
+    padding: var(--control-padding-block) var(--control-padding-inline);
+    border: 1px solid var(--outline);
+    border-radius: var(--radius-control-md);
+    background: var(--surface-container-lowest);
+    color: var(--on-surface);
+    font: inherit;
+    font-size: var(--step-0);
+    line-height: var(--lh-body);
+    transition: border-color var(--motion-fast) var(--motion-ease-standard), background-color var(--motion-fast) var(--motion-ease-standard);
+}
+
+.input:focus-visible {
+    outline: none;
+    border-color: var(--primary);
+    background: var(--surface-container-lowest);
+}
+
+*:focus-visible {
+    outline-color: var(--ring);
+    outline-style: solid;
+    outline-width: 1px;
+}

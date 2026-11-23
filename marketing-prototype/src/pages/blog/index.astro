@@ -1,0 +1,130 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SubscribeForm from "../../components/SubscribeForm.astro";
+
+const allPosts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const featuredPost = allPosts.find((p) => p.data.featured) ?? allPosts[0];
+
+const categories = [
+  { key: "all", label: "All", panelId: "blog-panel-all", tabId: "blog-tab-all", filter: null },
+  { key: "field-guide", label: "{Field Guide}", panelId: "blog-panel-field-guide", tabId: "blog-tab-field-guide", filter: "Field Guide" },
+  { key: "app-guide", label: "{App Guide}", panelId: "blog-panel-app-guide", tabId: "blog-tab-app-guide", filter: "App Guide" },
+  { key: "product-updates", label: "{Product Updates}", panelId: "blog-panel-product-updates", tabId: "blog-tab-product-updates", filter: "Product Updates" },
+] as const;
+---
+
+<BaseLayout
+  title="Field Guides, App Guide & Product Updates | AI Gardening Mentor Blog"
+  description="Offline-ready Tanzania crop manuals, step-by-step app guides, and product updates for AI Gardening Mentor."
+>
+  <section class="blog-intro" id="top" aria-labelledby="blog-title">
+    <div class="container stack stack--sm">
+      <p class="eyebrow eyebrow--pill"><span class="eyebrow__label">AI Gardening Mentor</span><span class="eyebrow__index">Blog</span></p>
+      <h1 id="blog-title">Field Guides, App Guide &amp; Updates.</h1>
+      <p class="lead">Practical Tanzanian crop manuals, step-by-step walkthroughs, and pilot release notes.</p>
+    </div>
+  </section>
+
+  {featuredPost && (
+    <section class="blog-feature" aria-labelledby="featured-title">
+      <div class="container">
+        <article class="card surface-container-low blog-feature__card">
+          <div class="card__body">
+            <p class="h2 blog-feature__label">Featured {featuredPost.data.category}</p>
+            <h2 id="featured-title" class="card__title">{featuredPost.data.title}</h2>
+            <p class="blog-meta">{featuredPost.data.category} · {featuredPost.data.readTime}</p>
+            <p class="card__text lead">{featuredPost.data.description}</p>
+            <a class="learn-more" href={`/blog/${featuredPost.id}/`} aria-label={`Read ${featuredPost.data.title}`}>
+              Read guide <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span>
+            </a>
+          </div>
+          {featuredPost.data.image && (
+            <figure class="card__media surface-variant">
+              <img
+                src={featuredPost.data.image}
+                alt={featuredPost.data.imageAlt}
+                width="1350"
+                height="1080"
+                loading="eager"
+              />
+            </figure>
+          )}
+        </article>
+      </div>
+    </section>
+  )}
+
+  <section class="blog-index" aria-labelledby="browse-title">
+    <div class="container stack stack--lg">
+      <header class="stack stack--sm">
+        <h2 id="browse-title">Browse by Collection</h2>
+      </header>
+
+      <div class="tabs tabs--horizontal" data-tabs>
+        <div class="tabs__list" role="tablist" aria-label="Blog collections">
+          {categories.map((cat, index) => (
+            <button
+              class="tabs__tab"
+              id={cat.tabId}
+              type="button"
+              role="tab"
+              aria-selected={index === 0 ? "true" : "false"}
+              aria-controls={cat.panelId}
+              tabindex={index === 0 ? "0" : "-1"}
+            >
+              {cat.label}
+            </button>
+          ))}
+        </div>
+
+        {categories.map((cat, index) => {
+          const posts = cat.filter
+            ? allPosts.filter((p) => p.data.category === cat.filter)
+            : allPosts;
+          return (
+            <div
+              class="tabs__panel"
+              id={cat.panelId}
+              role="tabpanel"
+              aria-labelledby={cat.tabId}
+              tabindex="0"
+              hidden={index !== 0}
+            >
+              <div class="grid blog-list">
+                {posts.map((post) => (
+                  <article class="card surface-container-low exp-col-6">
+                    <div class="card__body">
+                      <h3 class="h4 card__title">{post.data.title}</h3>
+                      <p class="blog-meta">{post.data.category} · {post.data.readTime}</p>
+                      <p class="card__text">{post.data.description}</p>
+                      <a class="learn-more" href={`/blog/${post.id}/`} aria-label={`Read ${post.data.title}`}>
+                        Read article <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span>
+                      </a>
+                    </div>
+                    {post.data.image && (
+                      <figure class="card__media surface-variant">
+                        <img
+                          src={post.data.image}
+                          alt={post.data.imageAlt}
+                          width="341"
+                          height="193"
+                          loading="lazy"
+                        />
+                      </figure>
+                    )}
+                  </article>
+                ))}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <SubscribeForm />
+</BaseLayout>

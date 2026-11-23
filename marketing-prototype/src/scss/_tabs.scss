@@ -1,0 +1,158 @@
+@use 'themeui-lab/src/scss/abstracts/mixins' as tools;
+
+.tabs--horizontal {
+    width: 100%;
+    gap: var(--space-l);
+    text-align: start;
+}
+
+.tabs--horizontal .tabs__list {
+    align-items: flex-start;
+    gap: var(--space-default);
+    padding-block-end: var(--space);
+    scrollbar-color: transparent transparent;
+    border: 0;
+}
+
+.tabs--horizontal .tabs__list:hover,
+.tabs--horizontal .tabs__list:focus-within {
+    scrollbar-color: var(--surface-container-low) transparent;
+}
+
+.tabs--horizontal .tabs__list::-webkit-scrollbar-thumb {
+    border-radius: var(--radius-pill);
+    background: transparent;
+    transition: background-color var(--motion-fast) var(--motion-ease-standard);
+}
+
+.tabs--horizontal .tabs__list:hover::-webkit-scrollbar-thumb,
+.tabs--horizontal .tabs__list:focus-within::-webkit-scrollbar-thumb {
+    background: var(--surface-container-low);
+}
+
+.tabs--horizontal .tabs__tab {
+    min-block-size: 0;
+    padding-block: var(--space-xxs);
+    padding-inline: var(--space-xs);
+    border: 0;
+    border-radius: var(--radius-pill);
+    background: transparent;
+    color: var(--on-surface-variant);
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: var(--weight-regular);
+    line-height: var(--lh-label);
+    text-align: start;
+}
+
+.tabs--horizontal .tabs__tab:hover,
+.tabs--horizontal .tabs__tab:active {
+    background: var(--surface-container-low);
+    color: var(--on-surface);
+}
+
+.tabs--horizontal .tabs__tab[aria-selected='true'] {
+    background: var(--surface-container-low);
+    color: var(--on-surface);
+}
+
+.tabs--horizontal .tabs__tab[aria-selected='true']::after {
+    content: none;
+}
+
+.tabs--horizontal .tabs__tab:focus-visible {
+    outline: thin solid var(--primary-container);
+    outline-offset: calc(var(--space-xxs) / -2);
+}
+
+.tabs--horizontal .tabs__panel {
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+
+.tabs--horizontal .tabs__heading {
+    max-inline-size: 16ch;
+    color: var(--on-surface-variant);
+    font-family: var(--font-display);
+    font-size: var(--step-3);
+    font-weight: var(--weight-regular);
+    line-height: var(--lh-headline);
+    letter-spacing: var(--ls-headline);
+}
+
+.tabs--horizontal .tabs__content {
+    border-block-start: thin solid var(--outline-variant);
+}
+
+.tabs--horizontal .tabs__content > p {
+    margin: 0;
+    padding-block: var(--space-s);
+    color: var(--on-surface-variant);
+}
+
+.tabs--horizontal .tabs__content > p + p {
+    border-block-start: thin solid var(--outline-variant);
+}
+
+.tabs--horizontal .tabs__quote {
+    max-inline-size: var(--measure-lead);
+    margin: var(--space-m) 0 0 auto;
+    padding-inline-start: var(--space-m);
+    border-inline-start: var(--space-xxs) solid var(--tertiary-container);
+    color: var(--on-surface-variant);
+    font-size: var(--step-1);
+    line-height: var(--lh-body);
+}
+
+.tabs--horizontal .tabs__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-s);
+    padding-block: var(--space-s);
+    border-block-end: thin solid var(--outline-variant);
+}
+
+.tabs--horizontal .tabs__row h3,
+.tabs--horizontal .tabs__row p {
+    margin: 0;
+}
+
+.tabs--horizontal .tabs__row h3 {
+    color: var(--on-surface-variant);
+    font-family: var(--font-display);
+    font-size: var(--step-2);
+    font-weight: var(--weight-regular);
+    line-height: var(--lh-title);
+}
+
+.tabs--horizontal .tabs__row p {
+    color: var(--on-surface-variant);
+    font-family: var(--font-body);
+    font-size: var(--step-0);
+    line-height: var(--lh-body);
+}
+
+.tabs--horizontal .button {
+    margin-block-start: var(--space-m);
+}
+
+.tabs--horizontal .button.button--primary {
+    padding-inline-start: var(--space-m);
+}
+
+@include tools.breakpoint(medium) {
+    .tabs--horizontal .tabs__row {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: var(--space-m);
+    }
+
+    .tabs--horizontal .tabs__heading {
+        max-inline-size: 18ch;
+        font-size: var(--step-4);
+    }
+}

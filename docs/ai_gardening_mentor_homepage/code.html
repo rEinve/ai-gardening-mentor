@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto+Flex:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-surface":"#181d18","surface-variant":"#e0e4db","on-primary-container":"#9be9a8","surface-container-low":"#f1f5ec","on-background":"#181d18","surface-container":"#ebefe6","on-error-container":"#410002","on-tertiary":"#ffffff","primary-container":"#1e6b37","surface-container-high":"#e5eae1","on-secondary-container":"#101f10","inverse-on-surface":"#eef2e9","on-secondary-fixed":"#101f10","error-container":"#ffdad6","on-secondary":"#ffffff","tertiary-fixed-dim":"#a0cfd2","surface":"#f7fbf2","background":"#f7fbf2","secondary":"#526350","surface-container-highest":"#e0e4db","on-primary":"#ffffff","primary-fixed-dim":"#8bd898","on-error":"#ffffff","on-tertiary-fixed":"#002022","surface-tint":"#1f6c38","secondary-fixed":"#d5e8d0","surface-container-lowest":"#ffffff","secondary-container":"#d5e8cf","secondary-fixed-dim":"#b9ccb5","on-surface-variant":"#424940","outline-variant":"#bfc9bd","on-secondary-fixed-variant":"#3b4b39","surface-dim":"#d7dbd3","primary":"#005223","surface-bright":"#f7fbf2","on-primary-fixed":"#00210a","error":"#ba1a1a","inverse-primary":"#8bd898","tertiary-container":"#386568","on-tertiary-container":"#002022","on-primary-fixed-variant":"#005224","on-tertiary-fixed-variant":"#1f4d50","tertiary-fixed":"#bcebee","outline":"#72796f","inverse-surface":"#2d322c","tertiary":"#1e4d50","primary-fixed":"#a6f4b2"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-xl":"2.5rem","space-md":"1rem","space-xs":"0.25rem","margin-mobile":"1rem","gutter-mobile":"1rem","space-lg":"1.5rem","gutter":"1.5rem","margin":"2rem","space-sm":"0.5rem"},"fontFamily":{"label-lg":["Inter"],"headline-md":["Roboto Flex"],"title-lg":["Roboto Flex"],"label-sm":["Inter"],"headline-md-mobile":["Roboto Flex"],"title-md":["Roboto Flex"],"display-lg-mobile":["Roboto Flex"],"body-md":["Inter"],"body-lg":["Inter"],"display-lg":["Roboto Flex"]},"fontSize":{"label-lg":["0.875rem",{"lineHeight":"1.25","letterSpacing":"0.1px","fontWeight":"500"}],"headline-md":["2rem",{"lineHeight":"1.25","letterSpacing":"-0.01em","fontWeight":"600"}],"title-lg":["1.5rem",{"lineHeight":"1.35","fontWeight":"600"}],"label-sm":["0.75rem",{"lineHeight":"1.2","letterSpacing":"0.5px","fontWeight":"600"}],"headline-md-mobile":["1.75rem",{"lineHeight":"1.3","letterSpacing":"-0.01em","fontWeight":"600"}],"title-md":["1.25rem",{"lineHeight":"1.4","fontWeight":"600"}],"display-lg-mobile":["2.5rem",{"lineHeight":"1.2","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["1rem",{"lineHeight":"1.6","fontWeight":"400"}],"body-lg":["1.125rem",{"lineHeight":"1.6","fontWeight":"400"}],"display-lg":["3.75rem",{"lineHeight":"1.15","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><img alt="AI Gardening Mentor Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK8UT2_yTVvW_W8HaybW4MhxHfG2kfDKtXkM01lpBtLoD_KercnZpM0nCGIse3NK4IJZmo-zEZToJRwhJSESpIItkXccKseRcn3aPROYtYAi-mAJoOWoDN9hfYPyHLDuK7c9dxxaal-r8IzN7LIBi9j899cNWBByMlIv9QAYfl4tWI6HHyr3Kod4UhaKiUJTGXwix7xlLvCiEFkgOP3wDlLAxfV5bri-V45n0Cf4M"/><span class="font-title-md text-title-md text-on-surface tracking-tight whitespace-nowrap">AI Gardening Mentor</span></div><nav class="hidden md:flex items-center gap-space-xs p-space-xs" data-active-classes="bg-secondary-container text-on-secondary-container font-semibold rounded-full"><a class="px-space-md py-space-sm rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="camera-triage" href="#">Camera Triage</a><a class="px-space-md py-space-sm rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="7-day-cadence" href="#">7-Day Cadence</a><a class="px-space-md py-space-sm rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="organic-mentor" href="#">Organic Mentor</a><a class="px-space-md py-space-sm rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="compare" href="#">Compare</a></nav><div class="flex items-center gap-space-sm"><button aria-label="Toggle botanical color theme" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">light_mode</span></button><button class="h-10 px-space-lg rounded-full bg-primary text-on-primary font-label-lg text-label-lg hover:opacity-90 transition-opacity shadow-[0_1px_3px_1px_rgba(16,31,16,0.08)] whitespace-nowrap" type="button">Download App</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- =========================================================================
+       1. HERO SECTION
+       ========================================================================= -->
+<section class="relative w-full overflow-hidden px-margin-mobile lg:px-margin pt-space-lg lg:pt-space-xl pb-space-xl">
+<!-- Ambient botanical backdrop glow -->
+<div class="absolute -top-32 -left-20 w-96 h-96 bg-primary-fixed/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-1/2 -right-32 w-[30rem] h-[30rem] bg-secondary-fixed/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left Hero Content (7 cols) -->
+<div class="lg:col-span-7 flex flex-col items-start">
+<!-- Overline chip -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow-sm mb-space-md">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span>Built for Real Garden Beds &amp; Dirt • University Extension Science</span>
+</div>
+<!-- Headline -->
+<h1 class="font-display-lg text-display-lg-mobile lg:text-display-lg text-on-surface tracking-tight mb-space-md">
+            Stop Guessing.<br/>
+            Stop Panicking.<br/>
+<span class="text-primary">Grow Vegetables</span> with Confidence.
+          </h1>
+<!-- Subheadline -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-space-lg">
+            The first intelligent gardening mentor built specifically to eliminate novice anxiety. Get instant 3-step calm triage from a quick photo, follow 5-minute daily micro-habits that adapt to the weather, and chat with an organic mentor that already knows your plot.
+          </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-space-sm sm:gap-space-md w-full sm:w-auto mb-space-lg">
+<a class="inline-flex items-center justify-center gap-space-xs h-12 px-space-xl rounded-full bg-primary text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary/90 transition-all" href="#panic-triage">
+<span>Start Growing Free</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-xs h-12 px-space-lg rounded-full bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-sm hover:bg-surface-container transition-all" href="#live-triage-card">
+<span class="material-symbols-outlined text-[20px] text-primary">photo_camera</span>
+<span>Test Live Triage</span>
+</a>
+</div>
+<!-- Trust Badges Strip -->
+<div class="flex flex-wrap items-center gap-y-space-xs gap-x-space-md text-on-surface-variant font-label-sm text-label-sm pt-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<span>Zero Chemical Organophosphates</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">wifi_off</span>
+<span>100% Offline-First in the Mud</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">yard</span>
+<span>Zero $800 Plastic Towers</span>
+</div>
+</div>
+</div>
+<!-- Right Hero Artifact: Plant Triage Preview Card (5 cols) -->
+<div class="lg:col-span-5 relative mt-space-md lg:mt-0" id="live-triage-card">
+<!-- Outer botanical card shell with depth -->
+<div class="relative bg-surface-container-low rounded-lg p-space-md shadow-xl overflow-hidden">
+<!-- Image Viewfinder Top -->
+<div class="relative h-60 w-full rounded-DEFAULT overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Close up high-resolution macro shot of a Roma tomato plant leaf with mild heat wilt and slight curling under bright morning sunlight in an organic backyard raised vegetable garden bed with dark rich loam soil." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcGwzmkx0AY7H-YxIth-3UdPGd8h5dDjWa0V2E4kuj63C2VFmvWB7R260pkOf5NsWhobCPmUEDDJI-TisQ7Jw7G85Q9aa8yt8WyB8NewwbKEsTQ5WJphPrkRbjeVBQbdWFk1WJ53zhFGN9Q5UgJYPpDAqoyYuL4aafSI2DToOiuJ4SAeuwuQ7LFdFcpms91Loo7t4e6fKBMvak6yhV7VO1r0jIagDXa43zjEpD3qU"/>
+<!-- Viewfinder Overlays -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none"></div>
+<!-- Top HUD -->
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between text-white">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary/80 backdrop-blur-md font-label-sm text-label-sm text-on-primary">
+<span class="w-2 h-2 rounded-full bg-primary-fixed animate-pulse"></span>
+                  Leaf Focus Confirmed
+                </span>
+<span class="px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-md font-label-sm text-label-sm">
+                  Roma Tomato • 98.4% Confidence
+                </span>
+</div>
+<!-- Scanning Reticle Corners -->
+<div class="absolute top-10 left-10 w-6 h-6 border-t-2 border-l-2 border-primary-fixed rounded-tl"></div>
+<div class="absolute top-10 right-10 w-6 h-6 border-t-2 border-r-2 border-primary-fixed rounded-tr"></div>
+<div class="absolute bottom-6 left-10 w-6 h-6 border-b-2 border-l-2 border-primary-fixed rounded-bl"></div>
+<div class="absolute bottom-6 right-10 w-6 h-6 border-b-2 border-r-2 border-primary-fixed rounded-br"></div>
+<!-- Bottom photo badge -->
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white">
+<div class="flex items-center gap-1 text-[13px] font-medium drop-shadow">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">wb_sunny</span>
+                  Transpiration Wilt • NOT Early Blight
+                </div>
+<span class="text-[11px] bg-white/20 backdrop-blur-md px-2 py-0.5 rounded">Triage ID: #TM-4091</span>
+</div>
+</div>
+<!-- Triage Immediate Calming Feed -->
+<div class="mt-space-md flex flex-col gap-space-sm">
+<div class="bg-surface-container rounded-DEFAULT p-space-sm flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">self_improvement</span>
+</div>
+<div class="flex-1 min-w-0">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Step 1: Calm Diagnosis</span>
+<p class="font-title-md text-title-md text-on-surface leading-tight mt-0.5">High Transpiration Curling</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-[13px] mt-1">Leaves are curling upward to conserve moisture under 88°F afternoon sun. Stems remain turgid and fully healthy.</p>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-DEFAULT p-space-sm flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">water_drop</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Step 2: 3-Min Remedy</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-lowest px-2 py-0.5 rounded-full">3 mins</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface text-[13px] font-medium mt-0.5">Deep root-soak tomorrow morning at 6:45 AM. Avoid wet leaves.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm font-semibold">NO toxic spray needed. Crop is safe.</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary underline cursor-pointer">Extension Doc →</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       2. PANIC TRIAGE DEMO (Interactive 3-Step Calm Action Plan)
+       ========================================================================= -->
+<section class="w-full bg-surface-container-low py-space-xl px-margin-mobile lg:px-margin" id="panic-triage">
+<div class="max-w-7xl mx-auto">
+<!-- Section Header -->
+<div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-space-lg">
+<span class="inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-surface-container-highest text-secondary font-label-sm text-label-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">camera</span>
+          Edge Diagnostic Intelligence
+        </span>
+<h2 class="font-headline-md text-headline-md-mobile lg:text-headline-md text-on-surface tracking-tight">
+          Camera Diagnostic &amp; Panic Triage
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs">
+          Why 70% of novices abandon gardens: panic-spraying chemicals over cosmetic leaf chew. Stop the panic in 3 seconds.
+        </p>
+</div>
+<!-- Scenario Switcher Pills -->
+<div class="flex flex-wrap items-center justify-center gap-space-xs mb-space-lg" id="triage-pills">
+<button class="triage-pill active h-10 px-space-md rounded-full bg-secondary-container text-on-secondary-container font-label-lg text-label-lg shadow-sm transition-all flex items-center gap-1.5" data-scenario="roma" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">spa</span>
+<span>Scenario A: Yellowing Lower Leaves (Tomato)</span>
+</button>
+<button class="triage-pill h-10 px-space-md rounded-full bg-surface-container-highest text-on-surface-variant font-label-lg text-label-lg shadow-sm transition-all flex items-center gap-1.5" data-scenario="squash" type="button">
+<span class="material-symbols-outlined text-[18px]">grain</span>
+<span>Scenario B: White Powdery Spots (Squash)</span>
+</button>
+<button class="triage-pill h-10 px-space-md rounded-full bg-surface-container-highest text-on-surface-variant font-label-lg text-label-lg shadow-sm transition-all flex items-center gap-1.5" data-scenario="pepper" type="button">
+<span class="material-symbols-outlined text-[18px]">water_loss</span>
+<span>Scenario C: Mid-Day Drooping (Pepper)</span>
+</button>
+</div>
+<!-- Dynamic Scenario Card Container -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md lg:p-space-lg shadow-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Viewfinder Visual Preview (5 cols) -->
+<div class="lg:col-span-5 relative">
+<div class="relative h-80 w-full rounded-DEFAULT overflow-hidden bg-surface-container-high shadow-inner">
+<img class="w-full h-full object-cover transition-opacity duration-300" data-alt="Realistic botanical macro photo of yellowing bottom leaves of a vigorous Roma tomato plant in an organic raised garden bed, natural soil senescence, soft natural lighting." id="triage-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXjHRellaKKmFMMoHDa52DMLex8X91TBwkuW_qtyc6coo-WbWp0TBOnMB3YC_D7qJeUVVt4Hn0gKk39QN44jm3Iijw7I2g2G3vrjW_MUSpZeyMAmrZG0qrcMdpHGMqjMU0eJGkFe7GFx_UlYpgOklixErOyfTn6F7UvQA72GTNgNmFhltKN_OISIK-eRSQVN7nuobKkKuO3lPwulaqfR_QYOZCA6dbmS8ljWXB1As"/>
+<!-- Scan lines & diagnostic grid overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+<!-- Camera HUD Overlay -->
+<div class="absolute top-4 left-4 flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-white font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary-fixed">shutter_speed</span>
+                  ISO 100 • F2.8 • 1/500s
+                </span>
+</div>
+<div class="absolute top-4 right-4">
+<span class="px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow" id="triage-confidence">
+                  Confidence: 98.4%
+                </span>
+</div>
+<!-- Crop box markers -->
+<div class="absolute inset-8 border border-white/30 rounded-lg pointer-events-none flex flex-col justify-between p-2">
+<div class="flex justify-between">
+<span class="text-[10px] text-white/70 uppercase font-mono">ROI Leaf Index #04</span>
+<span class="text-[10px] text-primary-fixed uppercase font-mono">Edge Validated</span>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-[10px] text-white/70 font-mono">Microclimate: Zone 7b</span>
+<span class="material-symbols-outlined text-white/60 text-[20px]">filter_center_focus</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 right-4 text-white">
+<p class="font-title-md text-title-md font-semibold drop-shadow" id="triage-caption-title">Roma Tomato (Solanum lycopersicum)</p>
+<p class="font-label-sm text-label-sm text-white/80" id="triage-caption-sub">35 days post-transplant • Primary Bed 01</p>
+</div>
+</div>
+</div>
+<!-- Structured 3-Step Calm Action Plan (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-title-lg text-title-lg text-on-surface font-semibold">3-Step Calm Action Plan</span>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">eco</span>
+                100% Organic Protocol
+              </span>
+</div>
+<!-- Step 1: What It Is -->
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md shadow-sm transition-all">
+<div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[18px]">search_check</span>
+<span class="font-bold">Step 1: What It Is (No Jargon)</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold" id="triage-step1-title">Natural Lower Leaf Senescence</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1" id="triage-step1-body">
+                As your indeterminate tomato reaches 3 feet in height, it naturally sheds the earliest bottom cotyledons and leaves that receive little sunlight. The upper canopy is photosynthesizing vigorously and flowers are setting normally.
+              </p>
+</div>
+<!-- Step 2: Immediate Action -->
+<div class="bg-primary/5 rounded-DEFAULT p-space-md shadow-sm transition-all">
+<div class="flex items-center justify-between text-primary font-label-sm text-label-sm uppercase tracking-wider mb-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">build_circle</span>
+<span class="font-bold">Step 2: Immediate Action (≤ 5 Minutes)</span>
+</div>
+<span class="bg-primary text-on-primary px-2 py-0.5 rounded-full text-[11px] font-semibold">3 min task</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold" id="triage-step2-title">Sanitize &amp; Prune Bottom 3 Inches</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1" id="triage-step2-body">
+                Wipe clean shears with rubbing alcohol. Snip the lowest 2 yellowing leaf stems flush with the main vine. This increases airflow and prevents soil rain-splash from reaching leaves. Compost the clippings.
+              </p>
+</div>
+<!-- Step 3: What NOT to Worry About -->
+<div class="bg-surface-container rounded-DEFAULT p-space-md shadow-sm transition-all">
+<div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">shield</span>
+<span class="font-bold">Step 3: What NOT to Worry About</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold" id="triage-step3-title">Halting the Panic: This is NOT Early Blight</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1" id="triage-step3-body">
+                Notice there are no concentric brown rings with yellow target halos. Do NOT buy or spray commercial copper fungicides or chemical sprays. Your fruit cluster is completely safe and unaffected.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       3. PROBLEM CONTRAST: NOVICE SPIRAL VS. MENTOR ROUTINE
+       ========================================================================= -->
+<section class="w-full py-space-xl px-margin-mobile lg:px-margin">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">The Shift</span>
+<h2 class="font-headline-md text-headline-md-mobile lg:text-headline-md text-on-surface tracking-tight mt-1">
+          Why Gardens Get Abandoned by July
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs">
+          Gardening shouldn't feel like managing an industrial farm spreadsheet or panicking over every yellow speckle.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-stretch">
+<!-- The Novice Spiral Card (Red/error tinted container) -->
+<div class="bg-error-container text-on-error-container rounded-lg p-space-lg flex flex-col justify-between shadow-md relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-40 h-40 bg-error/10 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold bg-white/40 px-3 py-1 rounded-full text-error">
+                The Novice Failure Spiral
+              </span>
+<span class="material-symbols-outlined text-[28px] text-error">warning</span>
+</div>
+<h3 class="font-title-lg text-title-lg font-bold text-on-error-container mb-space-md">
+              Panic, Burnout &amp; Chemical Overkill
+            </h3>
+<div class="space-y-space-md">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-error shrink-0 mt-0.5">cancel</span>
+<div>
+<h4 class="font-title-md text-title-md text-on-error-container font-semibold">Panic-Spraying Chemical Neurotoxins</h4>
+<p class="font-body-md text-body-md text-on-error-container/85 mt-0.5">
+                    Seeing a minor cosmetic hole on cabbage leaves and saturating food crops with dangerous organophosphates that decimate native pollinator bees.
+                  </p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-error shrink-0 mt-0.5">cancel</span>
+<div>
+<h4 class="font-title-md text-title-md text-on-error-container font-semibold">Rigid 40-Page Calendar Chore Fatigue</h4>
+<p class="font-body-md text-body-md text-on-error-container/85 mt-0.5">
+                    Spending weekends overwhelmed by manual 2D spacing grids and rigid chores that ignore real-world rainstorms, leading to total abandonment by midsummer.
+                  </p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-error shrink-0 mt-0.5">cancel</span>
+<div>
+<h4 class="font-title-md text-title-md text-on-error-container font-semibold">Chaotic Conflicting Forum Arguments</h4>
+<p class="font-body-md text-body-md text-on-error-container/85 mt-0.5">
+                    Googling frantically at 9:00 PM and receiving twelve opposite opinions on Reddit and Facebook while plant roots quietly drown in over-watered soil.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md bg-white/30 rounded-DEFAULT p-space-sm text-center">
+<span class="font-label-sm text-label-sm font-semibold text-error uppercase">Result: 72% Abandonment Rate in First 90 Days</span>
+</div>
+</div>
+<!-- The AI Gardening Mentor Routine (Green/primary container) -->
+<div class="bg-primary text-on-primary rounded-lg p-space-lg flex flex-col justify-between shadow-xl relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-40 h-40 bg-primary-fixed/20 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold bg-white/20 px-3 py-1 rounded-full text-on-primary">
+                The AI Gardening Mentor Routine
+              </span>
+<span class="material-symbols-outlined text-[28px] text-on-primary-container" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<h3 class="font-title-lg text-title-lg font-bold text-on-primary mb-space-md">
+              Calm Clarity &amp; 5-Minute Micro-Habits
+            </h3>
+<div class="space-y-space-md">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-on-primary-container shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h4 class="font-title-md text-title-md text-on-primary font-semibold">Instant 3-Step Visual Triage in 3 Seconds</h4>
+<p class="font-body-md text-body-md text-on-primary/90 mt-0.5">
+                    Snap a phone photo. Get immediate confirmation of whether it’s natural or pathological, a 3-minute physical organic fix, and reassurance that halts panic.
+                  </p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-on-primary-container shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h4 class="font-title-md text-title-md text-on-primary font-semibold">5-Minute Daily Micro-Habits in Dirty Boots</h4>
+<p class="font-body-md text-body-md text-on-primary/90 mt-0.5">
+                    No complex spreadsheets. Just 1 or 2 high-impact micro-actions per day, tailored to your crops and automatically deferred whenever heavy rain pours.
+                  </p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-on-primary-container shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h4 class="font-title-md text-title-md text-on-primary font-semibold">100% University Extension Agronomy</h4>
+<p class="font-body-md text-body-md text-on-primary/90 mt-0.5">
+                    Pure, peer-reviewed organic agricultural science calibrated to your USDA Hardiness Zone and soil volume. Zero toxic pesticide shortcuts.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md bg-white/15 rounded-DEFAULT p-space-sm text-center">
+<span class="font-label-sm text-label-sm font-semibold text-on-primary-container uppercase">Result: 94% Harvest Completion • Organic Bounty</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       4. CORE LOOPS BENTO GRID (Material Design 3 Bento)
+       ========================================================================= -->
+<section class="w-full bg-surface-container py-space-xl px-margin-mobile lg:px-margin">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col items-start max-w-3xl mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Architected for Beginners</span>
+<h2 class="font-headline-md text-headline-md-mobile lg:text-headline-md text-on-surface tracking-tight mt-1">
+          The Three Foundational Growth Loops
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs">
+          Built from the ground up to replace overwhelm with systematic biological composure.
+        </p>
+</div>
+<!-- Bento Grid (12 cols) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Loop 1: Camera Diagnostic & Panic Triage (Span 7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">camera_indoor</span>
+                The Diagnostic Loop
+              </span>
+<span class="font-label-sm text-label-sm text-secondary">Pre-Flight Leaf Focus</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">
+              Instant Edge Focus &amp; Multimodal Cloud Analysis
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs mb-space-md">
+              Before transmitting to our horticultural models, on-device edge sensors ensure optimal lighting, focus clarity, and leaf vein visibility. It isolates genuine physiological symptoms from ordinary cosmetic blemishes in seconds.
+            </p>
+<!-- Visual representation inside Loop 1 -->
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md">
+<div class="grid grid-cols-3 gap-space-sm text-center">
+<div class="bg-surface-container-lowest p-space-sm rounded-DEFAULT">
+<span class="material-symbols-outlined text-primary text-[24px]">center_focus_strong</span>
+<p class="font-label-sm text-label-sm font-semibold text-on-surface mt-1">Edge Validation</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-[11px]">Blur &amp; Glare rejection</p>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-DEFAULT">
+<span class="material-symbols-outlined text-primary text-[24px]">model_training</span>
+<p class="font-label-sm text-label-sm font-semibold text-on-surface mt-1">Agronomic Model</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-[11px]">250+ organic pathogens</p>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-DEFAULT">
+<span class="material-symbols-outlined text-primary text-[24px]">no_sim</span>
+<p class="font-label-sm text-label-sm font-semibold text-on-surface mt-1">Zero Toxins</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-[11px]">IPM-only organic safety</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Validated across 12,000+ Land-Grant Extension diagnostic sheets</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+</div>
+<!-- Loop 2: 7-Day Care Cadence (Span 5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">calendar_today</span>
+                The Retention Loop
+              </span>
+<span class="font-label-sm text-label-sm text-secondary">5-Min Cadence</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">
+              Daily Micro-Habits in the Mud
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs mb-space-md">
+              Replace exhausting weekend marathons with two effortless micro-actions a day. Designed to be completed with coffee in hand before work.
+            </p>
+<!-- Habit checklist mock -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between p-space-xs px-space-sm bg-surface-container-low rounded-DEFAULT">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_box</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Bottom mulch check (Squash bed)</span>
+</div>
+<span class="text-[11px] font-mono text-secondary">3 min</span>
+</div>
+<div class="flex items-center justify-between p-space-xs px-space-sm bg-surface-container-low rounded-DEFAULT">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_box</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Morning root hydration (Peppers)</span>
+</div>
+<span class="text-[11px] font-mono text-secondary">4 min</span>
+</div>
+<div class="flex items-center justify-between p-space-xs px-space-sm bg-surface-container-high/60 rounded-DEFAULT opacity-75">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-outline text-[18px]">check_box_outline_blank</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant line-through">Evening watering (Heavy rain deferred)</span>
+</div>
+<span class="text-[11px] font-mono text-primary font-semibold">Skipped</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">wifi_off</span>
+<span>Works 100% offline in outdoor plots without cell signal</span>
+</div>
+</div>
+<!-- Loop 3: Grounded Mentor Chat & Digital Twin (Span 12 cols full width banner) -->
+<div class="lg:col-span-12 bg-surface-container-lowest rounded-lg p-space-lg shadow-sm">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5 flex flex-col">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm mb-space-sm w-fit">
+<span class="material-symbols-outlined text-[16px] text-primary">psychology</span>
+                The Trust Loop • Digital Twin Injection
+              </span>
+<h3 class="font-headline-md text-headline-md-mobile lg:text-headline-md text-on-surface tracking-tight">
+                An Organic Mentor That Already Knows Your Soil
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+                No repetitive prompt engineering. The mentor automatically incorporates your exact plot footprint, hardiness zone, sun hours, and crop timeline into every conversational exchange.
+              </p>
+<!-- Plot metadata chips -->
+<div class="flex flex-wrap gap-1.5 mt-space-md">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">USDA Zone 7b</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">4'x8' Cedar Raised Bed</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Soil pH: 6.5 (Loam)</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Roma Tomatoes (Day 42)</span>
+</div>
+</div>
+<!-- Interactive Chat Preview Bubble (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-DEFAULT p-space-md shadow-inner flex flex-col gap-space-sm">
+<!-- User message -->
+<div class="flex items-start justify-end gap-space-xs">
+<div class="bg-primary text-on-primary rounded-2xl rounded-tr-none px-space-md py-space-xs max-w-md shadow-sm">
+<p class="font-body-md text-body-md text-[14px]">
+                    "My tomato flowers are dropping off before setting fruit. Should I spray blossom set chemical?"
+                  </p>
+</div>
+<div class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center text-[12px] font-bold text-on-secondary-container">
+                  You
+                </div>
+</div>
+<!-- Mentor response with context pill -->
+<div class="flex items-start gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary text-[15px]">eco</span>
+</div>
+<div class="bg-surface-container-lowest text-on-surface rounded-2xl rounded-tl-none p-space-md max-w-lg shadow-sm">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="font-label-sm text-label-sm font-semibold text-primary">Organic Mentor</span>
+<span class="text-[11px] bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-mono">
+                      Injected: Zone 7b • 92°F heat peak detected
+                    </span>
+</div>
+<p class="font-body-md text-body-md text-[13px] text-on-surface">
+<strong>Do not use chemical blossom sprays.</strong> In your 4x8 bed, temperatures hit 93°F yesterday. When temperatures exceed 88°F, tomato pollen becomes temporarily sterile—this is a normal heat defense mechanism.
+                  </p>
+<div class="mt-2 p-2 bg-surface-container-low rounded text-[12px] text-on-surface-variant">
+<span class="font-semibold text-primary">Next Step:</span> Keep roots cool with 2 inches of clean straw mulch. Normal fruit set will automatically resume this Thursday when temperatures drop back to 82°F.
+                  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       5. WEATHER OVERRIDE SIMULATOR (Interactive Astro Island)
+       ========================================================================= -->
+<section class="w-full py-space-xl px-margin-mobile lg:px-margin">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Cloud Forecast Interception</span>
+<h2 class="font-headline-md text-headline-md-mobile lg:text-headline-md text-on-surface tracking-tight mt-1">
+          Automated Weather Overrides: Never Drown or Freeze Your Harvest
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs">
+          Static calendars tell you to water on Tuesdays. We intercept actual rainfall and frost warnings to adapt your daily tasks automatically.
+        </p>
+</div>
+<!-- Simulation Controller Card -->
+<div class="bg-surface-container-low rounded-lg p-space-md lg:p-space-lg shadow-md max-w-4xl mx-auto">
+<!-- Toggle buttons -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-space-xs mb-space-lg" id="weather-sim-toggles">
+<button class="sim-btn active w-full sm:w-auto h-11 px-space-md rounded-full bg-secondary-container text-on-secondary-container font-label-lg text-label-lg shadow-sm transition-all flex items-center justify-center gap-2" data-sim="sunny" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">wb_sunny</span>
+<span>☀️ Sunny &amp; Normal (78°F)</span>
+</button>
+<button class="sim-btn w-full sm:w-auto h-11 px-space-md rounded-full bg-surface-container-high text-on-surface-variant font-label-lg text-label-lg shadow-sm transition-all flex items-center justify-center gap-2" data-sim="rain" type="button">
+<span class="material-symbols-outlined text-[20px]">rainy</span>
+<span>🌧️ Heavy Rain (&gt;0.50" detected)</span>
+</button>
+<button class="sim-btn w-full sm:w-auto h-11 px-space-md rounded-full bg-surface-container-high text-on-surface-variant font-label-lg text-label-lg shadow-sm transition-all flex items-center justify-center gap-2" data-sim="freeze" type="button">
+<span class="material-symbols-outlined text-[20px]">ac_unit</span>
+<span>❄️ Freeze Warning (32°F)</span>
+</button>
+</div>
+<!-- Live Dynamic Reactive Task Card -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md lg:p-space-lg shadow-md">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-space-sm mb-space-sm gap-2">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[28px]" id="sim-status-icon">wb_sunny</span>
+<div>
+<span class="font-title-md text-title-md text-on-surface font-semibold block leading-tight" id="sim-weather-title">
+                  Clear Conditions • 78°F • 0.00" Rain
+                </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="sim-status-sub">
+                  Normal biological care cadence active
+                </span>
+</div>
+</div>
+<span class="px-space-md py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold" id="sim-action-badge">
+              Standard Daily Plan
+            </span>
+</div>
+<!-- Dynamic Task Item -->
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm" id="sim-task-container">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0" id="sim-task-icon-bg">
+<span class="material-symbols-outlined text-[20px]" id="sim-task-icon">water_drop</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h4 class="font-title-md text-title-md text-on-surface font-semibold" id="sim-task-title">Watering: Deep Root Soak</h4>
+<span class="bg-surface-container-high text-on-surface-variant text-[11px] px-2 py-0.5 rounded font-mono" id="sim-task-time">5 mins</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-[14px] mt-0.5" id="sim-task-desc">
+                  Apply 1 gallon per tomato plant slowly at the soil base. Direct early morning hydration minimizes fungal risk.
+                </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-center shrink-0">
+<button class="h-10 px-space-md rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow hover:opacity-90" id="sim-task-btn" type="button">
+                Mark Done (5 min)
+              </button>
+</div>
+</div>
+<!-- Explanatory note -->
+<div class="mt-space-md p-space-sm rounded-DEFAULT bg-surface-container-high/50 flex items-center gap-space-xs text-on-surface-variant text-[13px]">
+<span class="material-symbols-outlined text-[18px] text-primary">satellite_alt</span>
+<span id="sim-satellite-note">
+              Real-time NOAA radar feed connected. Next automatic microclimate sweep in 12 minutes.
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       6. DETAILED COMPARISON TABLE
+       ========================================================================= -->
+<section class="w-full bg-surface-container-low py-space-xl px-margin-mobile lg:px-margin">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">The Competitive Matrix</span>
+<h2 class="font-headline-md text-headline-md-mobile lg:text-headline-md text-on-surface tracking-tight mt-1">
+          Built for Dirt, Not Plastic or Spreadsheets
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs">
+          See how AI Gardening Mentor fundamentally rethinks beginner vegetable success.
+        </p>
+</div>
+<!-- Table Wrapper with elevation & styling -->
+<div class="bg-surface-container-lowest rounded-lg shadow-lg overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[700px]">
+<thead>
+<tr class="bg-surface-container">
+<th class="p-space-md font-label-lg text-label-lg text-on-surface">Feature / Dimension</th>
+<th class="p-space-md font-title-md text-title-md text-on-primary bg-primary rounded-t-DEFAULT">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span>AI Gardening Mentor</span>
+</div>
+</th>
+<th class="p-space-md font-label-lg text-label-lg text-on-surface">2D Planners (GrowVeg / Planter)</th>
+<th class="p-space-md font-label-lg text-label-lg text-on-surface">Smart Hydroponics (Gardyn / Click)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high text-on-surface font-body-md text-body-md text-[14px]">
+<!-- Row 1 -->
+<tr>
+<td class="p-space-md font-semibold text-on-surface">Instant Camera Panic Triage</td>
+<td class="p-space-md bg-primary-fixed/20 font-semibold text-primary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Included (3-Step Calm Action Plan)</span>
+</div>
+</td>
+<td class="p-space-md text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+<span>None (Manual identification)</span>
+</div>
+</td>
+<td class="p-space-md text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span>Hardware sensor errors only</span>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr>
+<td class="p-space-md font-semibold text-on-surface">Daily Habit Sizing</td>
+<td class="p-space-md bg-primary-fixed/20 font-semibold text-primary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>5–10 Minute Micro-Tasks</span>
+</div>
+</td>
+<td class="p-space-md text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+<span>Overwhelming multi-month charts</span>
+</div>
+</td>
+<td class="p-space-md text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span>Intense weekly reservoir flushes</span>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr>
+<td class="p-space-md font-semibold text-on-surface">Dynamic Weather Overrides</td>
+<td class="p-space-md bg-primary-fixed/20 font-semibold text-primary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Automatic (Rain &amp; Frost Defense)</span>
+</div>
+</td>
+<td class="p-space-md text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+<span>Static calendars (ignores rain)</span>
+</div>
+</td>
+<td class="p-space-md text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+<span>Indoor only (No weather awareness)</span>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr>
+<td class="p-space-md font-semibold text-on-surface">Outdoor Offline Capability</td>
+<td class="p-space-md bg-primary-fixed/20 font-semibold text-primary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>100% Offline-First Local Cache</span>
+</div>
+</td>
+<td class="p-space-md text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span>Spotty mobile web sync in yard</span>
+</div>
+</td>
+<td class="p-space-md text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+<span>Requires constant 2.4GHz Wi-Fi</span>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr>
+<td class="p-space-md font-semibold text-on-surface">Initial Hardware Investment</td>
+<td class="p-space-md bg-primary-fixed/20 font-bold text-primary text-[16px]">
+                $0 (Works with existing dirt &amp; pots)
+              </td>
+<td class="p-space-md text-on-surface-variant">
+                $25 – $50 / year subscription
+              </td>
+<td class="p-space-md text-error font-medium">
+                $500 – $900 hardware purchase
+              </td>
+</tr>
+<!-- Row 6 -->
+<tr>
+<td class="p-space-md font-semibold text-on-surface">Organic Horticultural Rigor</td>
+<td class="p-space-md bg-primary-fixed/20 font-semibold text-primary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>Strict University Extension Standard</span>
+</div>
+</td>
+<td class="p-space-md text-on-surface-variant">
+                Generic crowd-sourced plant data
+              </td>
+<td class="p-space-md text-on-surface-variant">
+                Proprietary liquid synthetic salt pods
+              </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       7. TRUST & ORGANIC GUARANTEE
+       ========================================================================= -->
+<section class="w-full py-space-xl px-margin-mobile lg:px-margin">
+<div class="max-w-7xl mx-auto">
+<div class="bg-surface-container rounded-lg p-space-lg lg:p-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-8 flex flex-col">
+<div class="flex items-center gap-space-xs text-primary mb-space-xs">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest font-bold">Horticultural Safety Boundary</span>
+</div>
+<h2 class="font-headline-md text-headline-md-mobile lg:text-headline-md text-on-surface tracking-tight">
+              We Never Suggest Poison. Ever.
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm max-w-2xl">
+              Most online plant apps pull indiscriminately from commercial chemical pesticide catalogs. AI Gardening Mentor enforces strict safety guardrails: our core model is architecturally forbidden from recommending organophosphates, synthetic neurotoxins, or unverified folk concoctions that poison backyard soil.
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md mt-space-lg">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold text-on-surface">100% OMRI</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-[13px]">Materials Review Institute aligned solutions.</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold text-on-surface">Extension Peer-Reviewed</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-[13px]">Integrated Pest Management (IPM) protocols.</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold text-on-surface">Pollinator Safe</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-[13px]">Zero damage to bumblebees &amp; earthworms.</span>
+</div>
+</div>
+</div>
+<!-- Botanical Seal / Badge Graphic -->
+<div class="lg:col-span-4 flex items-center justify-center">
+<div class="relative w-48 h-48 rounded-full bg-primary/10 flex flex-col items-center justify-center text-center p-space-md shadow-inner">
+<span class="material-symbols-outlined text-[54px] text-primary mb-1">nest_eco_leaf</span>
+<span class="font-title-md text-title-md font-bold text-primary leading-tight">University Extension</span>
+<span class="font-label-sm text-label-sm text-secondary">Calibrated Agronomy</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       8. CALL TO ACTION & ONBOARDING CARD
+       ========================================================================= -->
+<section class="w-full py-space-xl px-margin-mobile lg:px-margin">
+<div class="max-w-7xl mx-auto">
+<div class="relative bg-primary text-on-primary rounded-xl p-space-lg lg:p-space-xl overflow-hidden shadow-2xl">
+<!-- Botanical background illustration shapes -->
+<div class="absolute -right-20 -top-20 w-80 h-80 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 -bottom-20 w-80 h-80 bg-secondary-fixed/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
+<span class="inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-white/20 text-on-primary font-label-sm text-label-sm mb-space-md">
+<span class="material-symbols-outlined text-[16px] text-on-primary-container">psychiatry</span>
+            Start Your First Bed in 3 Minutes
+          </span>
+<h2 class="font-display-lg text-display-lg-mobile lg:text-display-lg font-bold tracking-tight text-on-primary mb-space-sm">
+            Ready to Harvest Real Vegetables This Season?
+          </h2>
+<p class="font-body-lg text-body-lg text-on-primary/85 max-w-xl mb-space-lg">
+            Join over 45,000 backyard gardeners growing crisp greens, sweet peppers, and juicy heirloom tomatoes with calm, stress-free micro-habits.
+          </p>
+<!-- Email signup form -->
+<form class="flex flex-col sm:flex-row items-center gap-space-xs w-full max-w-md mb-space-lg" onsubmit="event.preventDefault(); alert('Welcome to AI Gardening Mentor! Check your email to set up your garden plot.');">
+<input class="w-full sm:flex-1 h-12 px-space-md rounded-full bg-white text-on-surface text-body-md placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-primary-fixed shadow-md" placeholder="Enter your email address" required="" type="email"/>
+<button class="w-full sm:w-auto h-12 px-space-lg rounded-full bg-on-primary-container text-on-secondary-container font-label-lg text-label-lg font-bold hover:bg-white transition-all shadow-md shrink-0" type="submit">
+              Get Free Plot Setup
+            </button>
+</form>
+<!-- App Store Buttons -->
+<div class="flex flex-wrap items-center justify-center gap-space-md text-on-primary/90 font-label-sm text-label-sm">
+<div class="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-space-md py-2 rounded-full cursor-pointer transition-all">
+<span class="material-symbols-outlined text-[20px]">phone_iphone</span>
+<span>Available for iOS App Store</span>
+</div>
+<div class="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-space-md py-2 rounded-full cursor-pointer transition-all">
+<span class="material-symbols-outlined text-[20px]">android</span>
+<span>Available on Google Play</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Client-side Interactive Script for Astro Islands Simulation & Triage Switching -->
+<script>
+  // Scenario Data Store for Panic Triage Island
+  const scenarios = {
+    roma: {
+      imageAlt: "Realistic botanical macro photo of yellowing bottom leaves of a vigorous Roma tomato plant in an organic raised garden bed, natural soil senescence, soft natural lighting.",
+      captionTitle: "Roma Tomato (Solanum lycopersicum)",
+      captionSub: "35 days post-transplant • Primary Bed 01",
+      confidence: "Confidence: 98.4%",
+      step1Title: "Natural Lower Leaf Senescence",
+      step1Body: "As your indeterminate tomato reaches 3 feet in height, it naturally sheds the earliest bottom cotyledons and leaves that receive little sunlight. The upper canopy is photosynthesizing vigorously and flowers are setting normally.",
+      step2Title: "Sanitize & Prune Bottom 3 Inches",
+      step2Body: "Wipe clean shears with rubbing alcohol. Snip the lowest 2 yellowing leaf stems flush with the main vine. This increases airflow and prevents soil rain-splash from reaching leaves. Compost the clippings.",
+      step3Title: "Halting the Panic: This is NOT Early Blight",
+      step3Body: "Notice there are no concentric brown rings with yellow target halos. Do NOT buy or spray commercial copper fungicides or chemical sprays. Your fruit cluster is completely safe and unaffected."
+    },
+    squash: {
+      imageAlt: "Macro close-up photo of yellow crookneck squash leaf showing subtle, harmless powdery white powdery spots on surface in outdoor sunlight, organic soil in background.",
+      captionTitle: "Yellow Summer Squash (Cucurbita pepo)",
+      captionSub: "28 days post-sowing • Hill 02",
+      confidence: "Confidence: 96.8%",
+      step1Title: "Early Surface Powdery Mildew (Podosphaera)",
+      step1Body: "Harmless fungal spores germinated on upper leaf surface during warm, humid nights. It is entirely superficial and has not penetrated the vascular root system or fruit stems.",
+      step2Title: "Baking Soda & Organic Castile Wash",
+      step2Body: "Mix 1 tsp baking soda and 3 drops organic Castile soap into 1 quart water. Spray lightly in early morning. The alkaline shift halts spore reproduction immediately in 3 minutes.",
+      step3Title: "Halting the Panic: Do NOT Pull the Plant",
+      step3Body: "Novices frequently discard healthy squash plants over powdery mildew. Squash vines continuously pump out fresh replacement leaves. Absolutely zero chemical fungicides needed."
+    },
+    pepper: {
+      imageAlt: "Macro photo of healthy green Bell Pepper plant drooping slightly under intense 2:00 PM summer heat in a backyard vegetable garden, dry surface soil.",
+      captionTitle: "Bell Pepper (Capsicum annuum)",
+      captionSub: "48 days post-transplant • Container #04",
+      confidence: "Confidence: 99.1%",
+      step1Title: "Heat Transpiration Protection Droop",
+      step1Body: "During peak 88°F+ afternoon solar exposure, pepper leaves lose turgor pressure to protect leaf stomata from excessive water evaporation. This is a vital evolutionary survival reflex.",
+      step2Title: "Schedule Deep Base Soak for Dawn",
+      step2Body: "Do NOT douse the plant with midday cold water right now (can shock hot roots). Let it rest. Set a phone reminder to provide a slow 1-gallon root soak tomorrow at 6:30 AM.",
+      step3Title: "Halting the Panic: This is NOT Bacterial Wilt",
+      step3Body: "Bacterial wilt causes permanent collapse with yellowing veining. Your pepper will naturally perk completely upright by 7:30 PM once shadows lengthen. Do not add fertilizers."
+    }
+  };
+
+  // Wire Scenario Pills
+  const triagePills = document.querySelectorAll('.triage-pill');
+  triagePills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      triagePills.forEach(p => {
+        p.classList.remove('active', 'bg-secondary-container', 'text-on-secondary-container');
+        p.classList.add('bg-surface-container-highest', 'text-on-surface-variant');
+      });
+      pill.classList.remove('bg-surface-container-highest', 'text-on-surface-variant');
+      pill.classList.add('active', 'bg-secondary-container', 'text-on-secondary-container');
+
+      const scenarioKey = pill.getAttribute('data-scenario');
+      const data = scenarios[scenarioKey];
+      if (!data) return;
+
+      const img = document.getElementById('triage-image');
+      img.setAttribute('data-alt', data.imageAlt);
+      document.getElementById('triage-caption-title').textContent = data.captionTitle;
+      document.getElementById('triage-caption-sub').textContent = data.captionSub;
+      document.getElementById('triage-confidence').textContent = data.confidence;
+      document.getElementById('triage-step1-title').textContent = data.step1Title;
+      document.getElementById('triage-step1-body').textContent = data.step1Body;
+      document.getElementById('triage-step2-title').textContent = data.step2Title;
+      document.getElementById('triage-step2-body').textContent = data.step2Body;
+      document.getElementById('triage-step3-title').textContent = data.step3Title;
+      document.getElementById('triage-step3-body').textContent = data.step3Body;
+    });
+  });
+
+  // Weather Override Simulator
+  const simButtons = document.querySelectorAll('.sim-btn');
+  const simWeatherTitle = document.getElementById('sim-weather-title');
+  const simStatusSub = document.getElementById('sim-status-sub');
+  const simStatusIcon = document.getElementById('sim-status-icon');
+  const simActionBadge = document.getElementById('sim-action-badge');
+  const simTaskContainer = document.getElementById('sim-task-container');
+  const simTaskTitle = document.getElementById('sim-task-title');
+  const simTaskDesc = document.getElementById('sim-task-desc');
+  const simTaskTime = document.getElementById('sim-task-time');
+  const simTaskIcon = document.getElementById('sim-task-icon');
+  const simTaskIconBg = document.getElementById('sim-task-icon-bg');
+  const simTaskBtn = document.getElementById('sim-task-btn');
+  const simSatelliteNote = document.getElementById('sim-satellite-note');
+
+  const weatherStates = {
+    sunny: {
+      title: "Clear Conditions • 78°F • 0.00\" Rain",
+      sub: "Normal biological care cadence active",
+      icon: "wb_sunny",
+      iconColor: "text-primary",
+      badge: "Standard Daily Plan",
+      badgeBg: "bg-secondary-container",
+      badgeText: "text-on-secondary-container",
+      taskTitle: "Watering: Deep Root Soak",
+      taskDesc: "Apply 1 gallon per tomato plant slowly at the soil base. Direct early morning hydration minimizes fungal risk.",
+      taskTime: "5 mins",
+      taskIcon: "water_drop",
+      taskIconBg: "bg-primary text-on-primary",
+      btnText: "Mark Done (5 min)",
+      btnClass: "bg-primary text-on-primary",
+      note: "Real-time NOAA radar feed connected. Next automatic microclimate sweep in 12 minutes."
+    },
+    rain: {
+      title: "Heavy Rainfall Detected • 64°F • 0.85\" Precip",
+      sub: "Over-watering prevention override automatically triggered",
+      icon: "rainy",
+      iconColor: "text-tertiary",
+      badge: "DEFERRED (WEATHER OVERRIDE)",
+      badgeBg: "bg-tertiary-container",
+      badgeText: "text-on-tertiary-container",
+      taskTitle: "Watering Automatically Paused",
+      taskDesc: "0.85\" rainfall detected in past 3 hours. Deep root saturation verified. Watering halted to protect root oxygen and prevent root rot.",
+      taskTime: "Deferred",
+      taskIcon: "umbrella",
+      taskIconBg: "bg-tertiary text-on-tertiary",
+      btnText: "Roots Protected ✓",
+      btnClass: "bg-secondary-container text-on-secondary-container",
+      note: "Automated rain gauge active. Soil moisture saturation index: 94%. Next review tomorrow at 7:00 AM."
+    },
+    freeze: {
+      title: "CRITICAL: Freeze Warning • 32°F Overnight Low",
+      sub: "Cold front arrival confirmed for 8:15 PM tonight",
+      icon: "ac_unit",
+      iconColor: "text-error",
+      badge: "EMERGENCY FROST INTERVENTION",
+      badgeBg: "bg-error-container",
+      badgeText: "text-on-error-container",
+      taskTitle: "Deploy Frost Cloths Over Tender Crops",
+      taskDesc: "Insert stakes and secure lightweight row covers over peppers, tomatoes, and squash before 6:00 PM. Trap ground thermal heat.",
+      taskTime: "8 mins",
+      taskIcon: "severe_cold",
+      taskIconBg: "bg-error text-on-error",
+      btnText: "Cover Plants Now",
+      btnClass: "bg-error text-on-error",
+      note: "National Weather Service Frost Advisory active for USDA Zone 7b until 9:00 AM tomorrow."
+    }
+  };
+
+  simButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      simButtons.forEach(b => {
+        b.classList.remove('active', 'bg-secondary-container', 'text-on-secondary-container');
+        b.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+      });
+      btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+      btn.classList.add('active', 'bg-secondary-container', 'text-on-secondary-container');
+
+      const simKey = btn.getAttribute('data-sim');
+      const data = weatherStates[simKey];
+      if (!data) return;
+
+      simWeatherTitle.textContent = data.title;
+      simStatusSub.textContent = data.sub;
+      simStatusIcon.textContent = data.icon;
+      simStatusIcon.className = `material-symbols-outlined text-[28px] ${data.iconColor}`;
+      
+      simActionBadge.textContent = data.badge;
+      simActionBadge.className = `px-space-md py-1 rounded-full font-label-sm text-label-sm font-semibold ${data.badgeBg} ${data.badgeText}`;
+
+      simTaskTitle.textContent = data.taskTitle;
+      simTaskDesc.textContent = data.taskDesc;
+      simTaskTime.textContent = data.taskTime;
+      simTaskIcon.textContent = data.taskIcon;
+      simTaskIconBg.className = `w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${data.taskIconBg}`;
+      
+      simTaskBtn.textContent = data.btnText;
+      simTaskBtn.className = `h-10 px-space-md rounded-full font-label-sm text-label-sm shadow ${data.btnClass}`;
+      
+      simSatelliteNote.textContent = data.note;
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-low mt-space-xl"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-space-xl"><div class="md:col-span-5 flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="AI Gardening Mentor Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK8UT2_yTVvW_W8HaybW4MhxHfG2kfDKtXkM01lpBtLoD_KercnZpM0nCGIse3NK4IJZmo-zEZToJRwhJSESpIItkXccKseRcn3aPROYtYAi-mAJoOWoDN9hfYPyHLDuK7c9dxxaal-r8IzN7LIBi9j899cNWBByMlIv9QAYfl4tWI6HHyr3Kod4UhaKiUJTGXwix7xlLvCiEFkgOP3wDlLAxfV5bri-V45n0Cf4M"/><span class="font-title-md text-title-md text-on-surface">AI Gardening Mentor</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Authoritative organic plant science translated into gentle daily micro-habits. Built upon agronomic models and botanical diagnostic intelligence.</p><div class="flex flex-wrap items-center gap-space-xs mt-space-sm"><span class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm"><span class="material-symbols-outlined text-[14px] text-primary">verified</span>Land-Grant Extension Calibrated</span><span class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm"><span class="material-symbols-outlined text-[14px] text-primary">eco</span>IPM &amp; OMRI Aligned</span></div></div><div class="md:col-span-2 flex flex-col gap-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-space-xs">Navigation</span><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="camera-triage" href="#">Camera Triage</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="7-day-cadence" href="#">7-Day Cadence</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="organic-mentor" href="#">Organic Mentor</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="compare" href="#">Compare Variants</a></div><div class="md:col-span-3 flex flex-col gap-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-space-xs">Science &amp; Extension</span><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#">Diagnostic Protocols</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#">Soil Biology Whitepaper</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#">Agronomic Sensor Integration</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#">Extension Partners</a></div><div class="md:col-span-2 flex flex-col gap-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-space-xs">Legal &amp; Standards</span><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#">Organic Compliance</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#">Privacy Policy</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#">Terms of Cultivation</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" href="#">Data Provenance</a></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-on-surface-variant font-label-sm text-label-sm bg-surface-container-high/50 p-space-md rounded-DEFAULT"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-primary">psychology_alt</span><span>Validated against university agricultural extension data and organic soil stewardship standards.</span></div><span>© 2025 AI Gardening Mentor Inc. Botanical precision engineered.</span></div></div></footer></body></html>

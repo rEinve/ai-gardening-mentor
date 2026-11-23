@@ -1,0 +1,65 @@
+/* Subscribe form adapted from Design/subscribe.png and subscribe.component.json. */
+.newsletter-form {
+    --grid-gap: var(--space-xs);
+    inline-size: min(100%, var(--measure-prose));
+}
+
+.newsletter-form__row {
+    display: flex;
+    align-items: stretch;
+    gap: calc(var(--space-xxs) / 4);
+    min-block-size: var(--space-l);
+    padding: calc(var(--space-xxs) / 4);
+    border: 1px solid var(--outline-variant);
+    border-radius: var(--radius-pill);
+    background: var(--surface-container-lowest);
+}
+
+.newsletter-form__row:focus-within {
+    outline: medium solid var(--primary);
+}
+
+.newsletter-form__input.input {
+    flex: 1 1 auto;
+    min-inline-size: 0;
+    inline-size: auto;
+    min-block-size: 0;
+    padding-inline: calc(var(--space-xs) / 2);
+    border: 0;
+    border-radius: var(--radius-pill);
+    background: transparent;
+}
+
+.newsletter-form__input.input:focus-visible {
+    outline: none;
+    background: transparent;
+}
+
+.newsletter-form__button.button {
+    flex: 0 0 auto;
+    padding-inline: var(--space-xs);
+    border-radius: var(--radius-pill);
+    background: var(--tertiary-fixed-dim);
+    color: var(--on-tertiary-fixed-variant);
+}
+
+.newsletter-form__button.button:hover,
+.newsletter-form__button.button:active {
+    background: var(--tertiary-fixed-dim);
+    color: var(--on-tertiary-fixed-variant);
+}
+
+.newsletter-form__consent {
+    color: var(--on-surface-variant);
+    font-size: var(--text-sm);
+    text-align: start;
+}
+
+.newsletter-form__consent input {
+    accent-color: var(--tertiary);
+}
+
+.newsletter-form__note {
+    color: var(--on-surface-variant);
+    font-size: var(--text-sm);
+}

@@ -1,0 +1,14 @@
+@use 'themeui-lab/src/scss/abstracts/mixins' as tools;
+
+#secondary-benefits h2 {
+    max-inline-size: 18ch;
+    font-size: var(--step-3);
+}
+
+@include tools.breakpoint(large) {
+    #secondary-benefits h2 {
+        font-size: var(--step-5);
+    }
+}
+
+

@@ -1,0 +1,364 @@
+{
+  "id": "F2C5F94F-9FAC-4248-A579-308C925229EB",
+  "name": "tab-hozintal",
+  "slug": "tab-hozintal",
+  "type": "tab",
+  "width": 977,
+  "height": 1221,
+  "layersCount": 2,
+  "layers": [
+    {
+      "name": "tabs__panel why mosi?",
+      "type": "Group",
+      "x": 14,
+      "y": 202,
+      "width": 963,
+      "height": 1019,
+      "layers": [
+        {
+          "name": "Group",
+          "type": "Group",
+          "x": 0,
+          "y": 0,
+          "width": 963,
+          "height": 1019,
+          "layers": [
+            {
+              "name": "quote",
+              "type": "Group",
+              "x": 207,
+              "y": 932,
+              "width": 641,
+              "height": 87,
+              "layers": [
+                {
+                  "name": "Mosi exists to close",
+                  "type": "Text",
+                  "x": 27,
+                  "y": 15,
+                  "width": 614,
+                  "height": 58,
+                  "text": "Mosi exists to close this first-conversation gap without pretending that conversation alone fixes the business.",
+                  "fontSize": 18,
+                  "fontFamily": "Helvetica",
+                  "fontWeight": 5,
+                  "lineHeight": 29,
+                  "textColor": "#73777f",
+                  "alignment": "left"
+                },
+                {
+                  "name": "Rectangle 26",
+                  "type": "ShapePath",
+                  "x": 0,
+                  "y": 0,
+                  "width": 7,
+                  "height": 87
+                }
+              ]
+            },
+            {
+              "name": "The visitor has a sy",
+              "type": "Text",
+              "x": 4,
+              "y": 287,
+              "width": 470,
+              "height": 94,
+              "text": "The visitor has a symptom, not a solution",
+              "fontSize": 36,
+              "fontFamily": "Clarity City",
+              "fontWeight": 5,
+              "lineHeight": null,
+              "textColor": "#73777f",
+              "alignment": "left"
+            },
+            {
+              "name": "They may ask for a n",
+              "type": "Text",
+              "x": 501,
+              "y": 287,
+              "width": 419,
+              "height": 87,
+              "text": "They may ask for a new website, more marketing, automation, or a chatbot without knowing where the journey is actually breaking.",
+              "fontSize": 18,
+              "fontFamily": "Helvetica",
+              "fontWeight": 5,
+              "lineHeight": 29,
+              "textColor": "#73777f",
+              "alignment": "left"
+            },
+            {
+              "name": "The contact form ask",
+              "type": "Text",
+              "x": 4,
+              "y": 436,
+              "width": 470,
+              "height": 94,
+              "text": "The contact form asks too much too early",
+              "fontSize": 36,
+              "fontFamily": "Clarity City",
+              "fontWeight": 5,
+              "lineHeight": null,
+              "textColor": "#73777f",
+              "alignment": "left"
+            },
+            {
+              "name": "The visitor must sur",
+              "type": "Text",
+              "x": 443,
+              "y": 436,
+              "width": 477,
+              "height": 58,
+              "text": "The visitor must surrender details before receiving anything useful—and may still need to repeat the entire story later.",
+              "fontSize": 18,
+              "fontFamily": "Helvetica",
+              "fontWeight": 5,
+              "lineHeight": 29,
+              "textColor": "#73777f",
+              "alignment": "left"
+            },
+            {
+              "name": "The first human resp",
+              "type": "Text",
+              "x": 7,
+              "y": 633,
+              "width": 412,
+              "height": 94,
+              "text": "The first human response lacks context",
+              "fontSize": 36,
+              "fontFamily": "Clarity City",
+              "fontWeight": 5,
+              "lineHeight": null,
+              "textColor": "#73777f",
+              "alignment": "left"
+            },
+            {
+              "name": "The owner receives a",
+              "type": "Text",
+              "x": 501,
+              "y": 633,
+              "width": 399,
+              "height": 87,
+              "text": "The owner receives a name and email but not the page, question, urgency, or problem behind the enquiry.",
+              "fontSize": 18,
+              "fontFamily": "Helvetica",
+              "fontWeight": 5,
+              "lineHeight": 29,
+              "textColor": "#73777f",
+              "alignment": "left"
+            },
+            {
+              "name": "A generic bot create",
+              "type": "Text",
+              "x": 4,
+              "y": 785,
+              "width": 470,
+              "height": 94,
+              "text": "A generic bot creates \nmore noise",
+              "fontSize": 36,
+              "fontFamily": "Clarity City",
+              "fontWeight": 5,
+              "lineHeight": null,
+              "textColor": "#73777f",
+              "alignment": "left"
+            },
+            {
+              "name": "It answers everythin",
+              "type": "Text",
+              "x": 503,
+              "y": 801,
+              "width": 397,
+              "height": 58,
+              "text": "It answers everything, invents confidence, or pushes every visitor into the same sales path.",
+              "fontSize": 18,
+              "fontFamily": "Helvetica",
+              "fontWeight": 5,
+              "lineHeight": 29,
+              "textColor": "#73777f",
+              "alignment": "left"
+            },
+            {
+              "name": "Line",
+              "type": "ShapePath",
+              "x": 0,
+              "y": 402,
+              "width": 917,
+              "height": 1
+            },
+            {
+              "name": "Line 2",
+              "type": "ShapePath",
+              "x": 0,
+              "y": 607,
+              "width": 917,
+              "height": 1
+            },
+            {
+              "name": "Line 3",
+              "type": "ShapePath",
+              "x": 0,
+              "y": 748,
+              "width": 917,
+              "height": 1
+            },
+            {
+              "name": "The quality of help",
+              "type": "Text",
+              "x": 1,
+              "y": 31,
+              "width": 962,
+              "height": 188,
+              "text": "The quality of help should follow the customer.",
+              "fontSize": 72,
+              "fontFamily": "Clarity City",
+              "fontWeight": 5,
+              "lineHeight": null,
+              "textColor": "#73777f",
+              "alignment": "left"
+            },
+            {
+              "name": "Line",
+              "type": "ShapePath",
+              "x": 0,
+              "y": 267,
+              "width": 921,
+              "height": 1
+            },
+            {
+              "name": "Customers choose the",
+              "type": "Text",
+              "x": 5,
+              "y": 0,
+              "width": 331,
+              "height": 12,
+              "text": "Customers choose the channel.  You keep the standards.",
+              "fontSize": 12,
+              "fontFamily": "Helvetica",
+              "fontWeight": 5,
+              "lineHeight": null,
+              "textColor": "#171c1f",
+              "alignment": "left"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "Group",
+      "x": 0,
+      "y": 0,
+      "width": 908,
+      "height": 101,
+      "layers": [
+        {
+          "name": "on-surface copy",
+          "type": "ShapePath",
+          "x": 0,
+          "y": 0,
+          "width": 908,
+          "height": 101
+        },
+        {
+          "name": "tabs__tab",
+          "type": "Group",
+          "x": 3,
+          "y": 2,
+          "width": 274,
+          "height": 92,
+          "layers": [
+            {
+              "name": "on-surface",
+              "type": "ShapePath",
+              "x": 0,
+              "y": 0,
+              "width": 274,
+              "height": 92
+            },
+            {
+              "name": "surface",
+              "type": "Text",
+              "x": 58,
+              "y": 33,
+              "width": 158,
+              "height": 31,
+              "text": "1/  Why Mosi?",
+              "fontSize": 24,
+              "fontFamily": "Clarity City",
+              "fontWeight": 5,
+              "lineHeight": null,
+              "textColor": "#171c1f",
+              "alignment": "left"
+            }
+          ]
+        },
+        {
+          "name": "tabs__tab",
+          "type": "Group",
+          "x": 578,
+          "y": 1,
+          "width": 298,
+          "height": 95,
+          "layers": [
+            {
+              "name": "tab",
+              "type": "ShapePath",
+              "x": 0,
+              "y": 0,
+              "width": 298,
+              "height": 95
+            },
+            {
+              "name": "3/ How it works?",
+              "type": "Text",
+              "x": 49,
+              "y": 34,
+              "width": 199,
+              "height": 31,
+              "text": "3/  How it works?",
+              "fontSize": 24,
+              "fontFamily": "Clarity City",
+              "fontWeight": 5,
+              "lineHeight": null,
+              "textColor": "#73777f",
+              "alignment": "left"
+            }
+          ]
+        },
+        {
+          "name": "tabs__tab",
+          "type": "Group",
+          "x": 289,
+          "y": 1,
+          "width": 274,
+          "height": 95,
+          "layers": [
+            {
+              "name": "tab",
+              "type": "ShapePath",
+              "x": 0,
+              "y": 0,
+              "width": 274,
+              "height": 95
+            },
+            {
+              "name": "2/ What it means?",
+              "type": "Text",
+              "x": 26,
+              "y": 34,
+              "width": 214,
+              "height": 31,
+              "text": "2/ What it means?",
+              "fontSize": 24,
+              "fontFamily": "Clarity City",
+              "fontWeight": 5,
+              "lineHeight": null,
+              "textColor": "#73777f",
+              "alignment": "left"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markupSnippet": "<div class=\"tabs\" data-component=\"tab\" aria-label=\"tab-hozintal\">\n  <div class=\"tabs__nav\" role=\"tablist\">\n    <button class=\"tabs__tab active\" role=\"tab\" aria-selected=\"true\">Tab 1</button>\n    <button class=\"tabs__tab\" role=\"tab\" aria-selected=\"false\">Tab 2</button>\n  </div>\n  <div class=\"tabs__panels\">\n    <div class=\"tabs__panel active\" role=\"tabpanel\">Content 1</div>\n  </div>\n</div>"
+}

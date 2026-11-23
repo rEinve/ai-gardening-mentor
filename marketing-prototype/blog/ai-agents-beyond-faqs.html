@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <include src="partials/header.html"></include>
+  <title>Can AI Agents Actually Solve Problems or Just Answer FAQs? | IntelliWebLab Blog</title>
+  <meta name="description" content="AI agents can complete bounded support tasks beyond FAQs. Learn what a verified action requires and how to test it.">
+</head>
+
+<body>
+  <main>
+    <include src="partials/main-menu.html"></include>
+    <section class="blog-article blog-article--questions" id="top" aria-labelledby="article-title">
+      <div class="container">
+        <article class="grid">
+          <nav class="col-full md-col-10-centered breadcrumbs blog-breadcrumbs cluster" aria-label="Breadcrumb">
+            <a href="/blog/">Blog</a><span aria-hidden="true">/</span>
+            <a href="/blog/#blog-panel-customer">Customer engagement</a><span aria-hidden="true">/</span>
+            <span aria-current="page">Can AI Agents Actually Solve Problems or Just Answer FAQs?</span>
+          </nav>
+          <header class="post-header blog-article__header padding-t space-t-xl">
+            <p class="eyebrow eyebrow--pill"><span class="eyebrow__label">Customer engagement</span></p>
+            <h1 id="article-title">Can AI Agents Actually Solve Problems or Just Answer FAQs?</h1>
+            <p class="blog-article__excerpt">AI agents can complete bounded support tasks beyond FAQs. Learn what a verified action requires and how to test it.</p>
+            <div class="post-byline"><span class="post-byline__avatar" aria-hidden="true">B</span><span class="post-byline__author"><strong>Editorial Team</strong><span>Editorial team</span></span><span class="post-byline__divider" aria-hidden="true"></span><time datetime="2026-10-23T20:03:52.982Z">Oct 23, 2026</time><span class="post-byline__updated">Updated Oct 23, 2026</span><span class="post-byline__reading">2 min read</span></div>
+          </header>
+          <figure class="col-full md-col-10-centered post-artwork">
+            <picture class="blog-article__media">
+              <img src="/media/blog/ai-agents-beyond-faqs-flat-v3.svg" alt="An answer card passes through approved action steps and ends in a verified completed case." width="1350" height="1080" loading="eager" fetchpriority="high">
+            </picture>
+          </figure>
+          <div class="col-full exp-col-8-centered post-layout with-sidebar padding-t space-t-m">
+            <div class="grid article-grid">
+              <aside class="sidebar__aside takeaways exp-col-4" aria-label="Article takeaways">
+                <nav class="blog-article__toc" aria-label="On this post"></nav>
+              </aside>
+              <div class="exp-col-8 post-content blog-article__body">
+                <section class="blog-article__section" aria-labelledby="ai-agents-beyond-faqs-1">
+                <h2 id="ai-agents-beyond-faqs-1">What a solved problem looks like</h2>
+                <p>An FAQ reply might explain the return window. A task-capable agent could check the purchase date, confirm eligibility, create a return request, and send the customer the reference number. The second workflow depends on current policy, accurate order data, an authorized action, and a confirmation that the return was actually created.</p>
+                <p>A smooth sentence saying “your return is started” is not evidence. The connected system should show the new request, and the customer should receive a traceable result.</p>
+              </section>
+              <section class="blog-article__section" aria-labelledby="ai-agents-beyond-faqs-2">
+                <h2 id="ai-agents-beyond-faqs-2">Set a boundary for action</h2>
+                <p>Start with actions that are reversible or low risk. Use identity checks before accessing private records and approval before consequential changes. Restrict each tool to the minimum permissions needed. When a rule is unclear, data conflicts, or a tool fails, the agent should stop, explain the next step, and transfer the case with context.</p>
+              </section>
+              <section class="blog-article__section" aria-labelledby="ai-agents-beyond-faqs-3">
+                <h2 id="ai-agents-beyond-faqs-3">Test for resolution, not performance theater</h2>
+                <p>Give the agent a real case in a safe test environment. Check the database or support system after every step. Include cases with missing information, ineligible requests, duplicate messages, and a customer who changes the instruction midway. Count correct completed outcomes, errors, and successful handoffs separately.</p>
+                <p>Only expand its authority after you can inspect and correct failures. A narrower agent that completes one task reliably is more valuable than a broad agent that merely sounds capable.</p>
+              </section>
+              <section class="blog-article__section" aria-labelledby="ai-agents-beyond-faqs-4">
+                <h2 id="ai-agents-beyond-faqs-4">Avoid duplicate or unfinished actions</h2>
+                <p>A customer may send the same request twice or lose connection after confirming. The connected workflow should use a case or transaction identifier so a retry does not create two returns, two bookings, or two refunds. The agent should distinguish “requested” from “completed” and report the actual status. If it cannot verify the final state, it should say so and route the case for review rather than reassure the customer without evidence.</p>
+              </section>
+              <section class="blog-article__section" aria-labelledby="takeaway-title">
+                <h2 id="takeaway-title">The practical answer</h2>
+                <p>An AI agent solves a problem when a permitted, verifiable action changes the case as intended.</p>
+              </section>
+              <section class="blog-article__section" aria-labelledby="reading-title">
+                <h2 id="reading-title">Further reading</h2>
+                <p><a href="https://airc.nist.gov/airmf-resources/playbook/manage/">NIST AI RMF Manage guide</a> · <a href="https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/">OWASP Top 10 for LLM Applications</a></p>
+              </section>
+              </div>
+            </div>
+          </div>
+          <footer class="blog-article__footer stack stack--sm">
+            <p class="label-s">IntelliWebLab notes</p>
+            <a class="button button--ghost" href="/blog/">Back to all notes <span class="button__icon material-icons-round" aria-hidden="true">arrow_back</span></a>
+          </footer>
+        </article>
+      </div>
+    </section>
+    <include src="partials/subscribe-form.html"></include>
+  </main>
+  <include src="partials/footer.html"></include>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

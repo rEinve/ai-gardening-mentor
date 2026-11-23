@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1350" height="1080" viewBox="0 0 1350 1080" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Connected customer support channels</title>
+  <desc id="desc">Four simple channel tiles feed one shared customer conversation inside a flat dashboard illustration.</desc>
+  <rect width="1350" height="1080" rx="52" fill="#F4EDE2"/>
+  <circle cx="1110" cy="205" r="188" fill="#EAD9BE"/>
+  <rect x="148" y="144" width="850" height="792" rx="42" fill="#FFFFFF"/>
+  <rect x="204" y="200" width="254" height="20" rx="10" fill="#D6C7B1"/>
+  <rect x="204" y="240" width="390" height="12" rx="6" fill="#E9E1D6"/>
+  <rect x="204" y="290" width="738" height="2" fill="#EEE8DF"/>
+
+  <rect x="204" y="330" width="166" height="158" rx="24" fill="#F3E9D9"/>
+  <circle cx="246" cy="376" r="17" fill="#B58B53"/>
+  <path d="M238 376h16m-8-8v16" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <rect x="229" y="414" width="106" height="11" rx="5.5" fill="#A28A68"/>
+  <rect x="229" y="439" width="72" height="8" rx="4" fill="#D6C7B1"/>
+
+  <rect x="394" y="330" width="166" height="158" rx="24" fill="#E6EFEB"/>
+  <circle cx="436" cy="376" r="17" fill="#628578"/>
+  <path d="M428 376h16m-8-8v16" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <rect x="419" y="414" width="106" height="11" rx="5.5" fill="#80968D"/>
+  <rect x="419" y="439" width="72" height="8" rx="4" fill="#CBDAD4"/>
+
+  <rect x="584" y="330" width="166" height="158" rx="24" fill="#E9EDF0"/>
+  <circle cx="626" cy="376" r="17" fill="#6D7581"/>
+  <path d="M618 376h16m-8-8v16" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <rect x="609" y="414" width="106" height="11" rx="5.5" fill="#7F8892"/>
+  <rect x="609" y="439" width="72" height="8" rx="4" fill="#CBD2D8"/>
+
+  <rect x="774" y="330" width="166" height="158" rx="24" fill="#F1E7E3"/>
+  <circle cx="816" cy="376" r="17" fill="#9E735D"/>
+  <path d="M808 376h16m-8-8v16" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <rect x="799" y="414" width="106" height="11" rx="5.5" fill="#A98B7D"/>
+  <rect x="799" y="439" width="72" height="8" rx="4" fill="#DECFC8"/>
+
+  <path d="M287 488v52m190-52v52m190-52v52m190-52v52M287 540h570M572 540v39" stroke="#BBC0C5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="572" cy="540" r="12" fill="#628578"/>
+  <rect x="204" y="579" width="736" height="180" rx="28" fill="#E6EFEB"/>
+  <circle cx="276" cy="646" r="33" fill="#628578"/>
+  <path d="m263 646 10 10 18-21" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="333" y="622" width="266" height="14" rx="7" fill="#4A626C"/>
+  <rect x="333" y="654" width="456" height="10" rx="5" fill="#97A9A1"/>
+  <rect x="333" y="679" width="322" height="10" rx="5" fill="#CBDAD4"/>
+  <rect x="204" y="804" width="738" height="2" fill="#EEE8DF"/>
+  <circle cx="228" cy="851" r="15" fill="#C89451"/>
+  <rect x="259" y="841" width="310" height="11" rx="5.5" fill="#818783"/>
+  <rect x="259" y="865" width="220" height="8" rx="4" fill="#D6D9D6"/>
+
+  <rect x="1032" y="566" width="230" height="278" rx="34" fill="#E6EFEB"/>
+  <circle cx="1147" cy="670" r="53" stroke="#97A9A1" stroke-width="15"/>
+  <path d="M1147 617a53 53 0 0 1 49 72" stroke="#4C786A" stroke-width="15" stroke-linecap="round"/>
+  <rect x="1085" y="771" width="124" height="13" rx="6.5" fill="#80968D"/>
+  <rect x="1103" y="799" width="88" height="9" rx="4.5" fill="#CBDAD4"/>
+</svg>

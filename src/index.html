@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Gardening Mentor • Eliminate Novice Anxiety & Grow Vegetables</title>
+  <meta name="description" content="Intelligent gardening mentor designed specifically to de-escalate novice anxiety. 3-step calm triage, 5-minute weather-adaptive micro-habits, and organic AI advice.">
+  <link rel="stylesheet" href="styles/m3-tokens.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <!-- Top App Bar -->
+  <header class="top-app-bar">
+    <div class="container top-app-bar__inner">
+      <a href="#" class="top-app-bar__brand">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="color: var(--md-sys-color-primary)">
+          <path d="M12 3C7.58 3 4 6.58 4 11C4 15.42 7.58 19 12 19V21C6.48 21 2 16.52 2 11C2 5.48 6.48 1 12 1C17.52 1 22 5.48 22 11H20C20 6.58 16.42 3 12 3M12 7C9.79 7 8 8.79 8 11C8 13.21 9.79 15 12 15C14.21 15 16 13.21 16 11H14C14 12.1 13.1 13 12 13C10.9 13 10 12.1 10 11C10 9.9 10.9 9 12 9V7Z"/>
+        </svg>
+        <span>AI Gardening Mentor</span>
+      </a>
+
+      <nav>
+        <ul class="top-app-bar__nav">
+          <li><a href="#triage" class="top-app-bar__link">Camera Triage</a></li>
+          <li><a href="#cadence" class="top-app-bar__link">7-Day Cadence</a></li>
+          <li><a href="#mentor" class="top-app-bar__link">Organic Mentor</a></li>
+          <li><a href="#compare" class="top-app-bar__link">Compare</a></li>
+        </ul>
+      </nav>
+
+      <div class="top-app-bar__actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <span id="themeIcon">🌙</span>
+        </button>
+        <a href="#download" class="btn btn--primary">Download App</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="section">
+      <div class="container hero-grid">
+        <div class="hero__content">
+          <div class="chip chip--accent chip--pill">
+            🌱 Built for Real Garden Beds & Dirt • University Extension Science
+          </div>
+          <h1 class="display-large">
+            Stop Guessing. Stop Panicking. Grow Vegetables with Confidence.
+          </h1>
+          <p class="body-large">
+            The first intelligent gardening mentor built specifically to eliminate novice anxiety. Get instant 3-step calm triage from a quick photo, follow 5-minute daily micro-habits that adapt to the weather, and chat with an organic mentor that already knows your plot.
+          </p>
+          <div class="hero__actions">
+            <a href="#download" class="btn btn--primary">Start Growing Free</a>
+            <a href="#triage" class="btn btn--outlined">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="3.2"/>
+                <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
+              </svg>
+              Test Live Triage
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Preview Card -->
+        <div class="card card--elevated" style="background-color: var(--md-sys-color-surface-container);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <span class="chip chip--pill">Live Diagnostic</span>
+            <span style="font-size: 0.85rem; color: var(--md-sys-color-primary); font-weight: 600;">99.4% Organic Confidence</span>
+          </div>
+          <div style="background-color: var(--md-sys-color-surface); padding: 1rem; border-radius: 12px; margin-bottom: 1rem;">
+            <p style="font-weight: 600; margin-bottom: 0.25rem;">Roma Tomato (Plot A - Raised Bed)</p>
+            <p style="font-size: 0.875rem; color: var(--md-sys-color-on-surface-variant);">Diagnosed: Natural Lower Leaf Senescence</p>
+          </div>
+          <div style="background: rgba(30,107,55,0.1); border-left: 3px solid var(--md-sys-color-primary); padding: 0.75rem 1rem; border-radius: 6px;">
+            <p style="font-size: 0.875rem; font-weight: 500; color: var(--md-sys-color-primary);">Immediate Action (2 min):</p>
+            <p style="font-size: 0.85rem;">Prune the 2 bottom yellowing leaves with clean shears to maximize airflow. No chemicals needed!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Panic Triage Demo (Interactive Island) -->
+    <section id="triage" class="section section--compact">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin-inline: auto; margin-bottom: 3rem;">
+          <span class="chip chip--pill" style="margin-bottom: 0.75rem;">Interactive Simulator</span>
+          <h2 class="headline-medium">3-Step Panic Triage Engine</h2>
+          <p class="body-medium" style="margin-top: 0.5rem;">
+            When novices spot yellowing or holes, they panic-spray toxic chemicals. AI Gardening Mentor halts the spiral with calm, actionable reassurance.
+          </p>
+        </div>
+
+        <div class="triage-demo">
+          <div class="triage-tabs" id="triageTabs">
+            <button class="triage-tab-btn active" data-scenario="tomato">🍅 Tomato Lower Leaves Yellowing</button>
+            <button class="triage-tab-btn" data-scenario="squash">🥒 White Spots on Zucchini Leaf</button>
+            <button class="triage-tab-btn" data-scenario="pepper">🫑 Bell Pepper Mid-Day Droop</button>
+          </div>
+
+          <div id="triageResultArea">
+            <!-- Dynamic Step 1 -->
+            <div class="plan-step">
+              <div class="plan-step__badge plan-step__badge--what">1</div>
+              <div>
+                <h4 class="title-large" style="margin-bottom: 0.25rem;" id="triageWhatTitle">What It Is: Natural Lower Leaf Senescence</h4>
+                <p class="body-medium" id="triageWhatBody">The plant is withdrawing mobile nitrogen from older lower shaded leaves to feed vigorous new upper growth and flower clusters.</p>
+              </div>
+            </div>
+
+            <!-- Dynamic Step 2 -->
+            <div class="plan-step">
+              <div class="plan-step__badge plan-step__badge--action">2</div>
+              <div>
+                <h4 class="title-large" style="margin-bottom: 0.25rem;" id="triageActionTitle">Immediate Action: 2-Minute Bottom Pruning</h4>
+                <p class="body-medium" id="triageActionBody">Take clean garden shears and snip off the bottom two yellowed branches right at the stem collar. This improves soil splash protection and airflow.</p>
+              </div>
+            </div>
+
+            <!-- Dynamic Step 3 -->
+            <div class="plan-step">
+              <div class="plan-step__badge plan-step__badge--calm">3</div>
+              <div>
+                <h4 class="title-large" style="margin-bottom: 0.25rem;" id="triageCalmTitle">What NOT to Worry About: Zero Blight Danger</h4>
+                <p class="body-medium" id="triageCalmBody">This is completely normal growth biology, NOT Early Blight or fungal decay. Do NOT apply copper fungicides, chemical poisons, or heavy fertilizer.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Contrast Section -->
+    <section class="section">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin-inline: auto; margin-bottom: 3rem;">
+          <h2 class="headline-medium">The Novice Spiral vs. The Calm Routine</h2>
+          <p class="body-medium" style="margin-top: 0.5rem;">Why 70% of first-time gardeners quit before their first harvest, and how we change that.</p>
+        </div>
+
+        <div class="contrast-grid">
+          <!-- The Novice Spiral -->
+          <div class="card contrast-card--negative">
+            <h3 class="title-large" style="color: var(--md-sys-color-error);">❌ The Novice Spiral</h3>
+            <ul class="contrast-list">
+              <li>
+                <span>⚠️</span>
+                <span><strong>Panic-Spraying:</strong> Rushing to spray harsh store-bought neurotoxins over cosmetic leaf imperfections, destroying beneficial garden pollinators.</span>
+              </li>
+              <li>
+                <span>⏳</span>
+                <span><strong>Chore Burnout:</strong> Trying to digest 40-page manuals and rigid 3-month schedules that don't fit busy lives.</span>
+              </li>
+              <li>
+                <span>🌪️</span>
+                <span><strong>Contradictory Forums:</strong> Sifting through endless chaotic online threads while roots rot from panic over-watering.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- The AI Gardening Mentor Routine -->
+          <div class="card contrast-card--positive">
+            <h3 class="title-large">✅ The AI Gardening Mentor Routine</h3>
+            <ul class="contrast-list">
+              <li>
+                <span>🛡️</span>
+                <span><strong>Instant Visual Triage:</strong> Camera diagnosis identifies real causes in 3 seconds and stops unnecessary pesticide sprays.</span>
+              </li>
+              <li>
+                <span>⏱️</span>
+                <span><strong>5-Minute Habits:</strong> Bite-sized, prioritized micro-tasks that fit naturally into your morning coffee routine.</span>
+              </li>
+              <li>
+                <span>🌱</span>
+                <span><strong>University Extension Science:</strong> Grounded strictly in peer-reviewed biological agriculture with plot-specific microclimate context.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Loops Bento Grid -->
+    <section id="cadence" class="section">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin-inline: auto; margin-bottom: 3rem;">
+          <span class="chip chip--pill">Engineered Loops</span>
+          <h2 class="headline-medium">Three Core Loops for Effortless Gardening</h2>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Loop 1 -->
+          <div class="card bento-col-2 card--elevated">
+            <span class="chip chip--accent" style="margin-bottom: 1rem;">Loop 1 • Edge & Multimodal AI</span>
+            <h3 class="title-large" style="margin-bottom: 0.5rem;">Camera Diagnostic & Panic Triage</h3>
+            <p class="body-medium">
+              Edge pre-flight validation verifies focus, exposure, and leaf boundaries before sending imagery to cloud multimodal models. Delivers the verified 3-Step Calm Action Plan directly to your phone.
+            </p>
+          </div>
+
+          <!-- Loop 2 -->
+          <div class="card card--elevated">
+            <span class="chip chip--accent" style="margin-bottom: 1rem;">Loop 2 • Offline First</span>
+            <h3 class="title-large" style="margin-bottom: 0.5rem;">7-Day Bite-Sized Care</h3>
+            <p class="body-medium">
+              Daily 5-to-10-minute micro-habits cached locally on your device. Works completely offline outdoors in backyard garden beds without cellular coverage.
+            </p>
+          </div>
+
+          <!-- Loop 3 -->
+          <div id="mentor" class="card bento-col-3 card--elevated">
+            <span class="chip chip--accent" style="margin-bottom: 1rem;">Loop 3 • Grounded Intelligence</span>
+            <h3 class="title-large" style="margin-bottom: 0.5rem;">Grounded Mentor Chat with Plot Digital Twin</h3>
+            <p class="body-medium">
+              Ask any dirt-side question. The mentor automatically injects your USDA hardiness zone, soil types, sunlight exposure, active crops, and growth stages into the prompt context, delivering hyper-relevant advice with strict organic safety boundaries.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dynamic Weather Override Simulator Island -->
+    <section class="section section--compact">
+      <div class="container">
+        <div class="weather-sim-panel">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+            <div>
+              <span class="chip chip--pill" style="margin-bottom: 0.5rem;">Live Simulation</span>
+              <h3 class="headline-medium">Dynamic Weather Overrides</h3>
+              <p class="body-medium">Test how cloud functions dynamically adapt daily chores to real-time weather forecasts.</p>
+            </div>
+            <div class="weather-controls" id="weatherControls">
+              <button class="weather-btn active" data-weather="sunny">☀️ Sunny & Normal</button>
+              <button class="weather-btn" data-weather="rain">🌧️ Heavy Rain (&gt;0.50")</button>
+              <button class="weather-btn" data-weather="freeze">❄️ Freeze Warning (32°F)</button>
+            </div>
+          </div>
+
+          <div class="card" id="weatherTaskCard" style="background-color: var(--md-sys-color-surface-container-low);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span id="weatherTaskBadge" class="chip chip--accent">Scheduled Task</span>
+              <span id="weatherTaskDuration" style="font-size: 0.85rem; font-weight: 600;">5 min</span>
+            </div>
+            <h4 class="title-large" id="weatherTaskTitle">Morning Deep Root Soak</h4>
+            <p class="body-medium" id="weatherTaskDesc">Provide 0.5 gallons of water directly to the base of each tomato plant before 9:00 AM.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section id="compare" class="section">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin-inline: auto; margin-bottom: 3rem;">
+          <h2 class="headline-medium">How AI Gardening Mentor Compares</h2>
+          <p class="body-medium" style="margin-top: 0.5rem;">Backyard soil vegetable cultivation vs. spreadsheets and expensive hydroponic plastics.</p>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature / Dimension</th>
+                <th style="color: var(--md-sys-color-primary);">AI Gardening Mentor</th>
+                <th>2D Planners (GrowVeg / Planter)</th>
+                <th>Smart Towers (Gardyn / Click&Grow)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Instant Camera Panic Triage</strong></td>
+                <td><strong style="color: var(--md-sys-color-primary);">Included (3-Step Calm Plan)</strong></td>
+                <td>❌ None (Manual identification)</td>
+                <td>❌ Hardware sensor alerts only</td>
+              </tr>
+              <tr>
+                <td><strong>Daily Habit Sizing</strong></td>
+                <td><strong style="color: var(--md-sys-color-primary);">5–10 Min Micro-Tasks</strong></td>
+                <td>❌ Complex multi-month schedules</td>
+                <td>⚠️ Weekly reservoir cleaning</td>
+              </tr>
+              <tr>
+                <td><strong>Dynamic Weather Overrides</strong></td>
+                <td><strong style="color: var(--md-sys-color-primary);">Automatic Rain & Freeze Defense</strong></td>
+                <td>❌ Static dates only</td>
+                <td>❌ Indoor only (ignores weather)</td>
+              </tr>
+              <tr>
+                <td><strong>Outdoor Offline Capability</strong></td>
+                <td><strong style="color: var(--md-sys-color-primary);">100% Offline-First Local Cache</strong></td>
+                <td>⚠️ Spotty mobile sync</td>
+                <td>❌ Requires continuous 2.4GHz Wi-Fi</td>
+              </tr>
+              <tr>
+                <td><strong>Hardware Investment</strong></td>
+                <td><strong style="color: var(--md-sys-color-primary);">$0 (Real Dirt & Pots)</strong></td>
+                <td>$25 – $50 / year</td>
+                <td>$500 – $900 hardware</td>
+              </tr>
+              <tr>
+                <td><strong>Organic Rigor</strong></td>
+                <td><strong style="color: var(--md-sys-color-primary);">University Extension Science</strong></td>
+                <td>Generic plant encyclopedias</td>
+                <td>Proprietary chemical pods</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="download" class="section section--compact">
+      <div class="container">
+        <div class="card card--elevated" style="background-color: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); text-align: center; padding: 4rem 2rem;">
+          <h2 class="display-large" style="margin-bottom: 1rem; color: #ffffff;">Ready to Harvest Without the Stress?</h2>
+          <p style="font-size: 1.25rem; max-width: 600px; margin-inline: auto; margin-bottom: 2rem; opacity: 0.95;">
+            Join thousands of novice gardeners turning panic into calm, abundant backyard vegetables with 5 minutes a day.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="#" class="btn btn--tonal" style="background-color: #ffffff; color: #1e6b37; font-weight: 600;">Download for iOS</a>
+            <a href="#" class="btn btn--tonal" style="background-color: #ffffff; color: #1e6b37; font-weight: 600;">Download for Android</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h4 class="title-large" style="margin-bottom: 0.75rem;">AI Gardening Mentor</h4>
+          <p class="body-medium">
+            Empowering beginner gardeners with calm, automated triage, weather-adaptive care micro-habits, and strictly organic guidance backed by University Extension research.
+          </p>
+        </div>
+        <div>
+          <h5 style="font-weight: 600; margin-bottom: 1rem;">Product</h5>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
+            <li><a href="#triage" style="text-decoration: none; color: inherit;">Camera Triage</a></li>
+            <li><a href="#cadence" style="text-decoration: none; color: inherit;">7-Day Cadence</a></li>
+            <li><a href="#mentor" style="text-decoration: none; color: inherit;">Organic Mentor</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 style="font-weight: 600; margin-bottom: 1rem;">Science</h5>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
+            <li><a href="#" style="text-decoration: none; color: inherit;">University Extension</a></li>
+            <li><a href="#" style="text-decoration: none; color: inherit;">Organic Safety Standard</a></li>
+            <li><a href="#" style="text-decoration: none; color: inherit;">USDA Hardiness Zones</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 style="font-weight: 600; margin-bottom: 1rem;">Platform</h5>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
+            <li><a href="CONTAINER.md" style="text-decoration: none; color: inherit;">Podman Deployment</a></li>
+            <li><a href="#" style="text-decoration: none; color: inherit;">Healthcheck (/healthz)</a></li>
+            <li><a href="#" style="text-decoration: none; color: inherit;">Privacy & Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 AI Gardening Mentor • IntelliTheme Studio. All rights reserved.</span>
+        <span>Containerized with Podman • Rootless & OCI-compliant</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Client-side Script -->
+  <script>
+    // Theme toggle with localStorage persistence
+    const themeBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+    const root = document.documentElement;
+
+    function applyTheme(theme) {
+      root.setAttribute('data-theme', theme);
+      themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+      localStorage.setItem('agm_theme', theme);
+    }
+
+    const savedTheme = localStorage.getItem('agm_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    applyTheme(savedTheme);
+
+    themeBtn.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme');
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // Panic Triage interactive simulator data
+    const triageData = {
+      tomato: {
+        whatTitle: "What It Is: Natural Lower Leaf Senescence",
+        whatBody: "The plant is withdrawing mobile nitrogen from older lower shaded leaves to feed vigorous new upper growth and flower clusters.",
+        actionTitle: "Immediate Action: 2-Minute Bottom Pruning",
+        actionBody: "Take clean garden shears and snip off the bottom two yellowed branches right at the stem collar. This improves soil splash protection and airflow.",
+        calmTitle: "What NOT to Worry About: Zero Blight Danger",
+        calmBody: "This is completely normal growth biology, NOT Early Blight or fungal decay. Do NOT apply copper fungicides, chemical poisons, or heavy fertilizer."
+      },
+      squash: {
+        whatTitle: "What It Is: Early Powdery Mildew (Surface Fungi)",
+        whatBody: "Superficial white fungal spore patches caused by humid overnight microclimates and dense leaf canopy shading.",
+        actionTitle: "Immediate Action: Morning Organic Bicarbonate Spray",
+        actionBody: "Mix 1 tbsp potassium bicarbonate or baking soda with 1/2 tsp Castile soap in 1 quart of water. Mist upper leaf surfaces in full morning sun.",
+        calmTitle: "What NOT to Worry About: Fruit Remains 100% Safe",
+        calmBody: "Powdery mildew does not infect or poison the zucchini fruit. Do NOT discard your plant or spray commercial chemical toxins."
+      },
+      pepper: {
+        whatTitle: "What It Is: Mid-Day Heat Transpiration Wilt",
+        whatBody: "Bell pepper leaves temporarily lose turgor pressure at peak midday sun (>85°F) as a protective mechanism to reduce water evaporation.",
+        actionTitle: "Immediate Action: Deep Evening Root Soak",
+        actionBody: "Verify soil moisture 2 inches deep. If dry, water deeply after sunset at the root zone without wetting foliage.",
+        calmTitle: "What NOT to Worry About: Root Rot Panic",
+        calmBody: "The plant is not dying or permanently damaged. Do NOT drown the pot with continuous noon-day water, which suffocates roots."
+      }
+    };
+
+    const triageButtons = document.querySelectorAll('#triageTabs .triage-tab-btn');
+    const whatTitle = document.getElementById('triageWhatTitle');
+    const whatBody = document.getElementById('triageWhatBody');
+    const actionTitle = document.getElementById('triageActionTitle');
+    const actionBody = document.getElementById('triageActionBody');
+    const calmTitle = document.getElementById('triageCalmTitle');
+    const calmBody = document.getElementById('triageCalmBody');
+
+    triageButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        triageButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const scenario = btn.getAttribute('data-scenario');
+        const data = triageData[scenario];
+        if (data) {
+          whatTitle.textContent = data.whatTitle;
+          whatBody.textContent = data.whatBody;
+          actionTitle.textContent = data.actionTitle;
+          actionBody.textContent = data.actionBody;
+          calmTitle.textContent = data.calmTitle;
+          calmBody.textContent = data.calmBody;
+        }
+      });
+    });
+
+    // Weather Override Simulator data
+    const weatherData = {
+      sunny: {
+        badge: "Scheduled Task",
+        badgeClass: "chip--accent",
+        duration: "5 min",
+        title: "Morning Deep Root Soak",
+        desc: "Provide 0.5 gallons of water directly to the base of each tomato plant before 9:00 AM."
+      },
+      rain: {
+        badge: "DEFERRED (WEATHER)",
+        badgeClass: "chip",
+        duration: "0 min",
+        title: "Watering Paused: 0.75\" Rainfall Verified",
+        desc: "Automated precipitation sensor detected 0.75\" rain. Soil saturation verified. Watering paused to prevent root rot and disease."
+      },
+      freeze: {
+        badge: "EMERGENCY DEFENSE",
+        badgeClass: "chip--accent",
+        duration: "10 min",
+        title: "Deploy Frost Cloth Before 6:00 PM",
+        desc: "Freeze alert: Forecast drops to 30°F tonight. Cover peppers and tomatoes with breathable frost blankets or 5-gallon buckets."
+      }
+    };
+
+    const weatherButtons = document.querySelectorAll('#weatherControls .weather-btn');
+    const weatherBadge = document.getElementById('weatherTaskBadge');
+    const weatherDuration = document.getElementById('weatherTaskDuration');
+    const weatherTitle = document.getElementById('weatherTaskTitle');
+    const weatherDesc = document.getElementById('weatherTaskDesc');
+
+    weatherButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        weatherButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const weather = btn.getAttribute('data-weather');
+        const data = weatherData[weather];
+        if (data) {
+          weatherBadge.textContent = data.badge;
+          weatherBadge.className = `chip ${data.badgeClass}`;
+          weatherDuration.textContent = data.duration;
+          weatherTitle.textContent = data.title;
+          weatherDesc.textContent = data.desc;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <include src="partials/header.html"></include>
+  <title>How Can AI Agents Handle My Customer Support Across Multiple Channels? | IntelliWebLab Blog</title>
+  <meta name="description" content="How AI agents connect chat, email, and other support channels while preserving case context, access controls, and human handoffs.">
+</head>
+
+<body>
+  <main>
+    <include src="partials/main-menu.html"></include>
+    <section class="blog-article blog-article--questions" id="top" aria-labelledby="article-title">
+      <div class="container">
+        <article class="grid">
+          <nav class="col-full md-col-10-centered breadcrumbs blog-breadcrumbs cluster" aria-label="Breadcrumb">
+            <a href="/blog/">Blog</a><span aria-hidden="true">/</span>
+            <a href="/blog/#blog-panel-customer">Customer engagement</a><span aria-hidden="true">/</span>
+            <span aria-current="page">How Can AI Agents Handle My Customer Support Across Multiple Channels?</span>
+          </nav>
+          <header class="post-header blog-article__header padding-t space-t-xl">
+            <p class="eyebrow eyebrow--pill"><span class="eyebrow__label">Customer engagement</span></p>
+            <h1 id="article-title">How Can AI Agents Handle My Customer Support Across Multiple Channels?</h1>
+            <p class="blog-article__excerpt">How AI agents connect chat, email, and other support channels while preserving case context, access controls, and human handoffs.</p>
+            <div class="post-byline"><span class="post-byline__avatar" aria-hidden="true">B</span><span class="post-byline__author"><strong>Editorial Team</strong><span>Editorial team</span></span><span class="post-byline__divider" aria-hidden="true"></span><time datetime="2026-10-23T20:03:52.982Z">Oct 23, 2026</time><span class="post-byline__updated">Updated Oct 23, 2026</span><span class="post-byline__reading">2 min read</span></div>
+          </header>
+          <figure class="col-full md-col-10-centered post-artwork">
+            <picture class="blog-article__media">
+              <img src="/media/blog/ai-agents-multiple-support-channels-flat-v3.svg" alt="Four support channel tiles connecting to one shared conversation" width="1350" height="1080" loading="eager" fetchpriority="high">
+            </picture>
+          </figure>
+          <div class="col-full exp-col-8-centered post-layout with-sidebar padding-t space-t-m">
+            <div class="grid article-grid">
+              <aside class="sidebar__aside takeaways exp-col-4" aria-label="Article takeaways">
+                <nav class="blog-article__toc" aria-label="On this post"></nav>
+              </aside>
+              <div class="exp-col-8 post-content blog-article__body">
+                <section class="blog-article__section" aria-labelledby="ai-agents-multiple-support-channels-1">
+                <h2 id="ai-agents-multiple-support-channels-1">What the agent needs to do</h2>
+                <p>Each channel needs a connector that receives messages and returns replies in the right format. The agent then needs approved answers, access to relevant case information, and a limited set of actions. It might answer a delivery question in chat, summarize an email for a teammate, or create a support ticket. Voice adds transcription, interruptions, and a stronger need to confirm what was heard.</p>
+                <p>A shared case identifier is what lets a later responder see the earlier conversation. Without it, the same agent may appear in several channels while customers still have to repeat themselves.</p>
+              </section>
+              <section class="blog-article__section" aria-labelledby="ai-agents-multiple-support-channels-2">
+                <h2 id="ai-agents-multiple-support-channels-2">Where the boundaries belong</h2>
+                <p>Decide which tasks may be completed automatically and which require identity checks or a person. Reading a public returns policy is different from changing an address or refunding a payment. Give the agent only the data and permissions required for each task, and preserve a clear record of what it did.</p>
+                <p>Make the handoff practical: send the customer’s request, the facts checked, the attempted action, and the reason for transfer. Do not make the customer reconstruct the case for a human agent.</p>
+              </section>
+              <section class="blog-article__section" aria-labelledby="ai-agents-multiple-support-channels-3">
+                <h2 id="ai-agents-multiple-support-channels-3">A useful first test</h2>
+                <p>Pick two channels and one repeated request. Start a conversation in one channel, continue it in the other, and check whether the agent keeps the right context without exposing another customer’s information. Repeat the test when the request is unclear, when the integration fails, and when the customer asks for a person. Expand channel by channel after those paths work.</p>
+              </section>
+              <section class="blog-article__section" aria-labelledby="ai-agents-multiple-support-channels-4">
+                <h2 id="ai-agents-multiple-support-channels-4">What to check before adding another channel</h2>
+                <p>Confirm who owns a case when a message arrives twice or a customer switches channels mid-task. Test delayed delivery, duplicate requests, and an unavailable connector. The agent should avoid repeating a consequential action and should tell the customer when the next step is pending. Review whether channel-specific details, such as attachments or voice transcripts, are visible to the human who takes over. A new channel is useful only when its failures are manageable as well as its normal flow.</p>
+              </section>
+              <section class="blog-article__section" aria-labelledby="takeaway-title">
+                <h2 id="takeaway-title">The practical answer</h2>
+                <p>The practical goal is one coherent case across supported channels, with an accountable human route when automation reaches its limit.</p>
+              </section>
+              <section class="blog-article__section" aria-labelledby="reading-title">
+                <h2 id="reading-title">Further reading</h2>
+                <p><a href="https://airc.nist.gov/airmf-resources/playbook/manage/">NIST AI RMF Manage guide</a> · <a href="https://airc.nist.gov/airmf-resources/playbook/measure/">NIST AI RMF Measure guide</a></p>
+              </section>
+              </div>
+            </div>
+          </div>
+          <footer class="blog-article__footer stack stack--sm">
+            <p class="label-s">IntelliWebLab notes</p>
+            <a class="button button--ghost" href="/blog/">Back to all notes <span class="button__icon material-icons-round" aria-hidden="true">arrow_back</span></a>
+          </footer>
+        </article>
+      </div>
+    </section>
+    <include src="partials/subscribe-form.html"></include>
+  </main>
+  <include src="partials/footer.html"></include>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

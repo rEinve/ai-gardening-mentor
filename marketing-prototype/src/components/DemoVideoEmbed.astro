@@ -1,0 +1,66 @@
+---
+interface Props {
+  videoUrl?: string;
+  poster?: string;
+  title?: string;
+  caption?: string;
+}
+
+const {
+  videoUrl = "",
+  poster = "/media/diagnosis-workshop.jpg",
+  title = "3-Minute Animated Walkthrough — AI Gardening Mentor",
+  caption = "Walkthrough: Setup, Waterfall Crop Planner, 14-Day Prepare Ahead alerts, WhatsApp Photo Triage, and Farm Contacts.",
+} = Astro.props;
+
+function toEmbedUrl(raw: string): string | null {
+  if (!raw) return null;
+  const ytWatch = raw.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([A-Za-z0-9_-]{6,})/);
+  if (ytWatch) {
+    return `https://www.youtube-nocookie.com/embed/${ytWatch[1]}?rel=0`;
+  }
+  const ytEmbed = raw.match(/youtube(?:-nocookie)?\.com\/embed\/([A-Za-z0-9_-]{6,})/);
+  if (ytEmbed) {
+    return `https://www.youtube-nocookie.com/embed/${ytEmbed[1]}?rel=0`;
+  }
+  const vimeo = raw.match(/vimeo\.com\/(\d+)/);
+  if (vimeo) {
+    return `https://player.vimeo.com/video/${vimeo[1]}`;
+  }
+  return null;
+}
+
+const iframeSrc = toEmbedUrl(videoUrl);
+const isDirectVideo = Boolean(videoUrl && !iframeSrc);
+---
+
+<div class="demo-video-frame stack stack--sm">
+  {iframeSrc ? (
+    <div class="demo-video-frame__player">
+      <iframe
+        src={iframeSrc}
+        title={title}
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+  ) : isDirectVideo ? (
+    <div class="demo-video-frame__player">
+      <video controls preload="metadata" playsinline poster={poster} aria-label={title}>
+        <source src={videoUrl} />
+        Your browser does not support embedded video playback.
+      </video>
+    </div>
+  ) : (
+    <div class="demo-video-frame__placeholder stack stack--sm items-middle text-center">
+      <span class="demo-video-frame__badge material-icons-round" aria-hidden="true">play_circle</span>
+      <p class="card__text">{caption}</p>
+      <ul class="cluster justify-center hero__proof" aria-label="Demo video chapters">
+        <li class="hero__proof-item"><span class="material-icons-round" aria-hidden="true">check</span>1. Setup &amp; Crops</li>
+        <li class="hero__proof-item"><span class="material-icons-round" aria-hidden="true">check</span>2. Waterfall &amp; 14-Day Prep</li>
+        <li class="hero__proof-item"><span class="material-icons-round" aria-hidden="true">check</span>3. WhatsApp Photo Triage</li>
+      </ul>
+    </div>
+  )}
+</div>

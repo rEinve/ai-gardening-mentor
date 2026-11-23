@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import TriageTabs from "../components/TriageTabs.astro";
+import SecondaryBenefits from "../components/SecondaryBenefits.astro";
+import PricingTable from "../components/PricingTable.astro";
+import ResourcesSection from "../components/ResourcesSection.astro";
+import FaqSection from "../components/FaqSection.astro";
+import LastCallToAction from "../components/LastCallToAction.astro";
+---
+
+<BaseLayout title="AI Gardening Mentor — Proactive Farming & Crop Planner | IntelliWebLab">
+  <Hero />
+  <section>
+    <div class="container">
+      <div class="grid">
+        <div class="md-col-8-centered exp-col-8-centered lg-col-6-centered">
+          <TriageTabs />
+        </div>
+      </div>
+    </div>
+  </section>
+  <SecondaryBenefits />
+  <PricingTable />
+  <ResourcesSection />
+  <section class="section faq-section" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="grid">
+        <div class="md-col-8-centered exp-col-8-centered lg-col-7-centered">
+          <FaqSection />
+        </div>
+      </div>
+    </div>
+  </section>
+  <LastCallToAction />
+</BaseLayout>

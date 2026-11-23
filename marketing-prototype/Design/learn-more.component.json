@@ -1,0 +1,45 @@
+{
+  "id": "D24B248C-7A99-45FC-91F3-E2018E984072",
+  "name": "learn-more",
+  "slug": "learn-more",
+  "type": "component",
+  "width": 137,
+  "height": 24,
+  "layersCount": 2,
+  "layers": [
+    {
+      "name": "Learn More",
+      "type": "Text",
+      "x": 0,
+      "y": 0,
+      "width": 100,
+      "height": 24,
+      "text": "Learn More",
+      "fontSize": 18,
+      "fontFamily": "Clarity City",
+      "fontWeight": 6,
+      "lineHeight": null,
+      "textColor": "#432c00",
+      "alignment": "center"
+    },
+    {
+      "name": "arrow_forward_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24",
+      "type": "Group",
+      "x": 111,
+      "y": 0,
+      "width": 24,
+      "height": 24,
+      "layers": [
+        {
+          "name": "Path",
+          "type": "ShapePath",
+          "x": 4,
+          "y": 4,
+          "width": 16,
+          "height": 16
+        }
+      ]
+    }
+  ],
+  "markupSnippet": "<div class=\"component-learn-more\" data-component=\"learn-more\">\n  <!-- Component: learn-more -->\n</div>"
+}

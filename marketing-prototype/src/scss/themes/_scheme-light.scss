@@ -1,0 +1,95 @@
+/* ──────────────────────────────────────────────────────────────────────────
+ * Light theme — Botanical Mentor (from docs/ai_gardening_mentor_homepage/DESIGN.md)
+ * Mapped to IntelliTheme starter roles so Botanical Emerald drives hero,
+ * buttons, eyebrows, tabs, featured pricing, and CTA surfaces.
+ * All colors are explicitly authored as 8-digit hex (#RRGGBBAA).
+ * ────────────────────────────────────────────────────────────────────────── */
+
+:root,
+.light,
+[data-theme='light'] {
+  color-scheme: light;
+
+  // Primary (Botanical Emerald)
+  --primary: #005223ff;
+  --surface-tint: #1f6c38ff;
+  --on-primary: #ffffffff;
+  --primary-container: #a6f5b1ff;
+  --on-primary-container: #00210aff;
+  --primary-fixed: #a6f4b2ff;
+  --on-primary-fixed: #00210aff;
+  --primary-fixed-dim: #8bd898ff;
+  --on-primary-fixed-variant: #005224ff;
+
+  // Secondary (Muted Sage)
+  --secondary: #526350ff;
+  --on-secondary: #ffffffff;
+  --secondary-container: #d5e8cfff;
+  --on-secondary-container: #101f10ff;
+  --secondary-fixed: #d5e8d0ff;
+  --on-secondary-fixed: #101f10ff;
+  --secondary-fixed-dim: #b9ccb5ff;
+  --on-secondary-fixed-variant: #3b4b39ff;
+
+  // Tertiary (Mapped to Botanical Emerald Accent for IntelliTheme buttons, eyebrows & CTA)
+  --tertiary: #005223ff;
+  --on-tertiary: #ffffffff;
+  --tertiary-container: #a6f5b1ff;
+  --on-tertiary-container: #00210aff;
+  --tertiary-fixed: #a6f4b2ff;
+  --on-tertiary-fixed: #00210aff;
+  --tertiary-fixed-dim: #8bd898ff;
+  --on-tertiary-fixed-variant: #005224ff;
+
+  // Error
+  --error: #ba1a1aff;
+  --on-error: #ffffffff;
+  --error-container: #ffdad6ff;
+  --on-error-container: #410002ff;
+
+  // Background
+  --background: #f7fbf2ff;
+  --on-background: #181d18ff;
+
+  // Surface (Deep Botanical Forest on inverse-surface for Hero & dark accents)
+  --surface: #f7fbf2ff;
+  --on-surface: #181d18ff;
+  --surface-variant: #dee5d9ff;
+  --on-surface-variant: #424940ff;
+  --inverse-surface: #0d2b18ff;
+  --inverse-on-surface: #f1f8f0ff;
+  --surface-dim: #d7dbd3ff;
+  --surface-bright: #f7fbf2ff;
+  --surface-container-lowest: #ffffffff;
+  --surface-container-low: #f1f5ecff;
+  --surface-container: #ebf0e6ff;
+  --surface-container-high: #e6eae1ff;
+  --surface-container-highest: #e0e5dbff;
+
+  // Outline
+  --outline: #72796fff;
+  --outline-variant: #c2c9bdff;
+
+  // Shadow & Scrim
+  --shadow: #000000ff;
+  --scrim: #000000ff;
+
+  --inverse-primary: #8bd898ff;
+
+  // Text
+  --text-primary: var(--on-surface);
+  --text-secondary: var(--on-surface-variant);
+  --text-tertiary: var(--primary);
+  --text-muted: var(--outline);
+  --text-inverse: var(--inverse-on-surface);
+
+  // Button
+  --button-container: var(--primary-container);
+  --button-on-container: var(--on-primary-container);
+
+  // Links
+  --link-color: var(--primary);
+  --link-color-on-inverse: var(--primary-fixed-dim);
+  --link-color-on-inverse-hover: var(--primary-container);
+  --link-color-onhover: var(--surface-tint);
+}

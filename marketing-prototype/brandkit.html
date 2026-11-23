@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IntelliWebLab Brand Kit</title>
+    <meta name="description" content="The shared colours, typography, and spacing used across IntelliWebLab products.">
+  </head>
+  <body>
+<main>
+  <header class="nav-main nav-main--borderless nav-main--transparent" role="banner">
+    <div class="nav-main__inner">
+      <a class="nav-main__brand" href="#top" aria-label="IntelliWebLab Brand Kit home">
+        <img class="nav-main__logo" src="media/logo.svg" alt="" width="30" height="53" decoding="async">
+        <span>IntelliWebLab</span>
+      </a>
+
+      <button class="nav-main__toggle" type="button" aria-expanded="false" aria-controls="brandkit-mobile-nav" aria-label="Open menu">
+        <span class="nav-main__toggle-icon" aria-hidden="true"></span>
+      </button>
+
+      <nav id="brandkit-primary-nav" class="nav-main__nav nav-main__nav--centered" aria-label="Brand Kit sections">
+        <ul class="nav-main__list">
+          <li class="nav-main__item"><a class="nav-main__link" href="#colors">Colors</a></li>
+          <li class="nav-main__item"><a class="nav-main__link" href="#typography">Typesetting</a></li>
+          <li class="nav-main__item"><a class="nav-main__link" href="#components">Components</a></li>
+          <li class="nav-main__item"><a class="nav-main__link" href="#responsive">Responsive</a></li>
+        </ul>
+      </nav>
+
+      <nav id="brandkit-mobile-nav" class="nav-main__drawer" aria-label="Brand Kit sections" hidden>
+        <ul class="nav-main__drawer-list">
+          <li><a class="nav-main__drawer-link" href="#colors">Colors</a></li>
+          <li><a class="nav-main__drawer-link" href="#typography">Typesetting</a></li>
+          <li><a class="nav-main__drawer-link" href="#components">Components</a></li>
+          <li><a class="nav-main__drawer-link" href="#responsive">Responsive</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section id="top" class="">
+    <div class="container">
+      <div class="grid items-middle">
+        <div class="grid lg-col-7">
+          <p class="eyebrow eyebrow--pill"><span class="eyebrow__label">IntelliWebLab · Brand Kit</span></p>
+          <h1 class="display-l">Simply Smarter Web</h1>
+          <p class="lead">We make the web work more intelligently, with clear guidance and useful technology that feels approachable.</p>
+        </div>
+        <div class="md-col-5 lg-col-5">
+          <figure>
+            <img src="/media/diagnosis-workshop.jpg" alt="diagnosis workshop" class="">
+            <figcaption></figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="colors" aria-labelledby="colors-title">
+    <div class="container">
+      <div class="grid">
+        <header class="grid margin-b-l">
+          <p class="eyebrow eyebrow--pill"><span class="eyebrow__index">01</span><span class="eyebrow__label">Color palette</span></p>
+          <h2 id="colors-title">Color roles and surfaces</h2>
+          <p class="lead">These examples use the existing IntelliTheme color classes. Change a token in the theme or color controls, and every use of that class follows it.</p>
+        </header>
+        <h3 >Brand color roles</h3>
+        <div class="grid grid">
+          <article class="md-col-5 exp-col-4 card primary">
+            <h3 class="card__title">Primary</h3>
+            <code class="">primary</code>
+            <p class="card__text">Key brand moments and primary actions.</p>
+          </article>
+          <article class="md-col-5 exp-col-4  card secondary">
+            <h3 class="card__title">Secondary</h3>
+            <code>secondary</code>
+            <p class="card__text">Supporting surfaces and secondary emphasis.</p>
+          </article>
+          <article class="md-col-5 exp-col-4  card tertiary">
+            <h3 class="card__title">Tertiary</h3>
+            <code>tertiary</code>
+            <p class="card__text">Links, information, and teal emphasis.</p>
+          </article>
+          <article class="md-col-5 exp-col-4  card error">
+            <h3 class="card__title on-error-color">Error</h3>
+            <code class="on-error-color">error</code>
+            <p class="card__text on-error-color">Error and destructive states.</p>
+          </article>
+          <article class="md-col-5 exp-col-4  card background text-primary">
+            <h3 class="card__title">Background</h3>
+            <code class="on-background-color">background</code>
+            <p class="card__text">Pag e background and calm reading surfaces.</p>
+          </article>
+          <article class="md-col-5 exp-col-4  card surface-variant">
+            <h3 class="card__title surface-dark-color">Surface variant</h3>
+            <code class="on-surface-variant-color">surface-variant</code>
+            <p class="card__text on-surface-variant-color">Subtle panels and grouped content.</p>
+          </article>
+        </div>
+        <h3 >Surface</h3>
+        <div class="grid grid">
+          <article class="md-col-5 exp-col-4  card background on-background-color outline-variant-border">
+            <h4>background</h4>
+            <code>background</code>
+            <p class="card__text">Default page floor.</p>
+          </article>
+          <article class="md-col-5 exp-col-4  card surface-container-low">
+            <h4>surface-container-low</h4>
+            <code>surface-container-low</code>
+            <p class="card__text">Subtle backgrounds for supporting areas.</p>
+          </article>
+          <article class="md-col-5 exp-col-4  card surface-container">
+            <h4>surface-container</h4>
+            <code>surface-container</code>
+            <p class="card__text">Grouped content and card surfaces.</p>
+          </article>
+          <article class="md-col-5 exp-col-4  card surface-container-highest">
+            <h4>surface-container-highest</h4>
+            <code>surface-container-highest</code>
+            <p class="card__text">A stronger neutral surface role.</p>
+          </article>
+          <article class="md-col-5 exp-col-4  card surface-variant">
+            <h4>surface-variant</h4>
+            <code>surface-variant</code>
+            <p class="card__text">Subtle panels and grouped content.</p>
+          </article>
+        </div>
+        <h3 >Text</h3>
+        <div class="grid grid">
+          <article class="md-col-5 exp-col-4  card">
+            <h4>Primary text</h4>
+            <p class="text-primary">text-primary</p>
+            <p class="card__text">Primary text color utility.</p>
+          </article>
+          <article class="md-col-5 exp-col-4  card">
+            <h4>Secondary text</h4>
+            <p class="text-secondary">text-secondary</p>
+            <p class="card__text">Secondary text color utility.</p>
+          </article>
+          <article class="md-col-5 exp-col-4  card">
+            <h4>Muted text</h4>
+            <p class="text-secondary">text-secondary</p>
+            <p class="card__text">Muted text color utility.</p>
+          </article>
+          <article class="md-col-5 exp-col-4  card">
+            <h4>Inverse text</h4>
+            <p class="inverse-on-surface-color inverse-surface">inverse-on-surface-color</p>
+            <p class="card__text">Inverse text color utility.</p>
+          </article>
+        </div>
+        <p >These examples use shared color utility classes. Their colors come from the active theme tokens.</p>
+      </div>
+    </div>
+  </section>
+  <section class="" id="typography" aria-labelledby="typography-title">
+    <div class="container">
+      <div class="stack stack--xl">
+        <header class="stack stack--sm">
+          <p class="eyebrow eyebrow--pill"><span class="eyebrow__index">02</span><span class="eyebrow__label">Typesetting</span></p>
+          <h2 id="typography-title">Clarity City display, Montserrat body</h2>
+          <p class="lead">Clarity City shapes display, heading, and label roles. Montserrat carries lead and body copy. H1–H3 use medium weight; full bold is reserved for strong emphasis and smaller headings. Every specimen below uses the live fluid tokens compiled from the current Sass settings.</p>
+        </header>
+
+        <div class="stack stack--xl">
+          <article class="grid">
+            <div class="md-col-4 stack stack--sm">
+              <p class="label-m">Display · XL</p>
+              <p class="body-s">Clarity City · weight 500</p>
+              <p class="body-s"><code>--display-xl</code> · <code>--lh-display</code> · <code>--ls-display</code></p>
+            </div>
+            <div class="md-col-6">
+              <div class="h1 display-xl">Make the web work better</div>
+            </div>
+          </article>
+
+          <hr class="divider">
+
+          <article class="grid">
+            <div class="md-col-4 stack stack--sm">
+              <p class="label-m">Heading · H1</p>
+              <p class="body-s">Clarity City · weight 500</p>
+              <p class="body-s"><code>--step-5</code> · <code>--lh-display</code> · <code>--ls-display</code></p>
+            </div>
+            <div class="md-col-6">
+              <div class="h1">Build useful digital experiences</div>
+            </div>
+          </article>
+
+          <hr class="divider">
+
+          <article class="grid">
+            <div class="md-col-4 stack stack--sm">
+              <p class="label-m">Heading · H2</p>
+              <p class="body-s">Clarity City · weight 500</p>
+              <p class="body-s"><code>--step-4</code> · <code>--lh-display</code> · <code>--ls-display</code></p>
+            </div>
+            <div class="md-col-6">
+              <div class="h2">Turn ideas into useful experiences</div>
+            </div>
+          </article>
+
+          <hr class="divider">
+
+          <article class="grid">
+            <div class="md-col-4 stack stack--sm">
+              <p class="label-m">Heading · H3</p>
+              <p class="body-s">Clarity City · weight 500</p>
+              <p class="body-s"><code>--step-3</code> · <code>--lh-headline</code> · <code>--ls-headline</code></p>
+            </div>
+            <div class="md-col-6">
+              <div class="h3">A clearer customer journey</div>
+            </div>
+          </article>
+
+          <hr class="divider">
+
+          <article class="grid">
+            <div class="md-col-4 stack stack--sm">
+              <p class="label-m">Heading · H4</p>
+              <p class="body-s">Clarity City · weight 400</p>
+              <p class="body-s"><code>--step-2</code> · <code>--lh-headline</code> · <code>--ls-headline</code></p>
+            </div>
+            <div class="md-col-6">
+              <div class="h4">Clear steps, useful outcomes</div>
+            </div>
+          </article>
+
+          <hr class="divider">
+
+          <article class="grid">
+            <div class="md-col-4 stack stack--sm">
+              <p class="label-m">Lead</p>
+              <p class="body-s">Montserrat · weight 400</p>
+              <p class="body-s"><code>--text-leading</code> · <code>--lh-title</code> · <code>--measure-lead</code></p>
+            </div>
+            <div class="md-col-6">
+              <p class="lead">A considered starting point for a clearer digital experience.</p>
+            </div>
+          </article>
+
+          <hr class="divider">
+
+          <article class="grid">
+            <div class="md-col-4 stack stack--sm">
+              <p class="label-m">Body · paragraph</p>
+              <p class="body-s">Montserrat · weight 400</p>
+              <p class="body-s"><code>--step-0</code> · <code>--lh-body</code> · <code>--measure-prose</code></p>
+            </div>
+            <div class="md-col-6">
+              <p>We turn complex ideas into useful digital experiences, with practical guidance at every step.</p>
+            </div>
+          </article>
+
+          <hr class="divider">
+
+          <article class="grid">
+            <div class="md-col-4 stack stack--sm">
+              <p class="label-m">Small body and label</p>
+              <p class="body-s">Montserrat body · Clarity City label</p>
+              <p class="body-s"><code>--text-xs</code> · <code>--lh-label</code> · <code>--ls-label</code></p>
+            </div>
+            <div class="md-col-6 stack stack--sm">
+              <p class="body-s">Supporting detail for secondary information and compact descriptions.</p>
+              <span class="label-s">BRAND KIT SPECIMEN</span>
+            </div>
+          </article>
+
+          <hr class="divider">
+
+          <article class="grid">
+            <div class="md-col-4 stack stack--sm">
+              <p class="label-m">Navigation link</p>
+              <p class="body-s">Clarity City · weight 500</p>
+              <p class="body-s"><code>--text-sm</code> · <code>--lh-label</code></p>
+            </div>
+            <nav class="md-col-6" aria-label="Typography specimen">
+              <ul class="nav-main__list">
+                <li class="nav-main__item"><a class="nav-main__link" href="#typography">Brand strategy</a></li>
+                <li class="nav-main__item"><a class="nav-main__link" href="#typography">Digital products</a></li>
+                <li class="nav-main__item"><a class="nav-main__link" href="#typography">Our approach</a></li>
+              </ul>
+            </nav>
+          </article>
+
+          <hr class="divider">
+
+          <article class="grid">
+            <div class="md-col-4 stack stack--sm">
+              <p class="label-m">Primary button</p>
+              <p class="body-s">Clarity City · weight 500</p>
+              <p class="body-s"><code>--button-font-size</code> · <code>--lh-label</code></p>
+            </div>
+            <div class="md-col-6">
+              <button class="button button--primary" type="button">Explore what we do <span class="button__icon material-icons-round" aria-hidden="true">north_east</span></button>
+            </div>
+          </article>
+        </div>
+
+        <p class="body-s">The bundled Montserrat regular face supports body copy. Clarity City is loaded as a variable roman and italic family across weights 100–900. Fluid type tokens preserve the intended hierarchy from compact through large viewports.</p>
+      </div>
+    </div>
+  </section>
+  <section id="components" aria-labelledby="components-title">
+    <div class="container">
+      <div class="grid">
+        <header class="grid margin-b-l">
+          <p class="eyebrow eyebrow--pill"><span class="eyebrow__index">03</span><span class="eyebrow__label">Components and identity</span></p>
+          <h2 id="components-title">Useful patterns, used consistently</h2>
+          <p class="lead">Intelligent, practical, curious, clear, and human. Make the next useful action easy to find.</p>
+        </header>
+        <div class="grid">
+          <p class="row">Button variants</h3>
+          <p >Buttons share the IntelliTheme component styles. Color-surface examples inherit their foreground and fill from the current theme tokens.</p>
+          <div class="grid">
+            <article class="md-col-5 exp-col-4 lg-col-4 card surface-container-low">
+              <p class="label-m">button--primary</p>
+              <a class="button button--primary" href="#patterns">button—primary <span class="button__icon material-icons-round" aria-hidden="true">north_east</span></a>
+              <p >Primary action with theme button colors.</p>
+            </article>
+            <article class="md-col-5 exp-col-4 lg-col-4 card surface-container-low">
+              <p class="label-m">button--primary-disabled</p>
+              <button class="button button--primary" type="button" disabled="">Unavailable <span class="button__icon material-icons-round" aria-hidden="true">north_east</span></button>
+              <p >Disabled state from the native control.</p>
+            </article>
+            <article class="md-col-5 exp-col-4 lg-col-4 card surface-container-low">
+              <p class="label-m">button ghost</p>
+              <a class="button button--ghost" href="#colors">View color roles</a>
+              <p >Secondary action on the default surface.</p>
+            </article>
+            <article class="md-col-5 exp-col-4 lg-col-4 card primary">
+              <p class="label-m">button-on-primary</p>
+              <a class="button" href="#patterns">Continue</a>
+              <p >Surface and text use primary role classes.</p>
+            </article>
+            <article class="md-col-5 exp-col-4 lg-col-4 card tertiary">
+              <p class="label-m">button-on-tertiary</p>
+              <a class="button on-tertiary" href="#responsive">See responsive rules</a>
+              <p >Surface and text use tertiary role classes.</p>
+            </article>
+            <article class="md-col-5 exp-col-4 lg-col-4 card surface-container-low">
+              <p class="label-m">button-text-link</p>
+              <a class="button button--link" href="#typography">Read the type scale</a>
+              <p >Low-emphasis text action.</p>
+            </article>
+          </div>
+        </div>
+        <div class="grid">
+          <p class="row">Identity in use</h3>
+          <div class="cluster"><span class="badge">Clear guidance</span><span class="tag">People in control</span></div>
+        </div>
+        <div class="grid grid">
+          <article class="md-col-5 exp-col-4 card">
+            <p class="eyebrow">Guidance</p>
+            <h3 class="card__title">Make complexity clear</h3>
+            <p class="card__text">Explain the useful idea in ordinary language before technical detail.</p>
+          </article>
+          <article class="md-col-5 exp-col-4 card">
+            <p class="eyebrow">Digital tools</p>
+            <h3 class="card__title">Be useful before impressive</h3>
+            <p class="card__text">Show what a person can do or understand, not just what technology can do.</p>
+          </article>
+          <article class="md-col-5 exp-col-4 card">
+            <p class="eyebrow">People first</p>
+            <h3 class="card__title">Keep people in control</h3>
+            <p class="card__text">Describe technology as a helpful tool and partner, never a substitute for human judgment.</p>
+          </article>
+        </div>
+        <p >Use the shared button, badge, tag, card, and surface classes as page building blocks. Keep proof and testimonials tied to approved source material.</p>
+      </div>
+    </div>
+  </section>
+  <section id="feature-cards" aria-labelledby="feature-cards-title">
+    <div class="container">
+      <div class="grid">
+        <header class="grid margin-b-l">
+          <p class="eyebrow eyebrow--pill"><span class="eyebrow__index">04</span><span class="eyebrow__label">Brand-color feature cards</span></p>
+          <h2 id="feature-cards-title">Use color to group useful work</h2>
+          <p class="lead">Six color-role examples followed by the media card component. Change the theme tokens to update the surfaces and their matching text colors.</p>
+        </header>
+        <div class="grid grid">
+          <article class="md-col-5 exp-col-4 lg-col-4 card primary">
+            <h3 class="card__title">Website strategy</h3>
+            <p class="card__text">Make the purpose, audience, and next step clear from the first view.</p>
+          </article>
+          <article class="md-col-5 exp-col-4 lg-col-4 card tertiary">
+            <h3 class="card__title">Digital tools</h3>
+            <p class="card__text">Choose practical tools that make everyday work easier to manage.</p>
+          </article>
+          <article class="md-col-5 exp-col-4 lg-col-4 card primary-container">
+            <h3 class="card__title">Web prototypes</h3>
+            <p class="card__text">Explore page structure and content directly in working HTML.</p>
+          </article>
+          <article class="md-col-5 exp-col-4 lg-col-4 card tertiary-container">
+            <h3 class="card__title">Growth systems</h3>
+            <p class="card__text">Connect useful content, customer journeys, and measurement.</p>
+          </article>
+          <article class="md-col-5 exp-col-4 lg-col-4 card secondary-container">
+            <h3 class="card__title">Business operations</h3>
+            <p class="card__text">Reduce repeated effort with clear workflows and shared information.</p>
+          </article>
+          <article class="md-col-5 exp-col-4 lg-col-4 card surface-container-low">
+            <h3 class="card__title">Human support</h3>
+            <p class="card__text">Keep people informed and in control at every step.</p>
+          </article>
+          <article class="md-col-5 exp-col-4 lg-col-4 card background">
+            <figure class="card__media surface-variant">
+              <img src="/card_image.svg" alt="A monitor showing several customer conversations happening in parallel" loading="lazy" width="341" height="222">
+            </figure>
+            <div class="card__body stack stack--xs">
+              <h3 class="card__title">1/ Parallel Conversations</h3>
+              <p class="card__text">Whether 5 or 500 customers message at the exact same second, each one gets an immediate, friendly, personal reply.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="" id="proof-cards" aria-labelledby="proof-cards-title">
+    <div class="container">
+      <div class="grid">
+        <header class="grid margin-b-l">
+          <p class="eyebrow eyebrow--pill"><span class="eyebrow__index">05</span><span class="eyebrow__label">Product mockup and testimonial cards</span></p>
+          <h2 id="proof-cards-title">Show the work and the proof</h2>
+          <p class="lead">A product-style activity panel beside testimonial layouts. Replace sample details with approved project information and verified client feedback.</p>
+        </header>
+        <div class="grid grid">
+          <article class="md-col-5 exp-col-4 lg-col-4 card surface outline-variant-border on-surface-color">
+            <div class="row justify-between items-middle gap-s  padding-b-s">
+              <h3 class="card__title">Prototype activity</h3>
+              <span class="label-s">Sample data</span>
+            </div>
+             <hr class="divider">
+            <div class="row justify-between items-middle gap-s  padding-y-s">
+              <div>
+                <strong>Brand Kit page</strong>
+                <p class="body-s text-secondary">Layout updated</p>
+              </div>
+              <span class="label-s">Just now</span>
+            </div>
+             <hr class="divider">
+            <div class="row justify-between items-middle gap-s  padding-y-s">
+              <div>
+                <strong>Color roles</strong>
+                <p class="body-s text-secondary">Draft saved</p>
+              </div>
+              <span class="label-s">5 min ago</span>
+            </div>
+            <div class="row justify-between items-middle gap-s padding-y-s">
+              <div>
+                <strong>Mobile preview</strong>
+                <p class="body-s text-secondary">Ready to review</p>
+              </div>
+              <span class="label-s">Today</span>
+            </div>
+          </article>
+          <article class="md-col-5 exp-col-4 lg-col-4 card surface-container-low on-surface-color">
+            <p class="label-s">Testimonial layout · Replace with approved quote</p>
+            <blockquote class="on-surface-color">“Add a short, approved client quote that describes a specific outcome.”</blockquote>
+            <div><strong>Client name</strong><span class="body-s text-secondary">Role · Organization</span></div>
+          </article>
+          <article class="md-col-5 exp-col-4 lg-col-4 card surface-container-low on-surface-color">
+            <p class="label-s">Testimonial layout · Replace with approved quote</p>
+            <blockquote class="on-surface-color">“Add a second approved quote that gives useful context about the experience.”</blockquote>
+            <div><strong>Client name</strong><span class="body-s text-secondary">Role · Organization</span></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="forms" aria-labelledby="forms-title">
+    <div class="container">
+      <div class="grid">
+        <header class="grid margin-b-l">
+          <p class="eyebrow eyebrow--pill"><span class="eyebrow__index">06</span><span class="eyebrow__label">Form elements</span></p>
+          <h2 id="forms-title">Clear fields, familiar controls</h2>
+          <p class="lead">Use visible labels, concise hints, and the shared form styles. The focused field below demonstrates its focus state.</p>
+        </header>
+        <form class="grid" aria-label="Form element examples">
+          <div class="grid">
+            <div class="md-col-5 exp-col-4 lg-col-4"><label for="brand-kit-form-email">Email address</label><input class="input" id="brand-kit-form-email" name="email" type="email" placeholder="you@company.com"></div>
+            <div class="md-col-5 exp-col-4 lg-col-4"><label for="brand-kit-form-email-focused">Email · focused state</label><input class="input primary-border" id="brand-kit-form-email-focused" name="email-focused" type="email" value="alex@studio.com"></div>
+            <div class="md-col-5 exp-col-4 lg-col-4"><label for="brand-kit-form-company">Company name</label><input class="input" id="brand-kit-form-company" name="company" type="text" placeholder="Your company"></div>
+            <div class="md-col-5 exp-col-4 lg-col-4"><label for="brand-kit-form-project">Project brief</label><input class="input" id="brand-kit-form-project" name="project" type="text" placeholder="What would you like to improve?"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="" id="spacing-scale" aria-labelledby="spacing-scale-title">
+    <div class="container">
+      <div class="grid">
+        <header class="grid margin-b-l">
+          <p class="eyebrow eyebrow--pill"><span class="eyebrow__index">07</span><span class="eyebrow__label">Spacing scale</span></p>
+          <h2 id="spacing-scale-title">A steady rhythm, from small to spacious</h2>
+          <p class="lead">Each sample grows from the active IntelliTheme spacing token. Adjust the theme scale to update these bars across the page.</p>
+        </header>
+        <div class="grid grid">
+          <article class="md-col-5 exp-col-4  card surface-container-low">
+            <h3 class="card__title">Extra small</h3>
+            <code>--space-xs</code>
+          </article>
+          <article class="md-col-5 exp-col-4  card surface-container-low">
+            <h3 class="card__title">Small</h3>
+            <code>--space-s</code>
+          </article>
+          <article class="md-col-5 exp-col-4  card surface-container-low">
+            <h3 class="card__title">Medium</h3>
+            <code>--space-m</code>
+          </article>
+          <article class="md-col-5 exp-col-4  card surface-container-low">
+            <h3 class="card__title">Large</h3>
+            <code>--space-l</code>
+          </article>
+          <article class="md-col-5 exp-col-4  card surface-container-low">
+            <h3 class="card__title">Extra large</h3>
+            <code>--space-xl</code>
+          </article>
+          <article class="md-col-5 exp-col-4  card surface-container-low">
+            <h3 class="card__title">XXL</h3>
+            <code>--space-xxl</code>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="radius-scale" aria-labelledby="radius-scale-title">
+    <div class="container">
+      <div class="grid">
+        <header class="grid margin-b-l">
+          <p class="eyebrow eyebrow--pill"><span class="eyebrow__index">08</span><span class="eyebrow__label">Border radius scale</span></p>
+          <h2 id="radius-scale-title">Corners shaped by component tokens</h2>
+          <p class="lead">The samples use the active radius settings for shared controls, cards, badges, and dialogs.</p>
+        </header>
+        <div class="grid grid">
+          <article class="md-col-5 exp-col-4  card surface-container-low">
+            <h3 class="card__title">Input</h3>
+            <code>--input-radius</code>
+          </article>
+          <article class="md-col-5 exp-col-4  card surface-container-low">
+            <h3 class="card__title">Button</h3>
+            <code>--button-radius</code>
+          </article>
+          <article class="md-col-5 exp-col-4  card surface-container-low">
+            <h3 class="card__title">Card</h3>
+            <code>--card-radius</code>
+          </article>
+          <article class="md-col-5 exp-col-4  card surface-container-low">
+            <h3 class="card__title">Badge</h3>
+            <code>--badge-radius</code>
+          </article>
+          <article class="md-col-5 exp-col-4  card surface-container-low">
+            <h3 class="card__title">Dialog</h3>
+            <code>--modal-radius</code>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="" id="depth" aria-labelledby="depth-title">
+    <div class="container">
+      <div class="grid">
+        <header class="grid margin-b-l">
+          <p class="eyebrow eyebrow--pill"><span class="eyebrow__index">09</span><span class="eyebrow__label">Elevation and depth</span></p>
+          <h2 id="depth-title">Give content depth through contrast</h2>
+          <p class="lead">Keep shadows quiet. Separate content with surface roles, brand color, and hairline borders from the active theme.</p>
+        </header>
+        <div class="grid grid">
+          <article class="md-col-5 exp-col-4  card background on-background-color">
+            <h3 class="card__title">Canvas</h3>
+            <p class="card__text">The page surface for reading and broad sections.</p>
+          </article>
+          <article class="md-col-5 exp-col-4  card surface-container-low">
+            <h3 class="card__title">Grouped surface</h3>
+            <p class="card__text">Subtle contrast for related content.</p>
+          </article>
+          <article class="md-col-5 exp-col-4 card primary">
+            <h3 class="card__title">Primary surface</h3>
+            <p class="card__text">A clear brand moment for key content.</p>
+          </article>
+          <article class="md-col-5 exp-col-4 card tertiary">
+            <h3 class="card__title">Tertiary surface</h3>
+            <p class="card__text">A supporting brand surface for related features.</p>
+          </article>
+          <article class="md-col-5 exp-col-4  card surface on-surface-color outline-variant-border">
+            <h3 class="card__title">Hairline boundary</h3>
+            <p class="card__text">Use a fine outline to define a card on a calm surface.</p>
+          </article>
+          <article class="md-col-5 exp-col-4  card clarity-city-container-high">
+            <h3 class="card__title">Media frame</h3>
+            <p class="card__text">Let useful imagery add depth when it explains the content.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="" id="patterns" aria-labelledby="patterns-title">
+    <div class="container">
+      <div class="grid">
+        <header class="grid margin-b-l">
+          <p class="eyebrow eyebrow--pill"><span class="eyebrow__index">10</span><span class="eyebrow__label">Page patterns</span></p>
+          <h2 id="patterns-title">Reusable content, composed from primitives</h2>
+          <p class="lead">A compact sample of interface patterns for real prototype pages. These examples use IntelliTheme classes and neutral sample content.</p>
+        </header>
+        <div class="grid grid">
+          <article class="md-col-5 exp-col-4 card">
+            <p class="eyebrow">Page section</p>
+            <h3 class="card__title">A clear next step</h3>
+            <p class="card__text">Pair a short heading with one useful action and enough context to make it understandable.</p>
+            <a class="button button--primary" href="#responsive">Explore the approach <span class="button__icon material-icons-round" aria-hidden="true">north_east</span></a>
+          </article>
+          <article class="md-col-5 exp-col-4 card">
+            <p class="eyebrow">Interface sample</p>
+            <h3 class="card__title">Recent activity</h3>
+            <ul>
+              <li>Page draft · Updated just now</li>
+              <li>Color roles · In review</li>
+              <li>Layout sample · Ready to preview</li>
+            </ul>
+          </article>
+          <article class="md-col-5 exp-col-4 card">
+            <p class="eyebrow">Form sample</p>
+            <form><label for="brand-kit-email">Email address</label><input class="input" id="brand-kit-email" type="email" placeholder="you@example.com"><button class="button button--primary" type="button">Continue <span class="button__icon material-icons-round" aria-hidden="true">north_east</span></button></form>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="" id="responsive" aria-labelledby="responsive-title">
+    <div class="container">
+      <div class="grid">
+        <header class="grid margin-b-l">
+          <p class="eyebrow eyebrow--pill"><span class="eyebrow__index">11</span><span class="eyebrow__label">Responsive behavior</span></p>
+          <h2 id="responsive-title">One grid, four viewport tiers</h2>
+          <p class="lead">The shared layout classes change their column spans at the Composer’s Compact, Medium, Expanded, and Large breakpoints.</p>
+        </header>
+        <table class="grid">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Width</th>
+              <th scope="col">Grid classes</th>
+              <th scope="col">Behavior</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Compact</th>
+              <td>0–599px</td>
+              <td><code>.com-col-*</code></td>
+              <td>Compact spans set the column width on small screens.</td>
+            </tr>
+            <tr>
+              <th scope="row">Medium</th>
+              <td>600–839px</td>
+              <td><code>.md-col-*</code></td>
+              <td>Medium spans apply from the 600px media query.</td>
+            </tr>
+            <tr>
+              <th scope="row">Expanded</th>
+              <td>840–1199px</td>
+              <td><code>.exp-col-*</code></td>
+              <td>Expanded spans apply from the 840px media query.</td>
+            </tr>
+            <tr>
+              <th scope="row">Large</th>
+              <td>1200px and up</td>
+              <td><code>.lg-col-*</code></td>
+              <td>Large spans apply from the 1200px media query.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="grid">
+          <p class="row">Touch targets</h3>
+          <ul>
+            <li>Keep primary controls at least 44 × 44px where the layout allows.</li>
+            <li>Retain a visible focus state for keyboard users.</li>
+          </ul>
+        </div>
+        <div class="grid">
+          <p class="row">Grid behavior</h3>
+          <ul>
+            <li>Grid items default to full width until a breakpoint span applies.</li>
+            <li>Each larger tier can set a new span with its matching class prefix.</li>
+            <li>Component styles may use additional local media queries for navigation, type, or spacing.</li>
+          </ul>
+        </div>
+        <p >Breakpoint widths match the Composer viewport tiers and the shared IntelliTheme grid media queries.</p>
+        <p >Source: IntelliWebLab Brand Kit Design Source, version 0.1.0. Color roles and values are sourced from the current IntelliTheme color stylesheet; the palette image is reference only.</p>
+      </div>
+    </div>
+  </section>
+  <footer class="section padding-y-xl border-t on-primary-container-dark">
+    <div class="container stack stack--m">
+      <div class="cluster items-middle justify-between">
+        <span>IntelliWebLab © 2026</span>
+        <div class="cluster" style="gap: 1.5rem;">
+        <a href="#about">About Us</a>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+      </div>
+      </div>
+    </div>
+  </footer>
+</main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

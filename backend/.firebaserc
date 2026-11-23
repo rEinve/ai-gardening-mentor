@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "ai-gardening-mentor-dev",
+    "dev": "ai-gardening-mentor-dev",
+    "staging": "ai-gardening-mentor-staging",
+    "prod": "ai-gardening-mentor-prod"
+  }
+}

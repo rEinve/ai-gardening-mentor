@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <include src="./partials/header.html"></include>
+  <title>Talk to Mosi | IntelliWebLab</title>
+  <meta name="description" content="Tell us what your business needs from Mosi Assistance and review your enquiry before sending it.">
+</head>
+<body>
+<main>
+  <include src="./partials/main-menu.html"></include>
+
+  <section class="section contact-page" id="top" aria-labelledby="contact-page-title">
+    <div class="container">
+      <div class="grid">
+        <div class="contact-page__intro col-full md-col-10-centered exp-col-8-centered stack stack--sm text-center">
+          <p class="eyebrow eyebrow--pill margin-inline-auto"><span class="eyebrow__label">Mosi Assistance</span><span class="eyebrow__index">Talk to us</span></p>
+          <h1 id="contact-page-title">Let’s work out the right next step.</h1>
+          <p class="lead">Answer a few short questions. We’ll show you everything before you send your enquiry.</p>
+        </div>
+
+        <div class="contact-flow col-full md-col-10-centered exp-col-8-centered" data-contact-flow>
+          <div class="contact-flow__header cluster justify-between items-middle">
+            <p class="contact-flow__progress" data-progress>Question 1 of 5</p>
+            <p class="contact-flow__status" data-status>Private prototype</p>
+          </div>
+
+          <form class="contact-flow__form" id="contact-form" novalidate>
+            <div class="contact-flow__step" data-step="1">
+              <p class="contact-flow__step-number">01</p>
+              <h2>What would you like help with?</h2>
+              <p class="contact-flow__hint">Choose the conversation that is closest to what you need.</p>
+              <div class="contact-flow__options stack stack--xs">
+                <label class="contact-flow__option"><input type="radio" name="interest" value="Book a walkthrough" required><span>Book a walkthrough</span></label>
+                <label class="contact-flow__option"><input type="radio" name="interest" value="Ask about WhatsApp assistance"><span>Ask about WhatsApp assistance</span></label>
+                <label class="contact-flow__option"><input type="radio" name="interest" value="Discuss a custom deployment"><span>Discuss a custom deployment</span></label>
+              </div>
+            </div>
+
+            <div class="contact-flow__step" data-step="2" hidden>
+              <p class="contact-flow__step-number">02</p>
+              <h2>What kind of business do you run?</h2>
+              <p class="contact-flow__hint">This helps us keep the follow-up relevant.</p>
+              <label class="contact-flow__field"><span class="visually-hidden">Business type</span><input class="input" type="text" name="business" placeholder="For example, a retail shop or hotel" required></label>
+            </div>
+
+            <div class="contact-flow__step" data-step="3" hidden>
+              <p class="contact-flow__step-number">03</p>
+              <h2>Where do customer conversations happen today?</h2>
+              <p class="contact-flow__hint">Pick the channel that matters most right now.</p>
+              <div class="contact-flow__options stack stack--xs">
+                <label class="contact-flow__option"><input type="radio" name="channel" value="WhatsApp" required><span>WhatsApp</span></label>
+                <label class="contact-flow__option"><input type="radio" name="channel" value="Website and email"><span>Website and email</span></label>
+                <label class="contact-flow__option"><input type="radio" name="channel" value="Several channels"><span>Several channels</span></label>
+              </div>
+            </div>
+
+            <div class="contact-flow__step" data-step="4" hidden>
+              <p class="contact-flow__step-number">04</p>
+              <h2>What would you like Mosi to improve?</h2>
+              <p class="contact-flow__hint">A sentence or two is enough.</p>
+              <label class="contact-flow__field"><span class="visually-hidden">What would you like Mosi to improve?</span><textarea class="input" name="challenge" rows="4" placeholder="For example, answering repeat questions or following up with leads" required></textarea></label>
+            </div>
+
+            <div class="contact-flow__step" data-step="5" hidden>
+              <p class="contact-flow__step-number">05</p>
+              <h2>Where should we send the reply?</h2>
+              <p class="contact-flow__hint">We’ll only use these details to respond to this enquiry.</p>
+              <div class="contact-flow__fields stack stack--sm">
+                <label class="contact-flow__field"><span class="visually-hidden">Your name</span><input class="input" type="text" name="name" autocomplete="name" placeholder="Your name" required></label>
+                <label class="contact-flow__field"><span class="visually-hidden">Email address</span><input class="input" type="email" name="email" autocomplete="email" placeholder="Email address" required></label>
+                <label class="contact-flow__field"><span class="visually-hidden">Phone number, optional</span><input class="input" type="tel" name="phone" autocomplete="tel" placeholder="Phone number (optional)"></label>
+              </div>
+            </div>
+
+            <div class="contact-flow__review" data-review hidden>
+              <p class="contact-flow__step-number">Review</p>
+              <h2>Check your enquiry before sending.</h2>
+              <p class="contact-flow__hint">You can edit any answer before this prototype submits.</p>
+              <dl class="contact-flow__summary" data-summary></dl>
+            </div>
+
+            <p class="contact-flow__error" data-error role="alert" hidden>Please answer this question before continuing.</p>
+            <div class="contact-flow__actions cluster justify-between items-middle">
+              <button class="button button--ghost" type="button" data-back hidden>Back</button>
+              <span class="contact-flow__action-spacer"></span>
+              <button class="button button--primary" type="button" data-next>Continue <span class="button__icon material-icons-round" aria-hidden="true">arrow_forward</span></button>
+              <button class="button button--primary" type="submit" data-submit hidden>Send enquiry <span class="button__icon material-icons-round" aria-hidden="true">north_east</span></button>
+            </div>
+          </form>
+
+          <div class="contact-flow__success stack stack--sm items-middle text-center" data-success hidden>
+            <span class="contact-flow__success-icon material-icons-round" aria-hidden="true">check</span>
+            <h2>Thanks—we’ve got your enquiry.</h2>
+            <p>This prototype has recorded your answers. A connected version can send them to your sales workflow.</p>
+            <a class="button button--ghost" href="/">Return home <span class="button__icon material-icons-round" aria-hidden="true">arrow_back</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<include src="./partials/footer.html"></include>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

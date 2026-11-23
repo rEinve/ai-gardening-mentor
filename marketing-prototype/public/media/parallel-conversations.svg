@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 497 369" role="img" aria-labelledby="title description">
+  <title id="title">Parallel conversations</title>
+  <desc id="description">A computer monitor with a conversation bubble and overlapping message cards.</desc>
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#dfe2ec" d="M0 0h497v369H0z"/>
+    <path fill="#d9dce7" d="M220 270h58v43h-58z"/>
+    <path fill="#d3d6e1" d="M183 313h132v4H183z"/>
+    <path fill="#fff" stroke="#12131b" stroke-width="5" d="M139 105h231v165H139z"/>
+    <path stroke="#8b8d96" stroke-width="2" d="M139 120h231"/>
+    <circle cx="150" cy="112" r="2" fill="#8b8d96"/>
+    <circle cx="157" cy="112" r="2" fill="#8b8d96"/>
+    <circle cx="164" cy="112" r="2" fill="#8b8d96"/>
+    <path fill="#fff" stroke="#12131b" stroke-width="5" d="M250 145c30 0 54 22 54 49 0 16-9 31-24 40l-4 17-17-9h-9c-30 0-54-22-54-49s24-48 54-48z"/>
+    <circle cx="232" cy="194" r="6" fill="#12131b"/>
+    <circle cx="250" cy="194" r="6" fill="#12131b"/>
+    <circle cx="268" cy="194" r="6" fill="#12131b"/>
+    <rect x="90" y="211" width="105" height="42" rx="7" fill="#fff" stroke="#a9abb4" stroke-width="2"/>
+    <circle cx="108" cy="232" r="10" fill="#f3bd65"/>
+    <path stroke="#a9abb4" stroke-width="4" d="M126 225h45M126 238h31"/>
+    <circle cx="193" cy="211" r="7" fill="#f3bd65"/>
+    <path stroke="#fff" stroke-width="2" d="M193 207v8M189 211h8"/>
+    <rect x="400" y="255" width="31" height="18" rx="2" fill="#fff" stroke="#a9abb4"/>
+    <circle cx="410" cy="264" r="2" fill="#f3bd65"/>
+    <circle cx="201" cy="63" r="8" fill="#f3bd65"/>
+    <path stroke="#fff" stroke-width="2" d="M201 59v8M197 63h8"/>
+  </g>
+</svg>

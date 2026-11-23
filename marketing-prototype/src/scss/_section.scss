@@ -1,0 +1,19 @@
+@use 'themeui-lab/src/scss/abstracts/mixins' as tools;
+
+section {
+    padding-block: var(--section-space);
+    padding-inline: 0;
+}
+
+@include tools.breakpoint(medium) {
+    :root {
+        --section-space: var(--section-space-medium);
+    }
+}
+
+@include tools.breakpoint(expanded) {
+    :root {
+        --section-space: var(--section-space-expanded);
+    }
+}
+

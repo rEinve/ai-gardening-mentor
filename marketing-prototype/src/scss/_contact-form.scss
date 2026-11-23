@@ -1,0 +1,197 @@
+.contact-page {
+    padding-block: var(--space-xl) var(--space-xxl);
+}
+
+.contact-page__intro h1 {
+    max-inline-size: var(--measure-heading);
+    margin-inline: auto;
+    font-size: var(--step-4);
+    font-weight: var(--weight-regular);
+    line-height: var(--lh-headline);
+    letter-spacing: var(--ls-headline);
+    text-wrap: balance;
+}
+
+.contact-page__intro .lead {
+    max-inline-size: var(--measure-lead);
+    margin-inline: auto;
+}
+
+.contact-flow {
+    margin-block-start: var(--space-l);
+    padding: var(--space-m);
+    border: 1px solid var(--outline-variant);
+    border-radius: var(--radius-container-lg);
+    background: var(--surface-container-low);
+}
+
+.contact-flow__header {
+    padding-block-end: var(--space-s);
+    border-block-end: 1px solid var(--outline-variant);
+}
+
+.contact-flow__progress,
+.contact-flow__status,
+.contact-flow__step-number {
+    color: var(--on-surface-variant);
+    font-family: var(--font-label);
+    font-size: var(--text-sm);
+    letter-spacing: var(--ls-label);
+    text-transform: uppercase;
+}
+
+.contact-flow__status {
+    color: var(--tertiary);
+}
+
+.contact-flow__form {
+    padding-block: var(--space-l) var(--space-s);
+}
+
+.contact-flow__step,
+.contact-flow__review {
+    max-inline-size: var(--measure-prose);
+    margin-inline: auto;
+}
+
+.contact-flow__step h2,
+.contact-flow__review h2,
+.contact-flow__success h2 {
+    margin-block-start: var(--space-xxs);
+    font-size: var(--step-2);
+    font-weight: var(--weight-regular);
+    line-height: var(--lh-title);
+    text-wrap: balance;
+}
+
+.contact-flow__hint {
+    margin-block-start: var(--space-xxs);
+    color: var(--on-surface-variant);
+}
+
+.contact-flow__options,
+.contact-flow__fields {
+    margin-block-start: var(--space-m);
+}
+
+.contact-flow__option {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    min-block-size: var(--space-l);
+    padding: var(--space-xxs) var(--space-xs);
+    border: 1px solid var(--outline-variant);
+    border-radius: var(--radius-m);
+    background: var(--surface-container-lowest);
+    cursor: pointer;
+}
+
+.contact-flow__option:has(input:checked) {
+    border-color: var(--tertiary);
+    background: var(--tertiary-container);
+}
+
+.contact-flow__option input {
+    accent-color: var(--tertiary);
+}
+
+.contact-flow__field {
+    display: block;
+}
+
+.contact-flow__field .input {
+    inline-size: 100%;
+}
+
+.contact-flow__field textarea.input {
+    resize: vertical;
+}
+
+.contact-flow__summary {
+    display: grid;
+    gap: var(--space-xs);
+    margin-block-start: var(--space-m);
+}
+
+.contact-flow__summary div {
+    display: grid;
+    gap: var(--space-xxs);
+    padding-block-end: var(--space-xs);
+    border-block-end: 1px solid var(--outline-variant);
+}
+
+.contact-flow__summary dt {
+    color: var(--on-surface-variant);
+    font-family: var(--font-label);
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+}
+
+.contact-flow__summary dd {
+    margin: 0;
+}
+
+.contact-flow__summary button {
+    justify-self: start;
+    padding: 0;
+    border: 0;
+    color: var(--tertiary);
+    background: transparent;
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.contact-flow__error {
+    margin-block-start: var(--space-xs);
+    color: var(--error);
+}
+
+.contact-flow__actions {
+    max-inline-size: var(--measure-prose);
+    margin-inline: auto;
+    padding-block-start: var(--space-m);
+    border-block-start: 1px solid var(--outline-variant);
+}
+
+.contact-flow__action-spacer {
+    flex: 1 1 auto;
+}
+
+.contact-flow__success {
+    max-inline-size: var(--measure-prose);
+    margin-inline: auto;
+    padding-block: var(--space-l);
+}
+
+.contact-flow__success-icon {
+    display: grid;
+    place-items: center;
+    inline-size: var(--space-l);
+    block-size: var(--space-l);
+    border-radius: var(--radius-full);
+    background: var(--tertiary-container);
+    color: var(--on-tertiary-container);
+}
+
+@media (max-width: 599px) {
+    .contact-flow {
+        padding: var(--space-s);
+    }
+
+    .contact-flow__header,
+    .contact-flow__actions {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: var(--space-xs);
+    }
+
+    .contact-flow__actions .button,
+    .contact-flow__action-spacer {
+        inline-size: 100%;
+    }
+
+    .contact-flow__action-spacer {
+        display: none;
+    }
+}

@@ -1,0 +1,56 @@
+---
+import MainMenu from "../components/MainMenu.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "The first intelligent gardening mentor built specifically to eliminate novice anxiety—get instant 3-step calm triage from a photo, follow 5-minute weather-adaptive habits, and plan every crop from planting to harvest.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="IntelliWebLab Research & Engineering" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph / Social SEO -->
+    <meta property="og:site_name" content="Gardening Mentor | IntelliWebLab" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/media/logo.svg" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@intelliweblab" />
+    <meta name="twitter:creator" content="@intelliweblab" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/media/logo.svg" />
+
+    <!-- LLM & AI Search Citation Discovery -->
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Summary & Citation Data" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main>
+      <MainMenu />
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      import "../main.js";
+    </script>
+  </body>
+</html>

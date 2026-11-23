@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <include src="partials/header.html"></include>
+  <title>Blog | IntelliWebLab</title>
+  <meta name="description" content="Practical notes on clearer websites, useful prototypes, and thoughtful digital experiences from IntelliWebLab.">
+</head>
+<body>
+<main>
+  <include src="partials/main-menu.html"></include>
+
+  <section class="blog-intro" id="top" aria-labelledby="blog-title">
+    <div class="container stack stack--sm">
+      <p class="eyebrow eyebrow--pill"><span class="eyebrow__label">IntelliWebLab</span><span class="eyebrow__index">Blog</span></p>
+      <h1 id="blog-title">Ideas for a more useful web.</h1>
+      <p class="lead">Clear thinking about websites, prototypes, and the moments that help people move forward.</p>
+    </div>
+  </section>
+
+  <section class="blog-feature" aria-labelledby="featured-title">
+    <div class="container">
+      <article class="card surface-container-low blog-feature__card">
+        <div class="card__body">
+          <p class="h2 blog-feature__label">Feature Blog Post</p>
+          <h2 id="featured-title" class="card__title">Make complex pages clear</h2>
+          <p class="blog-meta">Website strategy · 3 min read</p>
+          <p class="card__text lead">Give visitors a clear purpose, a useful route through the information, and a next step they can recognize.</p>
+          <a class="learn-more" href="/blog/clearer-pages.html" aria-label="Read Make complex pages clear">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+        </div>
+        <figure class="card__media surface-variant">
+          <img src="/media/diagnosis-workshop.jpg" alt="Illustration of a person reviewing a chart at a desk" width="1350" height="1080" loading="eager">
+        </figure>
+      </article>
+    </div>
+  </section>
+
+  <section class="blog-index" aria-labelledby="browse-title">
+    <div class="container stack stack--lg">
+      <header class="stack stack--sm">
+        <h2 id="browse-title">More from Intelli Web Lab Blog</h2>
+      </header>
+
+      <div class="tabs tabs--horizontal" data-tabs>
+        <div class="tabs__list" role="tablist" aria-label="Blog topics">
+          <button class="tabs__tab" id="blog-tab-all" type="button" role="tab" aria-selected="true" aria-controls="blog-panel-all" tabindex="0">All</button>
+          <button class="tabs__tab" id="blog-tab-strategy" type="button" role="tab" aria-selected="false" aria-controls="blog-panel-strategy" tabindex="-1">Website strategy</button>
+          <button class="tabs__tab" id="blog-tab-prototypes" type="button" role="tab" aria-selected="false" aria-controls="blog-panel-prototypes" tabindex="-1">Prototyping</button>
+          <button class="tabs__tab" id="blog-tab-customer" type="button" role="tab" aria-selected="false" aria-controls="blog-panel-customer" tabindex="-1">Customer engagement</button>
+        </div>
+
+        <div class="tabs__panel" id="blog-panel-all" role="tabpanel" aria-labelledby="blog-tab-all" tabindex="0">
+          <div class="grid blog-list">
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">Prototype the useful path</h3>
+                <p class="blog-meta">Prototyping · 3 min read</p>
+                <a class="learn-more" href="/blog/useful-prototypes.html" aria-label="Read Prototype the useful path">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/smart-sorting-card_image.webp" alt="" width="341" height="193" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">How Can AI Agents Handle My Customer Support Across Multiple Channels?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/ai-agents-multiple-support-channels.html" aria-label="Read How Can AI Agents Handle My Customer Support Across Multiple Channels?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/ai-agents-multiple-support-channels-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">What's the Difference Between Regular Chatbots and Agentic AI?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/chatbots-vs-agentic-ai.html" aria-label="Read What's the Difference Between Regular Chatbots and Agentic AI?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/chatbots-vs-agentic-ai-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">Can AI Really Understand My Customers Like My Team Does?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/can-ai-understand-customers.html" aria-label="Read Can AI Really Understand My Customers Like My Team Does?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/can-ai-understand-customers-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">How Much Time Can Agentic AI Save My Customer Service Team?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/measure-ai-support-time-savings.html" aria-label="Read How Much Time Can Agentic AI Save My Customer Service Team?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/measure-ai-support-time-savings-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">What Does Omnichannel Customer Engagement Actually Mean?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/what-omnichannel-engagement-means.html" aria-label="Read What Does Omnichannel Customer Engagement Actually Mean?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/what-omnichannel-engagement-means-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">How Do I Get Started With AI Agents for My Business?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/start-ai-agents-business.html" aria-label="Read How Do I Get Started With AI Agents for My Business?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/start-ai-agents-business-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">Will AI Agents Replace My Customer Service Jobs?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/ai-agents-customer-service-jobs.html" aria-label="Read Will AI Agents Replace My Customer Service Jobs?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/ai-agents-customer-service-jobs-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">How Do Customers Feel About Talking to AI Instead of Humans?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/customer-preferences-ai-or-human-support.html" aria-label="Read How Do Customers Feel About Talking to AI Instead of Humans?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/customer-preferences-ai-or-human-support-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">What Should I Look for in an Omnichannel AI Platform?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/choose-omnichannel-ai-platform.html" aria-label="Read What Should I Look for in an Omnichannel AI Platform?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/choose-omnichannel-ai-platform-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">How Does AI-Powered Contact Center Automation Improve Customer Satisfaction?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/ai-contact-center-customer-satisfaction.html" aria-label="Read How Does AI-Powered Contact Center Automation Improve Customer Satisfaction?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/ai-contact-center-customer-satisfaction-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">Can AI Agents Actually Solve Problems or Just Answer FAQs?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/ai-agents-beyond-faqs.html" aria-label="Read Can AI Agents Actually Solve Problems or Just Answer FAQs?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/ai-agents-beyond-faqs-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">How Secure Is Customer Data With AI Engagement Platforms?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/ai-engagement-customer-data-security.html" aria-label="Read How Secure Is Customer Data With AI Engagement Platforms?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/ai-engagement-customer-data-security-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+          </div>
+        </div>
+
+        <div class="tabs__panel" id="blog-panel-strategy" role="tabpanel" aria-labelledby="blog-tab-strategy" tabindex="0" hidden>
+          <header class="blog-panel__header">
+            <div>
+              <p class="eyebrow">Website strategy</p>
+              <p>Make complex pages easier to understand and use.</p>
+            </div>
+            <span class="blog-panel__count">1 note</span>
+          </header>
+          <div class="grid blog-list">
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">Make complex pages clear</h3>
+                <p class="blog-meta">Website strategy · 3 min read</p>
+                <a class="learn-more" href="/blog/clearer-pages.html" aria-label="Read Make complex pages clear">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/diagnosis-workshop.jpg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+          </div>
+        </div>
+
+        <div class="tabs__panel" id="blog-panel-prototypes" role="tabpanel" aria-labelledby="blog-tab-prototypes" tabindex="0" hidden>
+          <header class="blog-panel__header">
+            <div>
+              <p class="eyebrow">Prototyping</p>
+              <p>Test the useful path before the work gets expensive.</p>
+            </div>
+            <span class="blog-panel__count">1 note</span>
+          </header>
+          <div class="grid blog-list">
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">Prototype the useful path</h3>
+                <p class="blog-meta">Prototyping · 3 min read</p>
+                <a class="learn-more" href="/blog/useful-prototypes.html" aria-label="Read Prototype the useful path">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/smart-sorting-card_image.webp" alt="" width="341" height="193" loading="lazy">
+              </figure>
+            </article>
+          </div>
+        </div>
+        <div class="tabs__panel" id="blog-panel-customer" role="tabpanel" aria-labelledby="blog-tab-customer" tabindex="0" hidden>
+          <header class="blog-panel__header">
+            <div>
+              <p class="eyebrow">Customer engagement</p>
+              <p>Turn conversations, channels, and automation into useful customer progress.</p>
+            </div>
+            <span class="blog-panel__count">11 notes</span>
+          </header>
+          <div class="grid blog-list">
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">How Can AI Agents Handle My Customer Support Across Multiple Channels?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/ai-agents-multiple-support-channels.html" aria-label="Read How Can AI Agents Handle My Customer Support Across Multiple Channels?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/ai-agents-multiple-support-channels-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">What's the Difference Between Regular Chatbots and Agentic AI?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/chatbots-vs-agentic-ai.html" aria-label="Read What's the Difference Between Regular Chatbots and Agentic AI?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/chatbots-vs-agentic-ai-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">Can AI Really Understand My Customers Like My Team Does?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/can-ai-understand-customers.html" aria-label="Read Can AI Really Understand My Customers Like My Team Does?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/can-ai-understand-customers-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">How Much Time Can Agentic AI Save My Customer Service Team?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/measure-ai-support-time-savings.html" aria-label="Read How Much Time Can Agentic AI Save My Customer Service Team?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/measure-ai-support-time-savings-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">What Does Omnichannel Customer Engagement Actually Mean?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/what-omnichannel-engagement-means.html" aria-label="Read What Does Omnichannel Customer Engagement Actually Mean?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/what-omnichannel-engagement-means-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">How Do I Get Started With AI Agents for My Business?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/start-ai-agents-business.html" aria-label="Read How Do I Get Started With AI Agents for My Business?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/start-ai-agents-business-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">Will AI Agents Replace My Customer Service Jobs?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/ai-agents-customer-service-jobs.html" aria-label="Read Will AI Agents Replace My Customer Service Jobs?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/ai-agents-customer-service-jobs-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">How Do Customers Feel About Talking to AI Instead of Humans?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/customer-preferences-ai-or-human-support.html" aria-label="Read How Do Customers Feel About Talking to AI Instead of Humans?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/customer-preferences-ai-or-human-support-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">What Should I Look for in an Omnichannel AI Platform?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/choose-omnichannel-ai-platform.html" aria-label="Read What Should I Look for in an Omnichannel AI Platform?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/choose-omnichannel-ai-platform-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">How Does AI-Powered Contact Center Automation Improve Customer Satisfaction?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/ai-contact-center-customer-satisfaction.html" aria-label="Read How Does AI-Powered Contact Center Automation Improve Customer Satisfaction?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/ai-contact-center-customer-satisfaction-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">Can AI Agents Actually Solve Problems or Just Answer FAQs?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/ai-agents-beyond-faqs.html" aria-label="Read Can AI Agents Actually Solve Problems or Just Answer FAQs?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/ai-agents-beyond-faqs-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+            <article class="card surface-container-low exp-col-6">
+              <div class="card__body">
+                <h3 class="h4 card__title">How Secure Is Customer Data With AI Engagement Platforms?</h3>
+                <p class="blog-meta">Customer engagement · 2 min read</p>
+                <a class="learn-more" href="/blog/ai-engagement-customer-data-security.html" aria-label="Read How Secure Is Customer Data With AI Engagement Platforms?">Read blog <span class="learn-more__icon material-icons-round" aria-hidden="true">arrow_forward</span></a>
+              </div>
+              <figure class="card__media surface-variant">
+                <img src="/media/blog/ai-engagement-customer-data-security-flat-v3.svg" alt="" width="1350" height="1080" loading="lazy">
+              </figure>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ <include src="partials/subscribe-form.html"></include>
+</main>
+<include src="partials/footer.html"></include>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

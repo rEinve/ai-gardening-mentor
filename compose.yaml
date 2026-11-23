@@ -1,0 +1,41 @@
+# Standard Compose Specification (Universal for Podman Compose & Docker Compose)
+
+services:
+  app:
+    container_name: ai-gardening-mentor
+    build:
+      context: .
+      dockerfile: Containerfile
+      target: production
+    image: localhost/ai-gardening-mentor:latest
+    ports:
+      - "4321:8080"
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD-SHELL", "wget --spider -q http://127.0.0.1:8080/healthz || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+    environment:
+      - NODE_ENV=production
+
+  dev:
+    container_name: ai-gardening-mentor-dev
+    build:
+      context: .
+      dockerfile: Containerfile
+      target: development
+    image: localhost/ai-gardening-mentor:dev
+    ports:
+      - "4321:4321"
+    volumes:
+      - .:/app:Z
+    environment:
+      - NODE_ENV=development
+      - PORT=4321
+    command: ["node", "scripts/dev-server.mjs", "--port", "4321", "--host", "0.0.0.0"]
+    profiles:
+      - dev

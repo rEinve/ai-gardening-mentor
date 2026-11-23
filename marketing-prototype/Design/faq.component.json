@@ -1,0 +1,1379 @@
+{
+  "id": "BF5FE352-CC53-4626-9690-9E1AF2A02C47",
+  "name": "faq",
+  "slug": "faq",
+  "type": "component",
+  "width": 1180,
+  "height": 706,
+  "layersCount": 2,
+  "layers": [
+    {
+      "name": "faq__list",
+      "type": "SymbolInstance",
+      "x": 77,
+      "y": 165,
+      "width": 976,
+      "height": 541,
+      "symbolId": "22E830C8-5BA9-4FB2-83DF-0A6E8137FCB4",
+      "masterName": "faq__list",
+      "overrides": [
+        {
+          "id": "08AA03FD-B82C-4FA6-A687-87765FF7D794_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "08AA03FD-B82C-4FA6-A687-87765FF7D794_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "08AA03FD-B82C-4FA6-A687-87765FF7D794_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "2D0455B7-123F-4DB7-9A23-98D80A45AF55_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "2D0455B7-123F-4DB7-9A23-98D80A45AF55_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "2D0455B7-123F-4DB7-9A23-98D80A45AF55_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "AE9C35EA-CD0D-48E0-8F65-48CAC05150AE_stringValue",
+          "property": "stringValue",
+          "value": "1/  "
+        },
+        {
+          "id": "AE9C35EA-CD0D-48E0-8F65-48CAC05150AE_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "AE9C35EA-CD0D-48E0-8F65-48CAC05150AE_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "AE9C35EA-CD0D-48E0-8F65-48CAC05150AE_textColor",
+          "property": "textColor",
+          "value": "#171c1fff"
+        },
+        {
+          "id": "AE9C35EA-CD0D-48E0-8F65-48CAC05150AE_textSize",
+          "property": "textSize",
+          "value": "36.00"
+        },
+        {
+          "id": "AE9C35EA-CD0D-48E0-8F65-48CAC05150AE_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "AE9C35EA-CD0D-48E0-8F65-48CAC05150AE_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "AE9C35EA-CD0D-48E0-8F65-48CAC05150AE_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "AE9C35EA-CD0D-48E0-8F65-48CAC05150AE_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "6D5F7D7B-55A9-40FB-9E1E-399418937E3E_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "6D5F7D7B-55A9-40FB-9E1E-399418937E3E_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "6D5F7D7B-55A9-40FB-9E1E-399418937E3E_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "9C90DBC0-5D3C-4407-9F95-EE0F12EF4ECA_stringValue",
+          "property": "stringValue",
+          "value": "-"
+        },
+        {
+          "id": "9C90DBC0-5D3C-4407-9F95-EE0F12EF4ECA_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "9C90DBC0-5D3C-4407-9F95-EE0F12EF4ECA_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "9C90DBC0-5D3C-4407-9F95-EE0F12EF4ECA_textColor",
+          "property": "textColor",
+          "value": "#7d570eff"
+        },
+        {
+          "id": "9C90DBC0-5D3C-4407-9F95-EE0F12EF4ECA_textSize",
+          "property": "textSize",
+          "value": "36.00"
+        },
+        {
+          "id": "9C90DBC0-5D3C-4407-9F95-EE0F12EF4ECA_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "9C90DBC0-5D3C-4407-9F95-EE0F12EF4ECA_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "9C90DBC0-5D3C-4407-9F95-EE0F12EF4ECA_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "9C90DBC0-5D3C-4407-9F95-EE0F12EF4ECA_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "F28ACDC9-4118-456F-9184-7DF0D72A912B_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "F28ACDC9-4118-456F-9184-7DF0D72A912B_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "F28ACDC9-4118-456F-9184-7DF0D72A912B_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#f0be6dff"
+        },
+        {
+          "id": "F28ACDC9-4118-456F-9184-7DF0D72A912B_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "F28ACDC9-4118-456F-9184-7DF0D72A912B_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "F28ACDC9-4118-456F-9184-7DF0D72A912B_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "99AE433A-BDC9-4D3D-A924-A263AF1E1255_stringValue",
+          "property": "stringValue",
+          "value": "Can the assistant answer my customers questions?"
+        },
+        {
+          "id": "99AE433A-BDC9-4D3D-A924-A263AF1E1255_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "99AE433A-BDC9-4D3D-A924-A263AF1E1255_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "99AE433A-BDC9-4D3D-A924-A263AF1E1255_textColor",
+          "property": "textColor",
+          "value": "#171c1fff"
+        },
+        {
+          "id": "99AE433A-BDC9-4D3D-A924-A263AF1E1255_textSize",
+          "property": "textSize",
+          "value": "36.00"
+        },
+        {
+          "id": "99AE433A-BDC9-4D3D-A924-A263AF1E1255_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "99AE433A-BDC9-4D3D-A924-A263AF1E1255_textStyle",
+          "property": "textStyle",
+          "value": "C0715FFA-7365-4AC1-98A1-2822D69ECAFD"
+        },
+        {
+          "id": "99AE433A-BDC9-4D3D-A924-A263AF1E1255_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "99AE433A-BDC9-4D3D-A924-A263AF1E1255_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "1"
+        },
+        {
+          "id": "99AE433A-BDC9-4D3D-A924-A263AF1E1255_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "53BADC5B-BB99-414D-8A12-C93C12316C9E_stringValue",
+          "property": "stringValue",
+          "value": "It can help with common questions about your services, prices, opening hours, and policies using the business information you provide."
+        },
+        {
+          "id": "53BADC5B-BB99-414D-8A12-C93C12316C9E_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "53BADC5B-BB99-414D-8A12-C93C12316C9E_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "53BADC5B-BB99-414D-8A12-C93C12316C9E_textColor",
+          "property": "textColor",
+          "value": "#42474eff"
+        },
+        {
+          "id": "53BADC5B-BB99-414D-8A12-C93C12316C9E_textSize",
+          "property": "textSize",
+          "value": "32.00"
+        },
+        {
+          "id": "53BADC5B-BB99-414D-8A12-C93C12316C9E_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "53BADC5B-BB99-414D-8A12-C93C12316C9E_textStyle",
+          "property": "textStyle",
+          "value": "E3004F5E-E65E-4DA1-B1BB-CBAD7C1CF492"
+        },
+        {
+          "id": "53BADC5B-BB99-414D-8A12-C93C12316C9E_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "53BADC5B-BB99-414D-8A12-C93C12316C9E_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "53BADC5B-BB99-414D-8A12-C93C12316C9E_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "BCE5B8EB-1EC6-4BE5-83DD-225F2F2BC6B3_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "BCE5B8EB-1EC6-4BE5-83DD-225F2F2BC6B3_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "BCE5B8EB-1EC6-4BE5-83DD-225F2F2BC6B3_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "D9222753-1745-49FB-8231-80209A81BFC4_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "D9222753-1745-49FB-8231-80209A81BFC4_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "D9222753-1745-49FB-8231-80209A81BFC4_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "E4B272B6-63BE-44AC-BD7A-5F83F4809752_stringValue",
+          "property": "stringValue",
+          "value": "6/  "
+        },
+        {
+          "id": "E4B272B6-63BE-44AC-BD7A-5F83F4809752_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "E4B272B6-63BE-44AC-BD7A-5F83F4809752_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "E4B272B6-63BE-44AC-BD7A-5F83F4809752_textColor",
+          "property": "textColor",
+          "value": "#171c1fff"
+        },
+        {
+          "id": "E4B272B6-63BE-44AC-BD7A-5F83F4809752_textSize",
+          "property": "textSize",
+          "value": "36.00"
+        },
+        {
+          "id": "E4B272B6-63BE-44AC-BD7A-5F83F4809752_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "E4B272B6-63BE-44AC-BD7A-5F83F4809752_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "E4B272B6-63BE-44AC-BD7A-5F83F4809752_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "E4B272B6-63BE-44AC-BD7A-5F83F4809752_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "A3728EE5-0DDF-4C43-ABDB-990BE5ADD50F_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "A3728EE5-0DDF-4C43-ABDB-990BE5ADD50F_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "A3728EE5-0DDF-4C43-ABDB-990BE5ADD50F_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "6D96D243-45D7-4364-9F43-555504B07C41_stringValue",
+          "property": "stringValue",
+          "value": "+"
+        },
+        {
+          "id": "6D96D243-45D7-4364-9F43-555504B07C41_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "6D96D243-45D7-4364-9F43-555504B07C41_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "6D96D243-45D7-4364-9F43-555504B07C41_textColor",
+          "property": "textColor",
+          "value": "#7d570eff"
+        },
+        {
+          "id": "6D96D243-45D7-4364-9F43-555504B07C41_textSize",
+          "property": "textSize",
+          "value": "36.00"
+        },
+        {
+          "id": "6D96D243-45D7-4364-9F43-555504B07C41_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "6D96D243-45D7-4364-9F43-555504B07C41_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "6D96D243-45D7-4364-9F43-555504B07C41_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "6D96D243-45D7-4364-9F43-555504B07C41_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "86771C17-A5D1-4BC5-83A5-F486E29FF753_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "86771C17-A5D1-4BC5-83A5-F486E29FF753_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "86771C17-A5D1-4BC5-83A5-F486E29FF753_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#f0be6dff"
+        },
+        {
+          "id": "86771C17-A5D1-4BC5-83A5-F486E29FF753_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "86771C17-A5D1-4BC5-83A5-F486E29FF753_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "86771C17-A5D1-4BC5-83A5-F486E29FF753_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "E63C8FD0-96DB-4D65-8812-EAC8806B822D_stringValue",
+          "property": "stringValue",
+          "value": "Can Mosi support customers business 24 hours?"
+        },
+        {
+          "id": "E63C8FD0-96DB-4D65-8812-EAC8806B822D_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "E63C8FD0-96DB-4D65-8812-EAC8806B822D_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "E63C8FD0-96DB-4D65-8812-EAC8806B822D_textColor",
+          "property": "textColor",
+          "value": "#171c1fff"
+        },
+        {
+          "id": "E63C8FD0-96DB-4D65-8812-EAC8806B822D_textSize",
+          "property": "textSize",
+          "value": "36.00"
+        },
+        {
+          "id": "E63C8FD0-96DB-4D65-8812-EAC8806B822D_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "E63C8FD0-96DB-4D65-8812-EAC8806B822D_textStyle",
+          "property": "textStyle",
+          "value": "C0715FFA-7365-4AC1-98A1-2822D69ECAFD"
+        },
+        {
+          "id": "E63C8FD0-96DB-4D65-8812-EAC8806B822D_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "E63C8FD0-96DB-4D65-8812-EAC8806B822D_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "1"
+        },
+        {
+          "id": "E63C8FD0-96DB-4D65-8812-EAC8806B822D_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "6CF751FF-8D6D-46EC-AC1D-7189265A40AA_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "6CF751FF-8D6D-46EC-AC1D-7189265A40AA_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "6CF751FF-8D6D-46EC-AC1D-7189265A40AA_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "A0E0B260-53A2-418B-B945-544B5F4706A9_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "A0E0B260-53A2-418B-B945-544B5F4706A9_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "A0E0B260-53A2-418B-B945-544B5F4706A9_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "3833BBAF-FA6D-4A06-89D5-3C441A9DC9C3_stringValue",
+          "property": "stringValue",
+          "value": "5/  "
+        },
+        {
+          "id": "3833BBAF-FA6D-4A06-89D5-3C441A9DC9C3_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "3833BBAF-FA6D-4A06-89D5-3C441A9DC9C3_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "3833BBAF-FA6D-4A06-89D5-3C441A9DC9C3_textColor",
+          "property": "textColor",
+          "value": "#171c1fff"
+        },
+        {
+          "id": "3833BBAF-FA6D-4A06-89D5-3C441A9DC9C3_textSize",
+          "property": "textSize",
+          "value": "36.00"
+        },
+        {
+          "id": "3833BBAF-FA6D-4A06-89D5-3C441A9DC9C3_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "3833BBAF-FA6D-4A06-89D5-3C441A9DC9C3_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "3833BBAF-FA6D-4A06-89D5-3C441A9DC9C3_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "3833BBAF-FA6D-4A06-89D5-3C441A9DC9C3_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "EC45FFDB-AA94-4519-8E5F-21FF1AC2DDF5_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "EC45FFDB-AA94-4519-8E5F-21FF1AC2DDF5_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "EC45FFDB-AA94-4519-8E5F-21FF1AC2DDF5_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "2382E0E1-3D30-4602-8B96-3829B1E3D20E_stringValue",
+          "property": "stringValue",
+          "value": "+"
+        },
+        {
+          "id": "2382E0E1-3D30-4602-8B96-3829B1E3D20E_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "2382E0E1-3D30-4602-8B96-3829B1E3D20E_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "2382E0E1-3D30-4602-8B96-3829B1E3D20E_textColor",
+          "property": "textColor",
+          "value": "#7d570eff"
+        },
+        {
+          "id": "2382E0E1-3D30-4602-8B96-3829B1E3D20E_textSize",
+          "property": "textSize",
+          "value": "36.00"
+        },
+        {
+          "id": "2382E0E1-3D30-4602-8B96-3829B1E3D20E_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "2382E0E1-3D30-4602-8B96-3829B1E3D20E_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "2382E0E1-3D30-4602-8B96-3829B1E3D20E_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "2382E0E1-3D30-4602-8B96-3829B1E3D20E_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "D894D784-3EDA-41C5-81D8-01E5F6547ABB_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "D894D784-3EDA-41C5-81D8-01E5F6547ABB_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "D894D784-3EDA-41C5-81D8-01E5F6547ABB_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#f0be6dff"
+        },
+        {
+          "id": "D894D784-3EDA-41C5-81D8-01E5F6547ABB_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "D894D784-3EDA-41C5-81D8-01E5F6547ABB_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "D894D784-3EDA-41C5-81D8-01E5F6547ABB_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "50157201-CB8C-4AEA-B30B-C99F069A15A3_stringValue",
+          "property": "stringValue",
+          "value": "What happens when a customer needs a person?"
+        },
+        {
+          "id": "50157201-CB8C-4AEA-B30B-C99F069A15A3_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "50157201-CB8C-4AEA-B30B-C99F069A15A3_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "50157201-CB8C-4AEA-B30B-C99F069A15A3_textColor",
+          "property": "textColor",
+          "value": "#171c1fff"
+        },
+        {
+          "id": "50157201-CB8C-4AEA-B30B-C99F069A15A3_textSize",
+          "property": "textSize",
+          "value": "36.00"
+        },
+        {
+          "id": "50157201-CB8C-4AEA-B30B-C99F069A15A3_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "50157201-CB8C-4AEA-B30B-C99F069A15A3_textStyle",
+          "property": "textStyle",
+          "value": "C0715FFA-7365-4AC1-98A1-2822D69ECAFD"
+        },
+        {
+          "id": "50157201-CB8C-4AEA-B30B-C99F069A15A3_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "50157201-CB8C-4AEA-B30B-C99F069A15A3_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "1"
+        },
+        {
+          "id": "50157201-CB8C-4AEA-B30B-C99F069A15A3_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "3F3B12FB-B0CC-48F1-86A1-2BE0CBD2665F_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "3F3B12FB-B0CC-48F1-86A1-2BE0CBD2665F_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "3F3B12FB-B0CC-48F1-86A1-2BE0CBD2665F_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "B09DB817-9068-400E-BE9A-369B450DE19E_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "B09DB817-9068-400E-BE9A-369B450DE19E_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "B09DB817-9068-400E-BE9A-369B450DE19E_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "85803672-8811-4808-BFD1-D31DCCC03142_stringValue",
+          "property": "stringValue",
+          "value": "4/  "
+        },
+        {
+          "id": "85803672-8811-4808-BFD1-D31DCCC03142_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "85803672-8811-4808-BFD1-D31DCCC03142_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "85803672-8811-4808-BFD1-D31DCCC03142_textColor",
+          "property": "textColor",
+          "value": "#171c1fff"
+        },
+        {
+          "id": "85803672-8811-4808-BFD1-D31DCCC03142_textSize",
+          "property": "textSize",
+          "value": "36.00"
+        },
+        {
+          "id": "85803672-8811-4808-BFD1-D31DCCC03142_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "85803672-8811-4808-BFD1-D31DCCC03142_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "85803672-8811-4808-BFD1-D31DCCC03142_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "85803672-8811-4808-BFD1-D31DCCC03142_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "31C6AF84-E47B-4B02-B539-2EA481783ED1_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "31C6AF84-E47B-4B02-B539-2EA481783ED1_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "31C6AF84-E47B-4B02-B539-2EA481783ED1_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "0C013E20-8D45-4E87-ADF4-C18633EE3F58_stringValue",
+          "property": "stringValue",
+          "value": "+"
+        },
+        {
+          "id": "0C013E20-8D45-4E87-ADF4-C18633EE3F58_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "0C013E20-8D45-4E87-ADF4-C18633EE3F58_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "0C013E20-8D45-4E87-ADF4-C18633EE3F58_textColor",
+          "property": "textColor",
+          "value": "#7d570eff"
+        },
+        {
+          "id": "0C013E20-8D45-4E87-ADF4-C18633EE3F58_textSize",
+          "property": "textSize",
+          "value": "36.00"
+        },
+        {
+          "id": "0C013E20-8D45-4E87-ADF4-C18633EE3F58_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "0C013E20-8D45-4E87-ADF4-C18633EE3F58_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "0C013E20-8D45-4E87-ADF4-C18633EE3F58_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "0C013E20-8D45-4E87-ADF4-C18633EE3F58_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "5C09878F-49BF-4CFD-8DCB-6672E2A93EC1_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "5C09878F-49BF-4CFD-8DCB-6672E2A93EC1_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "5C09878F-49BF-4CFD-8DCB-6672E2A93EC1_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#f0be6dff"
+        },
+        {
+          "id": "5C09878F-49BF-4CFD-8DCB-6672E2A93EC1_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "5C09878F-49BF-4CFD-8DCB-6672E2A93EC1_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "5C09878F-49BF-4CFD-8DCB-6672E2A93EC1_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "D7440BF1-F934-4110-A318-591B08451488_stringValue",
+          "property": "stringValue",
+          "value": "Can Mosi collect enquiries while I’m busy?"
+        },
+        {
+          "id": "D7440BF1-F934-4110-A318-591B08451488_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "D7440BF1-F934-4110-A318-591B08451488_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "D7440BF1-F934-4110-A318-591B08451488_textColor",
+          "property": "textColor",
+          "value": "#171c1fff"
+        },
+        {
+          "id": "D7440BF1-F934-4110-A318-591B08451488_textSize",
+          "property": "textSize",
+          "value": "36.00"
+        },
+        {
+          "id": "D7440BF1-F934-4110-A318-591B08451488_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "D7440BF1-F934-4110-A318-591B08451488_textStyle",
+          "property": "textStyle",
+          "value": "C0715FFA-7365-4AC1-98A1-2822D69ECAFD"
+        },
+        {
+          "id": "D7440BF1-F934-4110-A318-591B08451488_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "D7440BF1-F934-4110-A318-591B08451488_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "1"
+        },
+        {
+          "id": "D7440BF1-F934-4110-A318-591B08451488_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "7869567A-76D8-49BA-A2E3-636C8202B7C7_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "7869567A-76D8-49BA-A2E3-636C8202B7C7_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "7869567A-76D8-49BA-A2E3-636C8202B7C7_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "29871A49-552F-49C6-97E5-B6B2D503210D_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "29871A49-552F-49C6-97E5-B6B2D503210D_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "29871A49-552F-49C6-97E5-B6B2D503210D_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "D5B9B83C-C7B2-4802-8F27-626E84F6BDE1_stringValue",
+          "property": "stringValue",
+          "value": "3/  "
+        },
+        {
+          "id": "D5B9B83C-C7B2-4802-8F27-626E84F6BDE1_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "D5B9B83C-C7B2-4802-8F27-626E84F6BDE1_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "D5B9B83C-C7B2-4802-8F27-626E84F6BDE1_textColor",
+          "property": "textColor",
+          "value": "#171c1fff"
+        },
+        {
+          "id": "D5B9B83C-C7B2-4802-8F27-626E84F6BDE1_textSize",
+          "property": "textSize",
+          "value": "36.00"
+        },
+        {
+          "id": "D5B9B83C-C7B2-4802-8F27-626E84F6BDE1_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "D5B9B83C-C7B2-4802-8F27-626E84F6BDE1_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "D5B9B83C-C7B2-4802-8F27-626E84F6BDE1_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "D5B9B83C-C7B2-4802-8F27-626E84F6BDE1_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "F58354B8-4B86-4936-A962-E130B9D10508_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "F58354B8-4B86-4936-A962-E130B9D10508_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "F58354B8-4B86-4936-A962-E130B9D10508_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "E6F398CF-1D1E-4533-BFA8-DC0CEF2EF224_stringValue",
+          "property": "stringValue",
+          "value": "+"
+        },
+        {
+          "id": "E6F398CF-1D1E-4533-BFA8-DC0CEF2EF224_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "E6F398CF-1D1E-4533-BFA8-DC0CEF2EF224_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "E6F398CF-1D1E-4533-BFA8-DC0CEF2EF224_textColor",
+          "property": "textColor",
+          "value": "#7d570eff"
+        },
+        {
+          "id": "E6F398CF-1D1E-4533-BFA8-DC0CEF2EF224_textSize",
+          "property": "textSize",
+          "value": "36.00"
+        },
+        {
+          "id": "E6F398CF-1D1E-4533-BFA8-DC0CEF2EF224_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "E6F398CF-1D1E-4533-BFA8-DC0CEF2EF224_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "E6F398CF-1D1E-4533-BFA8-DC0CEF2EF224_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "E6F398CF-1D1E-4533-BFA8-DC0CEF2EF224_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "53BE0F32-8675-4A76-9B61-9738D5769D38_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "53BE0F32-8675-4A76-9B61-9738D5769D38_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "53BE0F32-8675-4A76-9B61-9738D5769D38_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#f0be6dff"
+        },
+        {
+          "id": "53BE0F32-8675-4A76-9B61-9738D5769D38_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "53BE0F32-8675-4A76-9B61-9738D5769D38_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "53BE0F32-8675-4A76-9B61-9738D5769D38_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "489F9089-229D-4111-B457-921EAF7E4414_stringValue",
+          "property": "stringValue",
+          "value": "Can Mosi send emails and follow-ups?"
+        },
+        {
+          "id": "489F9089-229D-4111-B457-921EAF7E4414_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "489F9089-229D-4111-B457-921EAF7E4414_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "489F9089-229D-4111-B457-921EAF7E4414_textColor",
+          "property": "textColor",
+          "value": "#171c1fff"
+        },
+        {
+          "id": "489F9089-229D-4111-B457-921EAF7E4414_textSize",
+          "property": "textSize",
+          "value": "36.00"
+        },
+        {
+          "id": "489F9089-229D-4111-B457-921EAF7E4414_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "489F9089-229D-4111-B457-921EAF7E4414_textStyle",
+          "property": "textStyle",
+          "value": "C0715FFA-7365-4AC1-98A1-2822D69ECAFD"
+        },
+        {
+          "id": "489F9089-229D-4111-B457-921EAF7E4414_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "489F9089-229D-4111-B457-921EAF7E4414_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "1"
+        },
+        {
+          "id": "489F9089-229D-4111-B457-921EAF7E4414_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "5EDED145-A06B-40CE-BE82-70B4F2317505_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "5EDED145-A06B-40CE-BE82-70B4F2317505_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "5EDED145-A06B-40CE-BE82-70B4F2317505_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "AD006A42-60B4-4E1B-A6E9-72EF7CE6DB04_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "AD006A42-60B4-4E1B-A6E9-72EF7CE6DB04_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "AD006A42-60B4-4E1B-A6E9-72EF7CE6DB04_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "7189F0B9-30A5-4D5A-9FB6-1CBACE0566B3_stringValue",
+          "property": "stringValue",
+          "value": "2/  "
+        },
+        {
+          "id": "7189F0B9-30A5-4D5A-9FB6-1CBACE0566B3_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "7189F0B9-30A5-4D5A-9FB6-1CBACE0566B3_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "7189F0B9-30A5-4D5A-9FB6-1CBACE0566B3_textColor",
+          "property": "textColor",
+          "value": "#171c1fff"
+        },
+        {
+          "id": "7189F0B9-30A5-4D5A-9FB6-1CBACE0566B3_textSize",
+          "property": "textSize",
+          "value": "36.00"
+        },
+        {
+          "id": "7189F0B9-30A5-4D5A-9FB6-1CBACE0566B3_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "7189F0B9-30A5-4D5A-9FB6-1CBACE0566B3_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "7189F0B9-30A5-4D5A-9FB6-1CBACE0566B3_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "7189F0B9-30A5-4D5A-9FB6-1CBACE0566B3_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "2F4B557D-8B32-4744-9CAD-DD0693725B4D_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "2F4B557D-8B32-4744-9CAD-DD0693725B4D_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "2F4B557D-8B32-4744-9CAD-DD0693725B4D_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "97DE1CAE-D70D-4B7E-8316-3332625EC14A_stringValue",
+          "property": "stringValue",
+          "value": "+"
+        },
+        {
+          "id": "97DE1CAE-D70D-4B7E-8316-3332625EC14A_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "97DE1CAE-D70D-4B7E-8316-3332625EC14A_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "97DE1CAE-D70D-4B7E-8316-3332625EC14A_textColor",
+          "property": "textColor",
+          "value": "#7d570eff"
+        },
+        {
+          "id": "97DE1CAE-D70D-4B7E-8316-3332625EC14A_textSize",
+          "property": "textSize",
+          "value": "36.00"
+        },
+        {
+          "id": "97DE1CAE-D70D-4B7E-8316-3332625EC14A_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "97DE1CAE-D70D-4B7E-8316-3332625EC14A_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "97DE1CAE-D70D-4B7E-8316-3332625EC14A_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "97DE1CAE-D70D-4B7E-8316-3332625EC14A_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "DA1ED306-3095-41B2-B1D7-3EDDC549C10D_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "DA1ED306-3095-41B2-B1D7-3EDDC549C10D_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "DA1ED306-3095-41B2-B1D7-3EDDC549C10D_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#f0be6dff"
+        },
+        {
+          "id": "DA1ED306-3095-41B2-B1D7-3EDDC549C10D_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "DA1ED306-3095-41B2-B1D7-3EDDC549C10D_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "DA1ED306-3095-41B2-B1D7-3EDDC549C10D_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "6C2CBF22-1E31-4C2A-8826-420F9162735E_stringValue",
+          "property": "stringValue",
+          "value": "Can Mosi handle bookings and appointments?"
+        },
+        {
+          "id": "6C2CBF22-1E31-4C2A-8826-420F9162735E_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "6C2CBF22-1E31-4C2A-8826-420F9162735E_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "6C2CBF22-1E31-4C2A-8826-420F9162735E_textColor",
+          "property": "textColor",
+          "value": "#171c1fff"
+        },
+        {
+          "id": "6C2CBF22-1E31-4C2A-8826-420F9162735E_textSize",
+          "property": "textSize",
+          "value": "36.00"
+        },
+        {
+          "id": "6C2CBF22-1E31-4C2A-8826-420F9162735E_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "6C2CBF22-1E31-4C2A-8826-420F9162735E_textStyle",
+          "property": "textStyle",
+          "value": "C0715FFA-7365-4AC1-98A1-2822D69ECAFD"
+        },
+        {
+          "id": "6C2CBF22-1E31-4C2A-8826-420F9162735E_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "6C2CBF22-1E31-4C2A-8826-420F9162735E_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "1"
+        },
+        {
+          "id": "6C2CBF22-1E31-4C2A-8826-420F9162735E_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "name": "Frequently asked que",
+      "type": "Text",
+      "x": 0,
+      "y": 0,
+      "width": 1180,
+      "height": 117,
+      "text": "Frequently asked questions",
+      "fontSize": 90,
+      "fontFamily": "Clarity City",
+      "fontWeight": 5,
+      "lineHeight": null,
+      "textColor": "#171c1f",
+      "alignment": "left"
+    }
+  ],
+  "markupSnippet": "<div class=\"component-faq\" data-component=\"faq\">\n  <!-- Component: faq -->\n</div>"
+}

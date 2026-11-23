@@ -1,0 +1,379 @@
+{
+  "id": "A347455D-26D3-45C5-9D60-6EA7920C0385",
+  "name": "last-call-to-action",
+  "slug": "last-call-to-action",
+  "type": "component",
+  "width": 1600,
+  "height": 801,
+  "layersCount": 6,
+  "layers": [
+    {
+      "name": "Rectangle 2",
+      "type": "ShapePath",
+      "x": 0,
+      "y": 0,
+      "width": 1600,
+      "height": 801
+    },
+    {
+      "name": "Talk to Us",
+      "type": "Text",
+      "x": 761,
+      "y": 601,
+      "width": 81,
+      "height": 29,
+      "text": "Talk to Us",
+      "fontSize": 18,
+      "fontFamily": "Helvetica",
+      "fontWeight": 5,
+      "lineHeight": 29,
+      "textColor": "#778481",
+      "alignment": "left"
+    },
+    {
+      "name": "Give Your Customers",
+      "type": "Text",
+      "x": 237,
+      "y": 278,
+      "width": 1130,
+      "height": 188,
+      "text": "Give Your Customers the Help They Need, When They Need It.",
+      "fontSize": 72,
+      "fontFamily": "Clarity City",
+      "fontWeight": 5,
+      "lineHeight": null,
+      "textColor": "#7d570e",
+      "alignment": "center"
+    },
+    {
+      "name": "Your AI assistant ta",
+      "type": "Text",
+      "x": 386,
+      "y": 506,
+      "width": 833,
+      "height": 83,
+      "text": "Your AI assistant takes care of everyday questions, giving you more time to run your business.",
+      "fontSize": 32,
+      "fontFamily": "Helvetica",
+      "fontWeight": 5,
+      "lineHeight": null,
+      "textColor": "#73777f",
+      "alignment": "center"
+    },
+    {
+      "name": "badge",
+      "type": "SymbolInstance",
+      "x": 637,
+      "y": 203,
+      "width": 331,
+      "height": 50,
+      "symbolId": "0BAAA57F-8D3F-4205-90D9-EB665F8B3D62",
+      "masterName": "badge",
+      "overrides": [
+        {
+          "id": "07887F47-0FE8-407E-A16F-6618647F85E9_stringValue",
+          "property": "stringValue",
+          "value": "24/7"
+        },
+        {
+          "id": "07887F47-0FE8-407E-A16F-6618647F85E9_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "07887F47-0FE8-407E-A16F-6618647F85E9_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "07887F47-0FE8-407E-A16F-6618647F85E9_textColor",
+          "property": "textColor",
+          "value": "#604100ff"
+        },
+        {
+          "id": "07887F47-0FE8-407E-A16F-6618647F85E9_textSize",
+          "property": "textSize",
+          "value": "18.00"
+        },
+        {
+          "id": "07887F47-0FE8-407E-A16F-6618647F85E9_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "07887F47-0FE8-407E-A16F-6618647F85E9_textStyle",
+          "property": "textStyle",
+          "value": "7B0C5D7A-501F-46E7-A8BC-4D1C400505E1"
+        },
+        {
+          "id": "07887F47-0FE8-407E-A16F-6618647F85E9_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "07887F47-0FE8-407E-A16F-6618647F85E9_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "07887F47-0FE8-407E-A16F-6618647F85E9_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "A6E285DF-4075-44BC-B801-0DEEEE16A4D1_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "A6E285DF-4075-44BC-B801-0DEEEE16A4D1_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "A6E285DF-4075-44BC-B801-0DEEEE16A4D1_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#ffdeadff"
+        },
+        {
+          "id": "A6E285DF-4075-44BC-B801-0DEEEE16A4D1_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "A6E285DF-4075-44BC-B801-0DEEEE16A4D1_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "A6E285DF-4075-44BC-B801-0DEEEE16A4D1_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "2561D124-D57E-40C3-91D3-6B12504E314F_opacity:border-0",
+          "property": "opacity:border-0",
+          "value": "1"
+        },
+        {
+          "id": "2561D124-D57E-40C3-91D3-6B12504E314F_blendMode:border-0",
+          "property": "blendMode:border-0",
+          "value": "0"
+        },
+        {
+          "id": "2561D124-D57E-40C3-91D3-6B12504E314F_color:border-0",
+          "property": "color:border-0",
+          "value": "#604100ff"
+        },
+        {
+          "id": "2561D124-D57E-40C3-91D3-6B12504E314F_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "2561D124-D57E-40C3-91D3-6B12504E314F_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "1"
+        },
+        {
+          "id": "2561D124-D57E-40C3-91D3-6B12504E314F_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "FAE5C321-81C9-4946-8E1C-B877BDF02E1B_stringValue",
+          "property": "stringValue",
+          "value": "Let Mosi handle Enquiry"
+        },
+        {
+          "id": "FAE5C321-81C9-4946-8E1C-B877BDF02E1B_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "FAE5C321-81C9-4946-8E1C-B877BDF02E1B_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "FAE5C321-81C9-4946-8E1C-B877BDF02E1B_textColor",
+          "property": "textColor",
+          "value": "#604100ff"
+        },
+        {
+          "id": "FAE5C321-81C9-4946-8E1C-B877BDF02E1B_textSize",
+          "property": "textSize",
+          "value": "18.00"
+        },
+        {
+          "id": "FAE5C321-81C9-4946-8E1C-B877BDF02E1B_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "FAE5C321-81C9-4946-8E1C-B877BDF02E1B_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "FAE5C321-81C9-4946-8E1C-B877BDF02E1B_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "1"
+        },
+        {
+          "id": "FAE5C321-81C9-4946-8E1C-B877BDF02E1B_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "name": "button--primary",
+      "type": "SymbolInstance",
+      "x": 719,
+      "y": 648,
+      "width": 212,
+      "height": 54,
+      "symbolId": "FCAB5329-2AED-4127-B2FE-57498D26D575",
+      "masterName": "button--primary",
+      "overrides": [
+        {
+          "id": "5C5C4176-7716-4DEA-9165-AC30AB0634E5_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "5C5C4176-7716-4DEA-9165-AC30AB0634E5_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "5C5C4176-7716-4DEA-9165-AC30AB0634E5_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#ffdeadff"
+        },
+        {
+          "id": "5C5C4176-7716-4DEA-9165-AC30AB0634E5_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "5C5C4176-7716-4DEA-9165-AC30AB0634E5_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "5C5C4176-7716-4DEA-9165-AC30AB0634E5_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "0B67CCD2-529A-443F-953C-DEE9B4403193_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "0B67CCD2-529A-443F-953C-DEE9B4403193_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "0B67CCD2-529A-443F-953C-DEE9B4403193_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#432c00ff"
+        },
+        {
+          "id": "0B67CCD2-529A-443F-953C-DEE9B4403193_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "0B67CCD2-529A-443F-953C-DEE9B4403193_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "0B67CCD2-529A-443F-953C-DEE9B4403193_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "3F570322-1E8A-4AA8-B3B9-A4C4FE0A5D40_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "3F570322-1E8A-4AA8-B3B9-A4C4FE0A5D40_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "3F570322-1E8A-4AA8-B3B9-A4C4FE0A5D40_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#ffdeadff"
+        },
+        {
+          "id": "3F570322-1E8A-4AA8-B3B9-A4C4FE0A5D40_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "3F570322-1E8A-4AA8-B3B9-A4C4FE0A5D40_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "1"
+        },
+        {
+          "id": "3F570322-1E8A-4AA8-B3B9-A4C4FE0A5D40_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "EB6C8FCC-D29D-4FE8-8F33-62D55ADE16D4_stringValue",
+          "property": "stringValue",
+          "value": "Book a free consultation."
+        },
+        {
+          "id": "EB6C8FCC-D29D-4FE8-8F33-62D55ADE16D4_textHAlign",
+          "property": "textHAlign",
+          "value": "justified"
+        },
+        {
+          "id": "EB6C8FCC-D29D-4FE8-8F33-62D55ADE16D4_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "EB6C8FCC-D29D-4FE8-8F33-62D55ADE16D4_textColor",
+          "property": "textColor",
+          "value": "#432c00ff"
+        },
+        {
+          "id": "EB6C8FCC-D29D-4FE8-8F33-62D55ADE16D4_textSize",
+          "property": "textSize",
+          "value": "18.00"
+        },
+        {
+          "id": "EB6C8FCC-D29D-4FE8-8F33-62D55ADE16D4_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "EB6C8FCC-D29D-4FE8-8F33-62D55ADE16D4_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "EB6C8FCC-D29D-4FE8-8F33-62D55ADE16D4_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "1"
+        },
+        {
+          "id": "EB6C8FCC-D29D-4FE8-8F33-62D55ADE16D4_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "markupSnippet": "<div class=\"component-last-call-to-action\" data-component=\"last-call-to-action\">\n  <!-- Component: last-call-to-action -->\n</div>"
+}

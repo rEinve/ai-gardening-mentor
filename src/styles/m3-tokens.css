@@ -1,0 +1,112 @@
+/**
+ * Google Material Design 3 (M3) Design System Tokens
+ * Botanical Emerald & Sage Palette for AI Gardening Mentor
+ */
+
+:root {
+  /* Primary Tonal Palette (Botanical Emerald) */
+  --md-sys-color-primary: #1e6b37;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #a6f5b1;
+  --md-sys-color-on-primary-container: #00210a;
+
+  /* Secondary Tonal Palette (Sage / Foliage) */
+  --md-sys-color-secondary: #526350;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #d5e8cf;
+  --md-sys-color-on-secondary-container: #101f10;
+
+  /* Tertiary Tonal Palette (Warm Terracotta / Sunlight) */
+  --md-sys-color-tertiary: #386568;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #bcebee;
+  --md-sys-color-on-tertiary-container: #002022;
+
+  /* Surface & Container Tonal Hierarchy */
+  --md-sys-color-surface: #f7fbf2;
+  --md-sys-color-on-surface: #181d18;
+  --md-sys-color-surface-variant: #dee5d9;
+  --md-sys-color-on-surface-variant: #424940;
+  --md-sys-color-surface-container-lowest: #ffffff;
+  --md-sys-color-surface-container-low: #f1f5ec;
+  --md-sys-color-surface-container: #ebf0e6;
+  --md-sys-color-surface-container-high: #e6eae1;
+  --md-sys-color-surface-container-highest: #e0e5db;
+  --md-sys-color-outline: #72796f;
+  --md-sys-color-outline-variant: #c2c9bd;
+
+  /* Error & Panic Triage */
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error-container: #410002;
+
+  /* Elevation Shadows */
+  --md-sys-elevation-level1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+  --md-sys-elevation-level2: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+  --md-sys-elevation-level3: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px 0px rgba(0, 0, 0, 0.30);
+
+  /* Shape Scale */
+  --md-sys-shape-corner-extra-small: 4px;
+  --md-sys-shape-corner-small: 8px;
+  --md-sys-shape-corner-medium: 12px;
+  --md-sys-shape-corner-large: 16px;
+  --md-sys-shape-corner-extra-large: 28px;
+  --md-sys-shape-corner-full: 9999px;
+
+  /* State Layer Opacities */
+  --md-sys-state-hover: 0.08;
+  --md-sys-state-focus: 0.12;
+  --md-sys-state-pressed: 0.12;
+
+  /* Typography Scales */
+  --md-sys-typescale-display-large: clamp(2.5rem, 5vw, 3.75rem);
+  --md-sys-typescale-headline-medium: 2rem;
+  --md-sys-typescale-title-large: 1.5rem;
+  --md-sys-typescale-title-medium: 1.25rem;
+  --md-sys-typescale-body-large: 1.125rem;
+  --md-sys-typescale-body-medium: 1rem;
+  --md-sys-typescale-label-large: 0.875rem;
+  --md-sys-typescale-label-small: 0.75rem;
+
+  /* Fonts */
+  --md-sys-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+[data-theme="dark"] {
+  --md-sys-color-primary: #8bd897;
+  --md-sys-color-on-primary: #003915;
+  --md-sys-color-primary-container: #005322;
+  --md-sys-color-on-primary-container: #a6f5b1;
+
+  --md-sys-color-secondary: #b9ccb4;
+  --md-sys-color-on-secondary: #243424;
+  --md-sys-color-secondary-container: #3a4b39;
+  --md-sys-color-on-secondary-container: #d5e8cf;
+
+  --md-sys-color-tertiary: #a0cfd2;
+  --md-sys-color-on-tertiary: #003639;
+  --md-sys-color-tertiary-container: #1e4d50;
+  --md-sys-color-on-tertiary-container: #bcebee;
+
+  --md-sys-color-surface: #101510;
+  --md-sys-color-on-surface: #e0e5db;
+  --md-sys-color-surface-variant: #424940;
+  --md-sys-color-on-surface-variant: #c2c9bd;
+  --md-sys-color-surface-container-lowest: #0b0f0b;
+  --md-sys-color-surface-container-low: #181d18;
+  --md-sys-color-surface-container: #1c211c;
+  --md-sys-color-surface-container-high: #272c26;
+  --md-sys-color-surface-container-highest: #323731;
+  --md-sys-color-outline: #8c9388;
+  --md-sys-color-outline-variant: #424940;
+
+  --md-sys-color-error: #ffb4ab;
+  --md-sys-color-on-error: #690005;
+  --md-sys-color-error-container: #93000a;
+  --md-sys-color-on-error-container: #ffdad6;
+
+  --md-sys-elevation-level1: 0px 1px 3px 1px rgba(0, 0, 0, 0.4), 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+  --md-sys-elevation-level2: 0px 2px 6px 2px rgba(0, 0, 0, 0.4), 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+  --md-sys-elevation-level3: 0px 4px 8px 3px rgba(0, 0, 0, 0.4), 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <include src="partials/header.html"></include>
+  <title>What's the Difference Between Regular Chatbots and Agentic AI? | IntelliWebLab Blog</title>
+  <meta name="description" content="Compare scripted chatbots with AI agents that use approved tools, and learn how to verify what an agent actually completes.">
+</head>
+
+<body>
+  <main>
+    <include src="partials/main-menu.html"></include>
+    <section class="blog-article blog-article--questions" id="top" aria-labelledby="article-title">
+      <div class="container">
+        <article class="grid">
+          <nav class="col-full md-col-10-centered breadcrumbs blog-breadcrumbs cluster" aria-label="Breadcrumb">
+            <a href="/blog/">Blog</a><span aria-hidden="true">/</span>
+            <a href="/blog/#blog-panel-customer">Customer engagement</a><span aria-hidden="true">/</span>
+            <span aria-current="page">What's the Difference Between Regular Chatbots and Agentic AI?</span>
+          </nav>
+          <header class="post-header blog-article__header padding-t space-t-xl">
+            <p class="eyebrow eyebrow--pill"><span class="eyebrow__label">Customer engagement</span></p>
+            <h1 id="article-title">What's the Difference Between Regular Chatbots and Agentic AI?</h1>
+            <p class="blog-article__excerpt">Compare scripted chatbots with AI agents that use approved tools, and learn how to verify what an agent actually completes.</p>
+            <div class="post-byline"><span class="post-byline__avatar" aria-hidden="true">B</span><span class="post-byline__author"><strong>Editorial Team</strong><span>Editorial team</span></span><span class="post-byline__divider" aria-hidden="true"></span><time datetime="2026-10-23T20:03:52.982Z">Oct 23, 2026</time><span class="post-byline__updated">Updated Oct 23, 2026</span><span class="post-byline__reading">2 min read</span></div>
+          </header>
+          <figure class="col-full md-col-10-centered post-artwork">
+            <picture class="blog-article__media">
+              <img src="/media/blog/chatbots-vs-agentic-ai-flat-v3.svg" alt="A fixed branching chatbot path beside an agent workflow that moves through connected actions." width="1350" height="1080" loading="eager" fetchpriority="high">
+            </picture>
+          </figure>
+          <div class="col-full exp-col-8-centered post-layout with-sidebar padding-t space-t-m">
+            <div class="grid article-grid">
+              <aside class="sidebar__aside takeaways exp-col-4" aria-label="Article takeaways">
+                <nav class="blog-article__toc" aria-label="On this post"></nav>
+              </aside>
+              <div class="exp-col-8 post-content blog-article__body">
+                <section class="blog-article__section" aria-labelledby="chatbots-vs-agentic-ai-1">
+                <h2 id="chatbots-vs-agentic-ai-1">Compare the same customer request</h2>
+                <p>Suppose someone asks, “Where is my order, and can I move the delivery?” A basic bot may show a tracking link and an article about changes. An AI agent could look up the order, check whether a change is still allowed, offer available dates, and submit the selected option. That last step requires a real integration and permission; a fluent answer alone is not an action.</p>
+                <p>Some rule-based bots already perform transactions, and some products called agents only draft replies. The labels do not establish capability.</p>
+              </section>
+              <section class="blog-article__section" aria-labelledby="chatbots-vs-agentic-ai-2">
+                <h2 id="chatbots-vs-agentic-ai-2">More autonomy means more controls</h2>
+                <p>A system that chooses tools needs clear limits. Specify which records it can read, which actions it can take, and when it must ask for approval. Require confirmation before a consequential change, such as cancelling an order. Log the decision and result so your team can investigate mistakes.</p>
+                <p>Also test what happens when a tool returns stale information, a customer changes their mind, or a message tries to instruct the agent to ignore its rules.</p>
+              </section>
+              <section class="blog-article__section" aria-labelledby="chatbots-vs-agentic-ai-3">
+                <h2 id="chatbots-vs-agentic-ai-3">How to evaluate a vendor claim</h2>
+                <p>Bring a representative request and ask the vendor to show the entire path, including an error and a handoff. Watch what happened in your systems, not just what the chat bubble said. If the platform cannot demonstrate the action, integration, permissions, and audit record, treat the feature as an assisted answer rather than a completed task.</p>
+              </section>
+              <section class="blog-article__section" aria-labelledby="chatbots-vs-agentic-ai-4">
+                <h2 id="chatbots-vs-agentic-ai-4">When a simpler bot is enough</h2>
+                <p>If the customer needs a known answer or a short, predictable choice, a well-maintained rule-based bot may be easier to operate and audit. Add an agent when the task genuinely needs to inspect context, choose among tools, or handle varied wording. Even then, keep deterministic business rules in your application. The AI may decide which approved workflow to request, while the connected system decides whether the requested action is permitted.</p>
+              </section>
+              <section class="blog-article__section" aria-labelledby="takeaway-title">
+                <h2 id="takeaway-title">The practical answer</h2>
+                <p>Judge an agent by bounded, verifiable work completed in connected systems, with appropriate human control.</p>
+              </section>
+              <section class="blog-article__section" aria-labelledby="reading-title">
+                <h2 id="reading-title">Further reading</h2>
+                <p><a href="https://airc.nist.gov/airmf-resources/playbook/manage/">NIST AI RMF Manage guide</a> · <a href="https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/">OWASP Top 10 for LLM Applications</a></p>
+              </section>
+              </div>
+            </div>
+          </div>
+          <footer class="blog-article__footer stack stack--sm">
+            <p class="label-s">IntelliWebLab notes</p>
+            <a class="button button--ghost" href="/blog/">Back to all notes <span class="button__icon material-icons-round" aria-hidden="true">arrow_back</span></a>
+          </footer>
+        </article>
+      </div>
+    </section>
+    <include src="partials/subscribe-form.html"></include>
+  </main>
+  <include src="partials/footer.html"></include>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+{
+  "Primary": {
+    "--primary": "#35618eff",
+    "--on-primary": "#ffffffff",
+    "--primary-container": "#d1e4ffff",
+    "--on-primary-container": "#184974ff",
+    "--primary-dark": "#a0cafdff",
+    "--on-primary-dark": "#003258ff",
+    "--primary-container-dark": "#184974ff",
+    "--on-primary-container-dark": "#d1e4ffff"
+  },
+  "Secondary": {
+    "--secondary": "#32628dff",
+    "--on-secondary": "#ffffffff",
+    "--secondary-container": "#cfe4ffff",
+    "--on-secondary-container": "#144a74ff",
+    "--secondary-dark": "#9dcafcff",
+    "--on-secondary-dark": "#003355ff",
+    "--secondary-container-dark": "#144a74ff",
+    "--on-secondary-container-dark": "#cfe4ffff"
+  },
+  "Tertiary": {
+    "--tertiary": "#7d570eff",
+    "--on-tertiary": "#ffffffff",
+    "--tertiary-container": "#ffdeadff",
+    "--on-tertiary-container": "#604100ff",
+    "--tertiary-dark": "#f0be6dff",
+    "--on-tertiary-dark": "#432c00ff",
+    "--tertiary-container-dark": "#604100ff",
+    "--on-tertiary-container-dark": "#ffdeadff"
+  },
+  "Error": {
+    "--error": "#ba1a1aff",
+    "--on-error": "#ffffffff",
+    "--error-container": "#ffdad6ff",
+    "--on-error-container": "#93000aff",
+    "--error-dark": "#ffb4abff",
+    "--on-error-dark": "#690005ff",
+    "--error-container-dark": "#93000aff",
+    "--on-error-container-dark": "#ffdad6ff"
+  },
+  "Surface": {
+    "--background": "#f8f9ffff",
+    "--on-background": "#191c20ff",
+    "--background-dark": "#101418ff",
+    "--on-background-dark": "#e1e2e8ff",
+    "--surface": "#f5fafdff",
+    "--on-surface": "#171c1fff",
+    "--surface-variant": "#dfe2ebff",
+    "--on-surface-variant": "#42474eff",
+    "--surface-dark": "#0f1416ff",
+    "--on-surface-dark": "#dee3e6ff",
+    "--surface-variant-dark": "#42474eff",
+    "--on-surface-variant-dark": "#c3c7cfff"
+  },
+  "Outline": {
+    "--outline": "#73777fff",
+    "--outline-dark": "#8d9199ff"
+  },
+  "Shadow&Scrim": {
+    "--shadow": "#000000ff",
+    "--scrim": "#000000ff"
+  },
+  "Text": {
+    "--text-primary": "#171c1fff",
+    "--text-secondary": "#42474eff",
+    "--text-tertiary": "#7d570eff",
+    "--text-muted": "#73777fff",
+    "--text-inverse": "#edf1f4ff"
+  },
+  "Button": {
+    "--button-container": "#7d570eff",
+    "--button-color": "#ffffffff",
+    "--button-on-container": "#7d570eff"
+  },
+  "links": {
+    "--link-color": "#432c00ff",
+    "--link-color-on-inverse": "#7d570eff",
+    "--link-color-on-inverse-hover": "#f0be6dff",
+    "--lnik-color-on-inverse-hover": "#f0be6dff",
+    "--link-color-onhover": "#f0be6dff"
+  }
+}
+

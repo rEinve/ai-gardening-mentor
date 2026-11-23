@@ -1,0 +1,103 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import DemoVideoEmbed from "../../components/DemoVideoEmbed.astro";
+import SubscribeForm from "../../components/SubscribeForm.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const categoryPanelMap: Record<string, string> = {
+  "Field Guide": "blog-panel-field-guide",
+  "App Guide": "blog-panel-app-guide",
+  "Product Updates": "blog-panel-product-updates",
+};
+
+const panelHash = categoryPanelMap[post.data.category] ?? "blog-panel-all";
+const formattedDate = post.data.pubDate.toLocaleDateString("en-US", {
+  month: "short",
+  day: "numeric",
+  year: "numeric",
+});
+---
+
+<BaseLayout title={`${post.data.title} | Gardening Mentor Blog`} description={post.data.description}>
+  <section class="blog-article blog-article--questions" id="top" aria-labelledby="article-title">
+    <div class="container">
+      <article class="grid">
+        <nav class="col-full md-col-10-centered breadcrumbs blog-breadcrumbs cluster" aria-label="Breadcrumb">
+          <a href="/blog/">Blog</a><span aria-hidden="true">/</span>
+          <a href={`/blog/#${panelHash}`}>{post.data.category}</a><span aria-hidden="true">/</span>
+          <span aria-current="page">{post.data.title}</span>
+        </nav>
+
+        <header class="post-header blog-article__header padding-t space-t-xl">
+          <p class="eyebrow eyebrow--pill"><span class="eyebrow__label">{post.data.category}</span></p>
+          <h1 id="article-title">{post.data.title}</h1>
+          <p class="blog-article__excerpt">{post.data.description}</p>
+          <div class="post-byline">
+            <span class="post-byline__avatar" aria-hidden="true">{post.data.author.charAt(0)}</span>
+            <span class="post-byline__author">
+              <strong>{post.data.author}</strong>
+              <span>Gardening Mentor</span>
+            </span>
+            <span class="post-byline__divider" aria-hidden="true"></span>
+            <time datetime={post.data.pubDate.toISOString()}>{formattedDate}</time>
+            <span class="post-byline__reading">{post.data.readTime}</span>
+          </div>
+        </header>
+
+        {post.data.videoUrl ? (
+          <div class="col-full md-col-10-centered post-artwork">
+            <DemoVideoEmbed
+              videoUrl={post.data.videoUrl}
+              poster={post.data.videoPoster ?? post.data.image}
+              title={post.data.videoTitle ?? post.data.title}
+            />
+          </div>
+        ) : post.data.image && (
+          <figure class="col-full md-col-10-centered post-artwork">
+            <picture class="blog-article__media">
+              <img
+                src={post.data.image}
+                alt={post.data.imageAlt}
+                width="1350"
+                height="1080"
+                loading="eager"
+                fetchpriority="high"
+              />
+            </picture>
+          </figure>
+        )}
+
+        <div class="col-full exp-col-8-centered post-layout with-sidebar padding-t space-t-m">
+          <div class="grid article-grid">
+            <aside class="sidebar__aside takeaways exp-col-4" aria-label="Article takeaways">
+              <nav class="blog-article__toc" aria-label="On this post"></nav>
+            </aside>
+            <div class="exp-col-8 post-content blog-article__body">
+              <Content />
+            </div>
+          </div>
+        </div>
+
+        <footer class="blog-article__footer stack stack--sm">
+          <p class="label-s">AI Gardening Mentor · IntelliWebLab</p>
+          <a class="button button--ghost" href={`/blog/#${panelHash}`}>
+            Back to {post.data.category} <span class="button__icon material-icons-round" aria-hidden="true">arrow_back</span>
+          </a>
+        </footer>
+      </article>
+    </div>
+  </section>
+
+  <SubscribeForm />
+</BaseLayout>

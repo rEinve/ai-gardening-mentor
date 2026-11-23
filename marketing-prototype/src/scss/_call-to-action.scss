@@ -1,0 +1,48 @@
+.call-to-action__eyebrow {
+    border-color: var(--on-tertiary-container);
+    color: var(--on-tertiary-container);
+}
+
+.call-to-action__eyebrow .eyebrow__index {
+    background: var(--tertiary-fixed);
+    color: var(--on-tertiary-fixed);
+}
+
+.call-to-action__title {
+    max-inline-size: var(--measure-heading);
+    color: var(--on-tertiary-container);
+    font-size: var(--step-4);
+    font-weight: var(--weight-regular);
+    line-height: var(--lh-headline);
+    letter-spacing: var(--ls-headline);
+    text-wrap: balance;
+}
+
+.call-to-action__description {
+    max-inline-size: var(--measure-lead);
+    color: var(--on-tertiary-container);
+    font-size: var(--step-1);
+    line-height: var(--lh-title);
+    text-wrap: balance;
+}
+
+.call-to-action__link-label {
+    color: var(--on-tertiary-container);
+    font-size: var(--step-0);
+}
+
+.button.call-to-action__button {
+    border: thin solid var(--on-tertiary-container);
+    background: transparent;
+    color: var(--on-tertiary-container);
+}
+
+.button.call-to-action__button:hover,
+.button.call-to-action__button:active {
+    background: transparent;
+}
+
+.button.call-to-action__button .button__icon {
+    background: var(--on-tertiary-container);
+    color: var(--tertiary-container);
+}

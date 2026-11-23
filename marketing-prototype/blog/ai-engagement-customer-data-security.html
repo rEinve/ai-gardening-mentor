@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <include src="partials/header.html"></include>
+  <title>How Secure Is Customer Data With AI Engagement Platforms? | IntelliWebLab Blog</title>
+  <meta name="description" content="A practical guide to customer data security in AI engagement platforms: data flow, permissions, prompt injection, vendor evidence, and deletion.">
+</head>
+
+<body>
+  <main>
+    <include src="partials/main-menu.html"></include>
+    <section class="blog-article blog-article--questions" id="top" aria-labelledby="article-title">
+      <div class="container">
+        <article class="grid">
+          <nav class="col-full md-col-10-centered breadcrumbs blog-breadcrumbs cluster" aria-label="Breadcrumb">
+            <a href="/blog/">Blog</a><span aria-hidden="true">/</span>
+            <a href="/blog/#blog-panel-customer">Customer engagement</a><span aria-hidden="true">/</span>
+            <span aria-current="page">How Secure Is Customer Data With AI Engagement Platforms?</span>
+          </nav>
+          <header class="post-header blog-article__header padding-t space-t-xl">
+            <p class="eyebrow eyebrow--pill"><span class="eyebrow__label">Customer engagement</span></p>
+            <h1 id="article-title">How Secure Is Customer Data With AI Engagement Platforms?</h1>
+            <p class="blog-article__excerpt">A practical guide to customer data security in AI engagement platforms: data flow, permissions, prompt injection, vendor evidence, and deletion.</p>
+            <div class="post-byline"><span class="post-byline__avatar" aria-hidden="true">B</span><span class="post-byline__author"><strong>Editorial Team</strong><span>Editorial team</span></span><span class="post-byline__divider" aria-hidden="true"></span><time datetime="2026-10-23T20:03:52.982Z">Oct 23, 2026</time><span class="post-byline__updated">Updated Oct 23, 2026</span><span class="post-byline__reading">2 min read</span></div>
+          </header>
+          <figure class="col-full md-col-10-centered post-artwork">
+            <picture class="blog-article__media">
+              <img src="/media/blog/ai-engagement-customer-data-security-flat-v3.svg" alt="A customer record is protected by access boundaries and a clearly approved action path." width="1350" height="1080" loading="eager" fetchpriority="high">
+            </picture>
+          </figure>
+          <div class="col-full exp-col-8-centered post-layout with-sidebar padding-t space-t-m">
+            <div class="grid article-grid">
+              <aside class="sidebar__aside takeaways exp-col-4" aria-label="Article takeaways">
+                <nav class="blog-article__toc" aria-label="On this post"></nav>
+              </aside>
+              <div class="exp-col-8 post-content blog-article__body">
+                <section class="blog-article__section" aria-labelledby="ai-engagement-customer-data-security-1">
+                <h2 id="ai-engagement-customer-data-security-1">Follow the data</h2>
+                <p>Map what enters through chat, email, and voice; where messages and recordings are stored; which model or service receives them; and what appears in logs and analytics. Ask about encryption in transit and at rest, retention periods, deletion, data residency, backups, subcontractors, and whether customer content is used to train models. Review the vendor’s contract and documentation against your obligations.</p>
+              </section>
+              <section class="blog-article__section" aria-labelledby="ai-engagement-customer-data-security-2">
+                <h2 id="ai-engagement-customer-data-security-2">Limit access and actions</h2>
+                <p>Give the agent only the records and tools required for its task. Enforce access checks in the application and connected systems rather than relying on a prompt that says “do not reveal data.” Require identity verification for private account information and extra approval for sensitive changes. Separate test data from production data, and make staff access auditable.</p>
+              </section>
+              <section class="blog-article__section" aria-labelledby="ai-engagement-customer-data-security-3">
+                <h2 id="ai-engagement-customer-data-security-3">Test AI-specific failure paths</h2>
+                <p>A malicious message or retrieved document can try to redirect an agent; this is prompt injection. Test whether it can reveal another customer’s information, copy secrets into a reply, or trigger an unauthorized action. OWASP identifies sensitive information disclosure and excessive agency among the risks to review. Monitor access and action logs, have an incident response process, and repeat tests when tools or permissions change.</p>
+                <p>If a vendor cannot explain the data flow, controls, and deletion path, pause the rollout until those questions have clear answers.</p>
+              </section>
+              <section class="blog-article__section" aria-labelledby="ai-engagement-customer-data-security-4">
+                <h2 id="ai-engagement-customer-data-security-4">Evidence to request from a vendor</h2>
+                <p>Ask for a current description of security controls, independent assessment or audit reports where available, breach notification terms, and a demonstration of deletion and access export. Check whether customer data can be excluded from model training and whether that setting applies to every service in the chain. Have your security and legal owners review the answers against the data you plan to send. For a first pilot, use synthetic or minimized data until the controls are understood.</p>
+              </section>
+              <section class="blog-article__section" aria-labelledby="takeaway-title">
+                <h2 id="takeaway-title">The practical answer</h2>
+                <p>Treat the agent as a new route into customer systems: minimize its access, verify every action, and keep data handling visible.</p>
+              </section>
+              <section class="blog-article__section" aria-labelledby="reading-title">
+                <h2 id="reading-title">Further reading</h2>
+                <p><a href="https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/">OWASP Top 10 for LLM Applications</a> · <a href="https://airc.nist.gov/airmf-resources/playbook/manage/">NIST AI RMF Manage guide</a></p>
+              </section>
+              </div>
+            </div>
+          </div>
+          <footer class="blog-article__footer stack stack--sm">
+            <p class="label-s">IntelliWebLab notes</p>
+            <a class="button button--ghost" href="/blog/">Back to all notes <span class="button__icon material-icons-round" aria-hidden="true">arrow_back</span></a>
+          </footer>
+        </article>
+      </div>
+    </section>
+    <include src="partials/subscribe-form.html"></include>
+  </main>
+  <include src="partials/footer.html"></include>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

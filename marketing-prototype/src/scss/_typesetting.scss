@@ -1,0 +1,331 @@
+@use 'themeui-lab/src/scss/abstracts/mixins' as tools;
+
+// Fonts: clarity-city (Header) & Montserrat (Body)
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.woff") format("woff");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "clarity-city";
+    src: url("../fonts/ClarityCity-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "clarity-city";
+    src: url("../fonts/ClarityCity-Italic-VariableFont_wght.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+
+// Wire project fonts into design-system tokens.
+// Headlines: clarity-city (medium for H1–H3) | Body Text: Montserrat
+:root {
+    --font-body: "Montserrat", system-ui, -apple-system, sans-serif;
+    --font-display: "clarity-city", system-ui, -apple-system,  sans-serif;
+    --font-heading: var(--font-display);
+    --font-label: var(--font-display);
+}
+
+
+// ── Base ──────────────────────────────────────────────────────────────
+// Single source of truth for body-level typography.
+// font-size, color, line-height and font-weight for these elements
+// must not be re-declared elsewhere unless there is an explicit
+// component-level reason to override.
+
+body {
+    font-family: var(--font-body);
+    color: var(--on-surface-variant);
+    font-size: var(--step-0);
+    line-height: var(--lh-body);
+    letter-spacing: var(--ls-body);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+@include tools.breakpoint(medium) {
+    :root {
+        --heading-space-after-h1: var(--heading-space-h1-medium);
+        --heading-space-after-h2: var(--heading-space-h2-medium);
+        --heading-space-after-h3: var(--heading-space-after-h1);
+    }
+}
+
+@include tools.breakpoint(expanded) {
+    :root {
+        --heading-space-after-h1: var(--heading-space-h1-expanded);
+        --heading-space-after-h2: var(--heading-space-h2-expanded);
+        --heading-space-after-h3: var(--heading-space-after-h1);
+    }
+
+    .lead {
+        font-size: var(--step-0);
+        padding-bottom: var(--space-xs);
+    }
+}
+
+@include tools.breakpoint(large) {
+    :root {
+        --heading-space-after-h1: var(--heading-space-h1-large);
+        --heading-space-after-h2: var(--heading-space-h2-large);
+        --heading-space-after-h3: var(--heading-space-after-h1);
+    }
+}
+
+p,
+li,
+blockquote {
+    font-family: var(--font-body);
+    font-size: var(--step-0);
+    line-height: var(--lh-body);
+    letter-spacing: var(--ls-body);
+    max-inline-size: var(--measure-prose);
+    text-wrap: pretty;
+}
+
+ul:not([class]),
+ol:not([class]) {
+    padding-inline-start: var(--space-s);
+}
+
+li:not([class]) + li:not([class]) {
+    margin-block-start: var(--space-xxs);
+}
+
+li > ul:not([class]),
+li > ol:not([class]) {
+    margin-block-start: var(--space-xxs);
+    padding-inline-start: var(--space-s);
+}
+
+// ── Badges & Kickers (prevent stretching in flex stacks) ─────────────
+.card-kicker,
+.tag,
+.article-post__kicker,
+.badge {
+    align-self: start;
+}
+
+.eyebrow--pill {
+    display: inline-flex;
+    align-items: center;
+    align-self: start;
+    gap: calc(var(--space-xxs) / 2);
+    width: fit-content;
+    max-inline-size: 100%;
+    padding: 2px;
+    padding-inline-end: 2px;
+    border: thin solid var(--outline);
+    border-radius: var(--radius-pill);
+    color: var(--on-surface);
+    font-family: var(--font-label);
+    font-size: var(--step-0);
+    font-weight: var(--weight-medium);
+    line-height: var(--lh-label);
+    letter-spacing: var(--ls-body);
+    text-transform: none;
+}
+
+.eyebrow__index {
+    padding: calc(var(--space-xxs) / 2) var(--space-xxs);
+    border-radius: var(--radius-pill);
+    background-color: var(--tertiary-container);
+    color: var(--on-tertiary-container);
+    white-space: nowrap;
+}
+
+.eyebrow__label {
+    padding: calc(var(--space-xxs) / 2) var(--space-xxs);
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    font-feature-settings: "liga", "kern";
+    font-weight: var(--weight-regular);
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-wrap: balance;
+    max-inline-size: var(--measure-heading);
+}
+
+// Smaller heading levels carry a softer tone.
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    color: var(--tertiary);
+    padding-bottom: var(--space-xs);
+}
+
+// Display headings follow ThemeUI's mobile-first fluid type scale.
+h1,
+.h1,
+.display-l {
+    font-size: var(--step-5);
+    font-weight:var(--weight-regular);
+    line-height: var(--lh-display);
+    letter-spacing: var(--ls-display);
+    padding-bottom: var(--heading-space-after-h1);
+    color: var(--on-surface);
+
+}
+
+// Primary section heading.
+h2,
+.h2 {
+    font-size: var(--step-4);
+    font-weight: var(--weight-regular);
+    line-height: var(--lh-display);
+    letter-spacing: var(--ls-display);
+    padding-bottom: var(--heading-space-after-h2);
+}
+
+// Sub-section heading.
+h3,
+.h3 {
+    font-family: var(--font-display);
+    font-size: var(--step-3);
+   font-weight: var(--weight-regular);
+    padding-bottom: var(--heading-space-after-h3);
+    line-height: var(--lh-headline);
+    letter-spacing: var(--ls-headline);
+}
+
+h4,
+.h4 {
+    font-size: var(--step-2);
+    font-weight: var(--weight-medium);
+    line-height: var(--lh-headline);
+    letter-spacing: var(--ls-headline);
+}
+
+h5,
+.h5 {
+    font-size: var(--step-1);
+    font-weight: var(--weight-bold);
+    line-height: var(--lh-title);
+}
+
+h6,
+.h6 {
+    font-size: var(--step-0);
+    font-weight: var(--weight-medium);
+    line-height: var(--lh-title);
+}
+
+// Full bold is reserved for explicit strong emphasis and, when needed,
+// the smaller H4–H6 heading levels. H1–H3 stay at medium weight.
+strong {
+    font-weight: var(--weight-bold);
+}
+
+h1 strong,
+.h1 strong,
+h2 strong,
+.h2 strong,
+h3 strong,
+.h3 strong {
+    font-weight: var(--weight-medium);
+}
+
+.display-xl {
+    font-size: var(--display-xl);
+}
+
+.lead,
+.leading {
+    max-inline-size: var(--measure-lead);
+    font-family: var(--font-body);
+    font-size: var(--text-leading);
+    font-weight: var(--weight-regular);
+    line-height: var(--lh-title);
+    letter-spacing: var(--ls-body);
+}
+
+// ── Component labels ──────────────────────────────────────────────────
+.subtitle {
+    max-inline-size: none;
+}
+
+.whatsnew__label {
+    font-family: var(--font-label);
+    font-size: var(--text-eyebrow);
+    font-weight: var(--weight-regular);
+    line-height: var(--lh-label);
+    letter-spacing: var(--ls-label);
+    text-transform: uppercase;
+}
+
+.leading {
+    padding-bottom: var(--space-xs);
+}
+
+// ── Links ─────────────────────────────────────────────────────────────
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--link-onhover);
+        text-decoration: underline;
+    }
+
+    &:active {
+        color: var(--link-pressed);
+        text-decoration: underline;
+    }
+
+    &:visited {
+        color: var(--link-visited);
+        text-decoration: underline;
+    }
+}
+
+h1,
+h2,
+h3 {
+    a {
+        color: var(--tertiary);
+        text-decoration: none;
+
+    }
+}
+
+
+
+blockquote {
+    color: var(--outline);
+    margin-left: calc(var(--space) * -1);
+    border-inline-start: var(--space-s) solid var(--tertiary);
+
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    margin: var(--space) 0;
+    background-color: var(--outline-variant);
+}

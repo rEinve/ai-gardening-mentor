@@ -1,0 +1,30 @@
+{
+  "name": "ai-gardening-mentor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Gardening Mentor - Intelligent, anxiety-free vegetable gardening prototype",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/dev-server.mjs",
+    "start": "node scripts/dev-server.mjs --port 8080",
+    "container:build": "podman build -t ai-gardening-mentor:latest -f Containerfile .",
+    "container:build:dev": "podman build -t ai-gardening-mentor:dev --target development -f Containerfile .",
+    "container:run": "podman run --rm -d -p 4321:8080 --name ai-gardening-mentor ai-gardening-mentor:latest",
+    "container:dev": "podman run --rm -it -p 4321:4321 -v .:/app:Z -w /app --name ai-gardening-mentor-dev ai-gardening-mentor:dev",
+    "container:stop": "podman stop ai-gardening-mentor ai-gardening-mentor-dev 2>/dev/null || true",
+    "compose:up": "podman compose up -d app",
+    "compose:dev": "podman compose --profile dev up dev",
+    "compose:down": "podman compose down"
+  },
+  "keywords": [
+    "ai-gardening",
+    "prototype",
+    "material-design-3",
+    "podman",
+    "container",
+    "astro"
+  ],
+  "author": "IntelliTheme Studio",
+  "license": "Apache-2.0"
+}

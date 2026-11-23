@@ -1,0 +1,386 @@
+{
+  "id": "393B32D0-D02D-485A-9341-A4452412E0A5",
+  "name": "card",
+  "slug": "card",
+  "type": "card",
+  "width": 500,
+  "height": 719,
+  "layersCount": 5,
+  "layers": [
+    {
+      "name": "on-container",
+      "type": "ShapePath",
+      "x": 0,
+      "y": 0,
+      "width": 497,
+      "height": 719
+    },
+    {
+      "name": "figure",
+      "type": "ShapePath",
+      "x": 1,
+      "y": 0,
+      "width": 497,
+      "height": 369
+    },
+    {
+      "name": "card_title",
+      "type": "Text",
+      "x": 47,
+      "y": 398,
+      "width": 418,
+      "height": 47,
+      "text": "1/ Parallel Conversations",
+      "fontSize": 36,
+      "fontFamily": "Clarity City",
+      "fontWeight": 5,
+      "lineHeight": null,
+      "textColor": "#171c1f",
+      "alignment": "left"
+    },
+    {
+      "name": "Whether 5 or 500 cus",
+      "type": "Text",
+      "x": 45,
+      "y": 485,
+      "width": 418,
+      "height": 194,
+      "text": "Whether 5 or 500 customers message at the exact same second, each one gets an immediate, friendly, personal reply.",
+      "fontSize": 32,
+      "fontFamily": "Montserrat",
+      "fontWeight": 5,
+      "lineHeight": null,
+      "textColor": "#42474e",
+      "alignment": "left"
+    },
+    {
+      "name": "card_image",
+      "type": "Group",
+      "x": 84,
+      "y": 99,
+      "width": 340,
+      "height": 221,
+      "layers": [
+        {
+          "name": "Group",
+          "type": "Group",
+          "x": 46,
+          "y": 50,
+          "width": 231,
+          "height": 171,
+          "layers": [
+            {
+              "name": "Path",
+              "type": "ShapePath",
+              "x": 22,
+              "y": 170,
+              "width": 189,
+              "height": 1
+            },
+            {
+              "name": "Path",
+              "type": "ShapePath",
+              "x": 88,
+              "y": 128,
+              "width": 56,
+              "height": 43
+            },
+            {
+              "name": "Path",
+              "type": "ShapePath",
+              "x": 0,
+              "y": 0,
+              "width": 231,
+              "height": 129
+            },
+            {
+              "name": "Rectangle",
+              "type": "ShapePath",
+              "x": 6,
+              "y": 5,
+              "width": 220,
+              "height": 119
+            }
+          ]
+        },
+        {
+          "name": "Rectangle",
+          "type": "ShapePath",
+          "x": 52,
+          "y": 66,
+          "width": 221,
+          "height": 1
+        },
+        {
+          "name": "Oval",
+          "type": "ShapePath",
+          "x": 61,
+          "y": 59,
+          "width": 4,
+          "height": 4
+        },
+        {
+          "name": "Oval",
+          "type": "ShapePath",
+          "x": 68,
+          "y": 59,
+          "width": 4,
+          "height": 4
+        },
+        {
+          "name": "Oval",
+          "type": "ShapePath",
+          "x": 74,
+          "y": 59,
+          "width": 4,
+          "height": 4
+        },
+        {
+          "name": "Shape",
+          "type": "Shape",
+          "x": 124,
+          "y": 79,
+          "width": 77,
+          "height": 81,
+          "layers": [
+            {
+              "name": "-path",
+              "type": "ShapePath",
+              "x": 0,
+              "y": 0,
+              "width": 77,
+              "height": 81
+            },
+            {
+              "name": "-path",
+              "type": "ShapePath",
+              "x": 5,
+              "y": 5,
+              "width": 66,
+              "height": 69
+            },
+            {
+              "name": "-path",
+              "type": "ShapePath",
+              "x": 48,
+              "y": 30,
+              "width": 11,
+              "height": 10
+            },
+            {
+              "name": "-path",
+              "type": "ShapePath",
+              "x": 33,
+              "y": 30,
+              "width": 11,
+              "height": 10
+            },
+            {
+              "name": "-path",
+              "type": "ShapePath",
+              "x": 18,
+              "y": 30,
+              "width": 11,
+              "height": 10
+            }
+          ]
+        },
+        {
+          "name": "Group",
+          "type": "Group",
+          "x": 0,
+          "y": 124,
+          "width": 107,
+          "height": 34,
+          "layers": [
+            {
+              "name": "Rectangle",
+              "type": "ShapePath",
+              "x": 0,
+              "y": 5,
+              "width": 101,
+              "height": 29
+            },
+            {
+              "name": "Shape",
+              "type": "Shape",
+              "x": 0,
+              "y": 5,
+              "width": 101,
+              "height": 29,
+              "layers": [
+                {
+                  "name": "-path",
+                  "type": "ShapePath",
+                  "x": 1,
+                  "y": 1,
+                  "width": 100,
+                  "height": 28
+                },
+                {
+                  "name": "-path",
+                  "type": "ShapePath",
+                  "x": 0,
+                  "y": 0,
+                  "width": 101,
+                  "height": 29
+                }
+              ]
+            },
+            {
+              "name": "Path",
+              "type": "ShapePath",
+              "x": 38,
+              "y": 22,
+              "width": 56,
+              "height": 4
+            },
+            {
+              "name": "Path",
+              "type": "ShapePath",
+              "x": 38,
+              "y": 12,
+              "width": 22,
+              "height": 4
+            },
+            {
+              "name": "Oval",
+              "type": "ShapePath",
+              "x": 8,
+              "y": 10,
+              "width": 20,
+              "height": 19
+            },
+            {
+              "name": "Oval",
+              "type": "ShapePath",
+              "x": 94,
+              "y": 0,
+              "width": 13,
+              "height": 13
+            },
+            {
+              "name": "Path",
+              "type": "ShapePath",
+              "x": 101,
+              "y": 2,
+              "width": 1,
+              "height": 8
+            },
+            {
+              "name": "Path",
+              "type": "ShapePath",
+              "x": 97,
+              "y": 6,
+              "width": 8,
+              "height": 1
+            }
+          ]
+        },
+        {
+          "name": "Group",
+          "type": "Group",
+          "x": 103,
+          "y": 0,
+          "width": 17,
+          "height": 16,
+          "layers": [
+            {
+              "name": "Oval",
+              "type": "ShapePath",
+              "x": 0,
+              "y": 0,
+              "width": 17,
+              "height": 16
+            },
+            {
+              "name": "Path",
+              "type": "ShapePath",
+              "x": 8,
+              "y": 3,
+              "width": 1,
+              "height": 10
+            },
+            {
+              "name": "Path",
+              "type": "ShapePath",
+              "x": 3,
+              "y": 8,
+              "width": 10,
+              "height": 1
+            }
+          ]
+        },
+        {
+          "name": "Group",
+          "type": "Group",
+          "x": 306,
+          "y": 171,
+          "width": 34,
+          "height": 18,
+          "layers": [
+            {
+              "name": "Shape",
+              "type": "Shape",
+              "x": 0,
+              "y": 0,
+              "width": 34,
+              "height": 18,
+              "layers": [
+                {
+                  "name": "-path",
+                  "type": "ShapePath",
+                  "x": 30,
+                  "y": 15,
+                  "width": 3,
+                  "height": 1
+                },
+                {
+                  "name": "-path",
+                  "type": "ShapePath",
+                  "x": 30,
+                  "y": 15,
+                  "width": 3,
+                  "height": 1
+                },
+                {
+                  "name": "-path",
+                  "type": "ShapePath",
+                  "x": 0,
+                  "y": 0,
+                  "width": 34,
+                  "height": 18
+                },
+                {
+                  "name": "-path",
+                  "type": "ShapePath",
+                  "x": 1,
+                  "y": 1,
+                  "width": 33,
+                  "height": 17
+                },
+                {
+                  "name": "-path",
+                  "type": "ShapePath",
+                  "x": 30,
+                  "y": 15,
+                  "width": 3,
+                  "height": 1
+                }
+              ]
+            },
+            {
+              "name": "Oval",
+              "type": "ShapePath",
+              "x": 13,
+              "y": 7,
+              "width": 3,
+              "height": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markupSnippet": "<div class=\"component-card\" data-component=\"card\">\n  <!-- Component: card -->\n</div>"
+}

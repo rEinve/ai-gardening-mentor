@@ -1,0 +1,93 @@
+.billing-toggle {
+    position: relative;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius-pill);
+    background: transparent;
+}
+
+.billing-toggle__indicator {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    inline-size: 60%;
+    border-radius: var(--radius-pill);
+    background: var(--tertiary-fixed);
+    pointer-events: none;
+    transition: transform var(--motion-medium) var(--motion-ease-standard);
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
+}
+
+.billing-toggle[data-segmented-value='monthly'] .billing-toggle__indicator {
+    transform: translateX(100%);
+}
+
+.billing-toggle[data-segmented-value='monthly'] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.billing-toggle[data-segmented-value='monthly'] .billing-toggle__indicator {
+    inline-size: 50%;
+}
+
+.billing-toggle__option {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-block-size: var(--space-m);
+    min-inline-size: 0;
+    padding: 0  calc(var(--space)/2);
+    border-radius: var(--radius-pill);
+    color: var(--on-surface-variant);
+    font-family: var(--font-display);
+    font-size: var(--step--1);
+    line-height: var(--lh-label);
+    cursor: pointer;
+}
+
+.billing-toggle__label {
+    display: inline-flex;
+    align-items: center;
+    gap: calc(var(--space) / 8);
+    padding-inline:calc(var(--space) / 2);
+}
+
+.billing-toggle__input {
+    position: absolute;
+    inline-size: 0;
+    block-size: 0;
+    margin: 0;
+    opacity: 0;
+}
+
+.billing-toggle__label small {
+    padding: calc(var(--space) / 4);
+    margin-left: calc(var(--space) /4);
+    border-radius: var(--radius-pill);
+    background: var(--tertiary-fixed-dim);
+    color: var(--on-tertiary-container);
+    font-size: var(--step--1);
+}
+
+.billing-toggle[data-segmented-value='monthly'] .billing-toggle__savings {
+    background: transparent;
+    color: inherit;
+}
+
+.billing-toggle__option--active {
+    color: var(--on-surface);
+}
+
+.billing-toggle__input:focus-visible + .billing-toggle__label {
+    outline: thin solid var(--primary);
+    outline-offset: calc(var(--space-xxs) / 2);
+}
+

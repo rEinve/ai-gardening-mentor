@@ -1,0 +1,589 @@
+{
+  "id": "602923B0-108D-4B3C-8C07-4D99C540E4C2",
+  "name": "Hero",
+  "slug": "hero",
+  "type": "hero",
+  "width": 1598,
+  "height": 895,
+  "layersCount": 6,
+  "layers": [
+    {
+      "name": "Rectangle 3",
+      "type": "ShapePath",
+      "x": 0,
+      "y": 0,
+      "width": 1598,
+      "height": 895
+    },
+    {
+      "name": "Call to Action",
+      "type": "Group",
+      "x": 540,
+      "y": 672,
+      "width": 518,
+      "height": 99,
+      "layers": [
+        {
+          "name": "tagline",
+          "type": "Group",
+          "x": 0,
+          "y": 0,
+          "width": 518,
+          "height": 20,
+          "layers": [
+            {
+              "name": "WhatsApp 24/7 Respon",
+              "type": "Text",
+              "x": 30,
+              "y": 1,
+              "width": 188,
+              "height": 12,
+              "text": "WhatsApp 24/7 Response",
+              "fontSize": 12,
+              "fontFamily": "Helvetica",
+              "fontWeight": 5,
+              "lineHeight": null,
+              "textColor": "#ffdead",
+              "alignment": "left"
+            },
+            {
+              "name": "Chat to Orders",
+              "type": "Text",
+              "x": 281,
+              "y": 0,
+              "width": 110,
+              "height": 20,
+              "text": "Chat to Orders",
+              "fontSize": 12,
+              "fontFamily": "Helvetica",
+              "fontWeight": 5,
+              "lineHeight": null,
+              "textColor": "#ffdead",
+              "alignment": "left"
+            },
+            {
+              "name": "Follow-up",
+              "type": "Text",
+              "x": 441,
+              "y": 1,
+              "width": 77,
+              "height": 12,
+              "text": "Follow-up",
+              "fontSize": 12,
+              "fontFamily": "Helvetica",
+              "fontWeight": 5,
+              "lineHeight": null,
+              "textColor": "#ffdead",
+              "alignment": "left"
+            },
+            {
+              "name": "Path",
+              "type": "ShapePath",
+              "x": 411,
+              "y": 6,
+              "width": 16,
+              "height": 12
+            },
+            {
+              "name": "Path 2",
+              "type": "ShapePath",
+              "x": 251,
+              "y": 4,
+              "width": 16,
+              "height": 12
+            },
+            {
+              "name": "Path 3",
+              "type": "ShapePath",
+              "x": 0,
+              "y": 6,
+              "width": 16,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "name": "buttons",
+          "type": "Group",
+          "x": 83,
+          "y": 44,
+          "width": 429,
+          "height": 55,
+          "layers": [
+            {
+              "name": "button--primary",
+              "type": "SymbolInstance",
+              "x": 0,
+              "y": 1,
+              "width": 212,
+              "height": 54,
+              "symbolId": "FCAB5329-2AED-4127-B2FE-57498D26D575",
+              "masterName": "button--primary",
+              "overrides": [
+                {
+                  "id": "5C5C4176-7716-4DEA-9165-AC30AB0634E5_opacity:fill-0",
+                  "property": "opacity:fill-0",
+                  "value": "1"
+                },
+                {
+                  "id": "5C5C4176-7716-4DEA-9165-AC30AB0634E5_blendMode:fill-0",
+                  "property": "blendMode:fill-0",
+                  "value": "0"
+                },
+                {
+                  "id": "5C5C4176-7716-4DEA-9165-AC30AB0634E5_color:fill-0",
+                  "property": "color:fill-0",
+                  "value": "#ffdeadff"
+                },
+                {
+                  "id": "5C5C4176-7716-4DEA-9165-AC30AB0634E5_verticalSizing",
+                  "property": "verticalSizing",
+                  "value": "3"
+                },
+                {
+                  "id": "5C5C4176-7716-4DEA-9165-AC30AB0634E5_horizontalSizing",
+                  "property": "horizontalSizing",
+                  "value": "3"
+                },
+                {
+                  "id": "5C5C4176-7716-4DEA-9165-AC30AB0634E5_isVisible",
+                  "property": "isVisible",
+                  "value": "1"
+                },
+                {
+                  "id": "0B67CCD2-529A-443F-953C-DEE9B4403193_opacity:fill-0",
+                  "property": "opacity:fill-0",
+                  "value": "1"
+                },
+                {
+                  "id": "0B67CCD2-529A-443F-953C-DEE9B4403193_blendMode:fill-0",
+                  "property": "blendMode:fill-0",
+                  "value": "0"
+                },
+                {
+                  "id": "0B67CCD2-529A-443F-953C-DEE9B4403193_color:fill-0",
+                  "property": "color:fill-0",
+                  "value": "#432c00ff"
+                },
+                {
+                  "id": "0B67CCD2-529A-443F-953C-DEE9B4403193_verticalSizing",
+                  "property": "verticalSizing",
+                  "value": "0"
+                },
+                {
+                  "id": "0B67CCD2-529A-443F-953C-DEE9B4403193_horizontalSizing",
+                  "property": "horizontalSizing",
+                  "value": "0"
+                },
+                {
+                  "id": "0B67CCD2-529A-443F-953C-DEE9B4403193_isVisible",
+                  "property": "isVisible",
+                  "value": "1"
+                },
+                {
+                  "id": "3F570322-1E8A-4AA8-B3B9-A4C4FE0A5D40_opacity:fill-0",
+                  "property": "opacity:fill-0",
+                  "value": "1"
+                },
+                {
+                  "id": "3F570322-1E8A-4AA8-B3B9-A4C4FE0A5D40_blendMode:fill-0",
+                  "property": "blendMode:fill-0",
+                  "value": "0"
+                },
+                {
+                  "id": "3F570322-1E8A-4AA8-B3B9-A4C4FE0A5D40_color:fill-0",
+                  "property": "color:fill-0",
+                  "value": "#ffdeadff"
+                },
+                {
+                  "id": "3F570322-1E8A-4AA8-B3B9-A4C4FE0A5D40_verticalSizing",
+                  "property": "verticalSizing",
+                  "value": "1"
+                },
+                {
+                  "id": "3F570322-1E8A-4AA8-B3B9-A4C4FE0A5D40_horizontalSizing",
+                  "property": "horizontalSizing",
+                  "value": "1"
+                },
+                {
+                  "id": "3F570322-1E8A-4AA8-B3B9-A4C4FE0A5D40_isVisible",
+                  "property": "isVisible",
+                  "value": "1"
+                },
+                {
+                  "id": "EB6C8FCC-D29D-4FE8-8F33-62D55ADE16D4_stringValue",
+                  "property": "stringValue",
+                  "value": "Order your Assistant Now"
+                },
+                {
+                  "id": "EB6C8FCC-D29D-4FE8-8F33-62D55ADE16D4_textHAlign",
+                  "property": "textHAlign",
+                  "value": "justified"
+                },
+                {
+                  "id": "EB6C8FCC-D29D-4FE8-8F33-62D55ADE16D4_textDecoration",
+                  "property": "textDecoration",
+                  "value": "none"
+                },
+                {
+                  "id": "EB6C8FCC-D29D-4FE8-8F33-62D55ADE16D4_textColor",
+                  "property": "textColor",
+                  "value": "#432c00ff"
+                },
+                {
+                  "id": "EB6C8FCC-D29D-4FE8-8F33-62D55ADE16D4_textSize",
+                  "property": "textSize",
+                  "value": "18.00"
+                },
+                {
+                  "id": "EB6C8FCC-D29D-4FE8-8F33-62D55ADE16D4_textWeight",
+                  "property": "textWeight",
+                  "value": "[object Object]"
+                },
+                {
+                  "id": "EB6C8FCC-D29D-4FE8-8F33-62D55ADE16D4_verticalSizing",
+                  "property": "verticalSizing",
+                  "value": "1"
+                },
+                {
+                  "id": "EB6C8FCC-D29D-4FE8-8F33-62D55ADE16D4_horizontalSizing",
+                  "property": "horizontalSizing",
+                  "value": "1"
+                },
+                {
+                  "id": "EB6C8FCC-D29D-4FE8-8F33-62D55ADE16D4_isVisible",
+                  "property": "isVisible",
+                  "value": "1"
+                }
+              ]
+            },
+            {
+              "name": "button--ghost",
+              "type": "SymbolInstance",
+              "x": 228,
+              "y": 0,
+              "width": 122,
+              "height": 64,
+              "symbolId": "292F7EC9-302F-4248-B013-55DB403140A4",
+              "masterName": "button--ghost",
+              "overrides": [
+                {
+                  "id": "17359C78-8A95-421B-AFD7-7D82E68D3961_color:border-0",
+                  "property": "color:border-0",
+                  "value": "#73777fff"
+                },
+                {
+                  "id": "17359C78-8A95-421B-AFD7-7D82E68D3961_blendMode:border-0",
+                  "property": "blendMode:border-0",
+                  "value": "0"
+                },
+                {
+                  "id": "17359C78-8A95-421B-AFD7-7D82E68D3961_opacity:border-0",
+                  "property": "opacity:border-0",
+                  "value": "1"
+                },
+                {
+                  "id": "4CB7311F-7576-4BF5-A5F9-BA7DD732FE9C_stringValue",
+                  "property": "stringValue",
+                  "value": "Try your Assistant "
+                },
+                {
+                  "id": "4CB7311F-7576-4BF5-A5F9-BA7DD732FE9C_textHAlign",
+                  "property": "textHAlign",
+                  "value": "left"
+                },
+                {
+                  "id": "4CB7311F-7576-4BF5-A5F9-BA7DD732FE9C_textDecoration",
+                  "property": "textDecoration",
+                  "value": "none"
+                },
+                {
+                  "id": "4CB7311F-7576-4BF5-A5F9-BA7DD732FE9C_textColor",
+                  "property": "textColor",
+                  "value": "#432c00ff"
+                },
+                {
+                  "id": "4CB7311F-7576-4BF5-A5F9-BA7DD732FE9C_textSize",
+                  "property": "textSize",
+                  "value": "18.00"
+                },
+                {
+                  "id": "4CB7311F-7576-4BF5-A5F9-BA7DD732FE9C_textWeight",
+                  "property": "textWeight",
+                  "value": "[object Object]"
+                },
+                {
+                  "id": "4CB7311F-7576-4BF5-A5F9-BA7DD732FE9C_verticalSizing",
+                  "property": "verticalSizing",
+                  "value": "1"
+                },
+                {
+                  "id": "4CB7311F-7576-4BF5-A5F9-BA7DD732FE9C_horizontalSizing",
+                  "property": "horizontalSizing",
+                  "value": "1"
+                },
+                {
+                  "id": "4CB7311F-7576-4BF5-A5F9-BA7DD732FE9C_isVisible",
+                  "property": "isVisible",
+                  "value": "1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "SymbolInstance",
+      "x": 575,
+      "y": 124,
+      "width": 449,
+      "height": 54,
+      "symbolId": "0BAAA57F-8D3F-4205-90D9-EB665F8B3D62",
+      "masterName": "badge",
+      "overrides": [
+        {
+          "id": "07887F47-0FE8-407E-A16F-6618647F85E9_stringValue",
+          "property": "stringValue",
+          "value": "24/7"
+        },
+        {
+          "id": "07887F47-0FE8-407E-A16F-6618647F85E9_textHAlign",
+          "property": "textHAlign",
+          "value": "center"
+        },
+        {
+          "id": "07887F47-0FE8-407E-A16F-6618647F85E9_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "07887F47-0FE8-407E-A16F-6618647F85E9_textColor",
+          "property": "textColor",
+          "value": "#432c00ff"
+        },
+        {
+          "id": "07887F47-0FE8-407E-A16F-6618647F85E9_textSize",
+          "property": "textSize",
+          "value": "18.00"
+        },
+        {
+          "id": "07887F47-0FE8-407E-A16F-6618647F85E9_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "07887F47-0FE8-407E-A16F-6618647F85E9_textStyle",
+          "property": "textStyle",
+          "value": "7B0C5D7A-501F-46E7-A8BC-4D1C400505E1"
+        },
+        {
+          "id": "07887F47-0FE8-407E-A16F-6618647F85E9_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "07887F47-0FE8-407E-A16F-6618647F85E9_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "07887F47-0FE8-407E-A16F-6618647F85E9_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "A6E285DF-4075-44BC-B801-0DEEEE16A4D1_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "A6E285DF-4075-44BC-B801-0DEEEE16A4D1_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "A6E285DF-4075-44BC-B801-0DEEEE16A4D1_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#ffdeadff"
+        },
+        {
+          "id": "A6E285DF-4075-44BC-B801-0DEEEE16A4D1_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "A6E285DF-4075-44BC-B801-0DEEEE16A4D1_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "A6E285DF-4075-44BC-B801-0DEEEE16A4D1_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "2561D124-D57E-40C3-91D3-6B12504E314F_opacity:border-0",
+          "property": "opacity:border-0",
+          "value": "1"
+        },
+        {
+          "id": "2561D124-D57E-40C3-91D3-6B12504E314F_blendMode:border-0",
+          "property": "blendMode:border-0",
+          "value": "0"
+        },
+        {
+          "id": "2561D124-D57E-40C3-91D3-6B12504E314F_color:border-0",
+          "property": "color:border-0",
+          "value": "#8d9199ff"
+        },
+        {
+          "id": "2561D124-D57E-40C3-91D3-6B12504E314F_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "2561D124-D57E-40C3-91D3-6B12504E314F_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "1"
+        },
+        {
+          "id": "2561D124-D57E-40C3-91D3-6B12504E314F_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "FAE5C321-81C9-4946-8E1C-B877BDF02E1B_stringValue",
+          "property": "stringValue",
+          "value": "[WhatsApp Sales & Ordering Assistant]"
+        },
+        {
+          "id": "FAE5C321-81C9-4946-8E1C-B877BDF02E1B_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "FAE5C321-81C9-4946-8E1C-B877BDF02E1B_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "FAE5C321-81C9-4946-8E1C-B877BDF02E1B_textColor",
+          "property": "textColor",
+          "value": "#f0be6dff"
+        },
+        {
+          "id": "FAE5C321-81C9-4946-8E1C-B877BDF02E1B_textSize",
+          "property": "textSize",
+          "value": "18.00"
+        },
+        {
+          "id": "FAE5C321-81C9-4946-8E1C-B877BDF02E1B_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "FAE5C321-81C9-4946-8E1C-B877BDF02E1B_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "FAE5C321-81C9-4946-8E1C-B877BDF02E1B_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "1"
+        },
+        {
+          "id": "FAE5C321-81C9-4946-8E1C-B877BDF02E1B_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "name": "Don’t Miss a WhatsAp",
+      "type": "Text",
+      "x": 337,
+      "y": 202,
+      "width": 983,
+      "height": 234,
+      "text": "Don’t Miss a WhatsApp Sale Again.",
+      "fontSize": 90,
+      "fontFamily": "Clarity City",
+      "fontWeight": 6,
+      "lineHeight": null,
+      "textColor": "#edf1f4",
+      "alignment": "center"
+    },
+    {
+      "name": "Turns your WhatsApp",
+      "type": "Text",
+      "x": 337,
+      "y": 484,
+      "width": 925,
+      "height": 156,
+      "text": "Turns your WhatsApp into an automated sales engine you have always wanted,  with no time customer respond, day or night, turn conversations into  rela time orders and with auto following up on opotunity  is missed",
+      "fontSize": 32,
+      "fontFamily": "Helvetica",
+      "fontWeight": 5,
+      "lineHeight": null,
+      "textColor": "#e1e2e8",
+      "alignment": "center"
+    },
+    {
+      "name": "Graphic",
+      "type": "Group",
+      "x": -14,
+      "y": 484,
+      "width": 404,
+      "height": 494,
+      "layers": [
+        {
+          "name": "Group",
+          "type": "Group",
+          "x": 12,
+          "y": 10,
+          "width": 379,
+          "height": 474,
+          "layers": [
+            {
+              "name": "Path-path 2",
+              "type": "Shape",
+              "x": 0,
+              "y": 0,
+              "width": 379,
+              "height": 474,
+              "layers": [
+                {
+                  "name": "Path-path",
+                  "type": "ShapePath",
+                  "x": 4,
+                  "y": 12,
+                  "width": 371,
+                  "height": 451
+                }
+              ]
+            },
+            {
+              "name": "left-eye",
+              "type": "ShapePath",
+              "x": 71,
+              "y": 186,
+              "width": 64,
+              "height": 80
+            },
+            {
+              "name": "right-eye",
+              "type": "ShapePath",
+              "x": 236,
+              "y": 206,
+              "width": 72,
+              "height": 80
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markupSnippet": "<section class=\"hero-section padding-y-xxl\" aria-label=\"Hero\">\n  <div class=\"container\">\n    <div class=\"grid-12 items-middle\">\n      <div class=\"md-col-7\">\n        <h1 class=\"display-l\">Hero</h1>\n        <p class=\"lead\">Built with modern Theme UI layout primitives.</p>\n      </div>\n    </div>\n  </div>\n</section>"
+}

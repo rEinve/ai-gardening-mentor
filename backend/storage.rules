@@ -1,0 +1,22 @@
+rules_version = '2';
+
+// Normative Cloud Storage Rules enforcing image-quality-v1 upload boundary.
+// Private to owner; JPEG only; max 350,000 bytes; no public download links.
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /users/{uid}/diagnostics/{fileName} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow create: if request.auth != null &&
+        request.auth.uid == uid &&
+        fileName.matches('^[a-zA-Z0-9_-]{8,64}\\.jpg$') &&
+        request.resource.contentType == 'image/jpeg' &&
+        request.resource.size > 0 &&
+        request.resource.size <= 350000;
+      allow update, delete: if false;
+    }
+
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

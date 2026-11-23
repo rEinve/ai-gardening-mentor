@@ -1,0 +1,562 @@
+{
+  "id": "E833E377-6928-4022-8DCD-452E789652A9",
+  "name": "subfooter",
+  "slug": "subfooter",
+  "type": "footer",
+  "width": 1276,
+  "height": 64,
+  "layersCount": 3,
+  "layers": [
+    {
+      "name": "sub-footer-nav",
+      "type": "Group",
+      "x": 345,
+      "y": 17,
+      "width": 586,
+      "height": 31,
+      "layers": [
+        {
+          "name": "Site Terms",
+          "type": "Text",
+          "x": 0,
+          "y": 0,
+          "width": 68,
+          "height": 29,
+          "text": "Site Terms",
+          "fontSize": 14,
+          "fontFamily": "Helvetica",
+          "fontWeight": 5,
+          "lineHeight": 29,
+          "textColor": "#edf1f4",
+          "alignment": "left"
+        },
+        {
+          "name": "Lincense",
+          "type": "Text",
+          "x": 84,
+          "y": 2,
+          "width": 57,
+          "height": 29,
+          "text": "Lincense",
+          "fontSize": 14,
+          "fontFamily": "Helvetica",
+          "fontWeight": 5,
+          "lineHeight": 29,
+          "textColor": "#edf1f4",
+          "alignment": "left"
+        },
+        {
+          "name": "Responsible AI Polic",
+          "type": "Text",
+          "x": 157,
+          "y": 0,
+          "width": 136,
+          "height": 29,
+          "text": "Responsible AI Policy",
+          "fontSize": 14,
+          "fontFamily": "Helvetica",
+          "fontWeight": 5,
+          "lineHeight": 29,
+          "textColor": "#edf1f4",
+          "alignment": "left"
+        },
+        {
+          "name": "Legal",
+          "type": "Text",
+          "x": 309,
+          "y": 2,
+          "width": 35,
+          "height": 29,
+          "text": "Legal",
+          "fontSize": 14,
+          "fontFamily": "Helvetica",
+          "fontWeight": 5,
+          "lineHeight": 29,
+          "textColor": "#edf1f4",
+          "alignment": "left"
+        },
+        {
+          "name": "Privacy Policy",
+          "type": "Text",
+          "x": 360,
+          "y": 0,
+          "width": 87,
+          "height": 29,
+          "text": "Privacy Policy",
+          "fontSize": 14,
+          "fontFamily": "Helvetica",
+          "fontWeight": 5,
+          "lineHeight": 29,
+          "textColor": "#edf1f4",
+          "alignment": "left"
+        },
+        {
+          "name": "Cookie Preferences",
+          "type": "Text",
+          "x": 463,
+          "y": 2,
+          "width": 123,
+          "height": 29,
+          "text": "Cookie Preferences",
+          "fontSize": 14,
+          "fontFamily": "Helvetica",
+          "fontWeight": 5,
+          "lineHeight": 29,
+          "textColor": "#edf1f4",
+          "alignment": "left"
+        }
+      ]
+    },
+    {
+      "name": "mainbrand-footer",
+      "type": "Group",
+      "x": 14,
+      "y": 7,
+      "width": 125,
+      "height": 50,
+      "layers": [
+        {
+          "name": "Intelliweblab",
+          "type": "Text",
+          "x": 35,
+          "y": 13,
+          "width": 90,
+          "height": 24,
+          "text": "Intelliweblab",
+          "fontSize": 18,
+          "fontFamily": "Clarity City",
+          "fontWeight": 5,
+          "lineHeight": null,
+          "textColor": "#c3c7cf",
+          "alignment": "left"
+        },
+        {
+          "name": "logo icon neg@1x",
+          "type": "Group",
+          "x": 0,
+          "y": 0,
+          "width": 38,
+          "height": 50,
+          "layers": [
+            {
+              "name": "path-1-link",
+              "type": "Group",
+              "x": 0,
+              "y": 0,
+              "width": 38,
+              "height": 50,
+              "layers": [
+                {
+                  "name": "path-1",
+                  "type": "ShapePath",
+                  "x": 0,
+                  "y": 0,
+                  "width": 38,
+                  "height": 50
+                }
+              ]
+            },
+            {
+              "name": "icon",
+              "type": "Group",
+              "x": 7,
+              "y": 3,
+              "width": 23,
+              "height": 43,
+              "layers": [
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 11,
+                  "y": 23,
+                  "width": 1,
+                  "height": 6
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 7,
+                  "y": 27,
+                  "width": 4,
+                  "height": 3
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 13,
+                  "y": 29,
+                  "width": 4,
+                  "height": 2
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 7,
+                  "y": 13,
+                  "width": 4,
+                  "height": 2
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 11,
+                  "y": 14,
+                  "width": 1,
+                  "height": 6
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 7,
+                  "y": 23,
+                  "width": 4,
+                  "height": 3
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 3,
+                  "y": 32,
+                  "width": 7,
+                  "height": 4
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 13,
+                  "y": 37,
+                  "width": 7,
+                  "height": 4
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 2,
+                  "y": 28,
+                  "width": 3,
+                  "height": 7
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 11,
+                  "y": 33,
+                  "width": 1,
+                  "height": 7
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 13,
+                  "y": 23,
+                  "width": 5,
+                  "height": 5
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 18,
+                  "y": 30,
+                  "width": 3,
+                  "height": 5
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 6,
+                  "y": 16,
+                  "width": 5,
+                  "height": 5
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 3,
+                  "y": 8,
+                  "width": 2,
+                  "height": 5
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 4,
+                  "y": 2,
+                  "width": 7,
+                  "height": 4
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 13,
+                  "y": 7,
+                  "width": 7,
+                  "height": 5
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 11,
+                  "y": 3,
+                  "width": 1,
+                  "height": 7
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 13,
+                  "y": 13,
+                  "width": 4,
+                  "height": 3
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 18,
+                  "y": 8,
+                  "width": 4,
+                  "height": 8
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 2,
+                  "y": 23,
+                  "width": 6,
+                  "height": 7
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 0,
+                  "y": 35,
+                  "width": 4,
+                  "height": 4
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 10,
+                  "y": 30,
+                  "width": 3,
+                  "height": 3
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 10,
+                  "y": 20,
+                  "width": 4,
+                  "height": 4
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 17,
+                  "y": 27,
+                  "width": 3,
+                  "height": 3
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 20,
+                  "y": 35,
+                  "width": 3,
+                  "height": 3
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 10,
+                  "y": 39,
+                  "width": 4,
+                  "height": 4
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 16,
+                  "y": 15,
+                  "width": 3,
+                  "height": 3
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 0,
+                  "y": 4,
+                  "width": 4,
+                  "height": 4
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 4,
+                  "y": 13,
+                  "width": 3,
+                  "height": 3
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 20,
+                  "y": 5,
+                  "width": 3,
+                  "height": 3
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 9,
+                  "y": 9,
+                  "width": 6,
+                  "height": 6
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 10,
+                  "y": 0,
+                  "width": 3,
+                  "height": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "languaage selector",
+      "type": "Group",
+      "x": 1132,
+      "y": 9,
+      "width": 131,
+      "height": 46,
+      "layers": [
+        {
+          "name": "Rectangle",
+          "type": "ShapePath",
+          "x": 0,
+          "y": 0,
+          "width": 131,
+          "height": 46
+        },
+        {
+          "name": "Arrow-down",
+          "type": "ShapePath",
+          "x": 105,
+          "y": 21,
+          "width": 12,
+          "height": 7
+        },
+        {
+          "name": "language",
+          "type": "Shape",
+          "x": 8,
+          "y": 13,
+          "width": 20,
+          "height": 20,
+          "layers": [
+            {
+              "name": "-path",
+              "type": "ShapePath",
+              "x": 0,
+              "y": 0,
+              "width": 20,
+              "height": 20
+            },
+            {
+              "name": "-path",
+              "type": "ShapePath",
+              "x": 8,
+              "y": 14,
+              "width": 4,
+              "height": 4
+            },
+            {
+              "name": "-path",
+              "type": "ShapePath",
+              "x": 3,
+              "y": 14,
+              "width": 4,
+              "height": 4
+            },
+            {
+              "name": "-path",
+              "type": "ShapePath",
+              "x": 13,
+              "y": 14,
+              "width": 4,
+              "height": 4
+            },
+            {
+              "name": "-path",
+              "type": "ShapePath",
+              "x": 2,
+              "y": 8,
+              "width": 4,
+              "height": 4
+            },
+            {
+              "name": "-path",
+              "type": "ShapePath",
+              "x": 8,
+              "y": 8,
+              "width": 5,
+              "height": 4
+            },
+            {
+              "name": "-path",
+              "type": "ShapePath",
+              "x": 15,
+              "y": 8,
+              "width": 4,
+              "height": 4
+            },
+            {
+              "name": "-path",
+              "type": "ShapePath",
+              "x": 13,
+              "y": 2,
+              "width": 4,
+              "height": 4
+            },
+            {
+              "name": "-path",
+              "type": "ShapePath",
+              "x": 8,
+              "y": 2,
+              "width": 4,
+              "height": 4
+            },
+            {
+              "name": "-path",
+              "type": "ShapePath",
+              "x": 3,
+              "y": 2,
+              "width": 4,
+              "height": 4
+            }
+          ]
+        },
+        {
+          "name": "ENGLISH",
+          "type": "Text",
+          "x": 35,
+          "y": 17,
+          "width": 62,
+          "height": 17,
+          "text": "ENGLISH",
+          "fontSize": 14,
+          "fontFamily": "Helvetica",
+          "fontWeight": 5,
+          "lineHeight": null,
+          "textColor": "#edf1f4",
+          "alignment": "left"
+        }
+      ]
+    }
+  ],
+  "markupSnippet": "<footer class=\"site-footer surface-container\" role=\"contentinfo\">\n  <div class=\"container\">\n    <div class=\"grid-12\">\n      <div class=\"md-col-6\"><p class=\"footer__brand\">Mosi</p></div>\n      <div class=\"md-col-6 text-end\"><p class=\"body-s\">&copy; IntelliTheme. All rights reserved.</p></div>\n    </div>\n  </div>\n</footer>"
+}

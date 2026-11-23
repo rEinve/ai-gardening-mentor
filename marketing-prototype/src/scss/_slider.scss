@@ -1,0 +1,130 @@
+.carousel-section {
+    overflow: hidden;
+    position: relative;
+
+    .slides {
+        display: grid;
+        gap: var(--space-m);
+        grid-auto-columns: 100%;
+        grid-auto-flow: column;
+        justify-items: stretch;
+        list-style-type: none;
+        padding: 0;
+        margin: 0 auto;
+        transition:
+            transform 0.5s ease-in-out,
+            height 0.5s ease-in-out;
+
+    }
+
+    .slide {
+        max-width: 100%;
+        .spotlight-card__media-frame {
+            align-items: center;
+            aspect-ratio: 1/1;
+            background-color: var(--tertiary-container);
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .slide-card {
+        height: 100%;
+    }
+
+    .slide-card__media img {
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 16/9;
+    }
+
+    .slide-card__title a {
+        color: var(--text-primary);
+        text-decoration: none;
+    }
+
+    .slide-card__title a:hover {
+        color: var(--accent);
+    }
+
+    .slide-card__excerpt {
+        max-width: 52ch;
+    }
+
+    .slider-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-s);
+    }
+}
+
+@media (max-width: 599.95px) {
+    .carousel-section {
+        .spotlight-card__frame {
+            padding: var(--space-m);
+        }
+
+        .slide-card__body {
+            gap: var(--space-s);
+        }
+
+        .slide-card__title {
+            font-size: var(--step-2);
+        }
+
+        .slide-card__excerpt {
+            display: -webkit-box;
+            overflow: hidden;
+        }
+
+        .slider-controls {
+            margin-top: var(--space-s);
+        }
+
+        .slider-actions {
+            width: 100%;
+
+            .btn {
+                flex: 1 1 10rem;
+            }
+        }
+    }
+}
+
+// Controls logic remains compatible with slider.js
+.slider-dots {
+    gap: var(--space-xs);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-xs);
+    position: relative;
+    z-index: 0;
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        width 0.25s ease;
+
+    .dot {
+        border-radius: var(--radius-pill);
+        background: var(--accent);
+        border: none;
+        cursor: pointer;
+        transition: width var(--motion-fast) var(--ease-standard);
+
+        &.is-active {
+width: 0.75rem;
+            background: var(--accent-80);
+            transform: scale(1.05);
+        }
+    }
+    button {
+    width: 1.75rem;
+    min-height: 0.0125rem;
+    padding: 0.265rem;
+
+    &:hover {
+        transform: translateY(0px);
+    }
+    }
+}

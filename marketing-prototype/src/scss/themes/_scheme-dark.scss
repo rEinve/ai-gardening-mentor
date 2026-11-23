@@ -1,0 +1,91 @@
+/* ──────────────────────────────────────────────────────────────────────────
+ * Dark theme — Botanical Mentor (from docs/ai_gardening_mentor_homepage/DESIGN.md)
+ * Activated via data-theme="dark" or .dark on <html> or any container.
+ * All colors are explicitly authored as 8-digit hex (#RRGGBBAA).
+ * ────────────────────────────────────────────────────────────────────────── */
+
+.dark,
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  // Primary (Botanical Emerald Dark)
+  --primary: #8bd898ff;
+  --surface-tint: #8bd898ff;
+  --on-primary: #003917ff;
+  --primary-container: #005223ff;
+  --on-primary-container: #a6f5b1ff;
+  --primary-fixed: #a6f4b2ff;
+  --on-primary-fixed: #00210aff;
+  --primary-fixed-dim: #8bd898ff;
+  --on-primary-fixed-variant: #005224ff;
+
+  // Secondary (Muted Sage Dark)
+  --secondary: #b9ccb5ff;
+  --on-secondary: #253424ff;
+  --secondary-container: #3b4b39ff;
+  --on-secondary-container: #d5e8cfff;
+  --secondary-fixed: #d5e8d0ff;
+  --on-secondary-fixed: #101f10ff;
+  --secondary-fixed-dim: #b9ccb5ff;
+  --on-secondary-fixed-variant: #3b4b39ff;
+
+  // Tertiary (Botanical Emerald Accent)
+  --tertiary: #8bd898ff;
+  --on-tertiary: #003917ff;
+  --tertiary-container: #005223ff;
+  --on-tertiary-container: #a6f5b1ff;
+  --tertiary-fixed: #a6f4b2ff;
+  --on-tertiary-fixed: #00210aff;
+  --tertiary-fixed-dim: #8bd898ff;
+  --on-tertiary-fixed-variant: #005224ff;
+
+  // Error
+  --error: #ffb4abff;
+  --on-error: #690005ff;
+  --error-container: #93000aff;
+  --on-error-container: #ffdad6ff;
+
+  // Background & Surface
+  --background: #0d140eff;
+  --on-background: #e0e5dbff;
+  --surface: #0d140eff;
+  --on-surface: #e0e5dbff;
+  --surface-variant: #424940ff;
+  --on-surface-variant: #c2c9bdff;
+  --inverse-surface: #0a2414ff;
+  --inverse-on-surface: #e0e5dbff;
+  --inverse-primary: #005223ff;
+  --surface-dim: #0d140eff;
+  --surface-bright: #363b35ff;
+  --surface-container-lowest: #090e0aff;
+  --surface-container-low: #161d17ff;
+  --surface-container: #1b231cff;
+  --surface-container-high: #262e27ff;
+  --surface-container-highest: #303931ff;
+
+  // Outline
+  --outline: #8c9388ff;
+  --outline-variant: #424940ff;
+
+  // Semantic text ramp
+  --text-primary: var(--on-surface);
+  --text-secondary: var(--on-surface-variant);
+  --text-tertiary: var(--primary);
+  --text-muted: var(--outline);
+  --text-inverse: var(--inverse-on-surface);
+
+  // Button solid states
+  --button-container: var(--primary);
+  --button-color: var(--on-primary);
+  --button-on-container: var(--on-primary);
+
+  // Link pairs
+  --link-color: var(--primary);
+  --link-color-onhover: var(--primary-container);
+  --link-color-on-inverse: var(--primary-fixed-dim);
+  --link-color-on-inverse-hover: var(--primary-container);
+
+  // Effects
+  --shadow: #000000ff;
+  --scrim: #00000085;
+}

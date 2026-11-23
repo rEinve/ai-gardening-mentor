@@ -1,0 +1,83 @@
+@use 'themeui-lab/src/scss/abstracts/mixins' as *;
+
+// ThemeUI Baseline: node_modules/themeui-lab/src/scss/components/_card.scss
+.card {
+    border: 0;
+    padding: 0;
+    gap: var(--space);
+    box-shadow: none;
+    
+}
+
+.card ,
+.card__media {
+     border-radius: var(--radius);
+}
+
+.card__media{
+    padding: 0;
+    img {aspect-ratio: 4/3;}
+}
+.card__body {
+    padding: var(--space-m);
+}
+
+.card__title {
+    padding-bottom: var(--space);
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    line-height: var(--lh-title);
+    font-weight: var(--weight-medium);
+}
+
+.card__text {
+    font-family: var(--font-body);
+    font-size: var(--step-0);
+    line-height: var(--lh-title);
+}
+
+
+/* Use .card--interactive when the card itself is a clickable element. */
+.card--interactive:hover {
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.card--interactive:focus-visible {
+    border-color: transparent;
+    outline: var(--space-xxs) solid var(--primary-fixed);
+    outline-offset: var(--space-xxs);
+}
+
+.card--interactive:active {
+    box-shadow: none;
+}
+
+
+@include breakpoint(medium) {
+    .card__media,
+    .card {
+       border-radius: var(--radius-m);
+    }
+}
+
+@include breakpoint(expanded) {
+    .card__media,
+    .card {
+        border-radius: var(--radius-l);
+    }
+}
+
+
+@include breakpoint(large) {
+    .card__media,
+    .card {
+        border-radius: var(--radius-l);
+    }
+    .card__media{
+    min-height: 360px;
+}
+
+}
+
+

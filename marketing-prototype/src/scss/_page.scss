@@ -1,0 +1,23 @@
+.recovery-booking {
+  .pagenavigation {
+    background-color: var(--surface-container-low);
+  }
+}
+
+.page {
+  img {
+    border-radius: var(--radius);
+  }
+}
+
+body {
+  background: var(--background);
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  margin-block-end: var(--site-footer-height, 0rem);
+  background: var(--background);
+  border-radius: 0 0 var(--space-xxl) var(--space-xxl);
+}

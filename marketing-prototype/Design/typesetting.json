@@ -1,0 +1,140 @@
+{
+  "Body": {
+    "body-s": {
+      "font-family": "Montserrat",
+      "font-size": "0.75rem",
+      "line-height": "normal",
+      "font-weight": "400"
+    },
+    "eyebrow": {
+      "font-family": "Clarity City",
+      "font-size": "1.125rem",
+      "line-height": "normal",
+      "font-weight": "400"
+    },
+    "label": {
+      "font-family": "Clarity City",
+      "font-size": "1.5rem",
+      "line-height": "normal",
+      "font-weight": "600"
+    },
+    "leading": {
+      "font-family": "Montserrat",
+      "font-size": "2rem",
+      "line-height": "normal",
+      "font-weight": "400"
+    },
+    "paragraph": {
+      "font-family": "Montserrat",
+      "font-size": "1.125rem",
+      "line-height": "1.8125rem",
+      "font-weight": "400"
+    },
+    "paragraph invers": {
+      "font-family": "Montserrat",
+      "font-size": "1.125rem",
+      "line-height": "1.8125rem",
+      "font-weight": "400"
+    },
+    "paragraph-muted": {
+      "font-family": "Montserrat",
+      "font-size": "1.125rem",
+      "line-height": "1.8125rem",
+      "font-weight": "400"
+    },
+    "sub-footer-links": {
+      "font-family": "Helvetica",
+      "font-size": "1.125rem",
+      "line-height": "1.8125rem",
+      "font-weight": "400"
+    }
+  },
+  "eyebrow": {
+    "font-family": "Clarity City",
+    "font-size": "1.125rem",
+    "line-height": "normal",
+    "font-weight": "400"
+  },
+  "foot-menulinks": {
+    "font-family": "Helvetica",
+    "font-size": "1rem",
+    "line-height": "1.8125rem",
+    "font-weight": "400"
+  },
+  "footer-header": {
+    "font-family": "Clarity City",
+    "font-size": "1.125rem",
+    "line-height": "normal",
+    "font-weight": "600"
+  },
+  "heading footer menu title": {
+    "font-family": "Clarity City",
+    "font-size": "1.125rem",
+    "line-height": "normal",
+    "font-weight": "700"
+  },
+  "Heading": {
+    "h1": {
+      "font-family": "Clarity City",
+      "font-size": "5.625rem",
+      "line-height": "normal",
+      "font-weight": "500"
+    },
+    "h1 invers": {
+      "font-family": "Clarity City",
+      "font-size": "9.125rem",
+      "line-height": "normal",
+      "font-weight": "400"
+    },
+    "h2": {
+      "font-family": "Clarity City",
+      "font-size": "5.625rem",
+      "line-height": "normal",
+      "font-weight": "400"
+    },
+    "h3": {
+      "font-family": "Clarity City",
+      "font-size": "4.5rem",
+      "line-height": "normal",
+      "font-weight": "400"
+    },
+    "h3 inverse": {
+      "font-family": "Clarity City",
+      "font-size": "4.5rem",
+      "line-height": "normal",
+      "font-weight": "400"
+    },
+    "h4": {
+      "font-family": "Clarity City",
+      "font-size": "2.25rem",
+      "line-height": "normal",
+      "font-weight": "400"
+    },
+    "h4 invers": {
+      "font-family": "Clarity City",
+      "font-size": "2.25rem",
+      "line-height": "normal",
+      "font-weight": "400"
+    }
+  },
+  "Link": {
+    "default": {
+      "font-family": "Montserrat",
+      "font-size": "1.125rem",
+      "line-height": "1.8125rem",
+      "font-weight": "400"
+    }
+  },
+  "main-menu link": {
+    "font-family": "Clarity City",
+    "font-size": "1.125rem",
+    "line-height": "normal",
+    "font-weight": "500"
+  },
+  "Quote": {
+    "font-family": "Montserrat",
+    "font-size": "1.125rem",
+    "line-height": "1.8125rem",
+    "font-weight": "400"
+  }
+}

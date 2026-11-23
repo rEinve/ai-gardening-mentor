@@ -1,0 +1,63 @@
+<aside class="toast-region" aria-label="Mosi assistant">
+    <div class="toast toast--visible padding-s" role="region">
+        <div class="toast__body">
+            <p class="toast__title">Ask Mosi</p>
+        </div>
+        <button class="button" type="button" aria-controls="mosi-widget-dialog" aria-expanded="false" aria-label="Ask Mosi" data-mosi-widget-open>
+            <img src="/images/mosi-icon.svg" alt="" width="64" height="64">
+        </button>
+    </div>
+</aside>
+
+<div class="modal-backdrop hidden" aria-hidden="true" hidden data-mosi-widget-backdrop></div>
+<div class="modal hidden" id="mosi-widget-dialog" role="dialog" aria-modal="true" aria-labelledby="mosi-widget-title" aria-hidden="true" hidden data-mosi-widget>
+    <div class="modal__panel" data-mosi-assistant>
+        <header class="modal__header padding-s">
+            <div class="stack stack--xs">
+                <span class="eyebrow">AI ASSISTANT</span>
+                <h2 class="modal__title" id="mosi-widget-title">Ask Mosi</h2>
+            </div>
+            <button class="modal__close" type="button" aria-label="Close Mosi" data-mosi-widget-close>
+                <span class="material-icons-outlined" aria-hidden="true">close</span>
+            </button>
+        </header>
+
+        <div class="modal__body stack stack--sm padding-s">
+            <div class="status-indicator status-indicator--info" role="status" data-mosi-runtime-status>
+                <span class="status-indicator__dot" aria-hidden="true"></span>
+                <span data-mosi-runtime-copy>Checking the Mosi service…</span>
+            </div>
+
+            <div class="stack stack--s" role="log" aria-live="polite" aria-relevant="additions" data-mosi-log>
+                <article class="surface-mute padding-s stack stack--xs">
+                    <span class="label-s">Mosi</span>
+                    <p>What is happening in your website or customer journey?</p>
+                </article>
+            </div>
+
+            <div class="cluster cluster--sm" aria-label="Example questions">
+                <button class="button text-sm" type="button" data-mosi-prompt="We get website traffic, but hardly anyone enquires. Where should we look first?">Few enquiries</button>
+                <button class="button text-sm" type="button" data-mosi-prompt="Our enquiries arrive, but prospects go cold before booking. What should we inspect?">Leads go cold</button>
+            </div>
+
+            <form class="stack stack--xs" data-mosi-form>
+                <label for="mosi-widget-question" class="label-s">Your question</label>
+                <textarea class="input" id="mosi-widget-question" name="question" rows="3" maxlength="1200" placeholder="Describe the problem in your own words" required></textarea>
+                <div class="cluster cluster--sm">
+                    <button class="button" type="submit" data-mosi-send>Ask Mosi</button>
+                    <button class="button button--link text-sm" type="button" data-mosi-reset>New conversation</button>
+                </div>
+            </form>
+
+            <div class="alert alert--danger hidden" role="alert" hidden data-mosi-error>
+                <span class="alert__icon material-icons-outlined" aria-hidden="true">error</span>
+                <div class="alert__body">
+                    <p class="alert__title" data-mosi-error-title>Mosi is not connected</p>
+                    <p class="alert__message" data-mosi-error-copy>Please try again or use the human route.</p>
+                </div>
+            </div>
+
+            <a class="text-accent text-sm self-start" href="/buy.html#fit-review">Speak with a person</a>
+        </div>
+    </div>
+</div>

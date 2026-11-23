@@ -1,0 +1,1489 @@
+{
+  "id": "ACF9CFBC-A5E6-4C4E-AF61-5B87180729B4",
+  "name": "secondary Benefits",
+  "slug": "secondary-benefits",
+  "type": "component",
+  "width": 1521,
+  "height": 1105,
+  "layersCount": 5,
+  "layers": [
+    {
+      "name": "Mosi gives your numb",
+      "type": "Text",
+      "x": 144,
+      "y": 0,
+      "width": 1146,
+      "height": 234,
+      "text": "Mosi gives your number unlimited breathing room",
+      "fontSize": 90,
+      "fontFamily": "Clarity City",
+      "fontWeight": 5,
+      "lineHeight": null,
+      "textColor": "#171c1f",
+      "alignment": "center"
+    },
+    {
+      "name": "Mosi doesn't change",
+      "type": "Text",
+      "x": 383,
+      "y": 262,
+      "width": 500,
+      "height": 72,
+      "text": "Mosi doesn't change your WhatsApp number. It powers up the number you already have.",
+      "fontSize": 18,
+      "fontFamily": "Clarity City",
+      "fontWeight": 5,
+      "lineHeight": null,
+      "textColor": "#171c1f",
+      "alignment": "center"
+    },
+    {
+      "name": "card",
+      "type": "Group",
+      "x": 513,
+      "y": 386,
+      "width": 497,
+      "height": 719,
+      "layers": [
+        {
+          "name": "surface",
+          "type": "ShapePath",
+          "x": 0,
+          "y": 0,
+          "width": 497,
+          "height": 719
+        },
+        {
+          "name": "figure",
+          "type": "ShapePath",
+          "x": 0,
+          "y": 0,
+          "width": 497,
+          "height": 369
+        },
+        {
+          "name": "card_context",
+          "type": "Text",
+          "x": 41,
+          "y": 470,
+          "width": 414,
+          "height": 195,
+          "text": "Routine questions (*price, location, catalogue*) are settled on the spot; serious orders get their details gathered and organized.",
+          "fontSize": 32,
+          "fontFamily": "Helvetica",
+          "fontWeight": 5,
+          "lineHeight": null,
+          "textColor": "#42474e",
+          "alignment": "left"
+        },
+        {
+          "name": "card Title",
+          "type": "Text",
+          "x": 41,
+          "y": 397,
+          "width": 284,
+          "height": 47,
+          "text": "2/ Smart Sorting",
+          "fontSize": 36,
+          "fontFamily": "Clarity City",
+          "fontWeight": 5,
+          "lineHeight": null,
+          "textColor": "#5b6664",
+          "alignment": "left"
+        },
+        {
+          "name": "smart-sorting-card_image",
+          "type": "Group",
+          "x": 41,
+          "y": 118,
+          "width": 340,
+          "height": 193,
+          "layers": [
+            {
+              "name": "Group",
+              "type": "Group",
+              "x": 188,
+              "y": 0,
+              "width": 152,
+              "height": 42,
+              "layers": [
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 0,
+                  "y": 0,
+                  "width": 152,
+                  "height": 42
+                },
+                {
+                  "name": "Shape",
+                  "type": "Shape",
+                  "x": 0,
+                  "y": 0,
+                  "width": 152,
+                  "height": 42,
+                  "layers": [
+                    {
+                      "name": "-path",
+                      "type": "ShapePath",
+                      "x": 0,
+                      "y": 0,
+                      "width": 152,
+                      "height": 42
+                    },
+                    {
+                      "name": "-path",
+                      "type": "ShapePath",
+                      "x": 1,
+                      "y": 1,
+                      "width": 150,
+                      "height": 39
+                    }
+                  ]
+                },
+                {
+                  "name": "Oval",
+                  "type": "ShapePath",
+                  "x": 10,
+                  "y": 10,
+                  "width": 23,
+                  "height": 23
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 46,
+                  "y": 13,
+                  "width": 56,
+                  "height": 4
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 46,
+                  "y": 25,
+                  "width": 93,
+                  "height": 4
+                }
+              ]
+            },
+            {
+              "name": "Group",
+              "type": "Group",
+              "x": 0,
+              "y": 73,
+              "width": 152,
+              "height": 42,
+              "layers": [
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 0,
+                  "y": 0,
+                  "width": 152,
+                  "height": 42
+                },
+                {
+                  "name": "Shape",
+                  "type": "Shape",
+                  "x": 0,
+                  "y": 0,
+                  "width": 152,
+                  "height": 42,
+                  "layers": [
+                    {
+                      "name": "-path",
+                      "type": "ShapePath",
+                      "x": 0,
+                      "y": 0,
+                      "width": 152,
+                      "height": 42
+                    },
+                    {
+                      "name": "-path",
+                      "type": "ShapePath",
+                      "x": 1,
+                      "y": 1,
+                      "width": 150,
+                      "height": 39
+                    }
+                  ]
+                },
+                {
+                  "name": "Oval",
+                  "type": "ShapePath",
+                  "x": 10,
+                  "y": 10,
+                  "width": 23,
+                  "height": 23
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 46,
+                  "y": 13,
+                  "width": 56,
+                  "height": 4
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 46,
+                  "y": 25,
+                  "width": 93,
+                  "height": 4
+                }
+              ]
+            },
+            {
+              "name": "Group",
+              "type": "Group",
+              "x": 132,
+              "y": 151,
+              "width": 152,
+              "height": 42,
+              "layers": [
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 0,
+                  "y": 0,
+                  "width": 152,
+                  "height": 42
+                },
+                {
+                  "name": "Shape",
+                  "type": "Shape",
+                  "x": 0,
+                  "y": 0,
+                  "width": 152,
+                  "height": 42,
+                  "layers": [
+                    {
+                      "name": "-path",
+                      "type": "ShapePath",
+                      "x": 0,
+                      "y": 0,
+                      "width": 152,
+                      "height": 42
+                    },
+                    {
+                      "name": "-path",
+                      "type": "ShapePath",
+                      "x": 1,
+                      "y": 1,
+                      "width": 150,
+                      "height": 39
+                    }
+                  ]
+                },
+                {
+                  "name": "Oval",
+                  "type": "ShapePath",
+                  "x": 10,
+                  "y": 10,
+                  "width": 23,
+                  "height": 23
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 46,
+                  "y": 13,
+                  "width": 56,
+                  "height": 4
+                },
+                {
+                  "name": "Path",
+                  "type": "ShapePath",
+                  "x": 46,
+                  "y": 25,
+                  "width": 93,
+                  "height": 4
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "SymbolInstance",
+      "x": 0,
+      "y": 386,
+      "width": 500,
+      "height": 719,
+      "symbolId": "C5815835-A576-420C-ACE4-6A25AD974174",
+      "masterName": "card",
+      "overrides": [
+        {
+          "id": "F2C62D9C-ED7B-4E25-879B-CABF9B732807_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "F2C62D9C-ED7B-4E25-879B-CABF9B732807_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "F2C62D9C-ED7B-4E25-879B-CABF9B732807_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "ED2E3461-6BCF-444C-83CA-91F53C5D7E83_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "ED2E3461-6BCF-444C-83CA-91F53C5D7E83_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "ED2E3461-6BCF-444C-83CA-91F53C5D7E83_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "D9B47E38-9F1A-42A1-B7C2-44E76FA27CA9_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "D9B47E38-9F1A-42A1-B7C2-44E76FA27CA9_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "D9B47E38-9F1A-42A1-B7C2-44E76FA27CA9_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#f0be6dff"
+        },
+        {
+          "id": "D9B47E38-9F1A-42A1-B7C2-44E76FA27CA9_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "D9B47E38-9F1A-42A1-B7C2-44E76FA27CA9_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "D9B47E38-9F1A-42A1-B7C2-44E76FA27CA9_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "8E2EB3B4-FFE8-47D3-9811-68A132369024_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "8E2EB3B4-FFE8-47D3-9811-68A132369024_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "8E2EB3B4-FFE8-47D3-9811-68A132369024_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#3f3d56ff"
+        },
+        {
+          "id": "8E2EB3B4-FFE8-47D3-9811-68A132369024_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "8E2EB3B4-FFE8-47D3-9811-68A132369024_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "8E2EB3B4-FFE8-47D3-9811-68A132369024_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "367E2377-F7D9-4550-8FEA-48C47168222C_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "3ADDEDA1-4248-4026-9F4F-273C4991241C_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "462D2426-45C9-431C-990D-5FB89B8AFC22_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "B5E1BD1B-3581-4B1D-AB59-6A5007F0DECA_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "33700DAC-312D-4CB7-84C3-0F59D440C369_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "A8BFE1F4-C0B4-4B49-B0AE-B12363F5129D_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "A8BFE1F4-C0B4-4B49-B0AE-B12363F5129D_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "A8BFE1F4-C0B4-4B49-B0AE-B12363F5129D_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "1817B83B-C57D-440C-9262-07EE74F6D190_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "1817B83B-C57D-440C-9262-07EE74F6D190_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "1817B83B-C57D-440C-9262-07EE74F6D190_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#ffffffff"
+        },
+        {
+          "id": "1817B83B-C57D-440C-9262-07EE74F6D190_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "1817B83B-C57D-440C-9262-07EE74F6D190_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "1817B83B-C57D-440C-9262-07EE74F6D190_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "DFFD3B10-0059-4C40-AD0B-FD4EFB3B3EEC_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "DFFD3B10-0059-4C40-AD0B-FD4EFB3B3EEC_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "DFFD3B10-0059-4C40-AD0B-FD4EFB3B3EEC_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#ffffffff"
+        },
+        {
+          "id": "DFFD3B10-0059-4C40-AD0B-FD4EFB3B3EEC_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "DFFD3B10-0059-4C40-AD0B-FD4EFB3B3EEC_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "DFFD3B10-0059-4C40-AD0B-FD4EFB3B3EEC_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "C7AC6D63-14FB-4E7A-B432-3940F910157A_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "C7AC6D63-14FB-4E7A-B432-3940F910157A_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "C7AC6D63-14FB-4E7A-B432-3940F910157A_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#f0be6dff"
+        },
+        {
+          "id": "C7AC6D63-14FB-4E7A-B432-3940F910157A_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "C7AC6D63-14FB-4E7A-B432-3940F910157A_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "C7AC6D63-14FB-4E7A-B432-3940F910157A_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "B2E2A3B9-C26B-41DF-B3B9-1AD93A7F8270_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "B2E2A3B9-C26B-41DF-B3B9-1AD93A7F8270_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "B2E2A3B9-C26B-41DF-B3B9-1AD93A7F8270_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "50DB2DE1-7923-4176-8663-8646A7BABA64_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "50DB2DE1-7923-4176-8663-8646A7BABA64_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "50DB2DE1-7923-4176-8663-8646A7BABA64_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#ffffffff"
+        },
+        {
+          "id": "50DB2DE1-7923-4176-8663-8646A7BABA64_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "50DB2DE1-7923-4176-8663-8646A7BABA64_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "50DB2DE1-7923-4176-8663-8646A7BABA64_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "D665C055-D272-461A-BB2E-714B528DD552_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "D665C055-D272-461A-BB2E-714B528DD552_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "D665C055-D272-461A-BB2E-714B528DD552_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#ffffffff"
+        },
+        {
+          "id": "D665C055-D272-461A-BB2E-714B528DD552_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "D665C055-D272-461A-BB2E-714B528DD552_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "D665C055-D272-461A-BB2E-714B528DD552_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "12CE751C-470E-40BD-AA83-BEA9B1FC25A4_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "12CE751C-470E-40BD-AA83-BEA9B1FC25A4_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "12CE751C-470E-40BD-AA83-BEA9B1FC25A4_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#f0be6dff"
+        },
+        {
+          "id": "12CE751C-470E-40BD-AA83-BEA9B1FC25A4_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "12CE751C-470E-40BD-AA83-BEA9B1FC25A4_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "12CE751C-470E-40BD-AA83-BEA9B1FC25A4_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "8303C2F1-E5B3-4318-A5BF-92FB77531FD6_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "8303C2F1-E5B3-4318-A5BF-92FB77531FD6_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "8303C2F1-E5B3-4318-A5BF-92FB77531FD6_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#f0be6dff"
+        },
+        {
+          "id": "8303C2F1-E5B3-4318-A5BF-92FB77531FD6_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "8303C2F1-E5B3-4318-A5BF-92FB77531FD6_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "8303C2F1-E5B3-4318-A5BF-92FB77531FD6_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "458E320B-C6E1-4838-8A8B-021F7ABC5C0E_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "458E320B-C6E1-4838-8A8B-021F7ABC5C0E_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "458E320B-C6E1-4838-8A8B-021F7ABC5C0E_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#ccccccff"
+        },
+        {
+          "id": "458E320B-C6E1-4838-8A8B-021F7ABC5C0E_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "458E320B-C6E1-4838-8A8B-021F7ABC5C0E_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "458E320B-C6E1-4838-8A8B-021F7ABC5C0E_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "D3BB2A37-CB49-4438-8F5A-AE3B0C29D95D_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "D3BB2A37-CB49-4438-8F5A-AE3B0C29D95D_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "D3BB2A37-CB49-4438-8F5A-AE3B0C29D95D_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#ccccccff"
+        },
+        {
+          "id": "D3BB2A37-CB49-4438-8F5A-AE3B0C29D95D_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "D3BB2A37-CB49-4438-8F5A-AE3B0C29D95D_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "D3BB2A37-CB49-4438-8F5A-AE3B0C29D95D_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "4A0BDB10-3461-4948-8426-A8F6129E989E_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "4A0BDB10-3461-4948-8426-A8F6129E989E_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "4A0BDB10-3461-4948-8426-A8F6129E989E_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#090814ff"
+        },
+        {
+          "id": "4A0BDB10-3461-4948-8426-A8F6129E989E_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "4A0BDB10-3461-4948-8426-A8F6129E989E_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "4A0BDB10-3461-4948-8426-A8F6129E989E_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "4E71733A-8FD2-463E-8963-E0CB8F09C503_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "DD9C2584-33E3-45D2-95F7-6B31D1E35C36_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "50ABC575-0AA5-4E0C-A78C-E0EC767AF72F_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "50ABC575-0AA5-4E0C-A78C-E0EC767AF72F_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "50ABC575-0AA5-4E0C-A78C-E0EC767AF72F_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#ffffffff"
+        },
+        {
+          "id": "50ABC575-0AA5-4E0C-A78C-E0EC767AF72F_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "50ABC575-0AA5-4E0C-A78C-E0EC767AF72F_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "50ABC575-0AA5-4E0C-A78C-E0EC767AF72F_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "F63120B2-09F6-4077-930A-B708C152A521_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "F63120B2-09F6-4077-930A-B708C152A521_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "F63120B2-09F6-4077-930A-B708C152A521_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#090814ff"
+        },
+        {
+          "id": "F63120B2-09F6-4077-930A-B708C152A521_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "F63120B2-09F6-4077-930A-B708C152A521_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "F63120B2-09F6-4077-930A-B708C152A521_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "B26DCFE7-01A5-4C68-8882-F8B83785144A_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "047500B3-CA40-41FA-B136-36DEFBC32F4F_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "E87DA68C-E59A-4ADE-9083-CFF3F030A2EA_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "AE49212D-A5D8-43F2-A19E-D3408482E030_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "ACC7D720-640F-464D-A05B-5D7A4F823F9F_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "3FDD28F5-E679-4184-82E1-92B35D1B41B1_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "3FDD28F5-E679-4184-82E1-92B35D1B41B1_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "3FDD28F5-E679-4184-82E1-92B35D1B41B1_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#ccccccff"
+        },
+        {
+          "id": "3FDD28F5-E679-4184-82E1-92B35D1B41B1_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "3FDD28F5-E679-4184-82E1-92B35D1B41B1_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "3FDD28F5-E679-4184-82E1-92B35D1B41B1_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "61E31BEC-57D3-4CAE-8597-1C79E47D3D58_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "61E31BEC-57D3-4CAE-8597-1C79E47D3D58_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "61E31BEC-57D3-4CAE-8597-1C79E47D3D58_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#ccccccff"
+        },
+        {
+          "id": "61E31BEC-57D3-4CAE-8597-1C79E47D3D58_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "61E31BEC-57D3-4CAE-8597-1C79E47D3D58_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "61E31BEC-57D3-4CAE-8597-1C79E47D3D58_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "2BEF01BC-0000-4D02-82FB-4952D91F6360_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "2BEF01BC-0000-4D02-82FB-4952D91F6360_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "2BEF01BC-0000-4D02-82FB-4952D91F6360_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#ccccccff"
+        },
+        {
+          "id": "2BEF01BC-0000-4D02-82FB-4952D91F6360_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "2BEF01BC-0000-4D02-82FB-4952D91F6360_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "2BEF01BC-0000-4D02-82FB-4952D91F6360_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "B203ED76-DCCC-476F-BACD-98644720DFD9_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "B203ED76-DCCC-476F-BACD-98644720DFD9_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "B203ED76-DCCC-476F-BACD-98644720DFD9_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#3f3d56ff"
+        },
+        {
+          "id": "B203ED76-DCCC-476F-BACD-98644720DFD9_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "B203ED76-DCCC-476F-BACD-98644720DFD9_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "B203ED76-DCCC-476F-BACD-98644720DFD9_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "899B58DD-CF4A-4E7B-AC2A-A4A596E70891_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "899B58DD-CF4A-4E7B-AC2A-A4A596E70891_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "899B58DD-CF4A-4E7B-AC2A-A4A596E70891_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "4DB7D62A-8823-4D4F-A2C8-2AF499395B11_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "4DB7D62A-8823-4D4F-A2C8-2AF499395B11_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "4DB7D62A-8823-4D4F-A2C8-2AF499395B11_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#ffffffff"
+        },
+        {
+          "id": "4DB7D62A-8823-4D4F-A2C8-2AF499395B11_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "4DB7D62A-8823-4D4F-A2C8-2AF499395B11_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "4DB7D62A-8823-4D4F-A2C8-2AF499395B11_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "903B05BE-E2D9-414C-B029-3AD6F35A2441_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "903B05BE-E2D9-414C-B029-3AD6F35A2441_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "903B05BE-E2D9-414C-B029-3AD6F35A2441_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#090814ff"
+        },
+        {
+          "id": "903B05BE-E2D9-414C-B029-3AD6F35A2441_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "903B05BE-E2D9-414C-B029-3AD6F35A2441_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "903B05BE-E2D9-414C-B029-3AD6F35A2441_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "D34B76CA-D5D2-4D71-AF49-852961D8859C_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "D34B76CA-D5D2-4D71-AF49-852961D8859C_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "D34B76CA-D5D2-4D71-AF49-852961D8859C_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#d6d6e3ff"
+        },
+        {
+          "id": "D34B76CA-D5D2-4D71-AF49-852961D8859C_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "D34B76CA-D5D2-4D71-AF49-852961D8859C_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "D34B76CA-D5D2-4D71-AF49-852961D8859C_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "DC7C4F01-A258-4CE0-A309-E4688500E0B5_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "DC7C4F01-A258-4CE0-A309-E4688500E0B5_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "DC7C4F01-A258-4CE0-A309-E4688500E0B5_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#d6d6e3ff"
+        },
+        {
+          "id": "DC7C4F01-A258-4CE0-A309-E4688500E0B5_verticalSizing",
+          "property": "verticalSizing",
+          "value": "3"
+        },
+        {
+          "id": "DC7C4F01-A258-4CE0-A309-E4688500E0B5_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "3"
+        },
+        {
+          "id": "DC7C4F01-A258-4CE0-A309-E4688500E0B5_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "9ED0C1F0-2E7A-4B03-9031-B999ACD0BB10_stringValue",
+          "property": "stringValue",
+          "value": "Whether 5 or 500 customers message at the exact same second, each one gets an immediate, friendly, personal reply."
+        },
+        {
+          "id": "9ED0C1F0-2E7A-4B03-9031-B999ACD0BB10_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "9ED0C1F0-2E7A-4B03-9031-B999ACD0BB10_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "9ED0C1F0-2E7A-4B03-9031-B999ACD0BB10_textColor",
+          "property": "textColor",
+          "value": "#42474eff"
+        },
+        {
+          "id": "9ED0C1F0-2E7A-4B03-9031-B999ACD0BB10_textSize",
+          "property": "textSize",
+          "value": "32.00"
+        },
+        {
+          "id": "9ED0C1F0-2E7A-4B03-9031-B999ACD0BB10_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "9ED0C1F0-2E7A-4B03-9031-B999ACD0BB10_textStyle",
+          "property": "textStyle",
+          "value": "E3004F5E-E65E-4DA1-B1BB-CBAD7C1CF492"
+        },
+        {
+          "id": "9ED0C1F0-2E7A-4B03-9031-B999ACD0BB10_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "9ED0C1F0-2E7A-4B03-9031-B999ACD0BB10_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "9ED0C1F0-2E7A-4B03-9031-B999ACD0BB10_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "F6513CEE-DDDD-4051-88E8-222AD0046B20_stringValue",
+          "property": "stringValue",
+          "value": "1/ Parallel Conversations"
+        },
+        {
+          "id": "F6513CEE-DDDD-4051-88E8-222AD0046B20_textHAlign",
+          "property": "textHAlign",
+          "value": "left"
+        },
+        {
+          "id": "F6513CEE-DDDD-4051-88E8-222AD0046B20_textDecoration",
+          "property": "textDecoration",
+          "value": "none"
+        },
+        {
+          "id": "F6513CEE-DDDD-4051-88E8-222AD0046B20_textColor",
+          "property": "textColor",
+          "value": "#171c1fff"
+        },
+        {
+          "id": "F6513CEE-DDDD-4051-88E8-222AD0046B20_textSize",
+          "property": "textSize",
+          "value": "36.00"
+        },
+        {
+          "id": "F6513CEE-DDDD-4051-88E8-222AD0046B20_textWeight",
+          "property": "textWeight",
+          "value": "[object Object]"
+        },
+        {
+          "id": "F6513CEE-DDDD-4051-88E8-222AD0046B20_textStyle",
+          "property": "textStyle",
+          "value": "C0715FFA-7365-4AC1-98A1-2822D69ECAFD"
+        },
+        {
+          "id": "F6513CEE-DDDD-4051-88E8-222AD0046B20_verticalSizing",
+          "property": "verticalSizing",
+          "value": "1"
+        },
+        {
+          "id": "F6513CEE-DDDD-4051-88E8-222AD0046B20_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "1"
+        },
+        {
+          "id": "F6513CEE-DDDD-4051-88E8-222AD0046B20_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "4C4B600B-7EF6-424D-9AD6-BAFDA7F3A3F2_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "4C4B600B-7EF6-424D-9AD6-BAFDA7F3A3F2_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "4C4B600B-7EF6-424D-9AD6-BAFDA7F3A3F2_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#dfe2ebff"
+        },
+        {
+          "id": "4C4B600B-7EF6-424D-9AD6-BAFDA7F3A3F2_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "4C4B600B-7EF6-424D-9AD6-BAFDA7F3A3F2_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "4C4B600B-7EF6-424D-9AD6-BAFDA7F3A3F2_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        },
+        {
+          "id": "93A62484-D6C3-4B9B-8D11-5AE19C4049AC_opacity:fill-0",
+          "property": "opacity:fill-0",
+          "value": "1"
+        },
+        {
+          "id": "93A62484-D6C3-4B9B-8D11-5AE19C4049AC_blendMode:fill-0",
+          "property": "blendMode:fill-0",
+          "value": "0"
+        },
+        {
+          "id": "93A62484-D6C3-4B9B-8D11-5AE19C4049AC_color:fill-0",
+          "property": "color:fill-0",
+          "value": "#f8f9ffff"
+        },
+        {
+          "id": "93A62484-D6C3-4B9B-8D11-5AE19C4049AC_verticalSizing",
+          "property": "verticalSizing",
+          "value": "0"
+        },
+        {
+          "id": "93A62484-D6C3-4B9B-8D11-5AE19C4049AC_horizontalSizing",
+          "property": "horizontalSizing",
+          "value": "0"
+        },
+        {
+          "id": "93A62484-D6C3-4B9B-8D11-5AE19C4049AC_isVisible",
+          "property": "isVisible",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "Group",
+      "x": 1022,
+      "y": 386,
+      "width": 499,
+      "height": 719,
+      "layers": [
+        {
+          "name": "Rectangle 5",
+          "type": "ShapePath",
+          "x": 0,
+          "y": 0,
+          "width": 497,
+          "height": 719
+        },
+        {
+          "name": "Rectangle 9",
+          "type": "ShapePath",
+          "x": 2,
+          "y": 0,
+          "width": 497,
+          "height": 369
+        },
+        {
+          "name": "When a deal needs a",
+          "type": "Text",
+          "x": 28,
+          "y": 481,
+          "width": 414,
+          "height": 195,
+          "text": "When a deal needs a person's touch, your team steps into the conversation with the buyer’s full details already prepared",
+          "fontSize": 32,
+          "fontFamily": "Helvetica",
+          "fontWeight": 5,
+          "lineHeight": null,
+          "textColor": "#42474e",
+          "alignment": "left"
+        },
+        {
+          "name": "3/ Team Collaboratio",
+          "type": "Text",
+          "x": 28,
+          "y": 408,
+          "width": 383,
+          "height": 47,
+          "text": "3/ Team Collaboration",
+          "fontSize": 36,
+          "fontFamily": "Clarity City",
+          "fontWeight": 5,
+          "lineHeight": null,
+          "textColor": "#5b6664",
+          "alignment": "left"
+        },
+        {
+          "name": "team-collaboration-card_image",
+          "type": "Group",
+          "x": 81,
+          "y": 117,
+          "width": 339,
+          "height": 177,
+          "layers": [
+            {
+              "name": "Oval",
+              "type": "ShapePath",
+              "x": 252,
+              "y": 90,
+              "width": 87,
+              "height": 87
+            },
+            {
+              "name": "Oval",
+              "type": "ShapePath",
+              "x": 283,
+              "y": 112,
+              "width": 25,
+              "height": 25
+            },
+            {
+              "name": "Path",
+              "type": "ShapePath",
+              "x": 269,
+              "y": 144,
+              "width": 61,
+              "height": 33
+            },
+            {
+              "name": "Oval",
+              "type": "ShapePath",
+              "x": 101,
+              "y": 0,
+              "width": 87,
+              "height": 87
+            },
+            {
+              "name": "Oval",
+              "type": "ShapePath",
+              "x": 132,
+              "y": 19,
+              "width": 28,
+              "height": 28
+            },
+            {
+              "name": "Path",
+              "type": "ShapePath",
+              "x": 116,
+              "y": 54,
+              "width": 61,
+              "height": 33
+            },
+            {
+              "name": "Oval",
+              "type": "ShapePath",
+              "x": 0,
+              "y": 68,
+              "width": 87,
+              "height": 87
+            },
+            {
+              "name": "Oval",
+              "type": "ShapePath",
+              "x": 30,
+              "y": 92,
+              "width": 25,
+              "height": 25
+            },
+            {
+              "name": "Path",
+              "type": "ShapePath",
+              "x": 15,
+              "y": 122,
+              "width": 61,
+              "height": 33
+            },
+            {
+              "name": "Path",
+              "type": "ShapePath",
+              "x": 96,
+              "y": 129,
+              "width": 40,
+              "height": 2
+            },
+            {
+              "name": "Path",
+              "type": "ShapePath",
+              "x": 96,
+              "y": 133,
+              "width": 8,
+              "height": 2
+            },
+            {
+              "name": "Path",
+              "type": "ShapePath",
+              "x": 96,
+              "y": 138,
+              "width": 19,
+              "height": 2
+            },
+            {
+              "name": "Path 4",
+              "type": "ShapePath",
+              "x": 216,
+              "y": 132,
+              "width": 40,
+              "height": 2
+            },
+            {
+              "name": "Path 3",
+              "type": "ShapePath",
+              "x": 216,
+              "y": 136,
+              "width": 8,
+              "height": 2
+            },
+            {
+              "name": "Path 2",
+              "type": "ShapePath",
+              "x": 216,
+              "y": 141,
+              "width": 19,
+              "height": 2
+            },
+            {
+              "name": "Path",
+              "type": "ShapePath",
+              "x": 196,
+              "y": 44,
+              "width": 40,
+              "height": 2
+            },
+            {
+              "name": "Path",
+              "type": "ShapePath",
+              "x": 196,
+              "y": 48,
+              "width": 8,
+              "height": 2
+            },
+            {
+              "name": "Path",
+              "type": "ShapePath",
+              "x": 196,
+              "y": 53,
+              "width": 19,
+              "height": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "markupSnippet": "<div class=\"component-secondary-benefits\" data-component=\"secondary-benefits\">\n  <!-- Component: secondary Benefits -->\n</div>"
+}

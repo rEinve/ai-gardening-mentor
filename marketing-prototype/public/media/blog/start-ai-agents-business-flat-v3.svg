@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1350" height="1080" viewBox="0 0 1350 1080" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Starting with AI agents</title>
+  <desc id="desc">A small pilot grows through three controlled stages toward a verified support workflow.</desc>
+  <rect width="1350" height="1080" rx="52" fill="#F4EDE2"/>
+  <circle cx="1110" cy="205" r="188" fill="#EAD9BE"/>
+  <rect x="148" y="144" width="850" height="792" rx="42" fill="#FFFFFF"/>
+  <rect x="204" y="200" width="254" height="20" rx="10" fill="#D6C7B1"/><rect x="204" y="240" width="390" height="12" rx="6" fill="#E9E1D6"/>
+  <rect x="204" y="290" width="738" height="2" rx="0" fill="#EEE8DF"/>
+  <rect x="204" y="330" width="736" height="420" rx="26" fill="#FFFFFF"/>
+      <rect x="241" y="490" width="188" height="206" rx="26" fill="#F3E9D9"/><rect x="476" y="420" width="188" height="276" rx="26" fill="#E9EDF0"/><rect x="711" y="350" width="188" height="346" rx="26" fill="#E6EFEB"/>
+      <circle cx="282" cy="536" r="22" fill="#B58B53"/><rect x="272" y="584" width="125" height="11" rx="5.5" fill="#B58B53"/><rect x="272" y="611" width="89" height="8" rx="4" fill="#D6C7B1"/>
+      <circle cx="517" cy="466" r="22" fill="#6D7581"/><rect x="507" y="514" width="125" height="11" rx="5.5" fill="#6D7581"/><rect x="507" y="541" width="89" height="8" rx="4" fill="#CBD2D8"/>
+      <circle cx="752" cy="396" r="22" fill="#628578"/><rect x="742" y="444" width="125" height="11" rx="5.5" fill="#4C786A"/><rect x="742" y="471" width="89" height="8" rx="4" fill="#CBDAD4"/>
+      <path d="M429 593h38m-13-13 13 13-13 13M664 525h38m-13-13 13 13-13 13" stroke="#B58B53" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="241" y="715" width="658" height="3" rx="0" fill="#EEE8DF"/>
+  <rect x="204" y="804" width="738" height="2" rx="0" fill="#EEE8DF"/>
+  <circle cx="228" cy="851" r="15" fill="#B58B53"/><rect x="259" y="841" width="310" height="11" rx="5.5" fill="#818783"/><rect x="259" y="865" width="220" height="8" rx="4" fill="#D6D9D6"/>
+  <rect x="1032" y="566" width="230" height="278" rx="34" fill="#E6EFEB"/>
+  <circle cx="1147" cy="670" r="53" stroke="#97A9A1" stroke-width="15"/>
+  <path d="M1147 617a53 53 0 0 1 49 72" stroke="#4C786A" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1085" y="771" width="124" height="13" rx="6.5" fill="#80968D"/><rect x="1103" y="799" width="88" height="9" rx="4.5" fill="#CBDAD4"/>
+</svg>

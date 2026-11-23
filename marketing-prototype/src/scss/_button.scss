@@ -1,0 +1,294 @@
+@use 'themeui-lab/src/scss/abstracts/mixins' as tools;
+
+.button {
+    display: inline-flex;
+    width: max-content;
+    max-inline-size: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    min-height: 2.75rem;
+    padding: var(--space-s) var(--space-m);
+    border: 0;
+    border-radius: var(--radius-pill);
+    background-color: var(--button-container);
+    color: var(--button-color);
+    font: inherit;
+    font-size: var(--step-0);
+    font-weight: var(--weight-semibold);
+    line-height: var(--lh-label);
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        background-color var(--motion-fast) var(--motion-ease-standard),
+        border-color var(--motion-fast) var(--motion-ease-standard),
+        color var(--motion-fast) var(--motion-ease-standard),
+        box-shadow var(--motion-fast) var(--motion-ease-standard);
+}
+
+.button:hover {
+    background-color: var(--button-container);
+    opacity: 0.92;
+}
+
+.button:focus-visible {
+    outline: none;
+    border-color: var(--button-container);
+    box-shadow: 0 0 0 0.1875rem var(--button-container);
+}
+
+.button:active {
+    background-color: var(--button-container);
+    opacity: 0.82;
+    transform: translateY(0.0625rem);
+
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+
+}
+
+/* ── Variants ───────────────────────────────────────────────────────────── */
+
+.button.button--primary {
+    background-color: var(--button-container);
+    border-color: transparent;
+    color: var(--button-color);
+}
+
+.button.button--primary:hover {
+    background-color: var(--button-container);
+    opacity: 0.92;
+}
+
+.button.button--primary:focus-visible {
+    border-color: transparent;
+    box-shadow: 0 0 0 0.1875rem var(--button-container);
+}
+
+.button.button--primary:active {
+    background-color: var(--button-container);
+    opacity: 0.82;
+    border-color: transparent;
+}
+
+.button.button--danger {
+    background-color: var(--error);
+    border-color: transparent;
+    color: var(--on-error);
+}
+
+.button.button--danger:hover {
+    background-color: var(--error);
+    opacity: 0.92;
+}
+
+.button.button--danger:focus-visible {
+    border-color: transparent;
+    box-shadow: 0 0 0 0.1875rem var(--error-container);
+}
+
+.button.button--danger:active {
+    background-color: var(--error);
+    opacity: 0.82;
+    border-color: transparent;
+}
+
+.button.button--ghost {
+    background-color: transparent;
+    border-color: var(--outline);
+    color: var(--on-surface);
+}
+
+.button.button--ghost:hover {
+    background-color: unset;
+}
+
+.button.button--ghost:active {
+    background-color: unset;
+    border-color: var(--outline);
+    opacity: 0.82;
+}
+
+.button.button--link {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--link-color);
+    padding-inline: var(--space-xxs);
+}
+
+.button.button--link:hover {
+    background-color: transparent;
+    color: var(--link-color-onhover);
+    text-decoration: underline;
+}
+
+.button.button--link:focus-visible {
+    border-color: transparent;
+    box-shadow: 0 0 0 0.1875rem var(--link-color);
+}
+
+.button.button--link:active {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--link-color-onhover);
+}
+
+/* ── Size modifiers ─────────────────────────────────────────────────────── */
+
+.button--m {
+    padding-inline: var(--space-m);
+    border-radius: var(--radius-control-md);
+}
+
+.button--l {
+    padding-inline: var(--space-l);
+    border-radius: var(--radius-control-md);
+}
+
+.button--xl {
+    padding-inline: var(--space-xl);
+    border-radius: var(--radius-control-lg);
+}
+
+.button--xxl {
+    padding-inline: var(--space-xxl);
+    border-radius: var(--radius-control-lg);
+}
+
+// Shared button sizing and responsive padding.
+.button {
+    padding: var(--button-padding-block) var(--space-s);
+    border-radius: var(--radius-pill);
+    font-size: var(--button-font-size);
+}
+
+.button.button--link {
+    padding-inline: var(--space-xs);
+}
+
+
+
+// Primary button.
+.button.button--primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-s);
+    width: fit-content;
+    align-self: flex-start;
+    min-height: 3.375rem;
+    padding: 0.4375rem 0.4375rem 0.4375rem var(--space-l);
+    border: 0;
+    border-radius: var(--radius-pill);
+    background-color: var(--tertiary-container);
+    color: var(--on-tertiary-container);
+    font-family: var(--font-label);
+    font-size: var(--button-font-size);
+    font-weight: var(--weight-medium);
+    line-height: var(--lh-label);
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition:
+        background-color var(--motion-fast) var(--motion-ease-standard),
+        opacity var(--motion-fast) var(--motion-ease-standard),
+        box-shadow var(--motion-fast) var(--motion-ease-standard),
+        transform var(--motion-fast) var(--motion-ease-standard);
+
+    &:hover {
+        background-color: var(--tertiary-container);
+        opacity: 0.92;
+        transform: translateY(-0.0625rem);
+    }
+
+    &:focus-visible {
+        outline: none;
+        border-color: transparent;
+        box-shadow: 0 0 0 0.1875rem var(--tertiary);
+    }
+
+    &:active {
+        background-color: var(--tertiary-container);
+        opacity: 0.85;
+        transform: translateY(0.0625rem);
+    }
+
+    &:disabled,
+    &[disabled] {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+    .button__icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 2.5rem;
+        inline-size: 2.5rem;
+        block-size: 2.5rem;
+        border-radius: var(--radius-full);
+        background-color: var(--on-tertiary-container);
+        color: var(--tertiary-container);
+        font-family: "Material Icons Round", sans-serif;
+        font-feature-settings: "liga";
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        white-space: nowrap;
+        direction: ltr;
+        -webkit-font-smoothing: antialiased;
+        user-select: none;
+    }
+}
+
+// Ghost button.
+.button.button--ghost {
+    border: thin solid var(--outline);
+    border-color: var(--outline);
+    background-color: transparent;
+    color: var(--link-color);
+}
+
+// Secondary button.
+.button.button--secondary {
+    border: 0;
+    padding-inline: var(--space-s);
+    background-color: var(--tertiary-container);
+    color: var(--on-tertiary-container);
+}
+
+.button.button--secondary:hover {
+    background-color: var(--tertiary-container);
+    color: var(--on-tertiary-container);
+    opacity: 0.92;
+}
+
+.button.button--secondary:focus-visible {
+    border-color: transparent;
+    box-shadow: 0 0 0 0.1875rem var(--tertiary);
+}
+
+.button.button--secondary:active {
+    background-color: var(--tertiary-container);
+    color: var(--on-tertiary-container);
+    opacity: 0.85;
+}
+
+@include tools.breakpoint(medium) {
+    .button {
+        padding-inline: var(--space-m);
+    }
+}
+
+@include tools.breakpoint(expanded) {
+    .button {
+        padding-inline: var(--space-l);
+    }
+}

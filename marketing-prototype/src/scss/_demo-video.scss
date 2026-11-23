@@ -1,0 +1,34 @@
+.demo-video-frame {
+  width: 100%;
+
+  &__player {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: var(--radius-l);
+    background-color: var(--color-surface-container-highest);
+    border: 1px solid var(--color-outline-variant);
+
+    iframe,
+    video {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  &__placeholder {
+    padding: var(--space-l);
+    border-radius: var(--radius-l);
+    border: 1px dashed var(--color-outline-variant);
+    background-color: var(--color-surface);
+  }
+
+  &__badge {
+    font-size: var(--step-4);
+    color: var(--color-accent);
+  }
+}
