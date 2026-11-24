@@ -85,6 +85,94 @@ class _MentorChatScreenState extends State<MentorChatScreen> {
     super.dispose();
   }
 
+  Future<void> _saveAdviceToCropLibrary(String adviceText) async {
+    final activeCrops = widget.store.crops.where((c) => !c.isRetired).toList();
+    if (activeCrops.isEmpty) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Add a crop in My Garden first to save notes to its library.')),
+      );
+      return;
+    }
+
+    // Auto-detect which active crop is mentioned in the reply (or last user message)
+    final lowerAdvice = adviceText.toLowerCase();
+    CropModel selected = activeCrops.first;
+    for (final c in activeCrops) {
+      if (lowerAdvice.contains(c.commonName.toLowerCase()) ||
+          (c.localNameSw.isNotEmpty && lowerAdvice.contains(c.localNameSw.toLowerCase()))) {
+        selected = c;
+        break;
+      }
+    }
+
+    final chosen = await showDialog<CropModel>(
+      context: context,
+      builder: (ctx) {
+        CropModel current = selected;
+        return StatefulBuilder(
+          builder: (ctx, setDialogState) => AlertDialog(
+            title: const Text('Save to My Crop Library'),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  'Choose which crop in My Garden should keep this Mentor advice for offline reference:',
+                ),
+                const SizedBox(height: 12),
+                DropdownButtonFormField<CropModel>(
+                  initialValue: current,
+                  decoration: const InputDecoration(
+                    labelText: 'Crop',
+                    border: OutlineInputBorder(),
+                  ),
+                  items: activeCrops
+                      .map(
+                        (c) => DropdownMenuItem(
+                          value: c,
+                          child: Text(
+                            c.localNameSw.isNotEmpty
+                                ? '${c.commonName} (${c.localNameSw})'
+                                : c.commonName,
+                          ),
+                        ),
+                      )
+                      .toList(),
+                  onChanged: (v) {
+                    if (v != null) setDialogState(() => current = v);
+                  },
+                ),
+              ],
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.of(ctx).pop(),
+                child: const Text('Cancel'),
+              ),
+              FilledButton(
+                onPressed: () => Navigator.of(ctx).pop(current),
+                child: const Text('Save Note'),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+
+    if (chosen == null) return;
+    await widget.store.addCropLibraryNote(
+      cropProfileId: chosen.cropProfileId,
+      cropName: chosen.commonName,
+      source: 'mentor_advice',
+      content: adviceText,
+    );
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('Saved to ${chosen.commonName} library in My Garden.')),
+    );
+  }
+
   Future<void> _sendPrompt(String text) async {
     final trimmed = text.trim();
     if (trimmed.isEmpty || _isStreaming) return;
@@ -707,13 +795,24 @@ class _MentorChatScreenState extends State<MentorChatScreen> {
                                     ],
                                     if (!msg.isUser && !msg.isStreaming && !msg.insufficientEvidence) ...[
                                       const SizedBox(height: 8),
-                                      ActionChip(
-                                        avatar: const Icon(Icons.storefront_outlined, size: 16),
-                                        label: const Text('Find Agro-Dealer & Price'),
-                                        onPressed: () => showAgroSupplierSheet(
-                                          context,
-                                          store: widget.store,
-                                        ),
+                                      Wrap(
+                                        spacing: 8,
+                                        runSpacing: 6,
+                                        children: [
+                                          ActionChip(
+                                            avatar: const Icon(Icons.bookmark_add_outlined, size: 16),
+                                            label: const Text('Save to Crop Library'),
+                                            onPressed: () => _saveAdviceToCropLibrary(msg.content),
+                                          ),
+                                          ActionChip(
+                                            avatar: const Icon(Icons.storefront_outlined, size: 16),
+                                            label: const Text('Find Agro-Dealer & Price'),
+                                            onPressed: () => showAgroSupplierSheet(
+                                              context,
+                                              store: widget.store,
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ],
                                   ],

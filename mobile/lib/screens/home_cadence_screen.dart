@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../data/offline_garden_store.dart';
 import '../models/garden_models.dart';
+import '../widgets/brand_logo.dart';
 import 'account_screen.dart';
 import 'task_detail_screen.dart';
 
@@ -106,7 +107,7 @@ class _HomeCadenceScreenState extends State<HomeCadenceScreen> {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Icon(Icons.spa_outlined, size: 40, color: cs.primary),
+                          const BrandLogo(size: 48),
                           const SizedBox(height: 12),
                           Text(
                             'No care tasks scheduled for this day. Enjoy your garden!',

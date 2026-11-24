@@ -5,13 +5,50 @@ import '../models/agro_supplier_models.dart';
 import '../models/crop_planner_models.dart';
 import 'agro_supplier_sheet.dart';
 
-/// `/planner` — Proactive Crop Planner, Waterfall Project Management & Succession Planting.
-/// Ported from `docs/Crop planting log.xlsx` with interactive 14-day prepare-ahead alerts,
-/// practical Tanzania fertilizer/management steps, and expected harvest date tracking.
-class CropPlannerScreen extends StatelessWidget {
+enum _PlannerViewMode { month, week, batches }
+
+/// `/planner` — Proactive Crop Planner with Monthly & Weekly Calendar views
+/// plus Waterfall Batch & Succession Planting management.
+class CropPlannerScreen extends StatefulWidget {
   const CropPlannerScreen({super.key, required this.store});
 
   final OfflineGardenStore store;
+
+  @override
+  State<CropPlannerScreen> createState() => _CropPlannerScreenState();
+}
+
+class _CropPlannerScreenState extends State<CropPlannerScreen> {
+  _PlannerViewMode _viewMode = _PlannerViewMode.month;
+  int _monthOffset = 0; // 0 = This Month, 1 = Next Month, etc.
+
+  OfflineGardenStore get store => widget.store;
+
+  static const List<String> _monthNames = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+
+  DateTime _selectedMonthDate() {
+    final now = DateTime.now();
+    return DateTime(now.year, now.month + _monthOffset, 1);
+  }
+
+  List<ScheduledMilestone> _allMilestonesSorted(List<ComputedBatchSchedule> schedules) {
+    final all = schedules.expand((s) => s.milestones).toList();
+    all.sort((a, b) => a.scheduledDate.compareTo(b.scheduledDate));
+    return all;
+  }
 
   Future<void> _openNewPlanSheet(BuildContext context) async {
     await showModalBottomSheet<void>(
@@ -252,6 +289,16 @@ class CropPlannerScreen extends StatelessWidget {
     final cs = Theme.of(context).colorScheme;
     final schedules = store.computedBatchSchedules;
     final prepAlerts = store.upcomingPrepAlerts;
+    final allMilestones = _allMilestonesSorted(schedules);
+    final selectedMonth = _selectedMonthDate();
+    final selectedMonthPrefix =
+        '${selectedMonth.year.toString().padLeft(4, '0')}-${selectedMonth.month.toString().padLeft(2, '0')}';
+    final monthMilestones = allMilestones
+        .where((m) => m.scheduledDate.startsWith(selectedMonthPrefix))
+        .toList();
+    final weekMilestones = allMilestones
+        .where((m) => m.daysFromToday >= 0 && m.daysFromToday <= 7)
+        .toList();
 
     return Scaffold(
       appBar: AppBar(
@@ -268,6 +315,169 @@ class CropPlannerScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 12, 16, 32),
         children: [
+          SegmentedButton<_PlannerViewMode>(
+            segments: const [
+              ButtonSegment(
+                value: _PlannerViewMode.month,
+                icon: Icon(Icons.calendar_month_outlined),
+                label: Text('Month'),
+              ),
+              ButtonSegment(
+                value: _PlannerViewMode.week,
+                icon: Icon(Icons.view_week_outlined),
+                label: Text('Week'),
+              ),
+              ButtonSegment(
+                value: _PlannerViewMode.batches,
+                icon: Icon(Icons.layers_outlined),
+                label: Text('Batches'),
+              ),
+            ],
+            selected: {_viewMode},
+            onSelectionChanged: (sel) => setState(() => _viewMode = sel.first),
+          ),
+          const SizedBox(height: 12),
+
+          if (_viewMode == _PlannerViewMode.month) ...[
+            Card(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
+                      tooltip: 'Previous month',
+                      icon: const Icon(Icons.chevron_left),
+                      onPressed: () => setState(() => _monthOffset--),
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          '${_monthNames[selectedMonth.month - 1]} ${selectedMonth.year}',
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleMedium
+                              ?.copyWith(fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          _monthOffset == 0
+                              ? 'This Month'
+                              : _monthOffset == 1
+                                  ? 'Next Month'
+                                  : _monthOffset == -1
+                                      ? 'Last Month'
+                                      : '${_monthOffset > 0 ? '+' : ''}$_monthOffset months',
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodySmall
+                              ?.copyWith(color: cs.onSurfaceVariant),
+                        ),
+                      ],
+                    ),
+                    IconButton(
+                      tooltip: 'Next month',
+                      icon: const Icon(Icons.chevron_right),
+                      onPressed: () => setState(() => _monthOffset++),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 10),
+            if (monthMilestones.isEmpty)
+              Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(18),
+                  child: Column(
+                    children: [
+                      const Text(
+                        'No crop milestones scheduled in this month.',
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(height: 8),
+                      TextButton.icon(
+                        onPressed: () => setState(() => _monthOffset++),
+                        icon: const Icon(Icons.arrow_forward),
+                        label: const Text('Check Next Month'),
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            else
+              ...monthMilestones.map(
+                (m) => Card(
+                  margin: const EdgeInsets.only(bottom: 8),
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      backgroundColor: m.phase == WaterfallPhase.harvest
+                          ? cs.tertiaryContainer
+                          : cs.primaryContainer,
+                      child: Text(
+                        m.scheduledDate.substring(8, 10),
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: m.phase == WaterfallPhase.harvest
+                              ? cs.onTertiaryContainer
+                              : cs.onPrimaryContainer,
+                        ),
+                      ),
+                    ),
+                    title: Text(
+                      '${m.cropLabel}: ${m.title}',
+                      style: const TextStyle(fontWeight: FontWeight.w600),
+                    ),
+                    subtitle: Text('${m.scheduledDate} • ${phaseLabel(m.phase)}'),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () => _openMilestoneActionSheet(context, m),
+                  ),
+                ),
+              ),
+            const SizedBox(height: 16),
+          ] else if (_viewMode == _PlannerViewMode.week) ...[
+            Text(
+              'Next 7 Days on Your Plan (${weekMilestones.length})',
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            if (weekMilestones.isEmpty)
+              const Card(
+                child: Padding(
+                  padding: EdgeInsets.all(18),
+                  child: Text(
+                    'No planting, feeding, or harvest milestones due in the next 7 days. Switch to Month to preview upcoming months.',
+                  ),
+                ),
+              )
+            else
+              ...weekMilestones.map(
+                (m) => Card(
+                  margin: const EdgeInsets.only(bottom: 8),
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      backgroundColor: cs.primaryContainer,
+                      child: Text(
+                        m.daysFromToday == 0 ? 'Now' : '+${m.daysFromToday}d',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: cs.onPrimaryContainer,
+                        ),
+                      ),
+                    ),
+                    title: Text(
+                      '${m.cropLabel}: ${m.title}',
+                      style: const TextStyle(fontWeight: FontWeight.w600),
+                    ),
+                    subtitle: Text('${m.scheduledDate} • ${phaseLabel(m.phase)}'),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () => _openMilestoneActionSheet(context, m),
+                  ),
+                ),
+              ),
+            const SizedBox(height: 16),
+          ],
+
           // Interactive "Prepare Ahead (Next 14 Days)" Card
           Card(
             color: prepAlerts.isNotEmpty ? cs.tertiaryContainer : cs.surfaceContainerHighest,

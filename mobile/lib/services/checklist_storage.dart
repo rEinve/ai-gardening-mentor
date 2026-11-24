@@ -109,6 +109,7 @@ class PersistedGardenProfile {
     this.crops = const [],
     this.batchPlans = const [],
     this.farmContacts = const [],
+    this.cropNotes = const [],
   });
 
   final String accountId;
@@ -122,6 +123,7 @@ class PersistedGardenProfile {
   final List<Map<String, dynamic>> crops;
   final List<Map<String, dynamic>> batchPlans;
   final List<Map<String, dynamic>> farmContacts;
+  final List<Map<String, dynamic>> cropNotes;
 
   Map<String, dynamic> toJson() => {
         'accountId': accountId,
@@ -135,6 +137,7 @@ class PersistedGardenProfile {
         'crops': crops,
         'batchPlans': batchPlans,
         'farmContacts': farmContacts,
+        'cropNotes': cropNotes,
       };
 
   static PersistedGardenProfile? fromJson(Map<String, dynamic>? json) {
@@ -170,6 +173,13 @@ class PersistedGardenProfile {
             .map((e) => Map<String, dynamic>.from(e))
             .toList()
         : <Map<String, dynamic>>[];
+    final rawNotes = json['cropNotes'];
+    final cropNotes = rawNotes is List
+        ? rawNotes
+            .whereType<Map>()
+            .map((e) => Map<String, dynamic>.from(e))
+            .toList()
+        : <Map<String, dynamic>>[];
     return PersistedGardenProfile(
       accountId: accountId,
       plotId: plotId,
@@ -182,6 +192,7 @@ class PersistedGardenProfile {
       crops: crops,
       batchPlans: batchPlans,
       farmContacts: farmContacts,
+      cropNotes: cropNotes,
     );
   }
 }

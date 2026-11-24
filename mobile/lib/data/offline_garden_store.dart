@@ -16,6 +16,49 @@ import '../services/firebase_garden_backend.dart';
 import '../services/garden_backend_client.dart';
 import 'tanzania_crops.dart';
 
+class CropLibraryNote {
+  const CropLibraryNote({
+    required this.noteId,
+    required this.cropProfileId,
+    required this.cropName,
+    required this.source,
+    required this.content,
+    required this.createdAtIso,
+  });
+
+  final String noteId;
+  final String cropProfileId;
+  final String cropName;
+
+  /// `'my_note'`, `'action_taken'`, or `'mentor_advice'`
+  final String source;
+  final String content;
+  final String createdAtIso;
+
+  Map<String, dynamic> toMap() => {
+        'noteId': noteId,
+        'cropProfileId': cropProfileId,
+        'cropName': cropName,
+        'source': source,
+        'content': content,
+        'createdAtIso': createdAtIso,
+      };
+
+  static CropLibraryNote? fromMap(Map<String, dynamic> m) {
+    final id = m['noteId'] as String?;
+    final content = m['content'] as String?;
+    if (id == null || content == null || content.trim().isEmpty) return null;
+    return CropLibraryNote(
+      noteId: id,
+      cropProfileId: (m['cropProfileId'] as String?) ?? '',
+      cropName: (m['cropName'] as String?) ?? 'Garden Crop',
+      source: (m['source'] as String?) ?? 'my_note',
+      content: content,
+      createdAtIso: (m['createdAtIso'] as String?) ?? '',
+    );
+  }
+}
+
 /// Offline-first Phase 1–3 store.
 /// Holds cached plots, crops, 7-day tasks, waterfall plans, farm contacts, and chat logs.
 /// Connects to Firebase AI Logic (`firebase_ai`) and Firebase Backend when configured.
@@ -90,6 +133,7 @@ class OfflineGardenStore extends ChangeNotifier {
   final List<CropBatchPlan> _batchPlans = [];
   final List<AgroSupplier> _customSuppliers = [];
   final List<MentorChatLogEntry> _chatLogs = [];
+  final List<CropLibraryNote> _cropLibraryNotes = [];
   InputPreference _inputPreference = InputPreference.both;
   String? _lastSyncError;
 
@@ -219,8 +263,52 @@ class OfflineGardenStore extends ChangeNotifier {
     _tasks.clear();
     _batchPlans.clear();
     _customSuppliers.clear();
+    _cropLibraryNotes.clear();
     _completionsByTaskId.clear();
     notifyListeners();
+  }
+
+  List<CropLibraryNote> get cropLibraryNotes => List.unmodifiable(_cropLibraryNotes);
+
+  List<CropLibraryNote> notesForCrop({
+    required String cropProfileId,
+    required String cropName,
+  }) {
+    final lowerName = cropName.toLowerCase();
+    return _cropLibraryNotes
+        .where((n) =>
+            (cropProfileId.isNotEmpty && n.cropProfileId == cropProfileId) ||
+            n.cropName.toLowerCase() == lowerName)
+        .toList();
+  }
+
+  Future<void> addCropLibraryNote({
+    required String cropProfileId,
+    required String cropName,
+    required String source,
+    required String content,
+  }) async {
+    final trimmed = content.trim();
+    if (trimmed.isEmpty) return;
+    _cropLibraryNotes.insert(
+      0,
+      CropLibraryNote(
+        noteId: 'note_${DateTime.now().microsecondsSinceEpoch}',
+        cropProfileId: cropProfileId,
+        cropName: cropName,
+        source: source,
+        content: trimmed,
+        createdAtIso: _formatLocalDate(DateTime.now()),
+      ),
+    );
+    notifyListeners();
+    await _persistLocalGardenProfile();
+  }
+
+  Future<void> deleteCropLibraryNote(String noteId) async {
+    _cropLibraryNotes.removeWhere((n) => n.noteId == noteId);
+    notifyListeners();
+    await _persistLocalGardenProfile();
   }
 
   List<MentorChatLogEntry> get chatLogs => List.unmodifiable(_chatLogs);
@@ -822,6 +910,13 @@ class OfflineGardenStore extends ChangeNotifier {
       }
       changed = true;
     }
+    if (_cropLibraryNotes.isEmpty && saved.cropNotes.isNotEmpty) {
+      for (final n in saved.cropNotes) {
+        final note = CropLibraryNote.fromMap(n);
+        if (note != null) _cropLibraryNotes.add(note);
+      }
+      changed = true;
+    }
     if (changed) {
       notifyListeners();
     }
@@ -856,6 +951,7 @@ class OfflineGardenStore extends ChangeNotifier {
           .toList(),
       batchPlans: _batchPlans.map(_batchToMap).toList(),
       farmContacts: _customSuppliers.map(_contactToMap).toList(),
+      cropNotes: _cropLibraryNotes.map((n) => n.toMap()).toList(),
     );
     await AccountGardenProfileStorage.save(profile);
   }
