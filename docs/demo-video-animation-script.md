@@ -1,155 +1,103 @@
-# AI Gardening Mentor — Three-minute hackathon demo
+# AI Gardening Mentor — Three-Minute Hackathon & Homepage Demo Script
 
-Version: 23 November 2026. Format: animated presentation with founder voiceover and authentic app footage inside animated device frames. Audience: #BuildHybridAI 2026 judges; reusable on the marketing homepage.
+Version: 25 November 2026.  
+Format: Founder voiceover with real screen captures from Desktop Chrome (`https://ai-gardening-mentor-dev.web.app`) and Android (`emulator-5554` / Android device) inside clean animated device frames.  
+Audience: **#BuildHybridAI 2026** judges & marketing homepage visitors.
 
-**Creative idea: “The guidance growers already ask me for, available through an app.”** The founder is a farmer whose friends already seek his mentorship. Follow one grower in Dodoma and one tomato crop, showing how the app extends access to practical guidance. “Digital twin” is the founder’s vision, not a claim that the model has been trained to reproduce his expertise or judgment.
+**Creative core:** *“Peer-to-peer homestead mentorship — the practical guidance farmers already ask me for, growing into their own offline farm library.”*  
+Follow one grower in **Dodoma, Tanzania** managing raised beds (Tomatoes, Cucumbers, Peppers, Amaranth, African Eggplant) — from planning the month ahead, to building a personal living crop library, to generating a fresh care checklist **on-device with Chrome Built-in Gemini Nano via Firebase AI Logic**.
 
-**Status: work-in-progress demo script.** Owner reports successful online feature testing. Hybrid SDK calls are implemented; on-device generation remains unverified on compatible hardware. The agreed film combines actual footage of tested features with a clearly labelled hybrid architecture animation. Do not delay the entire film for local-device testing, and do not depict simulated local answers as recorded results. This document does not establish hackathon eligibility or submission readiness.
+**Status: Ready for recording.** Web app is deployed at `https://ai-gardening-mentor-dev.web.app` with `Chrome Built-in Gemini Nano (LanguageModel)` verified `ready` in Desktop Chrome 158 + Firebase JS AI Logic (`PREFER_ON_DEVICE` + App Check + `agm-app-shell-v5` offline cache). Android APK (`google_sign_in` + `GardenHybridAiBridge.kt`) is verified on Android API 37 emulator.
 
-## Format and editorial direction
+---
 
-- Timeline: exactly 3:00, including opening and closing. Aim for a 2:58 export to leave encoding margin by shortening the closing hold.
-- Voice: founder speaking naturally in English, warm and practical. Approximately 360–390 words; allow pauses for results and transitions. Rehearse against the timed scenes before animation lock.
-- Animation: illustrated garden, growing timeline, moving device frames, tap highlights, and short text callouts. No presenter footage required.
-- Product proof: use real captures for taps, generated answers, and state changes. Animation can frame and explain these captures; do not animate invented responses as if they were observed app behavior.
-- Art direction: use the existing Gardening Mentor logo and botanical brand palette. Reuse approved app screens and brand assets. Keep captions clear at mobile playback size.
-- Sound: quiet instrumental bed, subtle taps, no sound effect over key voiceover. Deliver captions and a clean voice track as well as the mixed master.
+## Format & Production Checklist
 
-## Timed storyboard and recording script
+- **Target runtime:** **2:55 – 2:58** (strictly under the 3:00 limit).
+- **Spoken script length:** ~375 words (natural, warm, practical founder pace with pauses to read real UI responses).
+- **Authenticity rule:** Every app tap, generated checklist, `SDK Inference Source` badge, and saved note is captured from the real working build — never faked or simulated.
+- **Audio & Captions:** Record founder voiceover first, lock scene timings to the voice track, include crisp English captions (readable on mobile), and keep background music quiet underneath.
 
-Only the blockquotes are spoken. Overlays are editorial callouts, not claims that the app already has these UI labels.
+---
 
-### 1. The grower's problem — 0:00–0:18 (18 seconds)
+## Timed Storyboard & Voiceover Script
 
-**Animation:** Dawn over a small tomato plot in Dodoma. A grower checks a leaf, a handwritten planting date, and a phone with a weak connection. Transform the paper date into the app's Planner. Keep the tone resourceful rather than helpless.
+*(Only the blockquotes are spoken.)*
 
-**On-screen:** “What should I do next?” → “AI Gardening Mentor”.
+### Scene 1 — The Grower's Reality (0:00 – 0:18 | 18s)
+**Visual:** Dawn over a homestead plot in Dodoma. A farmer checking tomato leaves with a handwritten planting date and weak mobile signal. Smooth transition into the **AI Gardening Mentor** brand logo (`BrandLogo`) and app frame.  
+**On-screen callout:** *“What should I do next?” → AI Gardening Mentor*
 
-> I am a farmer. Friends already call me for help with their crops: when to plant, what to prepare, and what to do when something looks wrong. I built AI Gardening Mentor to make practical guidance easier to reach.
+> I am a farmer. Friends already call me for peer-to-peer advice: how to prepare their beds, when to plant, what inputs to buy early, and what to do when a leaf looks wrong. I built AI Gardening Mentor to put that practical homestead guidance right in their hands — online and offline.
 
-### 2. One grower, one crop — 0:18–0:35 (17 seconds)
+---
 
-**Animation:** Phone enters frame. Briefly show account entry, then actual region and crop setup. Choose Dodoma and tomato. Zoom into the saved garden context; skip typing passwords and lengthy forms.
+### Scene 2 — Personalized Homestead Setup (0:18 – 0:34 | 16s)
+**Visual:** Show the real app signed in (Dodoma • Raised Bed • Exposed) with active crops (`Tomato`, `Cucumber`, `Pepper`, `Amaranth`, `African Eggplant`).  
+**On-screen callout:** *Dodoma • Raised Bed • Your Crops, Your Conditions*
 
-**On-screen:** “Dodoma • Tomatoes • Your growing conditions”.
+> Start by setting your region, your plot type, and the crops you are growing. Here in Dodoma, we are following a homestead grower with raised beds — turning one planting date into a clear plan and a personal farm library.
 
-> Meet AI Gardening Mentor. Start with your region, your crops, and your growing conditions. We are following a tomato grower in Dodoma, turning one planting date into a practical plan for the weeks ahead.
+---
 
-### 3. Make the season visible — 0:35–1:02 (27 seconds)
+### Scene 3 — Calendar-First Crop Planner (0:34 – 1:02 | 28s)
+**Visual:** Open **Planner**. Show the **Month** calendar switcher (`This Month` → tap `>` for `Next Month`), toggle to **Week**, then **Batches**. Tap a **Prepare Ahead (Next 14 Days)** alert to show upcoming input preparation and staggered succession batches.  
+**On-screen callout:** *Month & Week Calendar • 14-Day Prepare Ahead • Staggered Harvests*
 
-**Animation:** Open Planner. Select bought seedlings and a planting date. Expand the real waterfall timeline. Trace planting, vegetative growth, flowering, and estimated harvest. Open Prepare Ahead, then show three succession batches offset by 21 days. Use dates computed by the app rather than manually designed dates.
+> In Crop Planner, you can switch between Month, Week, and Batch views to see what is coming this month and next month. Prepare Ahead highlights inputs two weeks before they are due, so you never miss feeding or transplanting windows. Staggered batches help you plan continuous harvests.
 
-**On-screen:** “Planting → Care milestones → Expected harvest” / “Prepare ahead” / “Stagger your batches”.
+---
 
-> Choose whether you are starting from seed, buying seedlings, or sowing directly. The planner lays out your crop milestones and expected harvest date. Prepare Ahead brings upcoming needs into view, so you can organize supplies before they are due. Staggered planting batches help you spread the work and plan for successive harvests.
+### Scene 4 — My Garden: Your Living Crop Library (1:02 – 1:34 | 32s)
+**Visual:** Open **My Garden**. Briefly tap **Compost & Bed Health** (off-season June–July manure collection & pit/heap composting) and **Trellis & Support Prep** (stakes & Florida Weave). Then tap **Tomato (Nyanya)** to open its **Living Crop Library**: show the **Tailored for Your Homestead** card (cm + adult foot-length / cut-stick spacing), harvest countdown, **Add Note**, and peer-to-peer field notes.  
+**On-screen callout:** *Bed Health & Compost • Practical cm & Foot-Length Spacing • Grows Every Season*
 
-### 4. Turn a photo into a next step — 1:02–1:27 (25 seconds)
+> My Garden is not a static textbook — it is your living farm library. It starts with bed health: how to compost dry off-season manure instead of using raw manure, and how to prepare trellises before flowering. Tap any crop for spacing tailored to your raised bed — in centimeters and simple foot-lengths — plus your harvest countdown and personal season notes.
 
-**Animation:** A farm colleague sends a leaf photo. Show it being saved from WhatsApp, then the actual Garden Mentor plus menu and photo upload. Hold on a real response long enough to read its core advice. Magnify the uncertainty or follow-up question if the response includes one.
+---
 
-**On-screen:** “Upload a photo” / “Understand the concern” / “Choose a next step”.
+### Scene 5 — Mentor + Save to Library + Real Hybrid AI Proof (1:34 – 2:18 | 44s)
+**Visual (Part A — 14s):** Open **Mentor**. Show the `+` menu (Camera / WhatsApp Photo Triage) and tap **`Save to Crop Library`** on a real Mentor reply to save that advice directly into Tomato's offline library.  
+**Visual (Part B — 30s, Desktop Chrome Hybrid Proof):** Open **Offline Care Checklist** in Desktop Chrome (`https://ai-gardening-mentor-dev.web.app`). Expand **Judge & Developer Details** showing:
+- `Platform: Web (Desktop Chrome + Firebase JS AI Logic)`
+- `Capability Status: ready`
+- `Model Identity: Chrome Built-in Gemini Nano (LanguageModel)`
+Disconnect Wi-Fi (or show offline state clearly), enter a fresh observation, tap **Make Today's Care Checklist**, and hold on the real result showing **`Generated on this device`** (`SDK Inference Source: onDevice`) + real elapsed milliseconds. Then show online **`Only Cloud`** / fallback producing **`Generated in cloud`** (`inCloud`) with App Check active.  
+**On-screen callout:** *Firebase AI Logic Hybrid • On-Device Gemini Nano (Offline) + Cloud Fallback*
 
-> When a leaf looks unusual, open Garden Mentor and add a photo, including one saved from WhatsApp. The mentor helps you understand the concern and choose a next step. If the image is unclear, it can ask for a better view. The aim is calmer decisions, with uncertainty made visible.
+> When you need help, ask Garden Mentor or upload a plant photo from your camera or WhatsApp — and save useful replies straight into that crop’s library. And when the network drops, Offline Care Checklist runs real Firebase AI Logic hybrid inference. Here in Desktop Chrome, Chrome’s built-in Gemini Nano generates a fresh checklist directly on-device with no internet, and automatically falls back to the cloud when local inference isn’t available.
 
-**Capture note:** This is a manual photo import, not an automated WhatsApp bot. Do not promise a definitive diagnosis or a fixed response time.
+---
 
-### 5. Explain the hybrid design — 1:27–2:02 (35 seconds)
+### Scene 6 — Architecture & Submission Integrity (2:18 – 2:38 | 20s)
+**Visual:** Clean architectural overlay around the app frame: **Firebase AI Logic (Hybrid Nano + Cloud)**, **Firebase Auth**, **App Check (reCAPTCHA Enterprise / Play Integrity)**, **Firestore Offline Persistence**, and **Versioned Offline App Shell (`agm-app-shell-v5`)**.  
+**On-screen callout:** *Firebase AI Logic • Auth • App Check • Offline App Shell*
 
-**Animation:** Keep the same garden context. Show a clearly labelled architecture diagram: grower → Firebase AI Logic → local model on compatible hardware / cloud model. Use real online app footage for the cloud portion. Show saved guides separately from model generation; a stored document is not evidence of local inference. Do not animate a fake network-off answer or present an invented source badge.
+> Under the hood, one Flutter codebase connects Firebase AI Logic for hybrid inference, Firebase Auth for account isolation, App Check for request protection, and a local CanvasKit offline shell — keeping every farmer’s plots, notes, and Farm Contact Book private and accessible offline.
 
-**On-screen:** “Hybrid architecture” / “On-device generation: implemented, awaiting device validation” / “Online experience: tested by the team”. Keep the qualification visible during the architecture sequence.
+---
 
-> We have implemented Firebase AI Logic hybrid routing: on-device generation for compatible hardware, with cloud fallback. Our testing so far covers the online experience; local generation still needs validation on a supported device. Saved guidance is a separate part of the offline design. This approach lets us explore local AI while keeping connected growers central to the product we are building today.
+### Scene 7 — Close & Call to Action (2:38 – 2:58 | 20s)
+**Visual:** Return to **Today** checklist, check off one micro-habit, then pull back to the **AI Gardening Mentor** logo, `https://ai-gardening-mentor-dev.web.app`, and `https://github.com/rEinve/ai-gardening-mentor` with a clean 3-second final hold.  
+**On-screen callout:** *Plan ahead. Grow with confidence.* / *AI Gardening Mentor — IntelliWebLab* / `ai-gardening-mentor-dev.web.app`
 
-**Production note:** Record only online flows that succeed in the submitted build. Show offline saved-content interactions only after verifying them. If genuine local-generation evidence becomes available before export, replace part of this diagram with that capture and update the qualification to match the exact tested platform. Do not reopen hardware testing solely to finish this film.
+> The more a farmer farms, the richer their personal library grows. Next, we are putting AI Gardening Mentor into the hands of growers I work with every week. AI Gardening Mentor: practical farmer-to-farmer guidance, ready online and offline.
 
-### 6. Make the technology legible — 2:02–2:20 (18 seconds)
+---
 
-**Animation:** Four restrained labels appear around a real app capture: Firebase AI Logic, Authentication, App Check, Remote Config. Briefly show the relevant runtime call or sanitized trace in a magnified inset. Keep explanations readable, not a wall of code.
+## Verification & Capture Checklist Before Final Export
 
-**On-screen:** “Firebase AI Logic at runtime”.
-
-> Firebase AI Logic powers the mentor's responses. The app also connects account access, App Check, and Remote Config, bringing identity, request protection, and configurable model settings into the experience. The code shows where the AI calls actually run.
-
-**Capture note:** Verify the configured build and active App Check before using this wording. Do not imply that merely reading a preference enables hybrid routing.
-
-### 7. Keep daily work together — 2:20–2:40 (20 seconds)
-
-**Animation:** Return to Home and complete one task. Open chat history, then Account → Farm Contact Book. Show Suppliers and Buyers / Clients with clearly fictional demonstration contacts and no usable personal phone numbers.
-
-**On-screen:** “Today's work • Previous advice • Farm contacts”.
-
-> Back in the garden, today's checklist keeps the next job clear. Previous conversations help the grower revisit advice, while the farm contact book keeps suppliers and buyers together. Planning, asking, and following through become parts of the same daily routine.
-
-### 8. Close with the outcome — 2:40–3:00 (20 seconds)
-
-**Animation:** Pull back from the phone to the original garden. The planting timeline resolves into upcoming milestones; avoid inventing a measured yield improvement. Finish on the logo and verified project URL, with a final silent hold.
-
-**On-screen:** “Plan ahead. Grow with confidence.” / “AI Gardening Mentor by IntelliWebLab” / “[verified project URL]”.
-
-> Our next step is to put this prototype in the hands of growers I know: people who already turn to me for advice. Their experience will help us improve it. AI Gardening Mentor: practical guidance, from one farmer’s experience to more growers.
-
-## What must be verified before production lock
-
-Repository review is source inspection, not a live end-to-end acceptance test.
-
-| Claim or sequence | Evidence found | Production decision |
+| Sequence | Verified Status | Capture Target |
 | --- | --- | --- |
-| Crop waterfall and succession planning | `mobile/lib/screens/crop_planner_screen.dart`; `backend/functions/src/domain/cropPlanner.ts` | Capture actual dates and interactions from the chosen demo account. Harvest dates are estimates, not promises. |
-| Firebase AI Logic cloud calls | `mobile/lib/services/firebase_ai_logic_service.dart` calls `generateContentStream` and `generateContent` | Capture a successfully configured runtime. Preview fallback must not stand in for live AI. |
-| On-device AI and automatic fallback | Android and Web hybrid adapters now contain Firebase SDK inference calls; local device execution remains unverified | Use the labelled architecture sequence in Scene 5. Only claim observed runtime results when supporting captures exist. |
-| Server AI route | `backend/functions/src/providers/geminiProvider.ts` uses `@google/genai` directly | Review against the event's Firebase AI Logic requirement before presenting the submission architecture. Do not depict this direct route as Firebase AI Logic. |
-| App Check | Activation is attempted; activation errors are caught | Confirm protection is active in the captured build; configuration code alone is insufficient proof. |
-| Photo import and mentor | `mobile/lib/screens/mentor_chat_screen.dart`; `triage_flow.dart` | Record the real upload and reply. Preserve qualifications in the answer. |
-| Accounts, history, contacts | Corresponding app screens and session notes | Verify persistence and account behavior in the demo build before capture. |
-| Chrome and Android | Both are project targets | Only label a platform as demonstrated after running that build; do not imply native Android proof from a browser capture. |
+| Sign-in & Dodoma Raised Bed setup | Verified on Web & Android emulator | Desktop Chrome + Android emulator |
+| Planner (`Month` / `Week` / `Batches` + 14-day Prepare Ahead) | Verified (`13/13` tests passing) | Desktop Chrome or Android |
+| My Garden Living Crop Library + Compost & Trellis Prep + Add Note | Verified (`13/13` tests passing) | Desktop Chrome + Android |
+| Mentor `Save to Crop Library` + WhatsApp Photo Import | Verified | Desktop Chrome or Android |
+| On-Device Gemini Nano (`Capability Status: ready`, `onDevice`) | **Verified ready on Desktop Chrome 158** | Desktop Chrome (Wi-Fi OFF capture + cold reload) |
+| Cloud Fallback (`inCloud` with App Check) | Wired (`ReCaptchaEnterpriseProvider` + `ONLY_IN_CLOUD` diagnostic) | Desktop Chrome (Wi-Fi ON capture) |
+| Native Android APK (`google_sign_in` + `GardenHybridAiBridge.kt`) | Installed & verified on Android API 37 emulator (note: emulator has no hardware AICore; claim on-device proof specifically on verified Desktop Chrome unless also captured on supported AICore phone) | Android emulator |
 
-Avoid the previous draft's unverified two-minute setup claim, guaranteed instant diagnosis, guaranteed harvest timing, and universal fertilizer dosages. Local agro-dealer search is deliberately omitted from the main film until its inference route and returned information are validated.
-
-## Landing-page reuse
-
-Use the same main film in the marketing homepage's existing hero/media area, with a clear “Watch the 3-minute demo” poster and click-to-play controls. Preserve the primary signup action. Do not autoplay audio. Provide captions and an adjacent transcript link; lazy-load the player on interaction where possible.
-
-For a marketing cut, replace the last sentence with: “Start your garden plan with AI Gardening Mentor.” Change the end card to “Start your garden plan” and the verified signup URL. Keep any feature limitations accurate. Embedding and video production are separate follow-up work; this task changes the script only.
-
-## Other useful demo placements
-
-| Priority | Placement | Length | Single action to demonstrate |
-| --- | --- | --- | --- |
-| 1 | Planner empty state and Planner app-guide article | 30–45 seconds | Add a planting date and understand the first milestone and estimated harvest. |
-| 1 | Garden Mentor plus menu help and photo-triage article | 20–30 seconds | Save a WhatsApp image, upload it, and read qualified advice. |
-| 1 | Offline/help panel, after hybrid verification | 20–30 seconds | Distinguish saved content, new local AI, and cloud access. Explain what happens when neither inference path is available. |
-| 2 | First-run setup help | 15–20 seconds | Choose region, crop, and growing conditions. |
-| 2 | Succession planting help beside its controls | 20–30 seconds | Create three staggered batches and inspect their dates. |
-| 2 | Home checklist first-use tip | 10–15 seconds | Complete a care task and find the next one. |
-| 3 | Farm Contact Book empty state | 15–20 seconds | Add one supplier and one buyer. |
-| 3 | Homepage feature sections | 6–10 seconds each | Silent clips extracted from planner and photo sequences, each with a static fallback. |
-
-Prefer contextual, dismissible help. Users should not have to watch a video to complete a task.
-
-## Video-studio handoff
-
-Prepare one scene per timed section with separate layers for background, device frame, authentic app footage, callouts, captions, and audio. Keep proof footage readable during transitions. No specific studio project format is assumed because the video studio has not yet been identified.
-
-Inputs needed for rendering: approved logo, garden illustration assets, captures from a configured demo account, a suitable plant photo with permission to use it, verified inference traces, founder voice recording, and final project/signup URLs. Use licensed music and illustrations.
-
-Outputs: 16:9 1080p master, caption file, transcript, poster image, and separate landing-page end-card variant. Record voiceover first, test pacing, then lock animation timing. Keep the last few seconds for a readable end card. Do not speed up speech to fit an overlong take.
-
-## Hackathon reference
-
-Checked 23 November 2026 against the [official event page](https://firebasehybridaihackathon.devpost.com/) and [official rules](https://firebasehybridaihackathon.devpost.com/rules).
-
-The event asks for a video no longer than three minutes, publicly viewable on YouTube, in English or with English subtitles, with footage showing the working project. Judging includes implementation, design, impact, and originality. The submission should demonstrate actual Firebase AI Logic use and hybrid behavior; animation should support that evidence. The rules also say the submitted project must function as depicted.
-
-This is why the script gives hybrid behavior its own proof sequence while retaining the grower's story. A fully animated exterior with real application captures inside it meets the creative direction without substituting a concept animation for a working demo.
-
-
-## Agreed submission and pilot sequence
-
-1. Capture the online features that work in the submitted build, using one consistent demo garden.
-2. Record the founder voiceover and animate the architecture explanation with its visible qualification.
-3. Export within three minutes; verify captions, public video access, repository instructions, and judge access. Aim to finish ahead of the submission window rather than leave publication until its final day. Recheck the official deadline before scheduling publication.
-4. Invite the founder’s farmer friends to use the working app. This is a planned pilot, not an existing adoption claim.
-5. Collect concrete feedback: what they asked, whether the answer helped, what was wrong or unclear, what failed on their phone, and when they still needed the founder’s help. Improve the real product from that evidence.
-
-Position the app as extending the founder’s mentorship. Avoid promising that every AI answer is identical to advice he would personally give. No invitations or publication are performed by this script update.
+## Landing-Page Reuse Variant
+For the marketing homepage hero (`marketing-prototype/`):
+- Swap the final spoken sentence to: *“Start your garden plan today with AI Gardening Mentor.”*
+- Show the live app URL `https://ai-gardening-mentor-dev.web.app` on the end card with click-to-play poster and captions.

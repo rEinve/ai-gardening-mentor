@@ -63,6 +63,127 @@ class GardenScreen extends StatelessWidget {
     }
   }
 
+  void _openCompostGuideSheet(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    showModalBottomSheet<void>(
+      context: context,
+      isScrollControlled: true,
+      useSafeArea: true,
+      builder: (ctx) => DraggableScrollableSheet(
+        expand: false,
+        initialChildSize: 0.72,
+        maxChildSize: 0.92,
+        builder: (ctx, scrollCtrl) => ListView(
+          controller: scrollCtrl,
+          padding: const EdgeInsets.all(20),
+          children: [
+            Row(
+              children: [
+                Icon(Icons.compost_outlined, color: cs.primary, size: 28),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Text(
+                    'Homestead Compost & Bed Health',
+                    style: Theme.of(ctx)
+                        .textTheme
+                        .titleLarge
+                        ?.copyWith(fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            Card(
+              color: cs.primaryContainer.withValues(alpha: 0.45),
+              child: const Padding(
+                padding: EdgeInsets.all(12),
+                child: Text(
+                  'Bed health comes first: industrial fertilizer alone struggles in soil with low organic matter. '
+                  'Well-rotted compost builds living soil so every crop responds better to feeding.',
+                ),
+              ),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              '1. Collect Manure in the Dry Off-Season (June–July)',
+              style: Theme.of(ctx).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 4),
+            const Text(
+              '• After the main rains, cow sheds dry out and dry manure is widely available and much cheaper.\n'
+              '• Gather enough manure early so it finishes composting before dry-season irrigated planting begins.\n'
+              '• Avoid putting raw, fresh manure straight onto beds — it can burn tender roots and bring weed seeds.',
+            ),
+            const SizedBox(height: 12),
+            Text(
+              '2. How to Make Compost at Home (Pit or Heap)',
+              style: Theme.of(ctx).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 4),
+            const Text(
+              '• Pit (best for dry/hot areas like Dodoma) or Heap (best for rainy/wet areas): layer dry grass or maize stalks + kitchen/garden greens + cow manure.\n'
+              '• Cover the heap or pit with banana leaves, dry grass, or a tarp so moisture and heat stay inside.\n'
+              '• Water regularly so the pile stays as damp as a wrung-out sponge (never soggy), and turn every 2–3 weeks.\n'
+              '• Ready to use when dark, crumbly, cool, and earthy-smelling — mix into beds before planting.',
+            ),
+            const SizedBox(height: 16),
+            FilledButton(
+              onPressed: () => Navigator.of(ctx).pop(),
+              child: const Text('Got it'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _openTrellisGuideSheet(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    showModalBottomSheet<void>(
+      context: context,
+      useSafeArea: true,
+      builder: (ctx) => Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Icon(Icons.fence_outlined, color: cs.primary, size: 28),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Text(
+                    'Trellis & Support Prep',
+                    style: Theme.of(ctx)
+                        .textTheme
+                        .titleLarge
+                        ?.copyWith(fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            const Text(
+              'If you are growing Tomatoes (Nyanya) or Cucumbers (Tango), gather poles, bamboo, and sisal twine BEFORE flowering:\n\n'
+              '• Single-Stake Tying: One sturdy pole (~150 cm tall) beside each tomato plant, tied loosely in a figure-8 so stems are not cut.\n'
+              '• Florida Weave: Sturdy posts every 2–3 plants with horizontal sisal twine woven along both sides of the row as plants grow.\n'
+              '• Cucumber A-Frame / String Trellis: Keeps vines off wet soil for straighter fruit, better airflow, and far less fungal spot.',
+            ),
+            const SizedBox(height: 16),
+            SizedBox(
+              width: double.infinity,
+              child: FilledButton(
+                onPressed: () => Navigator.of(ctx).pop(),
+                child: const Text('Close'),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final plot = store.activePlot;
@@ -126,6 +247,72 @@ class GardenScreen extends StatelessWidget {
                 );
               },
             ),
+          ),
+          const SizedBox(height: 10),
+          Row(
+            children: [
+              Expanded(
+                child: Card(
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: () => _openCompostGuideSheet(context),
+                    child: Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(
+                            Icons.compost_outlined,
+                            color: Theme.of(context).colorScheme.primary,
+                          ),
+                          const SizedBox(height: 6),
+                          const Text(
+                            'Compost & Bed Health',
+                            style: TextStyle(fontWeight: FontWeight.w700),
+                          ),
+                          const SizedBox(height: 2),
+                          Text(
+                            'Pit/heap guide & off-season manure prep',
+                            style: Theme.of(context).textTheme.bodySmall,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Card(
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: () => _openTrellisGuideSheet(context),
+                    child: Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(
+                            Icons.fence_outlined,
+                            color: Theme.of(context).colorScheme.primary,
+                          ),
+                          const SizedBox(height: 6),
+                          const Text(
+                            'Trellis & Support Prep',
+                            style: TextStyle(fontWeight: FontWeight.w700),
+                          ),
+                          const SizedBox(height: 2),
+                          Text(
+                            'Stakes & Florida Weave for tomato/cucumber',
+                            style: Theme.of(context).textTheme.bodySmall,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
           const SizedBox(height: 16),
           Text('Active Crops (${activeCrops.length})', style: Theme.of(context).textTheme.titleMedium),
@@ -193,12 +380,12 @@ class MentorPlaceholderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Organic Mentor')),
+      appBar: AppBar(title: const Text('Garden Mentor')),
       body: const Center(
         child: Padding(
           padding: EdgeInsets.all(24),
           child: Text(
-            'Grounded Mentor Chat (Phase 3)\n\nWill inject your active Tanzania plot/crops and cite reviewed EWS-KT GrowHow & extension passages.',
+            'Peer-to-peer Garden Mentor with your active Tanzania plot and crops.',
             textAlign: TextAlign.center,
           ),
         ),
