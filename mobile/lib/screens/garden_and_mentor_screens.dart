@@ -9,10 +9,35 @@ class GardenScreen extends StatelessWidget {
 
   final OfflineGardenStore store;
 
+  Future<void> _confirmRetireCrop(BuildContext context, dynamic crop) async {
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text('Remove ${crop.commonName}?'),
+        content: Text(
+          'Remove ${crop.commonName} from your garden? Future care tasks for this crop will be cleared.',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop(false),
+            child: const Text('Cancel'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(ctx).pop(true),
+            child: const Text('Remove'),
+          ),
+        ],
+      ),
+    );
+    if (confirmed == true) {
+      await store.retireCrop(crop.cropId as String);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final plot = store.activePlot;
-    final crops = store.crops;
+    final activeCrops = store.crops.where((c) => !c.isRetired).toList();
 
     return Scaffold(
       appBar: AppBar(
@@ -38,21 +63,39 @@ class GardenScreen extends StatelessWidget {
                 leading: const Icon(Icons.yard_outlined),
                 title: Text(plot.name, style: const TextStyle(fontWeight: FontWeight.w600)),
                 subtitle: Text('${plot.regionName} • ${plot.plotType.name} • ${plot.rainExposure.name}'),
+                trailing: const Icon(Icons.edit_outlined),
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute<void>(builder: (_) => AccountScreen(store: store)),
+                  );
+                },
               ),
             ),
           const SizedBox(height: 16),
-          Text('Active Crops (${crops.length})', style: Theme.of(context).textTheme.titleMedium),
+          Text('Active Crops (${activeCrops.length})', style: Theme.of(context).textTheme.titleMedium),
           const SizedBox(height: 8),
-          ...crops.map(
-            (c) => Card(
-              child: ListTile(
-                leading: const Icon(Icons.eco_outlined),
-                title: Text('${c.commonName} (${c.localNameSw})'),
-                subtitle: Text('Planted ${c.plantingDate} • Stage: ${c.growthStage}'),
-                trailing: Chip(label: Text(c.isRetired ? 'Retired' : 'Active')),
+          if (activeCrops.isEmpty)
+            const Card(
+              child: Padding(
+                padding: EdgeInsets.all(20),
+                child: Text('No active crops in this plot yet. Use Crop Planner to add your next crop batch.'),
+              ),
+            )
+          else
+            ...activeCrops.map(
+              (c) => Card(
+                child: ListTile(
+                  leading: const Icon(Icons.eco_outlined),
+                  title: Text('${c.commonName} (${c.localNameSw})'),
+                  subtitle: Text('Planted ${c.plantingDate} • Stage: ${c.growthStage}'),
+                  trailing: IconButton(
+                    icon: const Icon(Icons.delete_outline),
+                    tooltip: 'Remove crop',
+                    onPressed: () => _confirmRetireCrop(context, c),
+                  ),
+                ),
               ),
             ),
-          ),
         ],
       ),
     );

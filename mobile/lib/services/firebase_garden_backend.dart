@@ -114,21 +114,34 @@ class FirebaseGardenBackend implements GardenBackendClient {
   final bool _usingEmulators;
   final http.Client _httpClient;
 
+  /// Initializes Firebase once across backend and AI Logic services.
+  /// Returns `false` if this platform has no Firebase options configured.
+  static Future<bool> ensureFirebaseInitialized() async {
+    if (Firebase.apps.isNotEmpty) return true;
+    final options = FirebaseRuntimeConfig.resolveOptions();
+    try {
+      if (options != null) {
+        await Firebase.initializeApp(options: options);
+        return true;
+      }
+      if (!kIsWeb) {
+        await Firebase.initializeApp();
+        return true;
+      }
+      return false;
+    } on FirebaseException catch (err) {
+      if (err.code == 'duplicate-app') return true;
+      rethrow;
+    }
+  }
+
   /// Attempts to initialize Firebase (live or local emulators).
   /// Returns `null` cleanly if no Firebase options are configured on this host,
   /// allowing the app to run in pure local offline preview mode.
   static Future<FirebaseGardenBackend?> tryInitialize() async {
     try {
-      final options = FirebaseRuntimeConfig.resolveOptions();
-      if (Firebase.apps.isEmpty) {
-        if (options != null) {
-          await Firebase.initializeApp(options: options);
-        } else if (!kIsWeb) {
-          // On Android/iOS/macOS, falls back to native google-services / GoogleService-Info.
-          await Firebase.initializeApp();
-        } else {
-          return null;
-        }
+      if (!await ensureFirebaseInitialized()) {
+        return null;
       }
 
       final auth = FirebaseAuth.instance;
@@ -156,7 +169,6 @@ class FirebaseGardenBackend implements GardenBackendClient {
         storage: storage,
         usingEmulators: FirebaseRuntimeConfig.useEmulators,
       );
-      await backend.ensureSignedIn();
       return backend;
     } catch (err) {
       debugPrint('Firebase unavailable — running in local offline preview mode: $err');

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../data/image_quality.dart';
 import '../data/offline_garden_store.dart';
+import '../services/firebase_ai_logic_service.dart';
 import '../services/garden_backend_client.dart';
 import '../services/photo_picker.dart';
 import 'agro_supplier_sheet.dart';
@@ -38,8 +39,6 @@ class TriageFlowScreen extends StatefulWidget {
 class _TriageFlowScreenState extends State<TriageFlowScreen> {
   TriageViewState _viewState = TriageViewState.review;
   bool _allowBackgroundReturn = false;
-  bool _simulateUncertain = false;
-  bool _simulateExpiredImage = false;
   bool _addingRecoveryTask = false;
   String? _errorMessage;
   TriageOutcome? _outcome;
@@ -63,7 +62,7 @@ class _TriageFlowScreenState extends State<TriageFlowScreen> {
   }
 
   // Review metrics (validated by image-quality-v1 before upload/analysis)
-  ImageQualityMetrics _metrics = const ImageQualityMetrics(
+  final ImageQualityMetrics _metrics = const ImageQualityMetrics(
     laplacianVariance: 148.0,
     meanLuminance: 124.0,
     saturatedFraction: 0.04,
@@ -92,8 +91,40 @@ class _TriageFlowScreenState extends State<TriageFlowScreen> {
       }
     });
 
+    var aiLogic = widget.store.aiLogic;
+    aiLogic ??= await FirebaseAiLogicService.tryInitialize()
+        .timeout(const Duration(seconds: 6), onTimeout: () => null);
+
+    if (aiLogic != null) {
+      final region = widget.store.activePlot?.regionName ?? 'Tanzania';
+      final cropName = widget.store.crops.isNotEmpty ? widget.store.crops.first.commonName : 'Vegetable';
+      try {
+        final summary = await aiLogic.analyzePlantPhoto(
+          imageBytes: _pickedPhoto?.bytes ?? _kPreviewJpegBytes,
+          regionName: region,
+          cropName: cropName,
+        );
+        if (mounted && _viewState == TriageViewState.analyzing) {
+          _eightSecondTimer?.cancel();
+          setState(() {
+            _outcome = _parseAiLogicTriage(summary);
+            _viewState = TriageViewState.result;
+          });
+        }
+      } catch (err) {
+        if (mounted) {
+          _eightSecondTimer?.cancel();
+          setState(() {
+            _errorMessage = 'Plant photo analysis paused: $err';
+            _viewState = TriageViewState.review;
+          });
+        }
+      }
+      return;
+    }
+
     final backend = widget.store.backend;
-    if (backend != null) {
+    if (backend != null && backend.isLiveConnected) {
       final ts = DateTime.now().toUtc().millisecondsSinceEpoch;
       final diagnosisId = 'diag_$ts';
       final requestId = 'req_triage_$ts';
@@ -134,70 +165,50 @@ class _TriageFlowScreenState extends State<TriageFlowScreen> {
       return;
     }
 
-    final aiLogic = widget.store.aiLogic;
-    if (aiLogic != null) {
-      final region = widget.store.activePlot?.regionName ?? 'Tanzania';
-      final cropName = widget.store.crops.isNotEmpty ? widget.store.crops.first.commonName : 'Vegetable';
-      try {
-        final summary = await aiLogic.analyzePlantPhoto(
-          imageBytes: _pickedPhoto?.bytes ?? _kPreviewJpegBytes,
-          regionName: region,
-          cropName: cropName,
-        );
-        if (mounted && _viewState == TriageViewState.analyzing) {
-          _eightSecondTimer?.cancel();
-          setState(() {
-            _outcome = TriageOutcome(
-              diagnosisId: 'diag_ai_${DateTime.now().toUtc().millisecondsSinceEpoch}',
-              assessmentStatus: 'supported',
-              whatItIs: summary,
-              immediateAction: 'Follow the step-by-step care guidance above and monitor over 48 hours.',
-              whatNotToWorryAbout: 'Take another daylight photo if symptoms spread.',
-            );
-            _viewState = TriageViewState.result;
-          });
-        }
-      } catch (err) {
-        if (mounted) {
-          _eightSecondTimer?.cancel();
-          setState(() {
-            _errorMessage = 'Firebase AI Logic triage paused: $err';
-            _viewState = TriageViewState.review;
-          });
-        }
-      }
-      return;
-    }
-
-    // Local offline preview fallback when Firebase is not configured
-    await Future<void>.delayed(const Duration(milliseconds: 900));
+    // Honest offline/unavailable state: never return a fabricated plant diagnosis.
     if (mounted && _viewState == TriageViewState.analyzing) {
       _eightSecondTimer?.cancel();
+      final detail = FirebaseAiLogicService.lastInitError;
       setState(() {
-        _outcome = _simulateUncertain
-            ? const TriageOutcome(
-                diagnosisId: 'diag_local_uncertain',
-                assessmentStatus: 'uncertain',
-                whatItIs: 'Symptoms are not clear enough for a reliable identification.',
-                immediateAction:
-                    'Retake a close-up photo showing both top and underside of an affected leaf in daylight.',
-                whatNotToWorryAbout:
-                    'Avoid applying chemical sprays until the cause is clearly identified.',
-              )
-            : const TriageOutcome(
-                diagnosisId: 'diag_local_supported',
-                assessmentStatus: 'supported',
-                detectedAnomalyType: 'normal_growth',
-                recoveryTemplateId: 'tpl_lower_leaf_prune',
-                whatItIs: 'Natural lower leaf senescence on maturing tomato (Nyanya).',
-                immediateAction:
-                    'Snip the bottom two yellowed leaves cleanly at the stem collar to boost airflow.',
-                whatNotToWorryAbout:
-                    'This is not early blight. Upper leaves and fruit clusters remain healthy.',
-              );
-        _viewState = TriageViewState.result;
+        _errorMessage = detail != null
+            ? 'Cloud plant photo analysis unavailable: $detail'
+            : 'Live cloud connection required to analyze plant photos. '
+                'Connect to the internet and try again, or use Offline Care Checklist for saved guidance.';
+        _viewState = TriageViewState.review;
       });
     }
+  }
+
+  TriageOutcome _parseAiLogicTriage(String raw) {
+    final normalized = raw.replaceAll('**', '').trim();
+    final sec1 = RegExp(
+      r'1\)\s*What It Is[:\s]*(.*?)(?=2\)\s*Immediate Action|$)',
+      caseSensitive: false,
+      dotAll: true,
+    ).firstMatch(normalized)?.group(1)?.trim();
+    final sec2 = RegExp(
+      r'2\)\s*Immediate Action[:\s]*(.*?)(?=3\)\s*What NOT to Worry About|$)',
+      caseSensitive: false,
+      dotAll: true,
+    ).firstMatch(normalized)?.group(1)?.trim();
+    final sec3 = RegExp(
+      r'3\)\s*What NOT to Worry About[:\s]*(.*)$',
+      caseSensitive: false,
+      dotAll: true,
+    ).firstMatch(normalized)?.group(1)?.trim();
+
+    final uncertain = normalized.toLowerCase().contains('uncertain');
+    return TriageOutcome(
+      diagnosisId: 'diag_ai_${DateTime.now().toUtc().millisecondsSinceEpoch}',
+      assessmentStatus: uncertain ? 'uncertain' : 'supported',
+      whatItIs: (sec1 != null && sec1.isNotEmpty) ? sec1 : normalized,
+      immediateAction: (sec2 != null && sec2.isNotEmpty)
+          ? sec2
+          : 'Follow the care guidance above and monitor over the next 48 hours.',
+      whatNotToWorryAbout: (sec3 != null && sec3.isNotEmpty)
+          ? sec3
+          : 'Take another clear daylight close-up if symptoms spread.',
+    );
   }
 
   Future<void> _queueRecoveryTask() async {
@@ -300,7 +311,7 @@ class _TriageFlowScreenState extends State<TriageFlowScreen> {
                         const SizedBox(height: 8),
                         Text(
                           widget.initialMode == PhotoPickMode.galleryOrFile
-                              ? 'Upload a farm photo from Phone / WhatsApp'
+                              ? 'Upload a plant photo from your phone'
                               : 'Take or upload a clear leaf photo',
                         ),
                       ],
@@ -323,73 +334,29 @@ class _TriageFlowScreenState extends State<TriageFlowScreen> {
               child: FilledButton.tonalIcon(
                 onPressed: () => _selectPhoto(PhotoPickMode.galleryOrFile),
                 icon: const Icon(Icons.upload_file_outlined),
-                label: const Text('Phone / WhatsApp'),
+                label: const Text('Upload Photo'),
               ),
             ),
           ],
         ),
-        const SizedBox(height: 16),
-        Card(
-          color: quality.passed ? cs.primaryContainer : cs.errorContainer,
-          child: Padding(
-            padding: const EdgeInsets.all(14),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  quality.passed
-                      ? 'Quality Check Passed (Ready to Analyze)'
-                      : 'Quality Check Failed — Retake Required (No Bypass)',
-                  style: const TextStyle(fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 6),
-                if (quality.passed)
-                  Text(
-                    'Sharpness: ${_metrics.laplacianVariance.toStringAsFixed(0)} • '
-                    'Light: ${_metrics.meanLuminance.toStringAsFixed(0)} • '
-                    'Glare: ${(_metrics.saturatedFraction * 100).toStringAsFixed(0)}%',
-                  )
-                else
+        if (!quality.passed) ...[
+          const SizedBox(height: 16),
+          Card(
+            color: cs.errorContainer,
+            child: Padding(
+              padding: const EdgeInsets.all(14),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Photo Quality Issue — Retake Recommended',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 6),
                   ...quality.guidanceMessages.map((msg) => Text('• $msg')),
-              ],
+                ],
+              ),
             ),
-          ),
-        ),
-        const SizedBox(height: 16),
-        Wrap(
-          spacing: 8,
-          runSpacing: 8,
-          children: [
-            OutlinedButton(
-              onPressed: () => setState(() {
-                _metrics = const ImageQualityMetrics(
-                  laplacianVariance: 148,
-                  meanLuminance: 124,
-                  saturatedFraction: 0.04,
-                  subjectCheckPassed: true,
-                );
-              }),
-              child: const Text('Simulate Good Photo'),
-            ),
-            OutlinedButton(
-              onPressed: () => setState(() {
-                _metrics = const ImageQualityMetrics(
-                  laplacianVariance: 52,
-                  meanLuminance: 28,
-                  saturatedFraction: 0.02,
-                  subjectCheckPassed: true,
-                );
-              }),
-              child: const Text('Simulate Blurry/Dark'),
-            ),
-          ],
-        ),
-        if (!widget.store.isLiveBackend) ...[
-          const SizedBox(height: 12),
-          SwitchListTile(
-            title: const Text('Simulate Uncertain Result (A4)'),
-            value: _simulateUncertain,
-            onChanged: (v) => setState(() => _simulateUncertain = v),
           ),
         ],
         const SizedBox(height: 20),
@@ -429,22 +396,18 @@ class _TriageFlowScreenState extends State<TriageFlowScreen> {
 
   Widget _buildResult(ColorScheme cs) {
     final outcome = _outcome;
-    final isUncertain = outcome?.isUncertain ?? _simulateUncertain;
+    final isUncertain = outcome?.isUncertain ?? false;
 
     return ListView(
       children: [
         Card(
           color: cs.surfaceContainerHighest,
+          clipBehavior: Clip.antiAlias,
           child: SizedBox(
-            height: 120,
-            child: Center(
-              child: _simulateExpiredImage
-                  ? const Text(
-                      'Original photo expired after 30 days.\nDiagnostic text and sources are preserved.',
-                      textAlign: TextAlign.center,
-                    )
-                  : const Text('Private Diagnostic Photo (Expires in 30 days)'),
-            ),
+            height: _pickedPhoto != null ? 180 : 52,
+            child: _pickedPhoto != null
+                ? Image.memory(_pickedPhoto!.bytes, fit: BoxFit.cover)
+                : const Center(child: Text('Analyzed Plant Photo')),
           ),
         ),
         const SizedBox(height: 12),
@@ -455,12 +418,6 @@ class _TriageFlowScreenState extends State<TriageFlowScreen> {
         _triageCardTile('1. What It Is', outcome?.whatItIs ?? ''),
         _triageCardTile('2. Immediate Action', outcome?.immediateAction ?? ''),
         _triageCardTile('3. What NOT to Worry About', outcome?.whatNotToWorryAbout ?? ''),
-        const SizedBox(height: 12),
-        SwitchListTile(
-          title: const Text('Preview 30-day expired image state'),
-          value: _simulateExpiredImage,
-          onChanged: (v) => setState(() => _simulateExpiredImage = v),
-        ),
         const SizedBox(height: 12),
         if (!isUncertain) ...[
           FilledButton.icon(

@@ -191,6 +191,15 @@ service cloud.firestore {
         }
       }
 
+      // Crop planner batches & farm contact book: Owner read/write
+      match /cropBatches/{batchId} {
+        allow read, write: if isOwner(uid);
+      }
+
+      match /farmContacts/{contactId} {
+        allow read, write: if isOwner(uid);
+      }
+
       // Job runs: Internal server scheduling/idempotency only (no direct client access)
       match /jobRuns/{jobKey} {
         allow read, write: if false;

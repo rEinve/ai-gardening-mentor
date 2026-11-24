@@ -175,6 +175,32 @@ class CropPlannerScreen extends StatelessWidget {
     }
   }
 
+  Future<void> _confirmRemoveBatch(
+    BuildContext context,
+    ComputedBatchSchedule schedule,
+  ) async {
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text('Remove ${schedule.batchDisplayLabel}?'),
+        content: const Text('Remove this crop batch from your active plan?'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop(false),
+            child: const Text('Cancel'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(ctx).pop(true),
+            child: const Text('Remove'),
+          ),
+        ],
+      ),
+    );
+    if (confirmed == true) {
+      await store.removeCropBatch(schedule.plan.batchId);
+    }
+  }
+
   Future<void> _shiftBatchDateDialog(
     BuildContext context,
     ComputedBatchSchedule schedule,
@@ -268,7 +294,7 @@ class CropPlannerScreen extends StatelessWidget {
                   const SizedBox(height: 6),
                   if (prepAlerts.isEmpty)
                     const Text(
-                      'All upcoming 14-day preparations are complete. Tap any crop batch below to view its full waterfall.',
+                      'All upcoming 14-day preparations are complete. Tap any crop batch below to view its full schedule.',
                     )
                   else ...[
                     Text(
@@ -320,7 +346,7 @@ class CropPlannerScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Active Batches & Waterfall (${schedules.length})',
+                'Active Crop Batches (${schedules.length})',
                 style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
               ),
               Text(
@@ -357,6 +383,7 @@ class CropPlannerScreen extends StatelessWidget {
                     store.toggleMilestoneCompleted(schedule.plan.batchId, milestoneId),
                 onLogHarvest: () => _pickActualHarvestDate(context, schedule),
                 onShiftDate: () => _shiftBatchDateDialog(context, schedule),
+                onDeleteBatch: () => _confirmRemoveBatch(context, schedule),
               ),
             ),
         ],
@@ -372,6 +399,7 @@ class _BatchWaterfallCard extends StatelessWidget {
     required this.onToggleMilestone,
     required this.onLogHarvest,
     required this.onShiftDate,
+    required this.onDeleteBatch,
   });
 
   final ComputedBatchSchedule schedule;
@@ -379,6 +407,7 @@ class _BatchWaterfallCard extends StatelessWidget {
   final ValueChanged<String> onToggleMilestone;
   final VoidCallback onLogHarvest;
   final VoidCallback onShiftDate;
+  final VoidCallback onDeleteBatch;
 
   @override
   Widget build(BuildContext context) {
@@ -475,6 +504,11 @@ class _BatchWaterfallCard extends StatelessWidget {
                   schedule.plan.actualHarvestDate == null ? 'Log Actual Harvest' : 'Update Harvest',
                 ),
               ),
+              OutlinedButton.icon(
+                onPressed: onDeleteBatch,
+                icon: const Icon(Icons.delete_outline, size: 18),
+                label: const Text('Remove'),
+              ),
             ],
           ),
 
@@ -483,7 +517,7 @@ class _BatchWaterfallCard extends StatelessWidget {
           Align(
             alignment: Alignment.centerLeft,
             child: Text(
-              'Waterfall Management Timeline (tap any step for details)',
+              'Crop Care Timeline (tap any step for details)',
               style: Theme.of(context).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold),
             ),
           ),
@@ -807,7 +841,7 @@ class _AddCropPlanSheetState extends State<_AddCropPlanSheet> {
                 child: Text(
                   _enableSuccession
                       ? 'Create $_successionBatches Succession Batches'
-                      : 'Add Crop Batch & Waterfall',
+                      : 'Add Crop Batch',
                 ),
               ),
             ),

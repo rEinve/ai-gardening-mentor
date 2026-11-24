@@ -1,9 +1,10 @@
 import 'dart:async';
 import 'package:firebase_ai/firebase_ai.dart';
 import 'package:firebase_app_check/firebase_app_check.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/foundation.dart';
+
+import 'firebase_garden_backend.dart';
 
 /// Runtime Firebase AI Logic service (Web Chrome + Android).
 ///
@@ -26,8 +27,10 @@ class FirebaseAiLogicService {
   final String activeModelName;
   final bool preferOnDevice;
 
-  static const String _defaultModel = 'gemini-2.5-flash';
+  static const String _defaultModel = 'gemini-3.8-flash';
   static const String _recaptchaSiteKey = String.fromEnvironment('RECAPTCHA_SITE_KEY');
+  static const bool _enablePlayIntegrity = bool.fromEnvironment('ENABLE_PLAY_INTEGRITY');
+  static String? lastInitError;
 
   static const String _mentorSystemPrompt =
       'You are a practical vegetable farming and gardening mentor for growers in Tanzania. '
@@ -46,23 +49,31 @@ class FirebaseAiLogicService {
   /// Returns `null` cleanly when running in local offline/preview mode without Firebase config.
   static Future<FirebaseAiLogicService?> tryInitialize() async {
     try {
-      if (Firebase.apps.isEmpty) {
-        await Firebase.initializeApp();
+      if (!await FirebaseGardenBackend.ensureFirebaseInitialized()) {
+        return null;
       }
 
-      // Activate Firebase App Check (Android debug provider in dev; reCAPTCHA on Web if configured)
-      try {
-        await FirebaseAppCheck.instance.activate(
-          androidProvider: kReleaseMode ? AndroidProvider.playIntegrity : AndroidProvider.debug,
-          webProvider: _recaptchaSiteKey.isNotEmpty
-              ? ReCaptchaV3Provider(_recaptchaSiteKey)
-              : null,
-        );
-      } catch (err) {
-        debugPrint('App Check activation note: $err');
+      // Activate Firebase App Check:
+      // - Web: requires RECAPTCHA_SITE_KEY (reCAPTCHA Enterprise)
+      // - Android: Play Integrity when ENABLE_PLAY_INTEGRITY=true, otherwise Debug provider
+      var appCheckActive = false;
+      final shouldActivateAppCheck = !kIsWeb || _recaptchaSiteKey.isNotEmpty;
+      if (shouldActivateAppCheck) {
+        try {
+          await FirebaseAppCheck.instance.activate(
+            androidProvider:
+                _enablePlayIntegrity ? AndroidProvider.playIntegrity : AndroidProvider.debug,
+            webProvider: _recaptchaSiteKey.isNotEmpty
+                ? ReCaptchaEnterpriseProvider(_recaptchaSiteKey)
+                : null,
+          );
+          appCheckActive = true;
+        } catch (err) {
+          debugPrint('App Check activation note: $err');
+        }
       }
 
-      // Fetch Remote Config for dynamic model selection & hybrid on-device preference
+      // Read cached Remote Config immediately and refresh in background so AI init never stalls.
       var modelName = _defaultModel;
       var preferOnDevice = true;
       try {
@@ -73,22 +84,24 @@ class FirebaseAiLogicService {
         });
         await remoteConfig.setConfigSettings(
           RemoteConfigSettings(
-            fetchTimeout: const Duration(seconds: 6),
+            fetchTimeout: const Duration(seconds: 3),
             minimumFetchInterval: const Duration(hours: 1),
           ),
         );
-        await remoteConfig.fetchAndActivate();
         final configured = remoteConfig.getString('ai_model_name').trim();
         if (configured.isNotEmpty) {
           modelName = configured;
         }
         preferOnDevice = remoteConfig.getBool('ai_prefer_on_device');
+        unawaited(remoteConfig.fetchAndActivate().catchError((_) => false));
       } catch (err) {
         debugPrint('Remote Config fallback to defaults: $err');
       }
 
-      // Initialize Firebase AI Logic client backed by Gemini Developer API + App Check
-      final ai = FirebaseAI.googleAI(appCheck: FirebaseAppCheck.instance);
+      // Initialize Firebase AI Logic client backed by Gemini Developer API
+      final ai = appCheckActive
+          ? FirebaseAI.googleAI(appCheck: FirebaseAppCheck.instance)
+          : FirebaseAI.googleAI();
 
       final mentorModel = ai.generativeModel(
         model: modelName,
@@ -100,6 +113,7 @@ class FirebaseAiLogicService {
         systemInstruction: Content.system(_triageSystemPrompt),
       );
 
+      lastInitError = null;
       return FirebaseAiLogicService._(
         mentorModel: mentorModel,
         triageModel: triageModel,
@@ -107,6 +121,7 @@ class FirebaseAiLogicService {
         preferOnDevice: preferOnDevice,
       );
     } catch (err) {
+      lastInitError = err.toString();
       debugPrint('Firebase AI Logic unavailable in local preview mode: $err');
       return null;
     }

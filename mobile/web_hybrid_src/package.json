@@ -1,0 +1,15 @@
+{
+  "name": "garden-hybrid-ai-web-bundle",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/hybrid_ai.js --bundle --format=iife --minify --outfile=../web/hybrid_ai.bundle.js"
+  },
+  "dependencies": {
+    "firebase": "^12.5.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

@@ -2,9 +2,9 @@
 
 Version: 23 November 2026. Format: animated presentation with founder voiceover and authentic app footage inside animated device frames. Audience: #BuildHybridAI 2026 judges; reusable on the marketing homepage.
 
-**Creative idea: “From planting day to the next right action.”** Follow one grower in Dodoma and one tomato crop. Show a complete journey rather than a catalogue of features.
+**Creative idea: “The guidance growers already ask me for, available through an app.”** The founder is a farmer whose friends already seek his mentorship. Follow one grower in Dodoma and one tomato crop, showing how the app extends access to practical guidance. “Digital twin” is the founder’s vision, not a claim that the model has been trained to reproduce his expertise or judgment.
 
-**Status: production script draft.** Product scenes need a recorded walkthrough check. Scene 5 is a conditional target sequence: local inference and cloud fallback must be implemented and verified before recording its target narration. This document does not establish submission readiness.
+**Status: work-in-progress demo script.** Owner reports successful online feature testing. Hybrid SDK calls are implemented; on-device generation remains unverified on compatible hardware. The agreed film combines actual footage of tested features with a clearly labelled hybrid architecture animation. Do not delay the entire film for local-device testing, and do not depict simulated local answers as recorded results. This document does not establish hackathon eligibility or submission readiness.
 
 ## Format and editorial direction
 
@@ -25,7 +25,7 @@ Only the blockquotes are spoken. Overlays are editorial callouts, not claims tha
 
 **On-screen:** “What should I do next?” → “AI Gardening Mentor”.
 
-> Growing tomatoes means making decisions every day. When should I transplant? What should I prepare next? And what does this leaf need? For growers in Tanzania, those questions do not wait for a reliable internet connection.
+> I am a farmer. Friends already call me for help with their crops: when to plant, what to prepare, and what to do when something looks wrong. I built AI Gardening Mentor to make practical guidance easier to reach.
 
 ### 2. One grower, one crop — 0:18–0:35 (17 seconds)
 
@@ -53,21 +53,15 @@ Only the blockquotes are spoken. Overlays are editorial callouts, not claims tha
 
 **Capture note:** This is a manual photo import, not an automated WhatsApp bot. Do not promise a definitive diagnosis or a fixed response time.
 
-### 5. Show why hybrid matters — 1:27–2:02 (35 seconds)
+### 5. Explain the hybrid design — 1:27–2:02 (35 seconds)
 
-**CONDITIONAL: target narration below is only recordable after verified local generation and cloud fallback.**
+**Animation:** Keep the same garden context. Show a clearly labelled architecture diagram: grower → Firebase AI Logic → local model on compatible hardware / cloud model. Use real online app footage for the cloud portion. Show saved guides separately from model generation; a stored document is not evidence of local inference. Do not animate a fake network-off answer or present an invented source badge.
 
-**Animation:** Keep the same garden context. Use a supported device with its local model already available. Disable the network and submit a fresh, previously unused short care question. Show actual generated text. Then use a supported test configuration where local inference is unavailable, restore connectivity, and show a real cloud response. Animate a small phone → Firebase AI Logic → cloud diagram around the evidence.
+**On-screen:** “Hybrid architecture” / “On-device generation: implemented, awaiting device validation” / “Online experience: tested by the team”. Keep the qualification visible during the architecture sequence.
 
-**On-screen:** “On-device generation • Network off” → “Cloud fallback • Network available”. Add these labels only when supported by captured runtime evidence. Show “Time compressed” if any wait is shortened.
+> We have implemented Firebase AI Logic hybrid routing: on-device generation for compatible hardware, with cloud fallback. Our testing so far covers the online experience; local generation still needs validation on a supported device. Saved guidance is a separate part of the offline design. This approach lets us explore local AI while keeping connected growers central to the product we are building today.
 
-> Here is why hybrid AI matters in the garden. On a supported device, a short care question can run locally, even without a connection. This is a newly generated answer, not a saved reply. When local inference is unavailable, Firebase AI Logic provides the cloud path when connectivity is available. The grower keeps one familiar conversation, while the app handles where the answer comes from.
-
-**Honest interim narration if the implementation remains unchanged:**
-
-> The current prototype uses Firebase AI Logic for cloud conversations and photo analysis. Our next step is local generation on supported devices, with cloud fallback when needed. That distinction matters: opening a saved plan offline is useful, but it does not demonstrate on-device AI. Before submission, we need to prove both inference paths using a fresh question and visible runtime evidence.
-
-The interim version makes this an accurate progress demo; it does not resolve the hackathon's hybrid implementation requirement. For the interim visuals, show the cloud capture and a diagram clearly marked “Planned local inference”; omit the simulated offline answer.
+**Production note:** Record only online flows that succeed in the submitted build. Show offline saved-content interactions only after verifying them. If genuine local-generation evidence becomes available before export, replace part of this diagram with that capture and update the qualification to match the exact tested platform. Do not reopen hardware testing solely to finish this film.
 
 ### 6. Make the technology legible — 2:02–2:20 (18 seconds)
 
@@ -93,7 +87,7 @@ The interim version makes this an accurate progress demo; it does not resolve th
 
 **On-screen:** “Plan ahead. Grow with confidence.” / “AI Gardening Mentor by IntelliWebLab” / “[verified project URL]”.
 
-> AI Gardening Mentor helps growers move from uncertainty to a practical next step: plan the crop, prepare for what is coming, and get guidance when questions arise. Built for the realities of growing in Tanzania. Plan ahead. Grow with confidence.
+> Our next step is to put this prototype in the hands of growers I know: people who already turn to me for advice. Their experience will help us improve it. AI Gardening Mentor: practical guidance, from one farmer’s experience to more growers.
 
 ## What must be verified before production lock
 
@@ -103,7 +97,7 @@ Repository review is source inspection, not a live end-to-end acceptance test.
 | --- | --- | --- |
 | Crop waterfall and succession planning | `mobile/lib/screens/crop_planner_screen.dart`; `backend/functions/src/domain/cropPlanner.ts` | Capture actual dates and interactions from the chosen demo account. Harvest dates are estimates, not promises. |
 | Firebase AI Logic cloud calls | `mobile/lib/services/firebase_ai_logic_service.dart` calls `generateContentStream` and `generateContent` | Capture a successfully configured runtime. Preview fallback must not stand in for live AI. |
-| On-device AI and automatic fallback | `ai_prefer_on_device` is read and stored, but no routing use was found in `mobile/lib` | Scene 5 target wording is blocked until implemented and observed. Offline storage is not local inference. |
+| On-device AI and automatic fallback | Android and Web hybrid adapters now contain Firebase SDK inference calls; local device execution remains unverified | Use the labelled architecture sequence in Scene 5. Only claim observed runtime results when supporting captures exist. |
 | Server AI route | `backend/functions/src/providers/geminiProvider.ts` uses `@google/genai` directly | Review against the event's Firebase AI Logic requirement before presenting the submission architecture. Do not depict this direct route as Firebase AI Logic. |
 | App Check | Activation is attempted; activation errors are caught | Confirm protection is active in the captured build; configuration code alone is insufficient proof. |
 | Photo import and mentor | `mobile/lib/screens/mentor_chat_screen.dart`; `triage_flow.dart` | Record the real upload and reply. Preserve qualifications in the answer. |
@@ -148,3 +142,14 @@ Checked 23 November 2026 against the [official event page](https://firebasehybri
 The event asks for a video no longer than three minutes, publicly viewable on YouTube, in English or with English subtitles, with footage showing the working project. Judging includes implementation, design, impact, and originality. The submission should demonstrate actual Firebase AI Logic use and hybrid behavior; animation should support that evidence. The rules also say the submitted project must function as depicted.
 
 This is why the script gives hybrid behavior its own proof sequence while retaining the grower's story. A fully animated exterior with real application captures inside it meets the creative direction without substituting a concept animation for a working demo.
+
+
+## Agreed submission and pilot sequence
+
+1. Capture the online features that work in the submitted build, using one consistent demo garden.
+2. Record the founder voiceover and animate the architecture explanation with its visible qualification.
+3. Export within three minutes; verify captions, public video access, repository instructions, and judge access. Aim to finish ahead of the submission window rather than leave publication until its final day. Recheck the official deadline before scheduling publication.
+4. Invite the founder’s farmer friends to use the working app. This is a planned pilot, not an existing adoption claim.
+5. Collect concrete feedback: what they asked, whether the answer helped, what was wrong or unclear, what failed on their phone, and when they still needed the founder’s help. Improve the real product from that evidence.
+
+Position the app as extending the founder’s mentorship. Avoid promising that every AI answer is identical to advice he would personally give. No invitations or publication are performed by this script update.

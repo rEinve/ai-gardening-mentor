@@ -1,7 +1,8 @@
 import 'dart:typed_data';
 
 import 'photo_picker_stub.dart'
-    if (dart.library.html) 'photo_picker_web.dart' as impl;
+    if (dart.library.html) 'photo_picker_web.dart'
+    if (dart.library.io) 'photo_picker_io.dart' as impl;
 
 enum PhotoPickMode {
   camera,

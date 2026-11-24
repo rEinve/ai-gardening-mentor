@@ -4,9 +4,9 @@ Date: 23 November 2026. Status: ready for implementation; no hybrid implementati
 
 ## Agreed scope
 
-Build a real, testable hackathon edition of Gardening Mentor for Android and Web using the existing Flutter app. Keep the commercial edition focused on cloud AI plus saved offline content, without local-model download prompts or a dependency on local inference. Keep the submitted edition available and reproducible throughout judging.
+Priority: submit a working hackathon project tomorrow, 24 November 2026 (the owner’s submission target). Add genuine on-device inference to the existing Gardening Mentor app, preserving its business features. Commercial release configuration and packaging are deferred. Keep the submitted build available and reproducible throughout judging.
 
-Use one Flutter application with two platform adapters, not two independent products. Android and Web can be registered in the same Firebase project; two Firebase backend projects are not required. An isolated demo Firebase environment is recommended so judge data and configuration stay separate from the commercial service.
+Use one Flutter application with two platform adapters, not two independent products. Android and Web can be registered in the same Firebase project; two Firebase backend projects are not required. Reuse the current configured Firebase environment if suitable; creating a separate commercial/demo environment is not a prerequisite for tomorrow’s submission.
 
 **One feature:** “Make today's care checklist” from a bundled, reviewed tomato guide plus user-entered context. Generate up to three concise tasks. Demonstrate new local generation and cloud fallback using this same action. Leave photo diagnosis, supplier search, and full conversational AI outside the local feature.
 
@@ -26,7 +26,9 @@ If the Pixel is unavailable: retain it for cloud and offline-content tests. Cont
 
 - `mobile/lib/services/firebase_ai_logic_service.dart` creates cloud models. `preferOnDevice` is stored but never used to select inference.
 - `mobile/lib/main.dart` awaits backend and AI initialization before displaying the app; offline startup must not depend on successful network initialization.
-- `mobile/lib/screens/mentor_chat_screen.dart` has a local preview answer path. This must never supply a purported AI result in the hackathon edition.
+- Latest inspection: `mobile/lib/services/hybrid_mentor_responder.dart` now provides routing scaffolding, but `buildOnDeviceShortAnswer()` calls `_matchTopicGuidance()` and formats preset strings. It does not invoke a model.
+- `mobile/lib/screens/mentor_chat_screen.dart` toggles `_hasLocalModelDownloaded` from an ActionChip; this is not an SDK availability check or download. Replace both the flag source and the preset-answer path. Its other preview answers must not supply purported AI results.
+- `mobile/test/hybrid_ai_routing_test.dart` exists; routing tests alone cannot prove local generation.
 - `mobile/lib/data/offline_garden_store.dart` maintains in-memory state and backend synchronization. Verify durable state after process restart; its name does not prove persistence.
 - `mobile/pubspec.yaml` declares `firebase_ai: ^2.0.0`. Verify the resolved package and its actual hybrid API surface; Flutter's cross-platform UI support does not establish hybrid SDK parity.
 - `mobile/android/app/src/main/kotlin/com/example/ai_gardening_mentor/MainActivity.kt` is a minimal Flutter activity, so there is no existing native hybrid bridge.
@@ -48,9 +50,9 @@ Use non-streaming generation first; it is sufficient for three short tasks and m
 
 ## Ordered implementation tasks
 
-### 1. Add build separation and a shared prompt
+### 1. Replace the inference placeholders and add a shared prompt
 
-Create explicit commercial and hackathon configurations. Commercial must omit local download controls and disable local inference by default; avoid loading the Web hybrid bundle there and isolate native dependencies by flavor if needed. A build-time switch controls eligibility; Remote Config may tune an enabled feature but must not silently activate downloads in the commercial edition.
+Do not spend the submission window building commercial flavors. Replace the existing preset-answer path labelled on-device with real Firebase hybrid generation. Replace the user-toggleable downloaded flag with SDK capability/readiness state. Keep deterministic guides available, clearly labelled as saved/rule-based guidance. Only offer model preparation after an explicit action; never claim a download occurred because a toggle changed.
 
 Bundle a short reviewed guide with the app. Prompt inputs: guide text, crop stage, and one current observation. Ask for up to three tasks grounded in that guide; ask for clarification when facts are missing. Avoid invented fertilizer doses, disease certainty, weather, or live supplier data. Treat guide/user text as input, not executable instructions.
 
@@ -74,7 +76,7 @@ Persist the selected guide, relevant crop context, and generated checklist with 
 
 ### 5. Add the smallest usable demo flow
 
-In the hackathon edition, add “Offline care checklist” in an appropriate existing garden/mentor area. Show capability checking, unsupported, download available, downloading, ready, generating, success, and retryable failure. Download happens only after “Prepare offline AI”; show size when provided, otherwise do not invent it. Failed preparation must leave saved guides accessible.
+In the existing app, add “Offline care checklist” in an appropriate existing garden/mentor area. Show capability checking, unsupported, download available, downloading, ready, generating, success, and retryable failure. Download happens only after “Prepare offline AI”; show size when provided, otherwise do not invent it. Failed preparation must leave saved guides accessible.
 
 After generation, show “Generated on this device” or “Generated in cloud” from actual response metadata. Display elapsed time only if measured. Keep modes, SDK diagnostics, and request IDs in a judge/developer details panel. No simulated source badges.
 
@@ -99,18 +101,29 @@ Audit every AI path included in the demo for Firebase AI Logic usage. The existi
 | Interrupted download | Disconnect during preparation, reopen, retry online | No false ready state; recover using SDK-supported retry/resume behavior. |
 | Errors and cancellation | Cancel generation; test timeout, model busy, cloud/App Check denial | No fake answer, stale success badge, indefinite spinner, or unbounded retries. |
 | Auth isolation | Save output, sign out, use another account | Previous private context is inaccessible. |
-| Commercial regression | Build commercial edition and use normal app flows | No local-model prompts/downloads; normal cloud AI and saved content continue working. |
+| Existing feature regression | Exercise planner, account, saved guidance, and cloud mentor | Existing business features remain usable after hybrid integration. |
 
 Use physical device airplane mode with Wi-Fi also off for Android. For Web, disconnect the machine and collect browser network evidence; a developer-tools toggle alone is secondary evidence. Repeat with a changed input and record source metadata. Do not assert exact model wording in tests; assess that tasks respond to the supplied guide/context.
 
-Automated checks: adapter contract/error mapping, UI state transitions, request cancellation, and account-scoped persistence. Run `flutter analyze`, `flutter test`, Android and Web builds for both configurations, and the required root `npm run build`. Build success does not replace physical offline inference tests.
+Automated checks: adapter contract/error mapping, UI state transitions, request cancellation, and account-scoped persistence. Run `flutter analyze`, `flutter test`, Android and Web builds for the submission configuration, and the required root `npm run build`. Build success does not replace physical offline inference tests.
 
 ## Handoff and completion gate
 
-Implement in this order: environment probe → shared contract/prompt → Android adapter → Web adapter/cache → startup/persistence → fallback/UI → evidence. Hardware availability and SDK compatibility are the first dependencies; do not spend time on animation before these are settled.
+Implement in this order: short capability probes on Android and desktop Chrome → shared contract/prompt → first adapter on hardware that can actually generate locally → second adapter → startup/cache/persistence → fallback/UI → evidence. Preserve the Android + Web target, but do not let an unsupported phone block progress on a compatible desktop. Record unverified platform claims as blocked, not passed. Hardware availability and SDK compatibility are the first dependencies; do not spend time on animation before these are settled.
 
 Provide Codex with the commit/build identifier, exact SDK lockfiles, phone and browser versions, actual model identity, local/cloud traces without secrets, judge setup instructions, and a completed acceptance table. Include an APK and hosted Web build with clear preparation instructions. Public setup must work from a clean install, not only an already-prepared developer account.
 
 The feature is complete only when both claimed platform paths have been exercised, fresh offline generation is demonstrated, fallback is verified, and saved content survives restart. Report unavailable hardware honestly rather than marking its tests passed.
 
-Only then revise Scene 5 of `docs/demo-video-animation-script.md`: show actual preparation, a fresh offline checklist, and real cloud fallback. Mention only the platforms and capabilities verified. Do not promise the commercial edition includes the hackathon-only local feature.
+Only then revise Scene 5 of `docs/demo-video-animation-script.md`: show actual preparation, a fresh offline checklist, and real cloud fallback. Mention only the platforms and capabilities verified. Defer commercial packaging decisions until after the hackathon; the submission video describes the working submitted build.
+
+
+## Submission-first work split
+
+**Required before recording:** real model execution, genuine readiness/download state, SDK source metadata, a fresh offline result, cloud fallback, and a reproducible judge setup. Remove misleading placeholder labels even if a platform remains unsupported.
+
+**Keep existing:** planner, account, crop context, cloud mentor, and saved guidance. Avoid unrelated rewrites.
+
+**Defer:** commercial flavors, separate commercial deployment, expanded local features, broad visual polish, and additional tutorial videos.
+
+**Hardware decision:** test the Pixel 8 Pro first, but do not promise support. If unavailable, use it for Android cloud/fallback testing and obtain eligible hardware for local proof. Desktop Chrome capability is the next immediate probe. If only one platform can be verified by the owner’s deadline, report that limitation and have the owner choose submission scope; do not fabricate a second-platform demonstration.

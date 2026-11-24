@@ -38,7 +38,7 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(find.byTooltip('Add Photo or Tool'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Upload Photo from Phone / WhatsApp'));
+    await tester.tap(find.text('Upload Photo'));
     await tester.pumpAndSettle();
     expect(find.text('Analyze Photo'), findsOneWidget);
     await tester.tap(find.text('Analyze Photo'));
@@ -47,6 +47,8 @@ void main() {
     expect(fake.uploadedPaths.length, 1);
 
     await tester.scrollUntilVisible(find.text('Add Recovery Chore'), 200);
+    await tester.ensureVisible(find.text('Add Recovery Chore'));
+    await tester.pumpAndSettle();
     await tester.tap(find.text('Add Recovery Chore'));
     await tester.pumpAndSettle();
     expect(fake.recoveryDiagnosisIds.length, 1);

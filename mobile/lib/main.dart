@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 
 import 'data/offline_garden_store.dart';
@@ -12,11 +13,11 @@ import 'services/firebase_garden_backend.dart';
 import 'services/garden_backend_client.dart';
 import 'theme/app_theme.dart';
 
-Future<void> main() async {
+/// Renders immediately so offline cold starts never block on cloud initialization.
+/// Firebase backend & AI Logic attach asynchronously with bounded timeouts.
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  final backend = await FirebaseGardenBackend.tryInitialize();
-  final aiLogic = await FirebaseAiLogicService.tryInitialize();
-  runApp(AiGardeningMentorApp(backend: backend, aiLogic: aiLogic));
+  runApp(const AiGardeningMentorApp());
 }
 
 class AiGardeningMentorApp extends StatefulWidget {
@@ -37,6 +38,31 @@ class _AiGardeningMentorAppState extends State<AiGardeningMentorApp> {
   void initState() {
     super.initState();
     _store = OfflineGardenStore(backend: widget.backend, aiLogic: widget.aiLogic);
+    if (widget.backend == null && widget.aiLogic == null) {
+      unawaited(_attachFirebaseAsync());
+    }
+  }
+
+  Future<void> _attachFirebaseAsync() async {
+    try {
+      final initialized = await FirebaseGardenBackend.ensureFirebaseInitialized()
+          .timeout(const Duration(seconds: 6), onTimeout: () => false);
+      if (!initialized) return;
+
+      final results = await Future.wait<Object?>([
+        FirebaseGardenBackend.tryInitialize()
+            .timeout(const Duration(seconds: 10), onTimeout: () => null),
+        FirebaseAiLogicService.tryInitialize()
+            .timeout(const Duration(seconds: 10), onTimeout: () => null),
+      ]);
+      if (!mounted) return;
+      _store.attachServices(
+        backend: results[0] as GardenBackendClient?,
+        aiLogic: results[1] as FirebaseAiLogicService?,
+      );
+    } catch (_) {
+      // Offline cold start: bundled guides, local auth state, and hybrid adapter stay usable.
+    }
   }
 
   @override
@@ -79,7 +105,7 @@ class _AiGardeningMentorAppState extends State<AiGardeningMentorApp> {
                 NavigationDestination(
                   icon: Icon(Icons.today_outlined),
                   selectedIcon: Icon(Icons.today),
-                  label: 'Home',
+                  label: 'Today',
                 ),
                 NavigationDestination(
                   icon: Icon(Icons.calendar_month_outlined),
@@ -92,8 +118,8 @@ class _AiGardeningMentorAppState extends State<AiGardeningMentorApp> {
                   label: 'Garden',
                 ),
                 NavigationDestination(
-                  icon: Icon(Icons.chat_outlined),
-                  selectedIcon: Icon(Icons.chat),
+                  icon: Icon(Icons.chat_bubble_outline),
+                  selectedIcon: Icon(Icons.chat_bubble),
                   label: 'Mentor',
                 ),
               ],

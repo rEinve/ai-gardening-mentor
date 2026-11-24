@@ -12,6 +12,7 @@ dependencies:
   # Firebase Core + Firebase AI Logic + Auth + App Check + Remote Config
   firebase_core: ^3.8.0
   firebase_auth: ^5.3.3
+  google_sign_in: ^6.2.2
   firebase_ai: ^2.0.0
   firebase_app_check: ^0.3.1+7
   firebase_remote_config: ^5.1.6

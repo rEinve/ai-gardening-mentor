@@ -5,7 +5,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:ai_gardening_mentor/data/image_quality.dart';
 import 'package:ai_gardening_mentor/data/offline_garden_store.dart';
 import 'package:ai_gardening_mentor/data/tanzania_crops.dart';
+import 'package:ai_gardening_mentor/models/agro_supplier_models.dart';
+import 'package:ai_gardening_mentor/models/crop_planner_models.dart';
 import 'package:ai_gardening_mentor/models/garden_models.dart';
+import 'package:ai_gardening_mentor/services/checklist_storage.dart';
 import 'package:ai_gardening_mentor/services/garden_backend_client.dart';
 
 class FakeGardenBackend implements GardenBackendClient {
@@ -235,5 +238,69 @@ void main() {
 
     store.dispose();
     await fake.dispose();
+  });
+
+  test('OfflineGardenStore persists updated location, crop batches, and farm contacts per account', () async {
+    AccountChecklistStorage.debugMemoryStore = {};
+    addTearDown(() => AccountChecklistStorage.debugMemoryStore = null);
+
+    final store = OfflineGardenStore();
+    await store.signInWithEmail(
+      email: 'farmer@arusha.tz',
+      password: 'password123',
+      createAccount: true,
+    );
+    await store.updatePlotSettings(
+      plotName: 'Arusha Shamba',
+      regionName: 'Arusha',
+      plotType: PlotType.inGround,
+      sunlightExposure: SunlightExposure.fullSun,
+      farmAreaLabel: '0.5 acre',
+    );
+    expect(store.activePlot?.regionName, 'Arusha');
+    expect(store.farmAreaLabel, '0.5 acre');
+
+    store.addCropBatch(
+      cropProfileId: 'tz_tomato',
+      startMode: BatchStartMode.seedNursery,
+      anchorDate: '2026-11-24',
+      plantCount: 30,
+    );
+    store.addCustomSupplier(
+      name: 'Kilimo Agro',
+      regionName: 'Arusha',
+      townOrArea: 'Tengeru',
+      phoneNumber: '+255700000001',
+      inputsStocked: const ['DAP', 'Tomato Seeds'],
+      category: FarmContactCategory.supplier,
+    );
+
+    await Future<void>.delayed(Duration.zero);
+    final saved = await AccountGardenProfileStorage.load('farmer@arusha.tz');
+    expect(saved, isNotNull);
+    expect(saved!.regionName, 'Arusha');
+    expect(saved.farmAreaLabel, '0.5 acre');
+    expect(saved.batchPlans.length, 1);
+    expect(saved.farmContacts.length, 1);
+
+    await store.initializeGarden(
+      plotName: 'Arusha Shamba',
+      regionName: 'Arusha',
+      plotType: PlotType.inGround,
+      rainExposure: RainExposure.exposed,
+      sunlightExposure: SunlightExposure.fullSun,
+      selectedCrops: [kTanzaniaCrops.first, kTanzaniaCrops[1]],
+    );
+    final retiredCropId = store.crops.last.cropId;
+    await store.retireCrop(retiredCropId);
+    expect(store.crops.last.isRetired, isTrue);
+    expect(store.tasks.where((t) => t.cropId == retiredCropId), isEmpty);
+
+    final batchId = store.computedBatchSchedules.first.plan.batchId;
+    final initialCount = store.computedBatchSchedules.length;
+    await store.removeCropBatch(batchId);
+    expect(store.computedBatchSchedules.length, initialCount - 1);
+
+    store.dispose();
   });
 }

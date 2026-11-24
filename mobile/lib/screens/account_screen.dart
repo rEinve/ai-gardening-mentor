@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../data/offline_garden_store.dart';
+import '../data/tanzania_crops.dart';
 import '../models/agro_supplier_models.dart';
+import '../models/garden_models.dart';
 import '../services/photo_picker.dart';
 
 /// `/account` — Personal Account settings + Dedicated Farm Contact Book
@@ -42,6 +44,125 @@ class _AccountScreenState extends State<AccountScreen> {
         const SnackBar(content: Text('Profile photo updated.')),
       );
     }
+  }
+
+  Future<void> _editGardenProfile() async {
+    final plot = widget.store.activePlot;
+    final initialRegion = plot?.regionName ?? kTanzaniaRegions.first;
+    final regionOptions = kTanzaniaRegions.contains(initialRegion)
+        ? kTanzaniaRegions
+        : [initialRegion, ...kTanzaniaRegions];
+
+    var selectedRegion = initialRegion;
+    var selectedPlotType = plot?.plotType ?? PlotType.inGround;
+    var selectedSunlight = plot?.sunlightExposure ?? SunlightExposure.fullSun;
+    final nameCtrl = TextEditingController(text: plot?.name ?? '$initialRegion Plot');
+    final areaCtrl = TextEditingController(text: widget.store.farmAreaLabel ?? '');
+
+    final saved = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, setDialogState) => AlertDialog(
+          title: const Text('Garden & Location Settings'),
+          content: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                DropdownButtonFormField<String>(
+                  initialValue: selectedRegion,
+                  decoration: const InputDecoration(
+                    labelText: 'Region / Location',
+                    border: OutlineInputBorder(),
+                  ),
+                  items: regionOptions
+                      .map((r) => DropdownMenuItem(value: r, child: Text(r)))
+                      .toList(),
+                  onChanged: (val) {
+                    if (val != null) setDialogState(() => selectedRegion = val);
+                  },
+                ),
+                const SizedBox(height: 12),
+                TextField(
+                  controller: nameCtrl,
+                  decoration: const InputDecoration(
+                    labelText: 'Garden / Plot Name',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                TextField(
+                  controller: areaCtrl,
+                  decoration: const InputDecoration(
+                    labelText: 'Farm Area (optional, e.g. 50 m² or 0.5 acre)',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                DropdownButtonFormField<PlotType>(
+                  initialValue: selectedPlotType,
+                  decoration: const InputDecoration(
+                    labelText: 'Growing Space',
+                    border: OutlineInputBorder(),
+                  ),
+                  items: const [
+                    DropdownMenuItem(value: PlotType.inGround, child: Text('In-Ground Bed')),
+                    DropdownMenuItem(value: PlotType.raisedBed, child: Text('Raised Bed')),
+                    DropdownMenuItem(value: PlotType.container, child: Text('Containers / Pots')),
+                    DropdownMenuItem(value: PlotType.indoorWindow, child: Text('Indoor / Balcony')),
+                  ],
+                  onChanged: (val) {
+                    if (val != null) setDialogState(() => selectedPlotType = val);
+                  },
+                ),
+                const SizedBox(height: 12),
+                DropdownButtonFormField<SunlightExposure>(
+                  initialValue: selectedSunlight,
+                  decoration: const InputDecoration(
+                    labelText: 'Sunlight',
+                    border: OutlineInputBorder(),
+                  ),
+                  items: const [
+                    DropdownMenuItem(value: SunlightExposure.fullSun, child: Text('Full Sun (6h+)')),
+                    DropdownMenuItem(value: SunlightExposure.partialShade, child: Text('Partial Shade')),
+                    DropdownMenuItem(value: SunlightExposure.deepShade, child: Text('Mostly Shade')),
+                  ],
+                  onChanged: (val) {
+                    if (val != null) setDialogState(() => selectedSunlight = val);
+                  },
+                ),
+              ],
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(ctx).pop(false),
+              child: const Text('Cancel'),
+            ),
+            FilledButton(
+              onPressed: () => Navigator.of(ctx).pop(true),
+              child: const Text('Save Permanently'),
+            ),
+          ],
+        ),
+      ),
+    );
+
+    if (saved == true) {
+      await widget.store.updatePlotSettings(
+        plotName: nameCtrl.text,
+        regionName: selectedRegion,
+        plotType: selectedPlotType,
+        sunlightExposure: selectedSunlight,
+        farmAreaLabel: areaCtrl.text,
+      );
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Garden location saved permanently: $selectedRegion')),
+        );
+      }
+    }
+    nameCtrl.dispose();
+    areaCtrl.dispose();
   }
 
   void _copyPhone(String phone) {
@@ -90,7 +211,6 @@ class _AccountScreenState extends State<AccountScreen> {
   @override
   Widget build(BuildContext context) {
     final cs = Theme.of(context).colorScheme;
-    final region = widget.store.activePlot?.regionName ?? 'Dodoma';
     final isSupplier = _selectedCategory == FarmContactCategory.supplier;
 
     return Scaffold(
@@ -98,6 +218,7 @@ class _AccountScreenState extends State<AccountScreen> {
       body: ListenableBuilder(
         listenable: widget.store,
         builder: (context, _) {
+          final region = widget.store.activePlot?.regionName ?? 'Dodoma';
           final contacts = widget.store.contactsByCategory(_selectedCategory);
 
           return ListView(
@@ -178,6 +299,53 @@ class _AccountScreenState extends State<AccountScreen> {
                         },
                         icon: const Icon(Icons.logout),
                         label: const Text('Log Out'),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 12),
+
+              // Permanent Garden & Location Profile Card
+              Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.location_on_outlined, color: cs.primary),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: Text(
+                              'Garden & Location Profile',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleMedium
+                                  ?.copyWith(fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          FilledButton.tonalIcon(
+                            onPressed: _editGardenProfile,
+                            icon: const Icon(Icons.edit_outlined, size: 18),
+                            label: const Text('Edit'),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 8),
+                      Text(
+                        'Plot: ${widget.store.activePlot?.name ?? "My Garden"} • Region: $region'
+                        '${widget.store.farmAreaLabel != null ? " • Area: ${widget.store.farmAreaLabel}" : ""}',
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        'Saved permanently to your account and synced across restarts.',
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodySmall
+                            ?.copyWith(color: cs.onSurfaceVariant),
                       ),
                     ],
                   ),

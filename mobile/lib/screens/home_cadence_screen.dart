@@ -84,12 +84,14 @@ class _HomeCadenceScreenState extends State<HomeCadenceScreen> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  isToday ? "Today's Micro-Habits" : 'Scheduled for $selectedDate (Read-only)',
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w600),
+                Expanded(
+                  child: Text(
+                    isToday ? "Today's Micro-Habits" : 'Scheduled for $selectedDate (Read-only)',
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w600),
+                  ),
                 ),
+                const SizedBox(width: 8),
                 Text('~$totalMinutes min', style: TextStyle(color: cs.primary, fontWeight: FontWeight.w600)),
               ],
             ),
@@ -98,7 +100,23 @@ class _HomeCadenceScreenState extends State<HomeCadenceScreen> {
           // Task list
           Expanded(
             child: tasks.isEmpty
-                ? const Center(child: Text('No care tasks scheduled for this day. Enjoy your garden!'))
+                ? Center(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 24),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(Icons.spa_outlined, size: 40, color: cs.primary),
+                          const SizedBox(height: 12),
+                          Text(
+                            'No care tasks scheduled for this day. Enjoy your garden!',
+                            textAlign: TextAlign.center,
+                            style: Theme.of(context).textTheme.bodyLarge,
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
                 : ListView.separated(
                     padding: const EdgeInsets.all(16),
                     itemCount: tasks.length,

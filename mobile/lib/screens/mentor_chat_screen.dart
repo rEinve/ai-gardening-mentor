@@ -9,6 +9,7 @@ import '../services/hybrid_mentor_responder.dart';
 import '../services/photo_picker.dart';
 import '../widgets/brand_logo.dart';
 import 'agro_supplier_sheet.dart';
+import 'offline_checklist_screen.dart';
 import 'triage_flow.dart';
 
 class _ChatBubble {
@@ -67,7 +68,6 @@ class _MentorChatScreenState extends State<MentorChatScreen> {
   StreamSubscription<MentorSseEvent>? _streamSub;
   String _sessionId = 'sess_${DateTime.now().toUtc().millisecondsSinceEpoch}';
   bool _isOffline = false;
-  bool _hasLocalModelDownloaded = false;
   bool _isArchived = false;
   bool _isStreaming = false;
 
@@ -97,34 +97,21 @@ class _MentorChatScreenState extends State<MentorChatScreen> {
         ? widget.store.upcomingPrepAlerts.first
         : null;
 
-    final route = HybridMentorResponder.selectRoute(
-      isOnline: !_isOffline,
-      hasLocalModelDownloaded: _hasLocalModelDownloaded,
-    );
-
-    if (route == HybridAiRoute.onDeviceLocalOffline ||
-        route == HybridAiRoute.offlineSafeGuide) {
-      final resolution = route == HybridAiRoute.onDeviceLocalOffline
-          ? HybridMentorResponder.buildOnDeviceShortAnswer(
-              regionName: region,
-              cropsSummary: cropSummary,
-              userQuestion: trimmed,
-              nextPrepAlert: nextAlert,
-            )
-          : HybridMentorResponder.buildOfflineSafeGuide(
-              regionName: region,
-              cropsSummary: cropSummary,
-              userQuestion: trimmed,
-              nextPrepAlert: nextAlert,
-            );
+    if (_isOffline) {
+      final savedGuide = HybridMentorResponder.buildOfflineSafeGuide(
+        regionName: region,
+        cropsSummary: cropSummary,
+        userQuestion: trimmed,
+        nextPrepAlert: nextAlert,
+      );
       setState(() {
         _messages.add(_ChatBubble(isUser: true, content: trimmed, timestampIso: nowIso));
         _messages.add(
           _ChatBubble(
             isUser: false,
-            content: resolution.content,
+            content: savedGuide.content,
             timestampIso: nowIso,
-            modeBadge: resolution.badgeLabel,
+            modeBadge: savedGuide.badgeLabel,
             citations: const [kGrowHowFixtureCitation],
           ),
         );
@@ -133,7 +120,7 @@ class _MentorChatScreenState extends State<MentorChatScreen> {
       widget.store.recordChatLog(
         sessionId: _sessionId,
         question: trimmed,
-        answer: resolution.content,
+        answer: savedGuide.content,
         dateIso: nowIso.substring(0, 10),
       );
       return;
@@ -226,19 +213,12 @@ class _MentorChatScreenState extends State<MentorChatScreen> {
             },
             onError: (Object err) {
               if (!mounted) return;
-              final fallback = _hasLocalModelDownloaded
-                  ? HybridMentorResponder.buildOnDeviceShortAnswer(
-                      regionName: region,
-                      cropsSummary: cropSummary,
-                      userQuestion: trimmed,
-                      nextPrepAlert: nextAlert,
-                    )
-                  : HybridMentorResponder.buildOfflineSafeGuide(
-                      regionName: region,
-                      cropsSummary: cropSummary,
-                      userQuestion: trimmed,
-                      nextPrepAlert: nextAlert,
-                    );
+              final fallback = HybridMentorResponder.buildOfflineSafeGuide(
+                regionName: region,
+                cropsSummary: cropSummary,
+                userQuestion: trimmed,
+                nextPrepAlert: nextAlert,
+              );
               setState(() {
                 _isStreaming = false;
                 _messages[assistantIdx] = _messages[assistantIdx].copyWith(
@@ -312,19 +292,12 @@ class _MentorChatScreenState extends State<MentorChatScreen> {
         );
       } catch (err) {
         if (!mounted) return;
-        final fallback = _hasLocalModelDownloaded
-            ? HybridMentorResponder.buildOnDeviceShortAnswer(
-                regionName: region,
-                cropsSummary: cropSummary,
-                userQuestion: trimmed,
-                nextPrepAlert: nextAlert,
-              )
-            : HybridMentorResponder.buildOfflineSafeGuide(
-                regionName: region,
-                cropsSummary: cropSummary,
-                userQuestion: trimmed,
-                nextPrepAlert: nextAlert,
-              );
+        final fallback = HybridMentorResponder.buildOfflineSafeGuide(
+          regionName: region,
+          cropsSummary: cropSummary,
+          userQuestion: trimmed,
+          nextPrepAlert: nextAlert,
+        );
         setState(() {
           _isStreaming = false;
           _messages[assistantIdx] = _messages[assistantIdx].copyWith(
@@ -480,8 +453,8 @@ class _MentorChatScreenState extends State<MentorChatScreen> {
             ),
             ListTile(
               leading: const Icon(Icons.photo_camera_outlined),
-              title: const Text('Take Photo (Camera)'),
-              subtitle: const Text('Capture a leaf or plant directly on the farm'),
+              title: const Text('Take Photo'),
+              subtitle: const Text('Capture a leaf or plant directly with your camera'),
               onTap: () async {
                 Navigator.of(ctx).pop();
                 final picked = await pickPlantPhoto(PhotoPickMode.camera);
@@ -499,8 +472,8 @@ class _MentorChatScreenState extends State<MentorChatScreen> {
             ),
             ListTile(
               leading: const Icon(Icons.upload_file_outlined),
-              title: const Text('Upload Photo from Phone / WhatsApp'),
-              subtitle: const Text('Pick a farm photo sent via WhatsApp or saved in gallery'),
+              title: const Text('Upload Photo'),
+              subtitle: const Text('Choose a saved photo from your phone'),
               onTap: () async {
                 Navigator.of(ctx).pop();
                 final picked = await pickPlantPhoto(PhotoPickMode.galleryOrFile);
@@ -641,29 +614,12 @@ class _MentorChatScreenState extends State<MentorChatScreen> {
                 ),
                 const Spacer(),
                 ActionChip(
-                  avatar: Icon(
-                    _isOffline
-                        ? (_hasLocalModelDownloaded ? Icons.memory : Icons.shield_outlined)
-                        : Icons.cloud_done_outlined,
-                    size: 16,
-                  ),
-                  label: Text(
-                    _isOffline
-                        ? (_hasLocalModelDownloaded ? 'On-Device AI' : 'Safe Offline Guide')
-                        : (_hasLocalModelDownloaded ? 'Hybrid AI' : 'Cloud AI'),
-                  ),
-                  backgroundColor: _isOffline && !_hasLocalModelDownloaded
-                      ? cs.tertiaryContainer
-                      : null,
+                  avatar: const Icon(Icons.checklist_outlined, size: 16),
+                  label: const Text('Offline Checklist'),
                   onPressed: () {
-                    setState(() => _hasLocalModelDownloaded = !_hasLocalModelDownloaded);
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        content: Text(
-                          _hasLocalModelDownloaded
-                              ? 'On-device local model enabled: short answers work even offline.'
-                              : 'Standard device mode: uses Cloud AI online, Safe Guiding Plan offline.',
-                        ),
+                    Navigator.of(context).push(
+                      MaterialPageRoute<void>(
+                        builder: (_) => OfflineChecklistScreen(store: widget.store),
                       ),
                     );
                   },
